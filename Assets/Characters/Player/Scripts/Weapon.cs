@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WeaponScript : MonoBehaviour
+public class Weapon : MonoBehaviour
 {
     public GameObject Projectile_Bullet;
     public Transform firePoint;
@@ -10,7 +10,7 @@ public class WeaponScript : MonoBehaviour
 
     public void Fire()
     {
-        GameObject bullet = Instantiate(Projectile_Bullet, firepoint.position, firepoint.rotation);
+        GameObject bullet = Instantiate(Projectile_Bullet, firePoint.position, firePoint.rotation);
         bullet.GetComponent<Rigidbody2D>().AddForce(firePoint.up * fireForce, ForceMode2D.Impulse);
     }
 }
