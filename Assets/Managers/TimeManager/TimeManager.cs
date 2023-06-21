@@ -8,13 +8,15 @@ public class TimeManager : MonoBehaviour
 
 	GameManager gameManager;
 	UIHandler uiHandler;
-
 	#endregion
 
 	#region Attributes
 
+	//	Variables
 	private float time = 0;
 	private bool active = false;
+	private IEnumerator timer;
+	//	Methods
 	IEnumerator Timer(float interval)
 	{
 		while (active)
@@ -24,9 +26,14 @@ public class TimeManager : MonoBehaviour
 		}
 	}
 
-	public void Start(float interval)
+	public void StartTimer(float interval)
 	{
-		StartCoroutine(Timer(interval));
+		timer = Timer(interval);
+		StartCoroutine(timer);
+	}
+	public void StopTimer()
+	{
+		StopCoroutine(timer);
 	}
 
 	public float GetTime()
@@ -36,12 +43,12 @@ public class TimeManager : MonoBehaviour
 	#endregion
 
 	#region Unity
+
 	// Start is called before the first frame update
 	void Start()
     {
 		gameManager = this.GetComponentInParent<GameManager>();
 		uiHandler = this.GetComponentInParent<UIHandler>();
     }
-
 	#endregion
 }
