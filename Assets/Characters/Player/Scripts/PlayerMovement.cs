@@ -11,7 +11,7 @@ public class PlayerMovement : MonoBehaviour
 
 	public float moveSpeed;
     Rigidbody2D rb2d;
-    public Weapon weapon;
+    Weapon weapon;
 
     Vector2 moveDirection = new Vector2(0, 0);
     Vector2 mousePosition = new Vector2(0, 0);
@@ -43,6 +43,7 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         rb2d = this.GetComponent<Rigidbody2D>();
+        weapon = this.gameObject.GetComponentInChildren<Weapon>();
     }
     
     void Update()

@@ -14,15 +14,18 @@ public class TimeManager : MonoBehaviour
 
 	//	Variables
 	private float time = 0;
-	private bool active = false;
+	private bool active = true;
 	private IEnumerator timer;
 	//	Methods
 	IEnumerator Timer(float interval)
 	{
+		Debug.Log("Timer Started");
 		while (active)
 		{
 			yield return new WaitForSeconds(interval);
 			time += 1;
+			gameManager.uiHandler.timer.SetText(time.ToString());
+			Timer(interval);
 		}
 	}
 

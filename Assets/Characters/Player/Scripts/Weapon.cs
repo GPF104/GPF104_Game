@@ -5,7 +5,7 @@ using UnityEngine;
 public class Weapon : MonoBehaviour
 {
     public GameObject Projectile_Bullet;
-    public Transform firePoint;
+    Transform firePoint;
     public float fireForce = 20f;
 
     public void Fire()
@@ -13,4 +13,9 @@ public class Weapon : MonoBehaviour
         GameObject bullet = Instantiate(Projectile_Bullet, firePoint.position, firePoint.rotation);
         bullet.GetComponent<Rigidbody2D>().AddForce(firePoint.up * fireForce, ForceMode2D.Impulse);
     }
+
+	void Start()
+	{
+        firePoint = GameObject.Find("FirePoint").GetComponent<Transform>();
+	}
 }
