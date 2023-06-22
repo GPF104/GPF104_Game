@@ -13,35 +13,45 @@ public class TimeManager : MonoBehaviour
 	#region Attributes
 
 	//	Variables
-	private float time = 0;
 	private bool active = true;
 	private IEnumerator timer;
+	private float secondCount, minuteCount;
 	//	Methods
 	IEnumerator Timer(float interval)
 	{
-		Debug.Log("Timer Started");
 		while (active)
 		{
 			yield return new WaitForSeconds(interval);
-			time += 1;
-			gameManager.uiHandler.timer.SetText(time.ToString());
+			secondCount += 1;
+			minuteCount = (int)Mathf.Floor(secondCount / 60);
+
+			gameManager.uiHandler.timer.SetText(GetTimeString(minuteCount, secondCount));
+			yield return Timer(interval);
 			Timer(interval);
 		}
 	}
 
 	public void StartTimer(float interval)
 	{
+		secondCount = 0;
+		minuteCount = 0;
 		timer = Timer(interval);
 		StartCoroutine(timer);
 	}
 	public void StopTimer()
 	{
+		active = false;
 		StopCoroutine(timer);
+	}
+
+	public string GetTimeString(float minutes, float seconds)
+	{
+		return minutes.ToString("0#") + ":" + (seconds % 60).ToString("0#");
 	}
 
 	public float GetTime()
 	{
-		return time;
+		return (minuteCount*60) + secondCount;
 	}
 	#endregion
 

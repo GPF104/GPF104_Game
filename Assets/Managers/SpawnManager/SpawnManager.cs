@@ -19,6 +19,7 @@ public class SpawnManager : MonoBehaviour
 	void Start()
     {
         gameManager = this.GetComponentInParent<GameManager>();
+		timeManager = this.GetComponentInParent<TimeManager>();
     }
 
     // Update is called once per frame
