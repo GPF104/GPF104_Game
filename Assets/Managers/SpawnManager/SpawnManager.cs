@@ -4,10 +4,21 @@ using UnityEngine;
 
 public class SpawnManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+	#region ExternalLinks
+
+	GameManager gameManager;
+	TimeManager timeManager;
+	#endregion
+
+	#region Attributes
+
+	#endregion
+
+	#region Unity
+	// Start is called before the first frame update
+	void Start()
     {
-        
+        gameManager = this.GetComponentInParent<GameManager>();
     }
 
     // Update is called once per frame
@@ -15,4 +26,6 @@ public class SpawnManager : MonoBehaviour
     {
         
     }
+
+	#endregion
 }
