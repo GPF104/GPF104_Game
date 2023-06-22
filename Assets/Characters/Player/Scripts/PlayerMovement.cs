@@ -9,7 +9,7 @@ public class PlayerMovement : MonoBehaviour
 	#endregion
 	#region Attributes
 
-	public float moveSpeed;
+	public float moveSpeed = 10;
     Rigidbody2D rb2d;
     Weapon weapon;
 
