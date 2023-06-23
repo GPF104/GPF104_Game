@@ -26,7 +26,10 @@ public class ProjectileScript : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        Destroy(this.gameObject);
+        if (collision.collider.tag == "Enemy")
+		{
+            Destroy(this.gameObject);
+        }
         //check here to see if hitting enemy
     }
 	#endregion
