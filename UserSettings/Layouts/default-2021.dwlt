@@ -14,16 +14,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_PixelRect:
     serializedVersion: 2
-    x: 8
-    y: 51
-    width: 1904
-    height: 981
+    x: 0
+    y: 43
+    width: 1920
+    height: 997
   m_ShowMode: 4
-  m_Title: Game
+  m_Title: Git for Unity
   m_RootView: {fileID: 6}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
-  m_Maximized: 0
+  m_Maximized: 1
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -43,12 +43,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 30
-    width: 1904
-    height: 931
+    width: 1920
+    height: 947
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 15
+  controlID: 67
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -64,12 +64,12 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 1454
+    x: 1467
     y: 0
-    width: 450
-    height: 931
-  m_MinSize: {x: 101, y: 121}
-  m_MaxSize: {x: 4001, y: 4021}
+    width: 453
+    height: 947
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 12}
   m_Panes:
   - {fileID: 14}
@@ -93,8 +93,8 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 361
-    height: 553
+    width: 365
+    height: 561
   m_MinSize: {x: 201, y: 221}
   m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 15}
@@ -118,9 +118,9 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
-    y: 553
-    width: 1454
-    height: 378
+    y: 561
+    width: 1467
+    height: 386
   m_MinSize: {x: 231, y: 271}
   m_MaxSize: {x: 10001, y: 10021}
   m_ActualView: {fileID: 13}
@@ -149,8 +149,8 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1904
-    height: 981
+    width: 1920
+    height: 997
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
   m_UseTopView: 1
@@ -174,7 +174,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1904
+    width: 1920
     height: 30
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
@@ -195,8 +195,8 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
-    y: 961
-    width: 1904
+    y: 977
+    width: 1920
     height: 20
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
@@ -219,12 +219,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1454
-    height: 931
+    width: 1467
+    height: 947
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 16
+  controlID: 118
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -244,12 +244,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1454
-    height: 553
+    width: 1467
+    height: 561
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 17
+  controlID: 119
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -265,10 +265,10 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 361
+    x: 365
     y: 0
-    width: 1093
-    height: 553
+    width: 1102
+    height: 561
   m_MinSize: {x: 202, y: 221}
   m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 16}
@@ -297,10 +297,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1462
-    y: 81
-    width: 449
-    height: 910
+    x: 1467
+    y: 73
+    width: 452
+    height: 926
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -505,13 +505,1920 @@ MonoBehaviour:
     treeScroll: {x: 0, y: 0}
     treeChanges:
       assets:
-        keys: []
-        values: []
+        keys:
+        - 00000000000000001000000000000000
+        - e62bfff61af640249b3c819c1bd69e07
+        - 2435e39fdc585bf40b391ac382b25492
+        - 3639e97faa0bf8b42a5078af82424d1c
+        - 0b5484159ccf0b345bb0fa66f6836687
+        - 72a1e3a1abae98144b5e3fab5e5a4d28
+        - f617ec331b246a94d9498fd617e7072d
+        - ee50192cf79babd469ca8c9f1085a650
+        - c48700d8be79798499aaa8317666f214
+        - 794906042c2af3c4b818138dea46b8e0
+        - 976a50db534cee944bdc249ef1f37942
+        - 94b0422f1c5b4fc4bb5491416946ecd2
+        - 6e371674e3db5754db05516f4cdaed98
+        - caba51580d4572e49a3c4ab1dbf9f1fc
+        - 3bee6e4d88d9ca543a205f33c6b0dd3b
+        - 96276c7f8b09e554f9a7e3787cd171f5
+        - e677436435eb49c4ab5e731a591cc3b8
+        - 9aaf9d1760766bd4386eb4973313d401
+        - d30aca100c6f2084b97dce8b021f19b4
+        - 0d8127ce7846ff34680d2b24d550dd6d
+        - dcb033df40362784f831e2b8fafa7521
+        - 0fbcd4144a6d12c4399d439f180e9893
+        - 131a6b21c8605f84396be9f6751fb6e3
+        - 3c01811ffaefc80418519899485ed35a
+        - 683b369cba413ec428ad7bff3eedfb7d
+        - 48f500f4c058c3a48a7b1e7f6db1e340
+        - 787e19d95078c4f45a25fceb0f1d7498
+        - 434e78f89e4e7ab43b300c5e00238104
+        - 1bfec3806f9628c43b3eed2c4a88a4d2
+        - 66163f6c5d72e054d90aca4fac88f7bb
+        - 0eb8a4047ebf9284ca605c58800f2cae
+        - 5e262b0b52496024ab595a1152a50283
+        - f54d1bd14bd3ca042bd867b519fee8cc
+        - 8e7e8f5a82a3a134e91c54efd2274ea9
+        - 1b8d251f9af63b746bf2f7ffe00ebb9b
+        - 6ab70aee4d56447429c680537fbf93ed
+        - 6e59c59b81ab47f9b6ec5781fa725d2c
+        - e3265ab4bf004d28a9537516768c1c75
+        - 243e06394e614e5d99fab26083b707fa
+        - 731f1baa9d144a9897cb1d341c2092b8
+        - e73a58f6e2794ae7b1b7e50b7fb811b0
+        - 2e498d1c8094910479dc3e1b768306a4
+        - 79459efec17a4d00a321bdcc27bbc385
+        - 8f586378b4e144a9851e7b34d9b748ee
+        - fade42e8bc714b018fac513c043d323b
+        - d82c1b31c7e74239bff1220585707d2b
+        - 512a49d95c0c4332bdd98131869c23c9
+        - c41005c129ba4d66911b75229fd70b45
+        - 4aecb92fff08436c8303b10eab8da368
+        - f952c082cb03451daed3ee968ac6c63e
+        - 3f5b5dff67a942289a9defa416b206f3
+        - e9f693669af91aa45ad615fc681ed29f
+        - 128e987d567d4e2c824d754223b3f3b0
+        - 48bb5f55d8670e349b6e614913f9d910
+        - 1e3b057af24249748ff873be7fafee47
+        - dd89cf5b9246416f84610a006f916af7
+        - 14eb328de4b8eb245bb7cea29e4ac00b
+        - 68e6db2ebdc24f95958faec2be5558d6
+        - bc1ede39bf3643ee8e493720e4259791
+        - a02a7d8c237544f1962732b55a9aebf1
+        - c8d12adcee749c344b8117cf7c7eb912
+        - fe393ace9b354375a9cb14cdbbc28be4
+        - f7ada0af4f174f0694ca6a487b8f543d
+        - 85187c2149c549c5b33f0cdb02836b17
+        - cf81c85f95fe47e1a27f6ae460cf182c
+        - 407bc68d299748449bbf7f48ee690f8d
+        - c334973cef89a9840b0b0c507e0377ab
+        - 3997e2241185407d80309a82f9148466
+        - d930090c0cd643c7b55f19a38538c162
+        - d0603b6d5186471b96c778c3949c7ce2
+        - 381dcb09d5029d14897e55f98031fca5
+        - 8f05276190cf498a8153f6cbe761d4e6
+        - dffef66376be4fa480fb02b19edbe903
+        values:
+        - path: Assets
+          label: Assets
+          level: 0
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\Characters
+          label: Characters
+          level: 1
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\Characters\Player
+          label: Player
+          level: 2
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\Characters\Player\Player.prefab
+          label: Player.prefab
+          level: 3
+          isFolder: 0
+          isContainer: 1
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 1
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Characters\Player\Player.prefab
+            fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\Characters\Player\Player.prefab
+            projectPath: Assets\Characters\Player\Player.prefab
+            originalPath: 
+            indexStatus: 3
+            workTreeStatus: 0
+        - path: Assets\Characters\Player\Scripts
+          label: Scripts
+          level: 3
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\Characters\Player\Scripts\Player.cs
+          label: Player.cs
+          level: 4
+          isFolder: 0
+          isContainer: 1
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 1
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Characters\Player\Scripts\Player.cs
+            fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\Characters\Player\Scripts\Player.cs
+            projectPath: Assets\Characters\Player\Scripts\Player.cs
+            originalPath: 
+            indexStatus: 4
+            workTreeStatus: 0
+        - path: Assets\Characters\Player\Scripts\PlayerMovement.cs
+          label: PlayerMovement.cs
+          level: 4
+          isFolder: 0
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 1
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Characters\Player\Scripts\PlayerMovement.cs
+            fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\Characters\Player\Scripts\PlayerMovement.cs
+            projectPath: Assets\Characters\Player\Scripts\PlayerMovement.cs
+            originalPath: 
+            indexStatus: 3
+            workTreeStatus: 0
+        - path: Assets\Characters\Player\Scripts\Weapon.cs
+          label: Weapon.cs
+          level: 4
+          isFolder: 0
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 1
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Characters\Player\Scripts\Weapon.cs
+            fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\Characters\Player\Scripts\Weapon.cs
+            projectPath: Assets\Characters\Player\Scripts\Weapon.cs
+            originalPath: 
+            indexStatus: 3
+            workTreeStatus: 0
+        - path: Assets\Interface
+          label: Interface
+          level: 1
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\Interface\Timer
+          label: Timer
+          level: 2
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\Interface\Timer\UI_Timer.cs
+          label: UI_Timer.cs
+          level: 3
+          isFolder: 0
+          isContainer: 1
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 1
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Interface\Timer\UI_Timer.cs
+            fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\Interface\Timer\UI_Timer.cs
+            projectPath: Assets\Interface\Timer\UI_Timer.cs
+            originalPath: 
+            indexStatus: 4
+            workTreeStatus: 0
+        - path: Assets\Interface\Timer\UI_Timer.prefab
+          label: UI_Timer.prefab
+          level: 3
+          isFolder: 0
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 1
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Interface\Timer\UI_Timer.prefab
+            fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\Interface\Timer\UI_Timer.prefab
+            projectPath: Assets\Interface\Timer\UI_Timer.prefab
+            originalPath: 
+            indexStatus: 3
+            workTreeStatus: 0
+        - path: Assets\Managers
+          label: Managers
+          level: 1
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\Managers\GameManager
+          label: GameManager
+          level: 2
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\Managers\GameManager\GameManager.cs
+          label: GameManager.cs
+          level: 3
+          isFolder: 0
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 1
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Managers\GameManager\GameManager.cs
+            fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\Managers\GameManager\GameManager.cs
+            projectPath: Assets\Managers\GameManager\GameManager.cs
+            originalPath: 
+            indexStatus: 3
+            workTreeStatus: 0
+        - path: Assets\Managers\SpawnManager
+          label: SpawnManager
+          level: 2
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\Managers\SpawnManager\SpawnManager.cs
+          label: SpawnManager.cs
+          level: 3
+          isFolder: 0
+          isContainer: 1
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 1
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Managers\SpawnManager\SpawnManager.cs
+            fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\Managers\SpawnManager\SpawnManager.cs
+            projectPath: Assets\Managers\SpawnManager\SpawnManager.cs
+            originalPath: 
+            indexStatus: 4
+            workTreeStatus: 0
+        - path: Assets\Managers\SpawnManager\SpawnManager.prefab
+          label: SpawnManager.prefab
+          level: 3
+          isFolder: 0
+          isContainer: 1
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 1
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Managers\SpawnManager\SpawnManager.prefab
+            fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\Managers\SpawnManager\SpawnManager.prefab
+            projectPath: Assets\Managers\SpawnManager\SpawnManager.prefab
+            originalPath: 
+            indexStatus: 4
+            workTreeStatus: 0
+        - path: Assets\Managers\TimeManager
+          label: TimeManager
+          level: 2
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\Managers\TimeManager\TimeManager.cs
+          label: TimeManager.cs
+          level: 3
+          isFolder: 0
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 1
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Managers\TimeManager\TimeManager.cs
+            fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\Managers\TimeManager\TimeManager.cs
+            projectPath: Assets\Managers\TimeManager\TimeManager.cs
+            originalPath: 
+            indexStatus: 3
+            workTreeStatus: 0
+        - path: Assets\Managers\UIHandler
+          label: UIHandler
+          level: 2
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\Managers\UIHandler\UIHandler.cs
+          label: UIHandler.cs
+          level: 3
+          isFolder: 0
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 1
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Managers\UIHandler\UIHandler.cs
+            fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\Managers\UIHandler\UIHandler.cs
+            projectPath: Assets\Managers\UIHandler\UIHandler.cs
+            originalPath: 
+            indexStatus: 3
+            workTreeStatus: 0
+        - path: Assets\Scenes
+          label: Scenes
+          level: 1
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\Scenes\TestLevels
+          label: TestLevels
+          level: 2
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\Scenes\TestLevels\SpawnTest.unity
+          label: SpawnTest.unity
+          level: 3
+          isFolder: 0
+          isContainer: 1
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 1
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Scenes\TestLevels\SpawnTest.unity
+            fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\Scenes\TestLevels\SpawnTest.unity
+            projectPath: Assets\Scenes\TestLevels\SpawnTest.unity
+            originalPath: 
+            indexStatus: 4
+            workTreeStatus: 0
+        - path: Assets\Scenes\TestLevels\TestPlayer.unity
+          label: TestPlayer.unity
+          level: 3
+          isFolder: 0
+          isContainer: 1
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 1
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Scenes\TestLevels\TestPlayer.unity
+            fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\Scenes\TestLevels\TestPlayer.unity
+            projectPath: Assets\Scenes\TestLevels\TestPlayer.unity
+            originalPath: 
+            indexStatus: 4
+            workTreeStatus: 0
+        - path: Assets\Scenes\TestLevels\TestUI.unity
+          label: TestUI.unity
+          level: 3
+          isFolder: 0
+          isContainer: 1
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 1
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Scenes\TestLevels\TestUI.unity
+            fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\Scenes\TestLevels\TestUI.unity
+            projectPath: Assets\Scenes\TestLevels\TestUI.unity
+            originalPath: 
+            indexStatus: 4
+            workTreeStatus: 0
+        - path: Assets\Spells
+          label: Spells
+          level: 1
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\Spells\Projectiles
+          label: Projectiles
+          level: 2
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\Spells\Projectiles\Projectile_Bullet
+          label: Projectile_Bullet
+          level: 3
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\Spells\Projectiles\Projectile_Bullet\Projectile_Bullet.prefab
+          label: Projectile_Bullet.prefab
+          level: 4
+          isFolder: 0
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 1
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Spells\Projectiles\Projectile_Bullet\Projectile_Bullet.prefab
+            fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\Spells\Projectiles\Projectile_Bullet\Projectile_Bullet.prefab
+            projectPath: Assets\Spells\Projectiles\Projectile_Bullet\Projectile_Bullet.prefab
+            originalPath: 
+            indexStatus: 3
+            workTreeStatus: 0
+        - path: Assets\Spells\Projectiles\Projectile_Bullet\ProjectileScript.cs
+          label: ProjectileScript.cs
+          level: 4
+          isFolder: 0
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 1
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Spells\Projectiles\Projectile_Bullet\ProjectileScript.cs
+            fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\Spells\Projectiles\Projectile_Bullet\ProjectileScript.cs
+            projectPath: Assets\Spells\Projectiles\Projectile_Bullet\ProjectileScript.cs
+            originalPath: 
+            indexStatus: 3
+            workTreeStatus: 0
+        - path: Assets\TextMesh Pro
+          label: TextMesh Pro
+          level: 1
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\TextMesh Pro\Documentation
+          label: Documentation
+          level: 2
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\TextMesh Pro\Documentation\TextMesh Pro User Guide 2016.pdf
+          label: TextMesh Pro User Guide 2016.pdf
+          level: 3
+          isFolder: 0
+          isContainer: 1
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 1
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\TextMesh Pro\Documentation\TextMesh Pro User Guide 2016.pdf
+            fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\TextMesh
+              Pro\Documentation\TextMesh Pro User Guide 2016.pdf
+            projectPath: Assets\TextMesh Pro\Documentation\TextMesh Pro User Guide
+              2016.pdf
+            originalPath: 
+            indexStatus: 4
+            workTreeStatus: 0
+        - path: Assets\TextMesh Pro\Fonts
+          label: Fonts
+          level: 2
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt
+          label: LiberationSans - OFL.txt
+          level: 3
+          isFolder: 0
+          isContainer: 1
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 1
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt
+            fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\TextMesh
+              Pro\Fonts\LiberationSans - OFL.txt
+            projectPath: Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt
+            originalPath: 
+            indexStatus: 4
+            workTreeStatus: 0
+        - path: Assets\TextMesh Pro\Fonts\LiberationSans.ttf
+          label: LiberationSans.ttf
+          level: 3
+          isFolder: 0
+          isContainer: 1
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 1
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\TextMesh Pro\Fonts\LiberationSans.ttf
+            fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\TextMesh
+              Pro\Fonts\LiberationSans.ttf
+            projectPath: Assets\TextMesh Pro\Fonts\LiberationSans.ttf
+            originalPath: 
+            indexStatus: 4
+            workTreeStatus: 0
+        - path: Assets\TextMesh Pro\Resources
+          label: Resources
+          level: 2
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\TextMesh Pro\Resources\Fonts & Materials
+          label: Fonts & Materials
+          level: 3
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\TextMesh Pro\Resources\Fonts & Materials\LiberationSans SDF
+            - Drop Shadow.mat
+          label: LiberationSans SDF - Drop Shadow.mat
+          level: 4
+          isFolder: 0
+          isContainer: 1
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 1
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\TextMesh Pro\Resources\Fonts & Materials\LiberationSans
+              SDF - Drop Shadow.mat
+            fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\TextMesh
+              Pro\Resources\Fonts & Materials\LiberationSans SDF - Drop Shadow.mat
+            projectPath: Assets\TextMesh Pro\Resources\Fonts & Materials\LiberationSans
+              SDF - Drop Shadow.mat
+            originalPath: 
+            indexStatus: 4
+            workTreeStatus: 0
+        - path: Assets\TextMesh Pro\Resources\Fonts & Materials\LiberationSans SDF
+            - Fallback.asset
+          label: LiberationSans SDF - Fallback.asset
+          level: 4
+          isFolder: 0
+          isContainer: 1
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 1
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\TextMesh Pro\Resources\Fonts & Materials\LiberationSans
+              SDF - Fallback.asset
+            fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\TextMesh
+              Pro\Resources\Fonts & Materials\LiberationSans SDF - Fallback.asset
+            projectPath: Assets\TextMesh Pro\Resources\Fonts & Materials\LiberationSans
+              SDF - Fallback.asset
+            originalPath: 
+            indexStatus: 4
+            workTreeStatus: 0
+        - path: Assets\TextMesh Pro\Resources\Fonts & Materials\LiberationSans SDF
+            - Outline.mat
+          label: LiberationSans SDF - Outline.mat
+          level: 4
+          isFolder: 0
+          isContainer: 1
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 1
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\TextMesh Pro\Resources\Fonts & Materials\LiberationSans
+              SDF - Outline.mat
+            fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\TextMesh
+              Pro\Resources\Fonts & Materials\LiberationSans SDF - Outline.mat
+            projectPath: Assets\TextMesh Pro\Resources\Fonts & Materials\LiberationSans
+              SDF - Outline.mat
+            originalPath: 
+            indexStatus: 4
+            workTreeStatus: 0
+        - path: Assets\TextMesh Pro\Resources\Fonts & Materials\LiberationSans SDF.asset
+          label: LiberationSans SDF.asset
+          level: 4
+          isFolder: 0
+          isContainer: 1
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 1
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\TextMesh Pro\Resources\Fonts & Materials\LiberationSans
+              SDF.asset
+            fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\TextMesh
+              Pro\Resources\Fonts & Materials\LiberationSans SDF.asset
+            projectPath: Assets\TextMesh Pro\Resources\Fonts & Materials\LiberationSans
+              SDF.asset
+            originalPath: 
+            indexStatus: 4
+            workTreeStatus: 0
+        - path: Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt
+          label: LineBreaking Following Characters.txt
+          level: 3
+          isFolder: 0
+          isContainer: 1
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 1
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt
+            fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\TextMesh
+              Pro\Resources\LineBreaking Following Characters.txt
+            projectPath: Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt
+            originalPath: 
+            indexStatus: 4
+            workTreeStatus: 0
+        - path: Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt
+          label: LineBreaking Leading Characters.txt
+          level: 3
+          isFolder: 0
+          isContainer: 1
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 1
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt
+            fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\TextMesh
+              Pro\Resources\LineBreaking Leading Characters.txt
+            projectPath: Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt
+            originalPath: 
+            indexStatus: 4
+            workTreeStatus: 0
+        - path: Assets\TextMesh Pro\Resources\Sprite Assets
+          label: Sprite Assets
+          level: 3
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\TextMesh Pro\Resources\Sprite Assets\EmojiOne.asset
+          label: EmojiOne.asset
+          level: 4
+          isFolder: 0
+          isContainer: 1
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 1
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\TextMesh Pro\Resources\Sprite Assets\EmojiOne.asset
+            fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\TextMesh
+              Pro\Resources\Sprite Assets\EmojiOne.asset
+            projectPath: Assets\TextMesh Pro\Resources\Sprite Assets\EmojiOne.asset
+            originalPath: 
+            indexStatus: 4
+            workTreeStatus: 0
+        - path: Assets\TextMesh Pro\Resources\Style Sheets
+          label: Style Sheets
+          level: 3
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\TextMesh Pro\Resources\Style Sheets\Default Style Sheet.asset
+          label: Default Style Sheet.asset
+          level: 4
+          isFolder: 0
+          isContainer: 1
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 1
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\TextMesh Pro\Resources\Style Sheets\Default Style Sheet.asset
+            fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\TextMesh
+              Pro\Resources\Style Sheets\Default Style Sheet.asset
+            projectPath: Assets\TextMesh Pro\Resources\Style Sheets\Default Style
+              Sheet.asset
+            originalPath: 
+            indexStatus: 4
+            workTreeStatus: 0
+        - path: Assets\TextMesh Pro\Resources\TMP Settings.asset
+          label: TMP Settings.asset
+          level: 3
+          isFolder: 0
+          isContainer: 1
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 1
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\TextMesh Pro\Resources\TMP Settings.asset
+            fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\TextMesh
+              Pro\Resources\TMP Settings.asset
+            projectPath: Assets\TextMesh Pro\Resources\TMP Settings.asset
+            originalPath: 
+            indexStatus: 4
+            workTreeStatus: 0
+        - path: Assets\TextMesh Pro\Shaders
+          label: Shaders
+          level: 2
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader
+          label: TMP_Bitmap.shader
+          level: 3
+          isFolder: 0
+          isContainer: 1
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 1
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader
+            fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\TextMesh
+              Pro\Shaders\TMP_Bitmap.shader
+            projectPath: Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader
+            originalPath: 
+            indexStatus: 4
+            workTreeStatus: 0
+        - path: Assets\TextMesh Pro\Shaders\TMP_Bitmap-Custom-Atlas.shader
+          label: TMP_Bitmap-Custom-Atlas.shader
+          level: 3
+          isFolder: 0
+          isContainer: 1
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 1
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\TextMesh Pro\Shaders\TMP_Bitmap-Custom-Atlas.shader
+            fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\TextMesh
+              Pro\Shaders\TMP_Bitmap-Custom-Atlas.shader
+            projectPath: Assets\TextMesh Pro\Shaders\TMP_Bitmap-Custom-Atlas.shader
+            originalPath: 
+            indexStatus: 4
+            workTreeStatus: 0
+        - path: Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader
+          label: TMP_Bitmap-Mobile.shader
+          level: 3
+          isFolder: 0
+          isContainer: 1
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 1
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader
+            fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\TextMesh
+              Pro\Shaders\TMP_Bitmap-Mobile.shader
+            projectPath: Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader
+            originalPath: 
+            indexStatus: 4
+            workTreeStatus: 0
+        - path: Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader
+          label: TMP_SDF Overlay.shader
+          level: 3
+          isFolder: 0
+          isContainer: 1
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 1
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader
+            fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\TextMesh
+              Pro\Shaders\TMP_SDF Overlay.shader
+            projectPath: Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader
+            originalPath: 
+            indexStatus: 4
+            workTreeStatus: 0
+        - path: Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader
+          label: TMP_SDF SSD.shader
+          level: 3
+          isFolder: 0
+          isContainer: 1
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 1
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader
+            fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\TextMesh
+              Pro\Shaders\TMP_SDF SSD.shader
+            projectPath: Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader
+            originalPath: 
+            indexStatus: 4
+            workTreeStatus: 0
+        - path: Assets\TextMesh Pro\Shaders\TMP_SDF.shader
+          label: TMP_SDF.shader
+          level: 3
+          isFolder: 0
+          isContainer: 1
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 1
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\TextMesh Pro\Shaders\TMP_SDF.shader
+            fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\TextMesh
+              Pro\Shaders\TMP_SDF.shader
+            projectPath: Assets\TextMesh Pro\Shaders\TMP_SDF.shader
+            originalPath: 
+            indexStatus: 4
+            workTreeStatus: 0
+        - path: Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader
+          label: TMP_SDF-Mobile Masking.shader
+          level: 3
+          isFolder: 0
+          isContainer: 1
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 1
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader
+            fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\TextMesh
+              Pro\Shaders\TMP_SDF-Mobile Masking.shader
+            projectPath: Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader
+            originalPath: 
+            indexStatus: 4
+            workTreeStatus: 0
+        - path: Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader
+          label: TMP_SDF-Mobile Overlay.shader
+          level: 3
+          isFolder: 0
+          isContainer: 1
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 1
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader
+            fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\TextMesh
+              Pro\Shaders\TMP_SDF-Mobile Overlay.shader
+            projectPath: Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader
+            originalPath: 
+            indexStatus: 4
+            workTreeStatus: 0
+        - path: Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile SSD.shader
+          label: TMP_SDF-Mobile SSD.shader
+          level: 3
+          isFolder: 0
+          isContainer: 1
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 1
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile SSD.shader
+            fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\TextMesh
+              Pro\Shaders\TMP_SDF-Mobile SSD.shader
+            projectPath: Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile SSD.shader
+            originalPath: 
+            indexStatus: 4
+            workTreeStatus: 0
+        - path: Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader
+          label: TMP_SDF-Mobile.shader
+          level: 3
+          isFolder: 0
+          isContainer: 1
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 1
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader
+            fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\TextMesh
+              Pro\Shaders\TMP_SDF-Mobile.shader
+            projectPath: Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader
+            originalPath: 
+            indexStatus: 4
+            workTreeStatus: 0
+        - path: Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader
+          label: TMP_SDF-Surface.shader
+          level: 3
+          isFolder: 0
+          isContainer: 1
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 1
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader
+            fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\TextMesh
+              Pro\Shaders\TMP_SDF-Surface.shader
+            projectPath: Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader
+            originalPath: 
+            indexStatus: 4
+            workTreeStatus: 0
+        - path: Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader
+          label: TMP_SDF-Surface-Mobile.shader
+          level: 3
+          isFolder: 0
+          isContainer: 1
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 1
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader
+            fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\TextMesh
+              Pro\Shaders\TMP_SDF-Surface-Mobile.shader
+            projectPath: Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader
+            originalPath: 
+            indexStatus: 4
+            workTreeStatus: 0
+        - path: Assets\TextMesh Pro\Shaders\TMP_Sprite.shader
+          label: TMP_Sprite.shader
+          level: 3
+          isFolder: 0
+          isContainer: 1
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 1
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\TextMesh Pro\Shaders\TMP_Sprite.shader
+            fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\TextMesh
+              Pro\Shaders\TMP_Sprite.shader
+            projectPath: Assets\TextMesh Pro\Shaders\TMP_Sprite.shader
+            originalPath: 
+            indexStatus: 4
+            workTreeStatus: 0
+        - path: Assets\TextMesh Pro\Shaders\TMPro.cginc
+          label: TMPro.cginc
+          level: 3
+          isFolder: 0
+          isContainer: 1
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 1
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\TextMesh Pro\Shaders\TMPro.cginc
+            fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\TextMesh
+              Pro\Shaders\TMPro.cginc
+            projectPath: Assets\TextMesh Pro\Shaders\TMPro.cginc
+            originalPath: 
+            indexStatus: 4
+            workTreeStatus: 0
+        - path: Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc
+          label: TMPro_Mobile.cginc
+          level: 3
+          isFolder: 0
+          isContainer: 1
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 1
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc
+            fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\TextMesh
+              Pro\Shaders\TMPro_Mobile.cginc
+            projectPath: Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc
+            originalPath: 
+            indexStatus: 4
+            workTreeStatus: 0
+        - path: Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc
+          label: TMPro_Properties.cginc
+          level: 3
+          isFolder: 0
+          isContainer: 1
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 1
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc
+            fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\TextMesh
+              Pro\Shaders\TMPro_Properties.cginc
+            projectPath: Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc
+            originalPath: 
+            indexStatus: 4
+            workTreeStatus: 0
+        - path: Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc
+          label: TMPro_Surface.cginc
+          level: 3
+          isFolder: 0
+          isContainer: 1
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 1
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc
+            fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\TextMesh
+              Pro\Shaders\TMPro_Surface.cginc
+            projectPath: Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc
+            originalPath: 
+            indexStatus: 4
+            workTreeStatus: 0
+        - path: Assets\TextMesh Pro\Sprites
+          label: Sprites
+          level: 2
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt
+          label: EmojiOne Attribution.txt
+          level: 3
+          isFolder: 0
+          isContainer: 1
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 1
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt
+            fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\TextMesh
+              Pro\Sprites\EmojiOne Attribution.txt
+            projectPath: Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt
+            originalPath: 
+            indexStatus: 4
+            workTreeStatus: 0
+        - path: Assets\TextMesh Pro\Sprites\EmojiOne.json
+          label: EmojiOne.json
+          level: 3
+          isFolder: 0
+          isContainer: 1
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 1
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\TextMesh Pro\Sprites\EmojiOne.json
+            fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\TextMesh
+              Pro\Sprites\EmojiOne.json
+            projectPath: Assets\TextMesh Pro\Sprites\EmojiOne.json
+            originalPath: 
+            indexStatus: 4
+            workTreeStatus: 0
+        - path: Assets\TextMesh Pro\Sprites\EmojiOne.png
+          label: EmojiOne.png
+          level: 3
+          isFolder: 0
+          isContainer: 1
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 1
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\TextMesh Pro\Sprites\EmojiOne.png
+            fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\TextMesh
+              Pro\Sprites\EmojiOne.png
+            projectPath: Assets\TextMesh Pro\Sprites\EmojiOne.png
+            originalPath: 
+            indexStatus: 4
+            workTreeStatus: 0
       folders:
         keys:
+        - Assets
+        - Assets\Characters
+        - Assets\Characters\Player
+        - Assets\Characters\Player\Scripts
+        - Assets\Interface
+        - Assets\Interface\Timer
+        - Assets\Managers
+        - Assets\Managers\GameManager
+        - Assets\Managers\SpawnManager
+        - Assets\Managers\TimeManager
+        - Assets\Managers\UIHandler
+        - Assets\Scenes
+        - Assets\Scenes\TestLevels
+        - Assets\Spells
+        - Assets\Spells\Projectiles
+        - Assets\Spells\Projectiles\Projectile_Bullet
+        - Assets\TextMesh Pro
+        - Assets\TextMesh Pro\Documentation
+        - Assets\TextMesh Pro\Fonts
+        - Assets\TextMesh Pro\Resources
+        - Assets\TextMesh Pro\Resources\Fonts & Materials
+        - Assets\TextMesh Pro\Resources\Sprite Assets
+        - Assets\TextMesh Pro\Resources\Style Sheets
+        - Assets\TextMesh Pro\Shaders
+        - Assets\TextMesh Pro\Sprites
         - UserSettings
         - UserSettings\Layouts
         values:
+        - path: Assets
+          label: Assets
+          level: 0
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\Characters
+          label: Characters
+          level: 1
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\Characters\Player
+          label: Player
+          level: 2
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\Characters\Player\Scripts
+          label: Scripts
+          level: 3
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\Interface
+          label: Interface
+          level: 1
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\Interface\Timer
+          label: Timer
+          level: 2
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\Managers
+          label: Managers
+          level: 1
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\Managers\GameManager
+          label: GameManager
+          level: 2
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\Managers\SpawnManager
+          label: SpawnManager
+          level: 2
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\Managers\TimeManager
+          label: TimeManager
+          level: 2
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\Managers\UIHandler
+          label: UIHandler
+          level: 2
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\Scenes
+          label: Scenes
+          level: 1
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\Scenes\TestLevels
+          label: TestLevels
+          level: 2
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\Spells
+          label: Spells
+          level: 1
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\Spells\Projectiles
+          label: Projectiles
+          level: 2
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\Spells\Projectiles\Projectile_Bullet
+          label: Projectile_Bullet
+          level: 3
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\TextMesh Pro
+          label: TextMesh Pro
+          level: 1
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\TextMesh Pro\Documentation
+          label: Documentation
+          level: 2
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\TextMesh Pro\Fonts
+          label: Fonts
+          level: 2
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\TextMesh Pro\Resources
+          label: Resources
+          level: 2
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\TextMesh Pro\Resources\Fonts & Materials
+          label: Fonts & Materials
+          level: 3
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\TextMesh Pro\Resources\Sprite Assets
+          label: Sprite Assets
+          level: 3
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\TextMesh Pro\Resources\Style Sheets
+          label: Style Sheets
+          level: 3
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\TextMesh Pro\Shaders
+          label: Shaders
+          level: 2
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\TextMesh Pro\Sprites
+          label: Sprites
+          level: 2
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
         - path: UserSettings
           label: UserSettings
           level: 0
@@ -576,6 +2483,2369 @@ MonoBehaviour:
           originalPath: 
           indexStatus: 0
           workTreeStatus: 0
+      - path: Assets
+        label: Assets
+        level: 0
+        isFolder: 1
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: 
+          fullPath: 
+          projectPath: 
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 0
+      - path: Assets\Characters
+        label: Characters
+        level: 1
+        isFolder: 1
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: 
+          fullPath: 
+          projectPath: 
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 0
+      - path: Assets\Characters\Player
+        label: Player
+        level: 2
+        isFolder: 1
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: 
+          fullPath: 
+          projectPath: 
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 0
+      - path: Assets\Characters\Player\Player.prefab
+        label: Player.prefab
+        level: 3
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 1
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Characters\Player\Player.prefab
+          fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\Characters\Player\Player.prefab
+          projectPath: Assets\Characters\Player\Player.prefab
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+      - path: Assets\Characters\Player\Player.prefab.meta
+        label: Player.prefab.meta
+        level: 4
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 1
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Characters\Player\Player.prefab.meta
+          fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\Characters\Player\Player.prefab.meta
+          projectPath: Assets\Characters\Player\Player.prefab.meta
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+      - path: Assets\Characters\Player\Scripts
+        label: Scripts
+        level: 3
+        isFolder: 1
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: 
+          fullPath: 
+          projectPath: 
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 0
+      - path: Assets\Characters\Player\Scripts\Player.cs
+        label: Player.cs
+        level: 4
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 1
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Characters\Player\Scripts\Player.cs
+          fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\Characters\Player\Scripts\Player.cs
+          projectPath: Assets\Characters\Player\Scripts\Player.cs
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - path: Assets\Characters\Player\Scripts\Player.cs.meta
+        label: Player.cs.meta
+        level: 5
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 1
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Characters\Player\Scripts\Player.cs.meta
+          fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\Characters\Player\Scripts\Player.cs.meta
+          projectPath: Assets\Characters\Player\Scripts\Player.cs.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - path: Assets\Characters\Player\Scripts\PlayerMovement.cs
+        label: PlayerMovement.cs
+        level: 4
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 1
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Characters\Player\Scripts\PlayerMovement.cs
+          fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\Characters\Player\Scripts\PlayerMovement.cs
+          projectPath: Assets\Characters\Player\Scripts\PlayerMovement.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+      - path: Assets\Characters\Player\Scripts\Weapon.cs
+        label: Weapon.cs
+        level: 4
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 1
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Characters\Player\Scripts\Weapon.cs
+          fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\Characters\Player\Scripts\Weapon.cs
+          projectPath: Assets\Characters\Player\Scripts\Weapon.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+      - path: Assets\Interface
+        label: Interface
+        level: 1
+        isFolder: 1
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: 
+          fullPath: 
+          projectPath: 
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 0
+      - path: Assets\Interface\Timer
+        label: Timer
+        level: 2
+        isFolder: 1
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: 
+          fullPath: 
+          projectPath: 
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 0
+      - path: Assets\Interface\Timer\UI_Timer.cs
+        label: UI_Timer.cs
+        level: 3
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 1
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Interface\Timer\UI_Timer.cs
+          fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\Interface\Timer\UI_Timer.cs
+          projectPath: Assets\Interface\Timer\UI_Timer.cs
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - path: Assets\Interface\Timer\UI_Timer.cs.meta
+        label: UI_Timer.cs.meta
+        level: 4
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 1
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Interface\Timer\UI_Timer.cs.meta
+          fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\Interface\Timer\UI_Timer.cs.meta
+          projectPath: Assets\Interface\Timer\UI_Timer.cs.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - path: Assets\Interface\Timer\UI_Timer.prefab
+        label: UI_Timer.prefab
+        level: 3
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 1
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Interface\Timer\UI_Timer.prefab
+          fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\Interface\Timer\UI_Timer.prefab
+          projectPath: Assets\Interface\Timer\UI_Timer.prefab
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+      - path: Assets\Managers
+        label: Managers
+        level: 1
+        isFolder: 1
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: 
+          fullPath: 
+          projectPath: 
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 0
+      - path: Assets\Managers\GameManager
+        label: GameManager
+        level: 2
+        isFolder: 1
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: 
+          fullPath: 
+          projectPath: 
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 0
+      - path: Assets\Managers\GameManager\GameManager.cs
+        label: GameManager.cs
+        level: 3
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 1
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Managers\GameManager\GameManager.cs
+          fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\Managers\GameManager\GameManager.cs
+          projectPath: Assets\Managers\GameManager\GameManager.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+      - path: Assets\Managers\SpawnManager
+        label: SpawnManager
+        level: 2
+        isFolder: 1
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: 
+          fullPath: 
+          projectPath: 
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 0
+      - path: Assets\Managers\SpawnManager\SpawnManager.cs
+        label: SpawnManager.cs
+        level: 3
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 1
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Managers\SpawnManager\SpawnManager.cs
+          fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\Managers\SpawnManager\SpawnManager.cs
+          projectPath: Assets\Managers\SpawnManager\SpawnManager.cs
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - path: Assets\Managers\SpawnManager\SpawnManager.cs.meta
+        label: SpawnManager.cs.meta
+        level: 4
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 1
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Managers\SpawnManager\SpawnManager.cs.meta
+          fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\Managers\SpawnManager\SpawnManager.cs.meta
+          projectPath: Assets\Managers\SpawnManager\SpawnManager.cs.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - path: Assets\Managers\SpawnManager\SpawnManager.prefab
+        label: SpawnManager.prefab
+        level: 3
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 1
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Managers\SpawnManager\SpawnManager.prefab
+          fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\Managers\SpawnManager\SpawnManager.prefab
+          projectPath: Assets\Managers\SpawnManager\SpawnManager.prefab
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - path: Assets\Managers\SpawnManager\SpawnManager.prefab.meta
+        label: SpawnManager.prefab.meta
+        level: 4
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 1
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Managers\SpawnManager\SpawnManager.prefab.meta
+          fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\Managers\SpawnManager\SpawnManager.prefab.meta
+          projectPath: Assets\Managers\SpawnManager\SpawnManager.prefab.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - path: Assets\Managers\TimeManager
+        label: TimeManager
+        level: 2
+        isFolder: 1
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: 
+          fullPath: 
+          projectPath: 
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 0
+      - path: Assets\Managers\TimeManager\TimeManager.cs
+        label: TimeManager.cs
+        level: 3
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 1
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Managers\TimeManager\TimeManager.cs
+          fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\Managers\TimeManager\TimeManager.cs
+          projectPath: Assets\Managers\TimeManager\TimeManager.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+      - path: Assets\Managers\UIHandler
+        label: UIHandler
+        level: 2
+        isFolder: 1
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: 
+          fullPath: 
+          projectPath: 
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 0
+      - path: Assets\Managers\UIHandler\UIHandler.cs
+        label: UIHandler.cs
+        level: 3
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 1
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Managers\UIHandler\UIHandler.cs
+          fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\Managers\UIHandler\UIHandler.cs
+          projectPath: Assets\Managers\UIHandler\UIHandler.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+      - path: Assets\savedscene.unity
+        label: savedscene.unity
+        level: 1
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 1
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\savedscene.unity
+          fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\savedscene.unity
+          projectPath: Assets\savedscene.unity
+          originalPath: 
+          indexStatus: 5
+          workTreeStatus: 0
+      - path: Assets\Scenes
+        label: Scenes
+        level: 1
+        isFolder: 1
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: 
+          fullPath: 
+          projectPath: 
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 0
+      - path: Assets\Scenes\Draft.meta
+        label: Draft.meta
+        level: 2
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 1
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Scenes\Draft.meta
+          fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\Scenes\Draft.meta
+          projectPath: Assets\Scenes\Draft.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - path: Assets\Scenes\Production.meta
+        label: Production.meta
+        level: 2
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 1
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Scenes\Production.meta
+          fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\Scenes\Production.meta
+          projectPath: Assets\Scenes\Production.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - path: Assets\Scenes\TestLevels.meta
+        label: TestLevels.meta
+        level: 2
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 1
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Scenes\TestLevels.meta
+          fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\Scenes\TestLevels.meta
+          projectPath: Assets\Scenes\TestLevels.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - path: Assets\Scenes\TestLevels
+        label: TestLevels
+        level: 2
+        isFolder: 1
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: 
+          fullPath: 
+          projectPath: 
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 0
+      - path: Assets\Scenes\TestLevels\SpawnTest.unity
+        label: SpawnTest.unity
+        level: 3
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 1
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Scenes\TestLevels\SpawnTest.unity
+          fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\Scenes\TestLevels\SpawnTest.unity
+          projectPath: Assets\Scenes\TestLevels\SpawnTest.unity
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - path: Assets\Scenes\TestLevels\SpawnTest.unity.meta
+        label: SpawnTest.unity.meta
+        level: 4
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 1
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Scenes\TestLevels\SpawnTest.unity.meta
+          fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\Scenes\TestLevels\SpawnTest.unity.meta
+          projectPath: Assets\Scenes\TestLevels\SpawnTest.unity.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - path: Assets\Scenes\TestLevels\TestPlayer.unity
+        label: TestPlayer.unity
+        level: 3
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 1
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Scenes\TestLevels\TestPlayer.unity
+          fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\Scenes\TestLevels\TestPlayer.unity
+          projectPath: Assets\Scenes\TestLevels\TestPlayer.unity
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - path: Assets\Scenes\TestLevels\TestPlayer.unity.meta
+        label: TestPlayer.unity.meta
+        level: 4
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 1
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Scenes\TestLevels\TestPlayer.unity.meta
+          fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\Scenes\TestLevels\TestPlayer.unity.meta
+          projectPath: Assets\Scenes\TestLevels\TestPlayer.unity.meta
+          originalPath: Assets\savedscene.unity.meta
+          indexStatus: 6
+          workTreeStatus: 0
+      - path: Assets\Scenes\TestLevels\TestUI.unity
+        label: TestUI.unity
+        level: 3
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 1
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Scenes\TestLevels\TestUI.unity
+          fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\Scenes\TestLevels\TestUI.unity
+          projectPath: Assets\Scenes\TestLevels\TestUI.unity
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - path: Assets\Scenes\TestLevels\TestUI.unity.meta
+        label: TestUI.unity.meta
+        level: 4
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 1
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Scenes\TestLevels\TestUI.unity.meta
+          fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\Scenes\TestLevels\TestUI.unity.meta
+          projectPath: Assets\Scenes\TestLevels\TestUI.unity.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - path: Assets\Spells
+        label: Spells
+        level: 1
+        isFolder: 1
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: 
+          fullPath: 
+          projectPath: 
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 0
+      - path: Assets\Spells\Projectiles
+        label: Projectiles
+        level: 2
+        isFolder: 1
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: 
+          fullPath: 
+          projectPath: 
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 0
+      - path: Assets\Spells\Projectiles\Projectile_Bullet
+        label: Projectile_Bullet
+        level: 3
+        isFolder: 1
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: 
+          fullPath: 
+          projectPath: 
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 0
+      - path: Assets\Spells\Projectiles\Projectile_Bullet\Projectile_Bullet.prefab
+        label: Projectile_Bullet.prefab
+        level: 4
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 1
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Spells\Projectiles\Projectile_Bullet\Projectile_Bullet.prefab
+          fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\Spells\Projectiles\Projectile_Bullet\Projectile_Bullet.prefab
+          projectPath: Assets\Spells\Projectiles\Projectile_Bullet\Projectile_Bullet.prefab
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+      - path: Assets\Spells\Projectiles\Projectile_Bullet\ProjectileScript.cs
+        label: ProjectileScript.cs
+        level: 4
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 1
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Spells\Projectiles\Projectile_Bullet\ProjectileScript.cs
+          fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\Spells\Projectiles\Projectile_Bullet\ProjectileScript.cs
+          projectPath: Assets\Spells\Projectiles\Projectile_Bullet\ProjectileScript.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+      - path: Assets\TextMesh Pro.meta
+        label: TextMesh Pro.meta
+        level: 1
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 1
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\TextMesh Pro.meta
+          fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\TextMesh
+            Pro.meta
+          projectPath: Assets\TextMesh Pro.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - path: Assets\TextMesh Pro
+        label: TextMesh Pro
+        level: 1
+        isFolder: 1
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: 
+          fullPath: 
+          projectPath: 
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 0
+      - path: Assets\TextMesh Pro\Documentation.meta
+        label: Documentation.meta
+        level: 2
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 1
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\TextMesh Pro\Documentation.meta
+          fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\TextMesh
+            Pro\Documentation.meta
+          projectPath: Assets\TextMesh Pro\Documentation.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - path: Assets\TextMesh Pro\Documentation
+        label: Documentation
+        level: 2
+        isFolder: 1
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: 
+          fullPath: 
+          projectPath: 
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 0
+      - path: Assets\TextMesh Pro\Documentation\TextMesh Pro User Guide 2016.pdf
+        label: TextMesh Pro User Guide 2016.pdf
+        level: 3
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 1
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\TextMesh Pro\Documentation\TextMesh Pro User Guide 2016.pdf
+          fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\TextMesh
+            Pro\Documentation\TextMesh Pro User Guide 2016.pdf
+          projectPath: Assets\TextMesh Pro\Documentation\TextMesh Pro User Guide
+            2016.pdf
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - path: Assets\TextMesh Pro\Documentation\TextMesh Pro User Guide 2016.pdf.meta
+        label: TextMesh Pro User Guide 2016.pdf.meta
+        level: 4
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 1
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\TextMesh Pro\Documentation\TextMesh Pro User Guide 2016.pdf.meta
+          fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\TextMesh
+            Pro\Documentation\TextMesh Pro User Guide 2016.pdf.meta
+          projectPath: Assets\TextMesh Pro\Documentation\TextMesh Pro User Guide
+            2016.pdf.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - path: Assets\TextMesh Pro\Fonts.meta
+        label: Fonts.meta
+        level: 2
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 1
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\TextMesh Pro\Fonts.meta
+          fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\TextMesh
+            Pro\Fonts.meta
+          projectPath: Assets\TextMesh Pro\Fonts.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - path: Assets\TextMesh Pro\Fonts
+        label: Fonts
+        level: 2
+        isFolder: 1
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: 
+          fullPath: 
+          projectPath: 
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 0
+      - path: Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt
+        label: LiberationSans - OFL.txt
+        level: 3
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 1
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt
+          fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\TextMesh
+            Pro\Fonts\LiberationSans - OFL.txt
+          projectPath: Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - path: Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt.meta
+        label: LiberationSans - OFL.txt.meta
+        level: 4
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 1
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt.meta
+          fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\TextMesh
+            Pro\Fonts\LiberationSans - OFL.txt.meta
+          projectPath: Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - path: Assets\TextMesh Pro\Fonts\LiberationSans.ttf
+        label: LiberationSans.ttf
+        level: 3
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 1
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\TextMesh Pro\Fonts\LiberationSans.ttf
+          fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\TextMesh
+            Pro\Fonts\LiberationSans.ttf
+          projectPath: Assets\TextMesh Pro\Fonts\LiberationSans.ttf
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - path: Assets\TextMesh Pro\Fonts\LiberationSans.ttf.meta
+        label: LiberationSans.ttf.meta
+        level: 4
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 1
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\TextMesh Pro\Fonts\LiberationSans.ttf.meta
+          fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\TextMesh
+            Pro\Fonts\LiberationSans.ttf.meta
+          projectPath: Assets\TextMesh Pro\Fonts\LiberationSans.ttf.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - path: Assets\TextMesh Pro\Resources.meta
+        label: Resources.meta
+        level: 2
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 1
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\TextMesh Pro\Resources.meta
+          fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\TextMesh
+            Pro\Resources.meta
+          projectPath: Assets\TextMesh Pro\Resources.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - path: Assets\TextMesh Pro\Resources
+        label: Resources
+        level: 2
+        isFolder: 1
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: 
+          fullPath: 
+          projectPath: 
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 0
+      - path: Assets\TextMesh Pro\Resources\Fonts & Materials.meta
+        label: Fonts & Materials.meta
+        level: 3
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 1
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\TextMesh Pro\Resources\Fonts & Materials.meta
+          fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\TextMesh
+            Pro\Resources\Fonts & Materials.meta
+          projectPath: Assets\TextMesh Pro\Resources\Fonts & Materials.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - path: Assets\TextMesh Pro\Resources\Fonts & Materials
+        label: Fonts & Materials
+        level: 3
+        isFolder: 1
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: 
+          fullPath: 
+          projectPath: 
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 0
+      - path: Assets\TextMesh Pro\Resources\Fonts & Materials\LiberationSans SDF
+          - Drop Shadow.mat
+        label: LiberationSans SDF - Drop Shadow.mat
+        level: 4
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 1
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\TextMesh Pro\Resources\Fonts & Materials\LiberationSans SDF
+            - Drop Shadow.mat
+          fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\TextMesh
+            Pro\Resources\Fonts & Materials\LiberationSans SDF - Drop Shadow.mat
+          projectPath: Assets\TextMesh Pro\Resources\Fonts & Materials\LiberationSans
+            SDF - Drop Shadow.mat
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - path: Assets\TextMesh Pro\Resources\Fonts & Materials\LiberationSans SDF
+          - Drop Shadow.mat.meta
+        label: LiberationSans SDF - Drop Shadow.mat.meta
+        level: 5
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 1
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\TextMesh Pro\Resources\Fonts & Materials\LiberationSans SDF
+            - Drop Shadow.mat.meta
+          fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\TextMesh
+            Pro\Resources\Fonts & Materials\LiberationSans SDF - Drop Shadow.mat.meta
+          projectPath: Assets\TextMesh Pro\Resources\Fonts & Materials\LiberationSans
+            SDF - Drop Shadow.mat.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - path: Assets\TextMesh Pro\Resources\Fonts & Materials\LiberationSans SDF
+          - Fallback.asset
+        label: LiberationSans SDF - Fallback.asset
+        level: 4
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 1
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\TextMesh Pro\Resources\Fonts & Materials\LiberationSans SDF
+            - Fallback.asset
+          fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\TextMesh
+            Pro\Resources\Fonts & Materials\LiberationSans SDF - Fallback.asset
+          projectPath: Assets\TextMesh Pro\Resources\Fonts & Materials\LiberationSans
+            SDF - Fallback.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - path: Assets\TextMesh Pro\Resources\Fonts & Materials\LiberationSans SDF
+          - Fallback.asset.meta
+        label: LiberationSans SDF - Fallback.asset.meta
+        level: 5
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 1
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\TextMesh Pro\Resources\Fonts & Materials\LiberationSans SDF
+            - Fallback.asset.meta
+          fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\TextMesh
+            Pro\Resources\Fonts & Materials\LiberationSans SDF - Fallback.asset.meta
+          projectPath: Assets\TextMesh Pro\Resources\Fonts & Materials\LiberationSans
+            SDF - Fallback.asset.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - path: Assets\TextMesh Pro\Resources\Fonts & Materials\LiberationSans SDF
+          - Outline.mat
+        label: LiberationSans SDF - Outline.mat
+        level: 4
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 1
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\TextMesh Pro\Resources\Fonts & Materials\LiberationSans SDF
+            - Outline.mat
+          fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\TextMesh
+            Pro\Resources\Fonts & Materials\LiberationSans SDF - Outline.mat
+          projectPath: Assets\TextMesh Pro\Resources\Fonts & Materials\LiberationSans
+            SDF - Outline.mat
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - path: Assets\TextMesh Pro\Resources\Fonts & Materials\LiberationSans SDF
+          - Outline.mat.meta
+        label: LiberationSans SDF - Outline.mat.meta
+        level: 5
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 1
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\TextMesh Pro\Resources\Fonts & Materials\LiberationSans SDF
+            - Outline.mat.meta
+          fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\TextMesh
+            Pro\Resources\Fonts & Materials\LiberationSans SDF - Outline.mat.meta
+          projectPath: Assets\TextMesh Pro\Resources\Fonts & Materials\LiberationSans
+            SDF - Outline.mat.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - path: Assets\TextMesh Pro\Resources\Fonts & Materials\LiberationSans SDF.asset
+        label: LiberationSans SDF.asset
+        level: 4
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 1
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\TextMesh Pro\Resources\Fonts & Materials\LiberationSans SDF.asset
+          fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\TextMesh
+            Pro\Resources\Fonts & Materials\LiberationSans SDF.asset
+          projectPath: Assets\TextMesh Pro\Resources\Fonts & Materials\LiberationSans
+            SDF.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - path: Assets\TextMesh Pro\Resources\Fonts & Materials\LiberationSans SDF.asset.meta
+        label: LiberationSans SDF.asset.meta
+        level: 5
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 1
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\TextMesh Pro\Resources\Fonts & Materials\LiberationSans SDF.asset.meta
+          fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\TextMesh
+            Pro\Resources\Fonts & Materials\LiberationSans SDF.asset.meta
+          projectPath: Assets\TextMesh Pro\Resources\Fonts & Materials\LiberationSans
+            SDF.asset.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - path: Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt
+        label: LineBreaking Following Characters.txt
+        level: 3
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 1
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt
+          fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\TextMesh
+            Pro\Resources\LineBreaking Following Characters.txt
+          projectPath: Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - path: Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt.meta
+        label: LineBreaking Following Characters.txt.meta
+        level: 4
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 1
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt.meta
+          fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\TextMesh
+            Pro\Resources\LineBreaking Following Characters.txt.meta
+          projectPath: Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - path: Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt
+        label: LineBreaking Leading Characters.txt
+        level: 3
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 1
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt
+          fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\TextMesh
+            Pro\Resources\LineBreaking Leading Characters.txt
+          projectPath: Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - path: Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt.meta
+        label: LineBreaking Leading Characters.txt.meta
+        level: 4
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 1
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt.meta
+          fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\TextMesh
+            Pro\Resources\LineBreaking Leading Characters.txt.meta
+          projectPath: Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - path: Assets\TextMesh Pro\Resources\Sprite Assets.meta
+        label: Sprite Assets.meta
+        level: 3
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 1
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\TextMesh Pro\Resources\Sprite Assets.meta
+          fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\TextMesh
+            Pro\Resources\Sprite Assets.meta
+          projectPath: Assets\TextMesh Pro\Resources\Sprite Assets.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - path: Assets\TextMesh Pro\Resources\Sprite Assets
+        label: Sprite Assets
+        level: 3
+        isFolder: 1
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: 
+          fullPath: 
+          projectPath: 
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 0
+      - path: Assets\TextMesh Pro\Resources\Sprite Assets\EmojiOne.asset
+        label: EmojiOne.asset
+        level: 4
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 1
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\TextMesh Pro\Resources\Sprite Assets\EmojiOne.asset
+          fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\TextMesh
+            Pro\Resources\Sprite Assets\EmojiOne.asset
+          projectPath: Assets\TextMesh Pro\Resources\Sprite Assets\EmojiOne.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - path: Assets\TextMesh Pro\Resources\Sprite Assets\EmojiOne.asset.meta
+        label: EmojiOne.asset.meta
+        level: 5
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 1
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\TextMesh Pro\Resources\Sprite Assets\EmojiOne.asset.meta
+          fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\TextMesh
+            Pro\Resources\Sprite Assets\EmojiOne.asset.meta
+          projectPath: Assets\TextMesh Pro\Resources\Sprite Assets\EmojiOne.asset.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - path: Assets\TextMesh Pro\Resources\Style Sheets.meta
+        label: Style Sheets.meta
+        level: 3
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 1
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\TextMesh Pro\Resources\Style Sheets.meta
+          fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\TextMesh
+            Pro\Resources\Style Sheets.meta
+          projectPath: Assets\TextMesh Pro\Resources\Style Sheets.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - path: Assets\TextMesh Pro\Resources\Style Sheets
+        label: Style Sheets
+        level: 3
+        isFolder: 1
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: 
+          fullPath: 
+          projectPath: 
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 0
+      - path: Assets\TextMesh Pro\Resources\Style Sheets\Default Style Sheet.asset
+        label: Default Style Sheet.asset
+        level: 4
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 1
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\TextMesh Pro\Resources\Style Sheets\Default Style Sheet.asset
+          fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\TextMesh
+            Pro\Resources\Style Sheets\Default Style Sheet.asset
+          projectPath: Assets\TextMesh Pro\Resources\Style Sheets\Default Style Sheet.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - path: Assets\TextMesh Pro\Resources\Style Sheets\Default Style Sheet.asset.meta
+        label: Default Style Sheet.asset.meta
+        level: 5
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 1
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\TextMesh Pro\Resources\Style Sheets\Default Style Sheet.asset.meta
+          fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\TextMesh
+            Pro\Resources\Style Sheets\Default Style Sheet.asset.meta
+          projectPath: Assets\TextMesh Pro\Resources\Style Sheets\Default Style Sheet.asset.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - path: Assets\TextMesh Pro\Resources\TMP Settings.asset
+        label: TMP Settings.asset
+        level: 3
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 1
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\TextMesh Pro\Resources\TMP Settings.asset
+          fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\TextMesh
+            Pro\Resources\TMP Settings.asset
+          projectPath: Assets\TextMesh Pro\Resources\TMP Settings.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - path: Assets\TextMesh Pro\Resources\TMP Settings.asset.meta
+        label: TMP Settings.asset.meta
+        level: 4
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 1
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\TextMesh Pro\Resources\TMP Settings.asset.meta
+          fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\TextMesh
+            Pro\Resources\TMP Settings.asset.meta
+          projectPath: Assets\TextMesh Pro\Resources\TMP Settings.asset.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - path: Assets\TextMesh Pro\Shaders.meta
+        label: Shaders.meta
+        level: 2
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 1
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\TextMesh Pro\Shaders.meta
+          fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\TextMesh
+            Pro\Shaders.meta
+          projectPath: Assets\TextMesh Pro\Shaders.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - path: Assets\TextMesh Pro\Shaders
+        label: Shaders
+        level: 2
+        isFolder: 1
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: 
+          fullPath: 
+          projectPath: 
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 0
+      - path: Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader
+        label: TMP_Bitmap.shader
+        level: 3
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 1
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader
+          fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\TextMesh
+            Pro\Shaders\TMP_Bitmap.shader
+          projectPath: Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - path: Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader.meta
+        label: TMP_Bitmap.shader.meta
+        level: 4
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 1
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader.meta
+          fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\TextMesh
+            Pro\Shaders\TMP_Bitmap.shader.meta
+          projectPath: Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - path: Assets\TextMesh Pro\Shaders\TMP_Bitmap-Custom-Atlas.shader
+        label: TMP_Bitmap-Custom-Atlas.shader
+        level: 3
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 1
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\TextMesh Pro\Shaders\TMP_Bitmap-Custom-Atlas.shader
+          fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\TextMesh
+            Pro\Shaders\TMP_Bitmap-Custom-Atlas.shader
+          projectPath: Assets\TextMesh Pro\Shaders\TMP_Bitmap-Custom-Atlas.shader
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - path: Assets\TextMesh Pro\Shaders\TMP_Bitmap-Custom-Atlas.shader.meta
+        label: TMP_Bitmap-Custom-Atlas.shader.meta
+        level: 4
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 1
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\TextMesh Pro\Shaders\TMP_Bitmap-Custom-Atlas.shader.meta
+          fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\TextMesh
+            Pro\Shaders\TMP_Bitmap-Custom-Atlas.shader.meta
+          projectPath: Assets\TextMesh Pro\Shaders\TMP_Bitmap-Custom-Atlas.shader.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - path: Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader
+        label: TMP_Bitmap-Mobile.shader
+        level: 3
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 1
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader
+          fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\TextMesh
+            Pro\Shaders\TMP_Bitmap-Mobile.shader
+          projectPath: Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - path: Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader.meta
+        label: TMP_Bitmap-Mobile.shader.meta
+        level: 4
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 1
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader.meta
+          fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\TextMesh
+            Pro\Shaders\TMP_Bitmap-Mobile.shader.meta
+          projectPath: Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - path: Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader
+        label: TMP_SDF Overlay.shader
+        level: 3
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 1
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader
+          fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\TextMesh
+            Pro\Shaders\TMP_SDF Overlay.shader
+          projectPath: Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - path: Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader.meta
+        label: TMP_SDF Overlay.shader.meta
+        level: 4
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 1
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader.meta
+          fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\TextMesh
+            Pro\Shaders\TMP_SDF Overlay.shader.meta
+          projectPath: Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - path: Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader
+        label: TMP_SDF SSD.shader
+        level: 3
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 1
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader
+          fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\TextMesh
+            Pro\Shaders\TMP_SDF SSD.shader
+          projectPath: Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - path: Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader.meta
+        label: TMP_SDF SSD.shader.meta
+        level: 4
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 1
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader.meta
+          fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\TextMesh
+            Pro\Shaders\TMP_SDF SSD.shader.meta
+          projectPath: Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - path: Assets\TextMesh Pro\Shaders\TMP_SDF.shader
+        label: TMP_SDF.shader
+        level: 3
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 1
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\TextMesh Pro\Shaders\TMP_SDF.shader
+          fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\TextMesh
+            Pro\Shaders\TMP_SDF.shader
+          projectPath: Assets\TextMesh Pro\Shaders\TMP_SDF.shader
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - path: Assets\TextMesh Pro\Shaders\TMP_SDF.shader.meta
+        label: TMP_SDF.shader.meta
+        level: 4
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 1
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\TextMesh Pro\Shaders\TMP_SDF.shader.meta
+          fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\TextMesh
+            Pro\Shaders\TMP_SDF.shader.meta
+          projectPath: Assets\TextMesh Pro\Shaders\TMP_SDF.shader.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - path: Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader
+        label: TMP_SDF-Mobile Masking.shader
+        level: 3
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 1
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader
+          fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\TextMesh
+            Pro\Shaders\TMP_SDF-Mobile Masking.shader
+          projectPath: Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - path: Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader.meta
+        label: TMP_SDF-Mobile Masking.shader.meta
+        level: 4
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 1
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader.meta
+          fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\TextMesh
+            Pro\Shaders\TMP_SDF-Mobile Masking.shader.meta
+          projectPath: Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - path: Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader
+        label: TMP_SDF-Mobile Overlay.shader
+        level: 3
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 1
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader
+          fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\TextMesh
+            Pro\Shaders\TMP_SDF-Mobile Overlay.shader
+          projectPath: Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - path: Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader.meta
+        label: TMP_SDF-Mobile Overlay.shader.meta
+        level: 4
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 1
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader.meta
+          fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\TextMesh
+            Pro\Shaders\TMP_SDF-Mobile Overlay.shader.meta
+          projectPath: Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - path: Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile SSD.shader
+        label: TMP_SDF-Mobile SSD.shader
+        level: 3
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 1
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile SSD.shader
+          fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\TextMesh
+            Pro\Shaders\TMP_SDF-Mobile SSD.shader
+          projectPath: Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile SSD.shader
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - path: Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile SSD.shader.meta
+        label: TMP_SDF-Mobile SSD.shader.meta
+        level: 4
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 1
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile SSD.shader.meta
+          fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\TextMesh
+            Pro\Shaders\TMP_SDF-Mobile SSD.shader.meta
+          projectPath: Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile SSD.shader.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - path: Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader
+        label: TMP_SDF-Mobile.shader
+        level: 3
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 1
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader
+          fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\TextMesh
+            Pro\Shaders\TMP_SDF-Mobile.shader
+          projectPath: Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - path: Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader.meta
+        label: TMP_SDF-Mobile.shader.meta
+        level: 4
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 1
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader.meta
+          fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\TextMesh
+            Pro\Shaders\TMP_SDF-Mobile.shader.meta
+          projectPath: Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - path: Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader
+        label: TMP_SDF-Surface.shader
+        level: 3
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 1
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader
+          fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\TextMesh
+            Pro\Shaders\TMP_SDF-Surface.shader
+          projectPath: Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - path: Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader.meta
+        label: TMP_SDF-Surface.shader.meta
+        level: 4
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 1
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader.meta
+          fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\TextMesh
+            Pro\Shaders\TMP_SDF-Surface.shader.meta
+          projectPath: Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - path: Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader
+        label: TMP_SDF-Surface-Mobile.shader
+        level: 3
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 1
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader
+          fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\TextMesh
+            Pro\Shaders\TMP_SDF-Surface-Mobile.shader
+          projectPath: Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - path: Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader.meta
+        label: TMP_SDF-Surface-Mobile.shader.meta
+        level: 4
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 1
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader.meta
+          fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\TextMesh
+            Pro\Shaders\TMP_SDF-Surface-Mobile.shader.meta
+          projectPath: Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - path: Assets\TextMesh Pro\Shaders\TMP_Sprite.shader
+        label: TMP_Sprite.shader
+        level: 3
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 1
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\TextMesh Pro\Shaders\TMP_Sprite.shader
+          fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\TextMesh
+            Pro\Shaders\TMP_Sprite.shader
+          projectPath: Assets\TextMesh Pro\Shaders\TMP_Sprite.shader
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - path: Assets\TextMesh Pro\Shaders\TMP_Sprite.shader.meta
+        label: TMP_Sprite.shader.meta
+        level: 4
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 1
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\TextMesh Pro\Shaders\TMP_Sprite.shader.meta
+          fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\TextMesh
+            Pro\Shaders\TMP_Sprite.shader.meta
+          projectPath: Assets\TextMesh Pro\Shaders\TMP_Sprite.shader.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - path: Assets\TextMesh Pro\Shaders\TMPro.cginc
+        label: TMPro.cginc
+        level: 3
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 1
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\TextMesh Pro\Shaders\TMPro.cginc
+          fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\TextMesh
+            Pro\Shaders\TMPro.cginc
+          projectPath: Assets\TextMesh Pro\Shaders\TMPro.cginc
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - path: Assets\TextMesh Pro\Shaders\TMPro.cginc.meta
+        label: TMPro.cginc.meta
+        level: 4
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 1
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\TextMesh Pro\Shaders\TMPro.cginc.meta
+          fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\TextMesh
+            Pro\Shaders\TMPro.cginc.meta
+          projectPath: Assets\TextMesh Pro\Shaders\TMPro.cginc.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - path: Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc
+        label: TMPro_Mobile.cginc
+        level: 3
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 1
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc
+          fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\TextMesh
+            Pro\Shaders\TMPro_Mobile.cginc
+          projectPath: Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - path: Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc.meta
+        label: TMPro_Mobile.cginc.meta
+        level: 4
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 1
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc.meta
+          fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\TextMesh
+            Pro\Shaders\TMPro_Mobile.cginc.meta
+          projectPath: Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - path: Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc
+        label: TMPro_Properties.cginc
+        level: 3
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 1
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc
+          fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\TextMesh
+            Pro\Shaders\TMPro_Properties.cginc
+          projectPath: Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - path: Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc.meta
+        label: TMPro_Properties.cginc.meta
+        level: 4
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 1
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc.meta
+          fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\TextMesh
+            Pro\Shaders\TMPro_Properties.cginc.meta
+          projectPath: Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - path: Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc
+        label: TMPro_Surface.cginc
+        level: 3
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 1
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc
+          fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\TextMesh
+            Pro\Shaders\TMPro_Surface.cginc
+          projectPath: Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - path: Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc.meta
+        label: TMPro_Surface.cginc.meta
+        level: 4
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 1
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc.meta
+          fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\TextMesh
+            Pro\Shaders\TMPro_Surface.cginc.meta
+          projectPath: Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - path: Assets\TextMesh Pro\Sprites.meta
+        label: Sprites.meta
+        level: 2
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 1
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\TextMesh Pro\Sprites.meta
+          fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\TextMesh
+            Pro\Sprites.meta
+          projectPath: Assets\TextMesh Pro\Sprites.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - path: Assets\TextMesh Pro\Sprites
+        label: Sprites
+        level: 2
+        isFolder: 1
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: 
+          fullPath: 
+          projectPath: 
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 0
+      - path: Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt
+        label: EmojiOne Attribution.txt
+        level: 3
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 1
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt
+          fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\TextMesh
+            Pro\Sprites\EmojiOne Attribution.txt
+          projectPath: Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - path: Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt.meta
+        label: EmojiOne Attribution.txt.meta
+        level: 4
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 1
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt.meta
+          fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\TextMesh
+            Pro\Sprites\EmojiOne Attribution.txt.meta
+          projectPath: Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - path: Assets\TextMesh Pro\Sprites\EmojiOne.json
+        label: EmojiOne.json
+        level: 3
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 1
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\TextMesh Pro\Sprites\EmojiOne.json
+          fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\TextMesh
+            Pro\Sprites\EmojiOne.json
+          projectPath: Assets\TextMesh Pro\Sprites\EmojiOne.json
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - path: Assets\TextMesh Pro\Sprites\EmojiOne.json.meta
+        label: EmojiOne.json.meta
+        level: 4
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 1
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\TextMesh Pro\Sprites\EmojiOne.json.meta
+          fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\TextMesh
+            Pro\Sprites\EmojiOne.json.meta
+          projectPath: Assets\TextMesh Pro\Sprites\EmojiOne.json.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - path: Assets\TextMesh Pro\Sprites\EmojiOne.png
+        label: EmojiOne.png
+        level: 3
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 1
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\TextMesh Pro\Sprites\EmojiOne.png
+          fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\TextMesh
+            Pro\Sprites\EmojiOne.png
+          projectPath: Assets\TextMesh Pro\Sprites\EmojiOne.png
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - path: Assets\TextMesh Pro\Sprites\EmojiOne.png.meta
+        label: EmojiOne.png.meta
+        level: 4
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 1
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\TextMesh Pro\Sprites\EmojiOne.png.meta
+          fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\TextMesh
+            Pro\Sprites\EmojiOne.png.meta
+          projectPath: Assets\TextMesh Pro\Sprites\EmojiOne.png.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
       - path: UserSettings
         label: UserSettings
         level: 0
@@ -593,6 +4863,24 @@ MonoBehaviour:
           projectPath: 
           originalPath: 
           indexStatus: 0
+          workTreeStatus: 0
+      - path: UserSettings\EditorUserSettings.asset
+        label: EditorUserSettings.asset
+        level: 1
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 1
+        isLocked: 0
+        gitStatusEntry:
+          path: UserSettings\EditorUserSettings.asset
+          fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\UserSettings\EditorUserSettings.asset
+          projectPath: UserSettings\EditorUserSettings.asset
+          originalPath: 
+          indexStatus: 3
           workTreeStatus: 0
       - path: UserSettings\Layouts
         label: Layouts
@@ -628,8 +4916,8 @@ MonoBehaviour:
           fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\UserSettings\Layouts\default-2021.dwlt
           projectPath: UserSettings\Layouts\default-2021.dwlt
           originalPath: 
-          indexStatus: 0
-          workTreeStatus: 3
+          indexStatus: 9
+          workTreeStatus: 9
       selectedNode:
         path: 
         label: 
@@ -650,21 +4938,684 @@ MonoBehaviour:
           indexStatus: 0
           workTreeStatus: 0
     gitStatusEntries:
+    - path: Assets\Characters\Player\Player.prefab
+      fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\Characters\Player\Player.prefab
+      projectPath: Assets\Characters\Player\Player.prefab
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: Assets\Characters\Player\Player.prefab.meta
+      fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\Characters\Player\Player.prefab.meta
+      projectPath: Assets\Characters\Player\Player.prefab.meta
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: Assets\Characters\Player\Scripts\Player.cs
+      fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\Characters\Player\Scripts\Player.cs
+      projectPath: Assets\Characters\Player\Scripts\Player.cs
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\Characters\Player\Scripts\Player.cs.meta
+      fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\Characters\Player\Scripts\Player.cs.meta
+      projectPath: Assets\Characters\Player\Scripts\Player.cs.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\Characters\Player\Scripts\PlayerMovement.cs
+      fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\Characters\Player\Scripts\PlayerMovement.cs
+      projectPath: Assets\Characters\Player\Scripts\PlayerMovement.cs
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: Assets\Characters\Player\Scripts\Weapon.cs
+      fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\Characters\Player\Scripts\Weapon.cs
+      projectPath: Assets\Characters\Player\Scripts\Weapon.cs
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: Assets\Interface\Timer\UI_Timer.cs
+      fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\Interface\Timer\UI_Timer.cs
+      projectPath: Assets\Interface\Timer\UI_Timer.cs
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\Interface\Timer\UI_Timer.cs.meta
+      fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\Interface\Timer\UI_Timer.cs.meta
+      projectPath: Assets\Interface\Timer\UI_Timer.cs.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\Interface\Timer\UI_Timer.prefab
+      fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\Interface\Timer\UI_Timer.prefab
+      projectPath: Assets\Interface\Timer\UI_Timer.prefab
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: Assets\Managers\GameManager\GameManager.cs
+      fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\Managers\GameManager\GameManager.cs
+      projectPath: Assets\Managers\GameManager\GameManager.cs
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: Assets\Managers\SpawnManager\SpawnManager.cs
+      fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\Managers\SpawnManager\SpawnManager.cs
+      projectPath: Assets\Managers\SpawnManager\SpawnManager.cs
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\Managers\SpawnManager\SpawnManager.cs.meta
+      fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\Managers\SpawnManager\SpawnManager.cs.meta
+      projectPath: Assets\Managers\SpawnManager\SpawnManager.cs.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\Managers\SpawnManager\SpawnManager.prefab
+      fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\Managers\SpawnManager\SpawnManager.prefab
+      projectPath: Assets\Managers\SpawnManager\SpawnManager.prefab
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\Managers\SpawnManager\SpawnManager.prefab.meta
+      fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\Managers\SpawnManager\SpawnManager.prefab.meta
+      projectPath: Assets\Managers\SpawnManager\SpawnManager.prefab.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\Managers\TimeManager\TimeManager.cs
+      fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\Managers\TimeManager\TimeManager.cs
+      projectPath: Assets\Managers\TimeManager\TimeManager.cs
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: Assets\Managers\UIHandler\UIHandler.cs
+      fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\Managers\UIHandler\UIHandler.cs
+      projectPath: Assets\Managers\UIHandler\UIHandler.cs
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: Assets\savedscene.unity
+      fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\savedscene.unity
+      projectPath: Assets\savedscene.unity
+      originalPath: 
+      indexStatus: 5
+      workTreeStatus: 0
+    - path: Assets\Scenes\Draft.meta
+      fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\Scenes\Draft.meta
+      projectPath: Assets\Scenes\Draft.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\Scenes\Production.meta
+      fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\Scenes\Production.meta
+      projectPath: Assets\Scenes\Production.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\Scenes\TestLevels.meta
+      fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\Scenes\TestLevels.meta
+      projectPath: Assets\Scenes\TestLevels.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\Scenes\TestLevels\SpawnTest.unity
+      fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\Scenes\TestLevels\SpawnTest.unity
+      projectPath: Assets\Scenes\TestLevels\SpawnTest.unity
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\Scenes\TestLevels\SpawnTest.unity.meta
+      fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\Scenes\TestLevels\SpawnTest.unity.meta
+      projectPath: Assets\Scenes\TestLevels\SpawnTest.unity.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\Scenes\TestLevels\TestPlayer.unity
+      fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\Scenes\TestLevels\TestPlayer.unity
+      projectPath: Assets\Scenes\TestLevels\TestPlayer.unity
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\Scenes\TestLevels\TestPlayer.unity.meta
+      fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\Scenes\TestLevels\TestPlayer.unity.meta
+      projectPath: Assets\Scenes\TestLevels\TestPlayer.unity.meta
+      originalPath: Assets\savedscene.unity.meta
+      indexStatus: 6
+      workTreeStatus: 0
+    - path: Assets\Scenes\TestLevels\TestUI.unity
+      fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\Scenes\TestLevels\TestUI.unity
+      projectPath: Assets\Scenes\TestLevels\TestUI.unity
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\Scenes\TestLevels\TestUI.unity.meta
+      fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\Scenes\TestLevels\TestUI.unity.meta
+      projectPath: Assets\Scenes\TestLevels\TestUI.unity.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\Spells\Projectiles\Projectile_Bullet\Projectile_Bullet.prefab
+      fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\Spells\Projectiles\Projectile_Bullet\Projectile_Bullet.prefab
+      projectPath: Assets\Spells\Projectiles\Projectile_Bullet\Projectile_Bullet.prefab
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: Assets\Spells\Projectiles\Projectile_Bullet\ProjectileScript.cs
+      fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\Spells\Projectiles\Projectile_Bullet\ProjectileScript.cs
+      projectPath: Assets\Spells\Projectiles\Projectile_Bullet\ProjectileScript.cs
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: Assets\TextMesh Pro.meta
+      fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\TextMesh Pro.meta
+      projectPath: Assets\TextMesh Pro.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\TextMesh Pro\Documentation.meta
+      fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\TextMesh Pro\Documentation.meta
+      projectPath: Assets\TextMesh Pro\Documentation.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\TextMesh Pro\Documentation\TextMesh Pro User Guide 2016.pdf
+      fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\TextMesh Pro\Documentation\TextMesh
+        Pro User Guide 2016.pdf
+      projectPath: Assets\TextMesh Pro\Documentation\TextMesh Pro User Guide 2016.pdf
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\TextMesh Pro\Documentation\TextMesh Pro User Guide 2016.pdf.meta
+      fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\TextMesh Pro\Documentation\TextMesh
+        Pro User Guide 2016.pdf.meta
+      projectPath: Assets\TextMesh Pro\Documentation\TextMesh Pro User Guide 2016.pdf.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\TextMesh Pro\Fonts.meta
+      fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\TextMesh Pro\Fonts.meta
+      projectPath: Assets\TextMesh Pro\Fonts.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt
+      fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\TextMesh Pro\Fonts\LiberationSans
+        - OFL.txt
+      projectPath: Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt.meta
+      fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\TextMesh Pro\Fonts\LiberationSans
+        - OFL.txt.meta
+      projectPath: Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\TextMesh Pro\Fonts\LiberationSans.ttf
+      fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\TextMesh Pro\Fonts\LiberationSans.ttf
+      projectPath: Assets\TextMesh Pro\Fonts\LiberationSans.ttf
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\TextMesh Pro\Fonts\LiberationSans.ttf.meta
+      fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\TextMesh Pro\Fonts\LiberationSans.ttf.meta
+      projectPath: Assets\TextMesh Pro\Fonts\LiberationSans.ttf.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\TextMesh Pro\Resources.meta
+      fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\TextMesh Pro\Resources.meta
+      projectPath: Assets\TextMesh Pro\Resources.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\TextMesh Pro\Resources\Fonts & Materials.meta
+      fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\TextMesh Pro\Resources\Fonts
+        & Materials.meta
+      projectPath: Assets\TextMesh Pro\Resources\Fonts & Materials.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\TextMesh Pro\Resources\Fonts & Materials\LiberationSans SDF -
+        Drop Shadow.mat
+      fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\TextMesh Pro\Resources\Fonts
+        & Materials\LiberationSans SDF - Drop Shadow.mat
+      projectPath: Assets\TextMesh Pro\Resources\Fonts & Materials\LiberationSans
+        SDF - Drop Shadow.mat
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\TextMesh Pro\Resources\Fonts & Materials\LiberationSans SDF -
+        Drop Shadow.mat.meta
+      fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\TextMesh Pro\Resources\Fonts
+        & Materials\LiberationSans SDF - Drop Shadow.mat.meta
+      projectPath: Assets\TextMesh Pro\Resources\Fonts & Materials\LiberationSans
+        SDF - Drop Shadow.mat.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\TextMesh Pro\Resources\Fonts & Materials\LiberationSans SDF -
+        Fallback.asset
+      fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\TextMesh Pro\Resources\Fonts
+        & Materials\LiberationSans SDF - Fallback.asset
+      projectPath: Assets\TextMesh Pro\Resources\Fonts & Materials\LiberationSans
+        SDF - Fallback.asset
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\TextMesh Pro\Resources\Fonts & Materials\LiberationSans SDF -
+        Fallback.asset.meta
+      fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\TextMesh Pro\Resources\Fonts
+        & Materials\LiberationSans SDF - Fallback.asset.meta
+      projectPath: Assets\TextMesh Pro\Resources\Fonts & Materials\LiberationSans
+        SDF - Fallback.asset.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\TextMesh Pro\Resources\Fonts & Materials\LiberationSans SDF -
+        Outline.mat
+      fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\TextMesh Pro\Resources\Fonts
+        & Materials\LiberationSans SDF - Outline.mat
+      projectPath: Assets\TextMesh Pro\Resources\Fonts & Materials\LiberationSans
+        SDF - Outline.mat
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\TextMesh Pro\Resources\Fonts & Materials\LiberationSans SDF -
+        Outline.mat.meta
+      fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\TextMesh Pro\Resources\Fonts
+        & Materials\LiberationSans SDF - Outline.mat.meta
+      projectPath: Assets\TextMesh Pro\Resources\Fonts & Materials\LiberationSans
+        SDF - Outline.mat.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\TextMesh Pro\Resources\Fonts & Materials\LiberationSans SDF.asset
+      fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\TextMesh Pro\Resources\Fonts
+        & Materials\LiberationSans SDF.asset
+      projectPath: Assets\TextMesh Pro\Resources\Fonts & Materials\LiberationSans
+        SDF.asset
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\TextMesh Pro\Resources\Fonts & Materials\LiberationSans SDF.asset.meta
+      fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\TextMesh Pro\Resources\Fonts
+        & Materials\LiberationSans SDF.asset.meta
+      projectPath: Assets\TextMesh Pro\Resources\Fonts & Materials\LiberationSans
+        SDF.asset.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt
+      fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\TextMesh Pro\Resources\LineBreaking
+        Following Characters.txt
+      projectPath: Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt.meta
+      fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\TextMesh Pro\Resources\LineBreaking
+        Following Characters.txt.meta
+      projectPath: Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt
+      fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\TextMesh Pro\Resources\LineBreaking
+        Leading Characters.txt
+      projectPath: Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt.meta
+      fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\TextMesh Pro\Resources\LineBreaking
+        Leading Characters.txt.meta
+      projectPath: Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\TextMesh Pro\Resources\Sprite Assets.meta
+      fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\TextMesh Pro\Resources\Sprite
+        Assets.meta
+      projectPath: Assets\TextMesh Pro\Resources\Sprite Assets.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\TextMesh Pro\Resources\Sprite Assets\EmojiOne.asset
+      fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\TextMesh Pro\Resources\Sprite
+        Assets\EmojiOne.asset
+      projectPath: Assets\TextMesh Pro\Resources\Sprite Assets\EmojiOne.asset
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\TextMesh Pro\Resources\Sprite Assets\EmojiOne.asset.meta
+      fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\TextMesh Pro\Resources\Sprite
+        Assets\EmojiOne.asset.meta
+      projectPath: Assets\TextMesh Pro\Resources\Sprite Assets\EmojiOne.asset.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\TextMesh Pro\Resources\Style Sheets.meta
+      fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\TextMesh Pro\Resources\Style
+        Sheets.meta
+      projectPath: Assets\TextMesh Pro\Resources\Style Sheets.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\TextMesh Pro\Resources\Style Sheets\Default Style Sheet.asset
+      fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\TextMesh Pro\Resources\Style
+        Sheets\Default Style Sheet.asset
+      projectPath: Assets\TextMesh Pro\Resources\Style Sheets\Default Style Sheet.asset
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\TextMesh Pro\Resources\Style Sheets\Default Style Sheet.asset.meta
+      fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\TextMesh Pro\Resources\Style
+        Sheets\Default Style Sheet.asset.meta
+      projectPath: Assets\TextMesh Pro\Resources\Style Sheets\Default Style Sheet.asset.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\TextMesh Pro\Resources\TMP Settings.asset
+      fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\TextMesh Pro\Resources\TMP
+        Settings.asset
+      projectPath: Assets\TextMesh Pro\Resources\TMP Settings.asset
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\TextMesh Pro\Resources\TMP Settings.asset.meta
+      fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\TextMesh Pro\Resources\TMP
+        Settings.asset.meta
+      projectPath: Assets\TextMesh Pro\Resources\TMP Settings.asset.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\TextMesh Pro\Shaders.meta
+      fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\TextMesh Pro\Shaders.meta
+      projectPath: Assets\TextMesh Pro\Shaders.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader
+      fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader
+      projectPath: Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader.meta
+      fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader.meta
+      projectPath: Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\TextMesh Pro\Shaders\TMP_Bitmap-Custom-Atlas.shader
+      fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\TextMesh Pro\Shaders\TMP_Bitmap-Custom-Atlas.shader
+      projectPath: Assets\TextMesh Pro\Shaders\TMP_Bitmap-Custom-Atlas.shader
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\TextMesh Pro\Shaders\TMP_Bitmap-Custom-Atlas.shader.meta
+      fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\TextMesh Pro\Shaders\TMP_Bitmap-Custom-Atlas.shader.meta
+      projectPath: Assets\TextMesh Pro\Shaders\TMP_Bitmap-Custom-Atlas.shader.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader
+      fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader
+      projectPath: Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader.meta
+      fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader.meta
+      projectPath: Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader
+      fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\TextMesh Pro\Shaders\TMP_SDF
+        Overlay.shader
+      projectPath: Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader.meta
+      fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\TextMesh Pro\Shaders\TMP_SDF
+        Overlay.shader.meta
+      projectPath: Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader
+      fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\TextMesh Pro\Shaders\TMP_SDF
+        SSD.shader
+      projectPath: Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader.meta
+      fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\TextMesh Pro\Shaders\TMP_SDF
+        SSD.shader.meta
+      projectPath: Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\TextMesh Pro\Shaders\TMP_SDF.shader
+      fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\TextMesh Pro\Shaders\TMP_SDF.shader
+      projectPath: Assets\TextMesh Pro\Shaders\TMP_SDF.shader
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\TextMesh Pro\Shaders\TMP_SDF.shader.meta
+      fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\TextMesh Pro\Shaders\TMP_SDF.shader.meta
+      projectPath: Assets\TextMesh Pro\Shaders\TMP_SDF.shader.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader
+      fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile
+        Masking.shader
+      projectPath: Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader.meta
+      fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile
+        Masking.shader.meta
+      projectPath: Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader
+      fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile
+        Overlay.shader
+      projectPath: Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader.meta
+      fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile
+        Overlay.shader.meta
+      projectPath: Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile SSD.shader
+      fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile
+        SSD.shader
+      projectPath: Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile SSD.shader
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile SSD.shader.meta
+      fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile
+        SSD.shader.meta
+      projectPath: Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile SSD.shader.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader
+      fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader
+      projectPath: Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader.meta
+      fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader.meta
+      projectPath: Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader
+      fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader
+      projectPath: Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader.meta
+      fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader.meta
+      projectPath: Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader
+      fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader
+      projectPath: Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader.meta
+      fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader.meta
+      projectPath: Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\TextMesh Pro\Shaders\TMP_Sprite.shader
+      fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\TextMesh Pro\Shaders\TMP_Sprite.shader
+      projectPath: Assets\TextMesh Pro\Shaders\TMP_Sprite.shader
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\TextMesh Pro\Shaders\TMP_Sprite.shader.meta
+      fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\TextMesh Pro\Shaders\TMP_Sprite.shader.meta
+      projectPath: Assets\TextMesh Pro\Shaders\TMP_Sprite.shader.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\TextMesh Pro\Shaders\TMPro.cginc
+      fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\TextMesh Pro\Shaders\TMPro.cginc
+      projectPath: Assets\TextMesh Pro\Shaders\TMPro.cginc
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\TextMesh Pro\Shaders\TMPro.cginc.meta
+      fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\TextMesh Pro\Shaders\TMPro.cginc.meta
+      projectPath: Assets\TextMesh Pro\Shaders\TMPro.cginc.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc
+      fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc
+      projectPath: Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc.meta
+      fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc.meta
+      projectPath: Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc
+      fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc
+      projectPath: Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc.meta
+      fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc.meta
+      projectPath: Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc
+      fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc
+      projectPath: Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc.meta
+      fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc.meta
+      projectPath: Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\TextMesh Pro\Sprites.meta
+      fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\TextMesh Pro\Sprites.meta
+      projectPath: Assets\TextMesh Pro\Sprites.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt
+      fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\TextMesh Pro\Sprites\EmojiOne
+        Attribution.txt
+      projectPath: Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt.meta
+      fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\TextMesh Pro\Sprites\EmojiOne
+        Attribution.txt.meta
+      projectPath: Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\TextMesh Pro\Sprites\EmojiOne.json
+      fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\TextMesh Pro\Sprites\EmojiOne.json
+      projectPath: Assets\TextMesh Pro\Sprites\EmojiOne.json
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\TextMesh Pro\Sprites\EmojiOne.json.meta
+      fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\TextMesh Pro\Sprites\EmojiOne.json.meta
+      projectPath: Assets\TextMesh Pro\Sprites\EmojiOne.json.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\TextMesh Pro\Sprites\EmojiOne.png
+      fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\TextMesh Pro\Sprites\EmojiOne.png
+      projectPath: Assets\TextMesh Pro\Sprites\EmojiOne.png
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\TextMesh Pro\Sprites\EmojiOne.png.meta
+      fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\Assets\TextMesh Pro\Sprites\EmojiOne.png.meta
+      projectPath: Assets\TextMesh Pro\Sprites\EmojiOne.png.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: UserSettings\EditorUserSettings.asset
+      fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\UserSettings\EditorUserSettings.asset
+      projectPath: UserSettings\EditorUserSettings.asset
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
     - path: UserSettings\Layouts\default-2021.dwlt
       fullPath: C:\Users\User\Desktop\New folder\GPF104_Game\UserSettings\Layouts\default-2021.dwlt
       projectPath: UserSettings\Layouts\default-2021.dwlt
       originalPath: 
-      indexStatus: 0
-      workTreeStatus: 3
-    changedFilesText: 1 changed file
+      indexStatus: 9
+      workTreeStatus: 9
+    changedFilesText: 103 changed files
     lastCurrentBranchChangedEvent:
-      updatedTimeString: 2023-06-21T15:52:37.567+10:00
+      updatedTimeString: 2023-06-22T15:01:56.497+10:00
       cacheType: 1
     lastStatusEntriesChangedEvent:
-      updatedTimeString: 2023-06-21T15:52:39.820+10:00
+      updatedTimeString: 2023-06-22T15:02:46.234+10:00
       cacheType: 6
     lastLocksChangedEvent:
-      updatedTimeString: 2023-06-21T15:52:39.555+10:00
+      updatedTimeString: 2023-06-22T15:01:58.456+10:00
       cacheType: 7
   historyView:
     currentLogHasUpdate: 0
@@ -1353,8 +6304,8 @@ MonoBehaviour:
   currentRemoteName: origin
   currentBranch: master
   currentRemoteUrl: https://github.com/GPF104/GPF104_Game.git
-  statusAhead: 0
-  statusBehind: 0
+  statusAhead: 1
+  statusBehind: 11
   hasItemsToCommit: 1
   isTrackingRemoteBranch: 1
   currentBranchContent:
@@ -1366,13 +6317,13 @@ MonoBehaviour:
     m_Image: {fileID: 0}
     m_Tooltip: Url of the origin remote
   lastCurrentBranchAndRemoteChangedEvent:
-    updatedTimeString: 2023-06-21T15:52:37.567+10:00
+    updatedTimeString: 2023-06-22T15:01:56.497+10:00
     cacheType: 1
   lastTrackingStatusChangedEvent:
-    updatedTimeString: 2023-06-21T15:52:39.841+10:00
+    updatedTimeString: 2023-06-22T15:02:41.263+10:00
     cacheType: 5
   lastStatusEntriesChangedEvent:
-    updatedTimeString: 2023-06-21T15:52:39.820+10:00
+    updatedTimeString: 2023-06-22T15:02:46.234+10:00
     cacheType: 6
   pullButtonContent:
     m_Text: Pull
@@ -1415,10 +6366,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 8
+    x: 0
     y: 634
-    width: 1453
-    height: 357
+    width: 1466
+    height: 365
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -1451,7 +6402,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 2a620000
     m_LastClickedID: 25130
-    m_ExpandedIDs: 0000000026620000286200002a6200002c6200002e62000050620000
+    m_ExpandedIDs: 0000000026620000286200002a6200002c6200002e62000044620000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1569,7 +6520,7 @@ MonoBehaviour:
     m_CachedPref: 160
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
-  m_LastInspectedObjectInstanceID: 25004
+  m_LastInspectedObjectInstanceID: -1
   m_LastVerticalScrollValue: 0
   m_GlobalObjectId: 
   m_InspectorMode: 0
@@ -1596,10 +6547,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 8
-    y: 81
-    width: 360
-    height: 532
+    x: 0
+    y: 73
+    width: 364
+    height: 540
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -1609,7 +6560,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 2cfbffff
+      m_ExpandedIDs: 4eeeffff2cfbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1653,10 +6604,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 369
-    y: 81
-    width: 1091
-    height: 532
+    x: 365
+    y: 73
+    width: 1100
+    height: 540
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
