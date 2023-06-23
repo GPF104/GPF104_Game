@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class LevelGenerator : MonoBehaviour
 {
+	#region Attributes
+
+    //  Edit in Unity Editor
 	[SerializeField] float radius = 20;
     [SerializeField] int MIN_DENSITY = 100;
     [SerializeField] int MAX_DENSITY = 1000;
@@ -12,7 +15,11 @@ public class LevelGenerator : MonoBehaviour
     [SerializeField] List<GameObject> Props = new List<GameObject>();
     [SerializeField] List<GameObject> Decals = new List<GameObject>();
 
-    IEnumerator SlowGenerate(List<GameObject> gameObjects)
+	#endregion
+
+	#region Generation
+	//  Slower generation - Might need this for when our objects get more complex.
+	IEnumerator SlowGenerate(List<GameObject> gameObjects)
 	{
         for (int i = 0; i < gameObjects.Count; i++)
         {
@@ -37,9 +44,11 @@ public class LevelGenerator : MonoBehaviour
             }
 		}
 	}
+	#endregion
 
-    // Start is called before the first frame update
-    void Start()
+	#region Unity
+	// Start is called before the first frame update
+	void Start()
     {
         StartCoroutine(SlowGenerate(Flora));
         //Generate(Flora);
@@ -47,5 +56,5 @@ public class LevelGenerator : MonoBehaviour
         //Generate(Props);
         //Generate(Decals);
     }
-
+	#endregion
 }
