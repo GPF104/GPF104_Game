@@ -4,36 +4,24 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public float moveSpeed;
-    public Rigidbody2D rb;
-    public Weapon weapon;
+	#region ExternalLinks
 
-    Vector2 moveDirection;
-    Vector2 mousePosition;
-    
-    //
-    void Start()
-    {
-        
-    }
-    
-    void Update()
-    {
-        ProcessInputs();
-    }
+	#endregion
+	#region Attributes
 
-    void FixedUpdate() 
-    {
-        //Physics Calculations
-        Move();
-    }
+	public float moveSpeed = 10;
+    Rigidbody2D rb2d;
+    Weapon weapon;
+
+    Vector2 moveDirection = new Vector2(0, 0);
+    Vector2 mousePosition = new Vector2(0, 0);
 
     void ProcessInputs()
     {
         float moveX = Input.GetAxisRaw("Horizontal");
         float moveY = Input.GetAxisRaw("Vertical");
 
-        if(Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0))
         {
             weapon.Fire();
         }
@@ -44,11 +32,28 @@ public class PlayerMovement : MonoBehaviour
 
     void Move()
     {
-        rb.velocity = new Vector2(moveDirection.x * moveSpeed, moveDirection.y * moveSpeed);
-
-        Vector2 aimDirection = mousePosition - rb.position;
-        float aimAngle = Mathf.Atan2(aimDirection.y, aimDirection.x) * Mathf.Rad2Deg - 90f;
-        rb.rotation = aimAngle;
+        Vector2 aimDirection = mousePosition - rb2d.position;
+        //  To-do ease in?
+        rb2d.velocity = new Vector2(moveDirection.x * moveSpeed, moveDirection.y * moveSpeed);
+        rb2d.rotation = Mathf.Atan2(aimDirection.y, aimDirection.x) * Mathf.Rad2Deg - 90f;
     }
 
+    #endregion
+    //
+    void Start()
+    {
+        rb2d = this.GetComponent<Rigidbody2D>();
+        weapon = this.gameObject.GetComponentInChildren<Weapon>();
+    }
+    
+    void Update()
+    {
+        ProcessInputs();
+    }
+    // Framerate Independent
+    void FixedUpdate() 
+    {
+        //Physics Calculations
+        Move();
+    }
 }

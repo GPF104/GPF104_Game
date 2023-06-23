@@ -4,15 +4,23 @@ using UnityEngine;
 
 public class UIHandler : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+	#region ExternalLinks
+
+	GameManager gameManager;
+	public UI_Timer timer;
+
+	#endregion
+
+	#region Attributes
+
+	#endregion
+
+	#region Unity
+	// Start is called before the first frame update
+	void Start()
     {
-        
+		timer = this.gameObject.GetComponentInChildren<UI_Timer>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+	#endregion
 }
