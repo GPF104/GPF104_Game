@@ -4,41 +4,63 @@ using UnityEngine;
 
 public class Boundary : MonoBehaviour
 {
-    [SerializeField] float radius = 5;
-
-    CircleCollider2D circleCollider;
-	private bool outofbounds = false;
-
-	IEnumerator OutOfBounds()
+	GameManager gameManager;
+	[SerializeField] GameObject target;
+	[SerializeField] GameObject overlay;
+	float distance = 0;
+	float distanceFade = 0;
+	bool inarena = true;
+	[SerializeField] int MAX_DISTANCE = 80;
+	[SerializeField] int MIN_DISTANCE = 50;
+	IEnumerator OutofBounds()
 	{
-		yield return new WaitUntil(() => outofbounds == true);
-		Debug.Log("Out of bounds");
-		StartCoroutine(OutOfBounds());
+		yield return new WaitUntil(() => distance > 80);
+		inarena = false;
+		StartCoroutine(InBounds());
+		yield return new WaitForSeconds(1.5f);
+
+		gameManager.uiHandler.frameControls.FrameFade(overlay, Fade.In, 1);
 	}
 
+	IEnumerator InBounds()
+	{
+		yield return new WaitUntil(() => distance < 80);
+		inarena = true;
+		yield return new WaitForSeconds(1.5f);
+		gameManager.uiHandler.frameControls.FrameFade(overlay, Fade.Out, 1);
+	}
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        circleCollider = this.GetComponent<CircleCollider2D>();
-        circleCollider.radius = radius;
+	IEnumerator DistanceFade(float distance)
+	{
+		yield return new WaitForSeconds(0.5f);
+		if (distance > MIN_DISTANCE)
+		{
+			distanceFade = (distance - MIN_DISTANCE) / (MAX_DISTANCE - MIN_DISTANCE);
+			distanceFade = Mathf.Clamp01(distanceFade); // Ensure it stays between 0 and 1
 
-		StartCoroutine(OutOfBounds());
+			gameManager.uiHandler.frameControls.FrameOpacity(overlay, distanceFade);
+		}
+	}
+	IEnumerator GetDistance()
+	{
+		yield return new WaitForSeconds(0.15f);
+		distance = Vector2.Distance(this.transform.position, target.transform.position);
+		Debug.Log(distance + " in arena? " + inarena + " distance opacity " + distanceFade);
+		StartCoroutine(DistanceFade(distance));
+		StartCoroutine(GetDistance());
+		StartCoroutine(OutofBounds());
+		
+
+	}
+
+	// Start is called before the first frame update
+	void Start()
+	{
+		gameManager = GameObject.FindObjectOfType<GameManager>().GetComponent<GameManager>();
+		if (target != null)
+		{
+			StartCoroutine(GetDistance());
+		}
+		
     }
-
-	private void OnTriggerExit2D(Collider2D collision)
-	{
-		if (collision.tag == "Player")
-		{
-			outofbounds = true;
-		}
-	}
-
-	private void OnTriggerStay2D(Collider2D collision)
-	{
-		if (collision.tag == "Player" && outofbounds == true)
-		{
-			outofbounds = false;
-		}
-	}
 }
