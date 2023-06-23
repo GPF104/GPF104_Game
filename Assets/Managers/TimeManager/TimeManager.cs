@@ -46,6 +46,7 @@ public class TimeManager : MonoBehaviour
 
 	public string GetTimeString(float minutes, float seconds)
 	{
+		//Return time string
 		return minutes.ToString("0#") + ":" + (seconds % 60).ToString("0#");
 	}
 
