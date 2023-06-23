@@ -6,8 +6,11 @@ public class UIHandler : MonoBehaviour
 {
 	#region ExternalLinks
 
+	GameObject[] UI;
+
 	GameManager gameManager;
 	public UI_Timer timer;
+	public Overlay overlay;
 
 	#endregion
 
@@ -19,7 +22,7 @@ public class UIHandler : MonoBehaviour
 	// Start is called before the first frame update
 	void Start()
     {
-		timer = this.gameObject.GetComponentInChildren<UI_Timer>();
+		timer = GameObject.FindObjectOfType<UI_Timer>().GetComponent<UI_Timer>();
     }
 
 	#endregion

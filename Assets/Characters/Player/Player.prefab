@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 4245647849778599431}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -64,7 +64,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 0
-  weapon: {fileID: 0}
 --- !u!114 &7392110112727841557
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -78,7 +77,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Projectile_Bullet: {fileID: 0}
-  firePoint: {fileID: 0}
   fireForce: 20
 --- !u!50 &4245647849778599426
 Rigidbody2D:
@@ -130,7 +128,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 10
-  weapon: {fileID: 4245647849586323399}
 --- !u!1 &4245647849586323394
 GameObject:
   m_ObjectHideFlags: 0
@@ -230,7 +227,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Projectile_Bullet: {fileID: 6503832657817774434, guid: 0eb8a4047ebf9284ca605c58800f2cae, type: 3}
-  firePoint: {fileID: 4245647851456359254}
   fireForce: 20
 --- !u!1 &4245647850716838104
 GameObject:

@@ -61,8 +61,7 @@ public class TimeManager : MonoBehaviour
 	// Start is called before the first frame update
 	void Start()
     {
-		gameManager = this.GetComponentInParent<GameManager>();
-		uiHandler = this.GetComponentInParent<UIHandler>();
+		gameManager = GetComponentInParent<GameManager>();
     }
 	#endregion
 }
