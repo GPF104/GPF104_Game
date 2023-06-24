@@ -33,4 +33,13 @@ public class EnemyBehaviour : MonoBehaviour
     {
         rb.MovePosition((Vector2)transform.position + (direction * moveSpeed * Time.deltaTime));
     }
+
+    void OnCollisionEnter2D (Collision2D col)
+    {
+        if (col.gameObject.tag.Equals ("Bullet"))
+        {
+            Destroy (col.gameObject);
+            Destroy (gameObject);
+        }
+    }
 }

@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 443770733045036479}
   - component: {fileID: 6162635868446860078}
   - component: {fileID: 1731694302666004664}
+  - component: {fileID: 1438779679276794914}
   m_Layer: 0
   m_Name: Projectile_Bullet
-  m_TagString: Untagged
+  m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -119,3 +120,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e262b0b52496024ab595a1152a50283, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!58 &1438779679276794914
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6503832657817774434}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5
