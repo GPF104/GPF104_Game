@@ -6,6 +6,7 @@ using UnityEditor;
 
 public class AutoTile : MonoBehaviour
 {
+    //  Editor Variables
     [Range(0, 100)]
     public int iniChance;
     [Range(1, 8)]
@@ -15,7 +16,6 @@ public class AutoTile : MonoBehaviour
 
     [Range(1, 10)]
     public int numR;
-    private int count = 0;
 
     private int[,] terrainMap;
     public Vector3Int tmpSize;
@@ -27,6 +27,7 @@ public class AutoTile : MonoBehaviour
     int width;
     int height;
 
+    //  To-do: Corner detection.
     public void doSim(int nu)
     {
         clearMap(false);
@@ -53,9 +54,8 @@ public class AutoTile : MonoBehaviour
                 botMap.SetTile(new Vector3Int(-x + width / 2, -y + height / 2, 0), botTiles[Random.Range(0, botTiles.Count)]);
             }
         }
-
-
     }
+
     public void initPos()
     {
         for (int x = 0; x < width; x++)
@@ -68,6 +68,7 @@ public class AutoTile : MonoBehaviour
         }
 
     }
+
     public int[,] genTilePos(int[,] oldMap)
     {
         int[,] newMap = new int[width, height];
@@ -117,6 +118,18 @@ public class AutoTile : MonoBehaviour
         return newMap;
     }
 
+    public void clearMap(bool complete)
+    {
+
+        topMap.ClearAllTiles();
+        botMap.ClearAllTiles();
+        if (complete)
+        {
+            terrainMap = null;
+        }
+    }
+
+    //  Unity Methods
 
     void Update()
     {
@@ -133,22 +146,4 @@ public class AutoTile : MonoBehaviour
         }
 
     }
-
-
-
-
-    public void clearMap(bool complete)
-    {
-
-        topMap.ClearAllTiles();
-        botMap.ClearAllTiles();
-        if (complete)
-        {
-            terrainMap = null;
-        }
-
-
-    }
-
-
 }
