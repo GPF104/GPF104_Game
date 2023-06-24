@@ -19,12 +19,38 @@ MonoBehaviour:
     width: 3440
     height: 1349
   m_ShowMode: 4
-  m_Title: Game
-  m_RootView: {fileID: 6}
-  m_MinSize: {x: 875, y: 300}
+  m_Title: Project
+  m_RootView: {fileID: 7}
+  m_MinSize: {x: 875, y: 371}
   m_MaxSize: {x: 10000, y: 10000}
   m_Maximized: 1
 --- !u!114 &2
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: GameView
+  m_EditorClassIdentifier: 
+  m_Children: []
+  m_Position:
+    serializedVersion: 2
+    x: 1581
+    y: 0
+    width: 1046
+    height: 772
+  m_MinSize: {x: 202, y: 221}
+  m_MaxSize: {x: 4002, y: 4021}
+  m_ActualView: {fileID: 18}
+  m_Panes:
+  - {fileID: 18}
+  m_Selected: 0
+  m_LastSelected: 0
+--- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -37,19 +63,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Children:
-  - {fileID: 9}
-  - {fileID: 3}
+  - {fileID: 10}
+  - {fileID: 4}
   m_Position:
     serializedVersion: 2
     x: 0
     y: 30
     width: 3440
     height: 1299
-  m_MinSize: {x: 300, y: 200}
-  m_MaxSize: {x: 24288, y: 16192}
+  m_MinSize: {x: 400, y: 200}
+  m_MaxSize: {x: 32384, y: 16192}
   vertical: 0
-  controlID: 377
---- !u!114 &3
+  controlID: 15
+--- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -70,13 +96,13 @@ MonoBehaviour:
     height: 1299
   m_MinSize: {x: 276, y: 71}
   m_MaxSize: {x: 4001, y: 4021}
-  m_ActualView: {fileID: 14}
+  m_ActualView: {fileID: 15}
   m_Panes:
-  - {fileID: 14}
-  - {fileID: 12}
+  - {fileID: 15}
+  - {fileID: 13}
   m_Selected: 0
   m_LastSelected: 1
---- !u!114 &4
+--- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -95,14 +121,14 @@ MonoBehaviour:
     y: 0
     width: 652
     height: 772
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_ActualView: {fileID: 15}
+  m_MinSize: {x: 201, y: 221}
+  m_MaxSize: {x: 4001, y: 4021}
+  m_ActualView: {fileID: 16}
   m_Panes:
-  - {fileID: 15}
+  - {fileID: 16}
   m_Selected: 0
   m_LastSelected: 0
---- !u!114 &5
+--- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -112,7 +138,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: ConsoleWindow
+  m_Name: ProjectBrowser
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
@@ -121,15 +147,15 @@ MonoBehaviour:
     y: 772
     width: 2627
     height: 527
-  m_MinSize: {x: 101, y: 121}
-  m_MaxSize: {x: 4001, y: 4021}
-  m_ActualView: {fileID: 18}
+  m_MinSize: {x: 231, y: 271}
+  m_MaxSize: {x: 10001, y: 10021}
+  m_ActualView: {fileID: 14}
   m_Panes:
-  - {fileID: 13}
-  - {fileID: 18}
-  m_Selected: 1
+  - {fileID: 14}
+  - {fileID: 19}
+  m_Selected: 0
   m_LastSelected: 0
---- !u!114 &6
+--- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -142,22 +168,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Children:
-  - {fileID: 7}
-  - {fileID: 2}
   - {fileID: 8}
+  - {fileID: 3}
+  - {fileID: 9}
   m_Position:
     serializedVersion: 2
     x: 0
     y: 0
     width: 3440
     height: 1349
-  m_MinSize: {x: 875, y: 300}
+  m_MinSize: {x: 875, y: 371}
   m_MaxSize: {x: 10000, y: 10000}
   m_UseTopView: 1
   m_TopViewHeight: 30
   m_UseBottomView: 1
   m_BottomViewHeight: 20
---- !u!114 &7
+--- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -179,7 +205,7 @@ MonoBehaviour:
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
   m_LastLoadedLayoutName: 
---- !u!114 &8
+--- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -200,31 +226,6 @@ MonoBehaviour:
     height: 20
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
---- !u!114 &9
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 1
-  m_Script: {fileID: 12010, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Children:
-  - {fileID: 10}
-  - {fileID: 5}
-  m_Position:
-    serializedVersion: 2
-    x: 0
-    y: 0
-    width: 2627
-    height: 1299
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 16192, y: 16192}
-  vertical: 1
-  controlID: 107
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -238,19 +239,45 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Children:
-  - {fileID: 4}
   - {fileID: 11}
+  - {fileID: 6}
+  m_Position:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 2627
+    height: 1299
+  m_MinSize: {x: 300, y: 200}
+  m_MaxSize: {x: 24288, y: 16192}
+  vertical: 1
+  controlID: 16
+--- !u!114 &11
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12010, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Children:
+  - {fileID: 5}
+  - {fileID: 12}
+  - {fileID: 2}
   m_Position:
     serializedVersion: 2
     x: 0
     y: 0
     width: 2627
     height: 772
-  m_MinSize: {x: 200, y: 100}
-  m_MaxSize: {x: 16192, y: 8096}
+  m_MinSize: {x: 300, y: 100}
+  m_MaxSize: {x: 24288, y: 8096}
   vertical: 0
-  controlID: 108
---- !u!114 &11
+  controlID: 17
+--- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -267,17 +294,16 @@ MonoBehaviour:
     serializedVersion: 2
     x: 652
     y: 0
-    width: 1975
+    width: 929
     height: 772
   m_MinSize: {x: 202, y: 221}
   m_MaxSize: {x: 4002, y: 4021}
-  m_ActualView: {fileID: 16}
+  m_ActualView: {fileID: 17}
   m_Panes:
-  - {fileID: 16}
   - {fileID: 17}
   m_Selected: 0
-  m_LastSelected: 1
---- !u!114 &12
+  m_LastSelected: 0
+--- !u!114 &13
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -309,10 +335,10 @@ MonoBehaviour:
   notificationClearTime: -1
   timeSinceLastRotation: -1
   currentBranchAndRemoteHasUpdate: 0
-  currentTrackingStatusHasUpdate: 0
+  currentTrackingStatusHasUpdate: 1
   currentStatusEntriesHasUpdate: 1
   repositoryProgressHasUpdate: 1
-  appManagerProgressHasUpdate: 1
+  appManagerProgressHasUpdate: 0
   changeTab: 3
   activeTab: 3
   initProjectView:
@@ -534,7 +560,7 @@ MonoBehaviour:
   changesView:
     currentBranchHasUpdate: 0
     currentStatusEntriesHasUpdate: 1
-    currentLocksHasUpdate: 1
+    currentLocksHasUpdate: 0
     commitBody: 
     commitMessage: 
     currentBranch: Sam
@@ -543,20 +569,11 @@ MonoBehaviour:
       assets:
         keys:
         - 00000000000000001000000000000000
-        - c48700d8be79798499aaa8317666f214
-        - 9b7c2c463a578f44bac33ce2ce919bb0
-        - f1824cb1102f04f42a90fc77ca7bf170
-        - 6e371674e3db5754db05516f4cdaed98
-        - dcb033df40362784f831e2b8fafa7521
-        - 0fbcd4144a6d12c4399d439f180e9893
-        - 131a6b21c8605f84396be9f6751fb6e3
-        - 0fed5a04f26b7ec44a1502afc5825036
-        - 37d065b95e2783a409e2b92d327d3ede
         - 8ca05a017afe7ed4599dd3a52d3723ee
-        - ee8824b18afdb8e479bf7813d2bcf93b
-        - ce265f479becb1844b365611f8306e7d
-        - 0000000000000000c000000000000000
-        - 00000000000000003000000000000000
+        - fcfc70fe289fda348913fa7624a57614
+        - b3574b402a9509d4d8a8c0c23e26ee9b
+        - fdd6cf06299c52e46b31b2c214f05037
+        - b5b8c3b63a0ae4342b0943703d04e1a0
         values:
         - path: Assets
           label: Assets
@@ -576,171 +593,6 @@ MonoBehaviour:
             originalPath: 
             indexStatus: 0
             workTreeStatus: 0
-        - path: Assets\Interface
-          label: Interface
-          level: 1
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: Assets\Interface\Overlays
-          label: Overlays
-          level: 2
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: Assets\Interface\Overlays\Overlay.cs
-          label: Overlay.cs
-          level: 3
-          isFolder: 0
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: Assets\Interface\Overlays\Overlay.cs
-            fullPath: F:\University Work\Year 1\Trimester 2\GPF104\Game\GPFGame\GPF104
-              Game\Assets\Interface\Overlays\Overlay.cs
-            projectPath: Assets\Interface\Overlays\Overlay.cs
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 3
-        - path: Assets\Managers
-          label: Managers
-          level: 1
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: Assets\Managers\UIHandler
-          label: UIHandler
-          level: 2
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: Assets\Managers\UIHandler\UIHandler.cs
-          label: UIHandler.cs
-          level: 3
-          isFolder: 0
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: Assets\Managers\UIHandler\UIHandler.cs
-            fullPath: F:\University Work\Year 1\Trimester 2\GPF104\Game\GPFGame\GPF104
-              Game\Assets\Managers\UIHandler\UIHandler.cs
-            projectPath: Assets\Managers\UIHandler\UIHandler.cs
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 3
-        - path: Assets\Scenes
-          label: Scenes
-          level: 1
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: Assets\Scenes\Draft
-          label: Draft
-          level: 2
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: Assets\Scenes\Draft\Arena.unity
-          label: Arena.unity
-          level: 3
-          isFolder: 0
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: Assets\Scenes\Draft\Arena.unity
-            fullPath: F:\University Work\Year 1\Trimester 2\GPF104\Game\GPFGame\GPF104
-              Game\Assets\Scenes\Draft\Arena.unity
-            projectPath: Assets\Scenes\Draft\Arena.unity
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 3
         - path: Assets\World
           label: World
           level: 1
@@ -759,8 +611,8 @@ MonoBehaviour:
             originalPath: 
             indexStatus: 0
             workTreeStatus: 0
-        - path: Assets\World\Boundary
-          label: Boundary
+        - path: Assets\World\TileSets
+          label: TileSets
           level: 2
           isFolder: 1
           isContainer: 0
@@ -777,10 +629,10 @@ MonoBehaviour:
             originalPath: 
             indexStatus: 0
             workTreeStatus: 0
-        - path: Assets\World\Boundary\Boundary.cs
-          label: Boundary.cs
+        - path: Assets\World\TileSets\Strange
+          label: Strange
           level: 3
-          isFolder: 0
+          isFolder: 1
           isContainer: 0
           isCollapsed: 0
           isHidden: 0
@@ -789,18 +641,17 @@ MonoBehaviour:
           checkState: 0
           isLocked: 0
           gitStatusEntry:
-            path: Assets\World\Boundary\Boundary.cs
-            fullPath: F:\University Work\Year 1\Trimester 2\GPF104\Game\GPFGame\GPF104
-              Game\Assets\World\Boundary\Boundary.cs
-            projectPath: Assets\World\Boundary\Boundary.cs
+            path: 
+            fullPath: 
+            projectPath: 
             originalPath: 
             indexStatus: 0
-            workTreeStatus: 3
-        - path: ProjectSettings\EditorSettings.asset
-          label: EditorSettings.asset
-          level: 1
+            workTreeStatus: 0
+        - path: Assets\World\TileSets\Strange\Decorative.png
+          label: Decorative.png
+          level: 4
           isFolder: 0
-          isContainer: 0
+          isContainer: 1
           isCollapsed: 0
           isHidden: 0
           isActive: 0
@@ -808,18 +659,18 @@ MonoBehaviour:
           checkState: 0
           isLocked: 0
           gitStatusEntry:
-            path: ProjectSettings\EditorSettings.asset
+            path: Assets\World\TileSets\Strange\Decorative.png
             fullPath: F:\University Work\Year 1\Trimester 2\GPF104\Game\GPFGame\GPF104
-              Game\ProjectSettings\EditorSettings.asset
-            projectPath: ProjectSettings\EditorSettings.asset
+              Game\Assets\World\TileSets\Strange\Decorative.png
+            projectPath: Assets\World\TileSets\Strange\Decorative.png
             originalPath: 
-            indexStatus: 0
-            workTreeStatus: 3
-        - path: ProjectSettings\TagManager.asset
-          label: TagManager.asset
-          level: 1
+            indexStatus: 1
+            workTreeStatus: 1
+        - path: Assets\World\TileSets\Strange\MainLev.png
+          label: MainLev.png
+          level: 4
           isFolder: 0
-          isContainer: 0
+          isContainer: 1
           isCollapsed: 0
           isHidden: 0
           isActive: 0
@@ -827,137 +678,25 @@ MonoBehaviour:
           checkState: 0
           isLocked: 0
           gitStatusEntry:
-            path: ProjectSettings\TagManager.asset
+            path: Assets\World\TileSets\Strange\MainLev.png
             fullPath: F:\University Work\Year 1\Trimester 2\GPF104\Game\GPFGame\GPF104
-              Game\ProjectSettings\TagManager.asset
-            projectPath: ProjectSettings\TagManager.asset
+              Game\Assets\World\TileSets\Strange\MainLev.png
+            projectPath: Assets\World\TileSets\Strange\MainLev.png
             originalPath: 
-            indexStatus: 0
-            workTreeStatus: 3
+            indexStatus: 1
+            workTreeStatus: 1
       folders:
         keys:
         - Assets
-        - Assets\Interface
-        - Assets\Interface\Overlays
-        - Assets\Managers
-        - Assets\Managers\UIHandler
-        - Assets\Scenes
-        - Assets\Scenes\Draft
         - Assets\World
-        - Assets\World\Boundary
-        - ProjectSettings
+        - Assets\World\TileSets
+        - Assets\World\TileSets\Strange
+        - UserSettings
+        - UserSettings\Layouts
         values:
         - path: Assets
           label: Assets
           level: 0
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: Assets\Interface
-          label: Interface
-          level: 1
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: Assets\Interface\Overlays
-          label: Overlays
-          level: 2
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: Assets\Managers
-          label: Managers
-          level: 1
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: Assets\Managers\UIHandler
-          label: UIHandler
-          level: 2
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: Assets\Scenes
-          label: Scenes
-          level: 1
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: Assets\Scenes\Draft
-          label: Draft
-          level: 2
           isFolder: 1
           isContainer: 0
           isCollapsed: 0
@@ -991,8 +730,8 @@ MonoBehaviour:
             originalPath: 
             indexStatus: 0
             workTreeStatus: 0
-        - path: Assets\World\Boundary
-          label: Boundary
+        - path: Assets\World\TileSets
+          label: TileSets
           level: 2
           isFolder: 1
           isContainer: 0
@@ -1009,9 +748,45 @@ MonoBehaviour:
             originalPath: 
             indexStatus: 0
             workTreeStatus: 0
-        - path: ProjectSettings
-          label: ProjectSettings
+        - path: Assets\World\TileSets\Strange
+          label: Strange
+          level: 3
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: UserSettings
+          label: UserSettings
           level: 0
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: UserSettings\Layouts
+          label: Layouts
+          level: 1
           isFolder: 1
           isContainer: 0
           isCollapsed: 0
@@ -1073,171 +848,6 @@ MonoBehaviour:
           originalPath: 
           indexStatus: 0
           workTreeStatus: 0
-      - path: Assets\Interface
-        label: Interface
-        level: 1
-        isFolder: 1
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: 
-          fullPath: 
-          projectPath: 
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 0
-      - path: Assets\Interface\Overlays
-        label: Overlays
-        level: 2
-        isFolder: 1
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: 
-          fullPath: 
-          projectPath: 
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 0
-      - path: Assets\Interface\Overlays\Overlay.cs
-        label: Overlay.cs
-        level: 3
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Interface\Overlays\Overlay.cs
-          fullPath: F:\University Work\Year 1\Trimester 2\GPF104\Game\GPFGame\GPF104
-            Game\Assets\Interface\Overlays\Overlay.cs
-          projectPath: Assets\Interface\Overlays\Overlay.cs
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 3
-      - path: Assets\Managers
-        label: Managers
-        level: 1
-        isFolder: 1
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: 
-          fullPath: 
-          projectPath: 
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 0
-      - path: Assets\Managers\UIHandler
-        label: UIHandler
-        level: 2
-        isFolder: 1
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: 
-          fullPath: 
-          projectPath: 
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 0
-      - path: Assets\Managers\UIHandler\UIHandler.cs
-        label: UIHandler.cs
-        level: 3
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Managers\UIHandler\UIHandler.cs
-          fullPath: F:\University Work\Year 1\Trimester 2\GPF104\Game\GPFGame\GPF104
-            Game\Assets\Managers\UIHandler\UIHandler.cs
-          projectPath: Assets\Managers\UIHandler\UIHandler.cs
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 3
-      - path: Assets\Scenes
-        label: Scenes
-        level: 1
-        isFolder: 1
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: 
-          fullPath: 
-          projectPath: 
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 0
-      - path: Assets\Scenes\Draft
-        label: Draft
-        level: 2
-        isFolder: 1
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: 
-          fullPath: 
-          projectPath: 
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 0
-      - path: Assets\Scenes\Draft\Arena.unity
-        label: Arena.unity
-        level: 3
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Scenes\Draft\Arena.unity
-          fullPath: F:\University Work\Year 1\Trimester 2\GPF104\Game\GPFGame\GPF104
-            Game\Assets\Scenes\Draft\Arena.unity
-          projectPath: Assets\Scenes\Draft\Arena.unity
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 3
       - path: Assets\World
         label: World
         level: 1
@@ -1256,8 +866,27 @@ MonoBehaviour:
           originalPath: 
           indexStatus: 0
           workTreeStatus: 0
-      - path: Assets\World\Boundary
-        label: Boundary
+      - path: Assets\World\TileSets.meta
+        label: TileSets.meta
+        level: 2
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\World\TileSets.meta
+          fullPath: F:\University Work\Year 1\Trimester 2\GPF104\Game\GPFGame\GPF104
+            Game\Assets\World\TileSets.meta
+          projectPath: Assets\World\TileSets.meta
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\World\TileSets
+        label: TileSets
         level: 2
         isFolder: 1
         isContainer: 0
@@ -1274,8 +903,8 @@ MonoBehaviour:
           originalPath: 
           indexStatus: 0
           workTreeStatus: 0
-      - path: Assets\World\Boundary\Boundary.cs
-        label: Boundary.cs
+      - path: Assets\World\TileSets\Strange.meta
+        label: Strange.meta
         level: 3
         isFolder: 0
         isContainer: 0
@@ -1286,15 +915,109 @@ MonoBehaviour:
         checkState: 0
         isLocked: 0
         gitStatusEntry:
-          path: Assets\World\Boundary\Boundary.cs
+          path: Assets\World\TileSets\Strange.meta
           fullPath: F:\University Work\Year 1\Trimester 2\GPF104\Game\GPFGame\GPF104
-            Game\Assets\World\Boundary\Boundary.cs
-          projectPath: Assets\World\Boundary\Boundary.cs
+            Game\Assets\World\TileSets\Strange.meta
+          projectPath: Assets\World\TileSets\Strange.meta
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\World\TileSets\Strange
+        label: Strange
+        level: 3
+        isFolder: 1
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: 
+          fullPath: 
+          projectPath: 
           originalPath: 
           indexStatus: 0
-          workTreeStatus: 3
-      - path: ProjectSettings
-        label: ProjectSettings
+          workTreeStatus: 0
+      - path: Assets\World\TileSets\Strange\Decorative.png
+        label: Decorative.png
+        level: 4
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\World\TileSets\Strange\Decorative.png
+          fullPath: F:\University Work\Year 1\Trimester 2\GPF104\Game\GPFGame\GPF104
+            Game\Assets\World\TileSets\Strange\Decorative.png
+          projectPath: Assets\World\TileSets\Strange\Decorative.png
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\World\TileSets\Strange\Decorative.png.meta
+        label: Decorative.png.meta
+        level: 5
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\World\TileSets\Strange\Decorative.png.meta
+          fullPath: F:\University Work\Year 1\Trimester 2\GPF104\Game\GPFGame\GPF104
+            Game\Assets\World\TileSets\Strange\Decorative.png.meta
+          projectPath: Assets\World\TileSets\Strange\Decorative.png.meta
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\World\TileSets\Strange\MainLev.png
+        label: MainLev.png
+        level: 4
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\World\TileSets\Strange\MainLev.png
+          fullPath: F:\University Work\Year 1\Trimester 2\GPF104\Game\GPFGame\GPF104
+            Game\Assets\World\TileSets\Strange\MainLev.png
+          projectPath: Assets\World\TileSets\Strange\MainLev.png
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\World\TileSets\Strange\MainLev.png.meta
+        label: MainLev.png.meta
+        level: 5
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\World\TileSets\Strange\MainLev.png.meta
+          fullPath: F:\University Work\Year 1\Trimester 2\GPF104\Game\GPFGame\GPF104
+            Game\Assets\World\TileSets\Strange\MainLev.png.meta
+          projectPath: Assets\World\TileSets\Strange\MainLev.png.meta
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: UserSettings
+        label: UserSettings
         level: 0
         isFolder: 1
         isContainer: 0
@@ -1311,10 +1034,10 @@ MonoBehaviour:
           originalPath: 
           indexStatus: 0
           workTreeStatus: 0
-      - path: ProjectSettings\EditorSettings.asset
-        label: EditorSettings.asset
+      - path: UserSettings\Layouts
+        label: Layouts
         level: 1
-        isFolder: 0
+        isFolder: 1
         isContainer: 0
         isCollapsed: 0
         isHidden: 0
@@ -1323,16 +1046,15 @@ MonoBehaviour:
         checkState: 0
         isLocked: 0
         gitStatusEntry:
-          path: ProjectSettings\EditorSettings.asset
-          fullPath: F:\University Work\Year 1\Trimester 2\GPF104\Game\GPFGame\GPF104
-            Game\ProjectSettings\EditorSettings.asset
-          projectPath: ProjectSettings\EditorSettings.asset
+          path: 
+          fullPath: 
+          projectPath: 
           originalPath: 
           indexStatus: 0
-          workTreeStatus: 3
-      - path: ProjectSettings\TagManager.asset
-        label: TagManager.asset
-        level: 1
+          workTreeStatus: 0
+      - path: UserSettings\Layouts\default-2021.dwlt
+        label: default-2021.dwlt
+        level: 2
         isFolder: 0
         isContainer: 0
         isCollapsed: 0
@@ -1342,10 +1064,10 @@ MonoBehaviour:
         checkState: 0
         isLocked: 0
         gitStatusEntry:
-          path: ProjectSettings\TagManager.asset
+          path: UserSettings\Layouts\default-2021.dwlt
           fullPath: F:\University Work\Year 1\Trimester 2\GPF104\Game\GPFGame\GPF104
-            Game\ProjectSettings\TagManager.asset
-          projectPath: ProjectSettings\TagManager.asset
+            Game\UserSettings\Layouts\default-2021.dwlt
+          projectPath: UserSettings\Layouts\default-2021.dwlt
           originalPath: 
           indexStatus: 0
           workTreeStatus: 3
@@ -1369,57 +1091,64 @@ MonoBehaviour:
           indexStatus: 0
           workTreeStatus: 0
     gitStatusEntries:
-    - path: Assets\Interface\Overlays\Overlay.cs
+    - path: Assets\World\TileSets.meta
       fullPath: F:\University Work\Year 1\Trimester 2\GPF104\Game\GPFGame\GPF104
-        Game\Assets\Interface\Overlays\Overlay.cs
-      projectPath: Assets\Interface\Overlays\Overlay.cs
+        Game\Assets\World\TileSets.meta
+      projectPath: Assets\World\TileSets.meta
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\World\TileSets\Strange.meta
+      fullPath: F:\University Work\Year 1\Trimester 2\GPF104\Game\GPFGame\GPF104
+        Game\Assets\World\TileSets\Strange.meta
+      projectPath: Assets\World\TileSets\Strange.meta
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\World\TileSets\Strange\Decorative.png
+      fullPath: F:\University Work\Year 1\Trimester 2\GPF104\Game\GPFGame\GPF104
+        Game\Assets\World\TileSets\Strange\Decorative.png
+      projectPath: Assets\World\TileSets\Strange\Decorative.png
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\World\TileSets\Strange\Decorative.png.meta
+      fullPath: F:\University Work\Year 1\Trimester 2\GPF104\Game\GPFGame\GPF104
+        Game\Assets\World\TileSets\Strange\Decorative.png.meta
+      projectPath: Assets\World\TileSets\Strange\Decorative.png.meta
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\World\TileSets\Strange\MainLev.png
+      fullPath: F:\University Work\Year 1\Trimester 2\GPF104\Game\GPFGame\GPF104
+        Game\Assets\World\TileSets\Strange\MainLev.png
+      projectPath: Assets\World\TileSets\Strange\MainLev.png
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\World\TileSets\Strange\MainLev.png.meta
+      fullPath: F:\University Work\Year 1\Trimester 2\GPF104\Game\GPFGame\GPF104
+        Game\Assets\World\TileSets\Strange\MainLev.png.meta
+      projectPath: Assets\World\TileSets\Strange\MainLev.png.meta
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: UserSettings\Layouts\default-2021.dwlt
+      fullPath: F:\University Work\Year 1\Trimester 2\GPF104\Game\GPFGame\GPF104
+        Game\UserSettings\Layouts\default-2021.dwlt
+      projectPath: UserSettings\Layouts\default-2021.dwlt
       originalPath: 
       indexStatus: 0
       workTreeStatus: 3
-    - path: Assets\Managers\UIHandler\UIHandler.cs
-      fullPath: F:\University Work\Year 1\Trimester 2\GPF104\Game\GPFGame\GPF104
-        Game\Assets\Managers\UIHandler\UIHandler.cs
-      projectPath: Assets\Managers\UIHandler\UIHandler.cs
-      originalPath: 
-      indexStatus: 0
-      workTreeStatus: 3
-    - path: Assets\Scenes\Draft\Arena.unity
-      fullPath: F:\University Work\Year 1\Trimester 2\GPF104\Game\GPFGame\GPF104
-        Game\Assets\Scenes\Draft\Arena.unity
-      projectPath: Assets\Scenes\Draft\Arena.unity
-      originalPath: 
-      indexStatus: 0
-      workTreeStatus: 3
-    - path: Assets\World\Boundary\Boundary.cs
-      fullPath: F:\University Work\Year 1\Trimester 2\GPF104\Game\GPFGame\GPF104
-        Game\Assets\World\Boundary\Boundary.cs
-      projectPath: Assets\World\Boundary\Boundary.cs
-      originalPath: 
-      indexStatus: 0
-      workTreeStatus: 3
-    - path: ProjectSettings\EditorSettings.asset
-      fullPath: F:\University Work\Year 1\Trimester 2\GPF104\Game\GPFGame\GPF104
-        Game\ProjectSettings\EditorSettings.asset
-      projectPath: ProjectSettings\EditorSettings.asset
-      originalPath: 
-      indexStatus: 0
-      workTreeStatus: 3
-    - path: ProjectSettings\TagManager.asset
-      fullPath: F:\University Work\Year 1\Trimester 2\GPF104\Game\GPFGame\GPF104
-        Game\ProjectSettings\TagManager.asset
-      projectPath: ProjectSettings\TagManager.asset
-      originalPath: 
-      indexStatus: 0
-      workTreeStatus: 3
-    changedFilesText: 6 changed files
+    changedFilesText: 7 changed files
     lastCurrentBranchChangedEvent:
-      updatedTimeString: 2023-06-23T17:36:38.111+09:30
+      updatedTimeString: 2023-06-24T15:40:01.349+09:30
       cacheType: 1
     lastStatusEntriesChangedEvent:
-      updatedTimeString: 2023-06-23T18:00:09.775+09:30
+      updatedTimeString: 2023-06-24T16:10:01.265+09:30
       cacheType: 6
     lastLocksChangedEvent:
-      updatedTimeString: 2023-06-23T17:59:57.825+09:30
+      updatedTimeString: 2023-06-24T15:40:03.267+09:30
       cacheType: 7
   historyView:
     currentLogHasUpdate: 0
@@ -2108,7 +1837,7 @@ MonoBehaviour:
   currentRemoteName: origin
   currentBranch: Sam
   currentRemoteUrl: https://github.com/GPF104/GPF104_Game.git
-  statusAhead: 1
+  statusAhead: 0
   statusBehind: 0
   hasItemsToCommit: 1
   isTrackingRemoteBranch: 1
@@ -2121,13 +1850,13 @@ MonoBehaviour:
     m_Image: {fileID: 0}
     m_Tooltip: Url of the origin remote
   lastCurrentBranchAndRemoteChangedEvent:
-    updatedTimeString: 2023-06-23T17:36:38.111+09:30
+    updatedTimeString: 2023-06-24T15:40:01.349+09:30
     cacheType: 1
   lastTrackingStatusChangedEvent:
-    updatedTimeString: 2023-06-23T17:36:38.341+09:30
+    updatedTimeString: 2023-06-24T16:10:01.284+09:30
     cacheType: 5
   lastStatusEntriesChangedEvent:
-    updatedTimeString: 2023-06-23T17:38:46.004+09:30
+    updatedTimeString: 2023-06-24T16:10:01.265+09:30
     cacheType: 6
   pullButtonContent:
     m_Text: Pull
@@ -2150,7 +1879,7 @@ MonoBehaviour:
   appManagerProgressValue: 1
   appManagerProgressMessage: 
   primaryConnectionUsername: 
---- !u!114 &13
+--- !u!114 &14
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2191,23 +1920,23 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Managers/TimeManager
+    - Assets/World/TileSets/Strange
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Managers/TimeManager
+  - Assets/World/TileSets/Strange
   m_LastFoldersGridSize: -1
   m_LastProjectPath: F:\University Work\Year 1\Trimester 2\GPF104\Game\GPFGame\GPF104
     Game
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 78}
-    m_SelectedIDs: e8620000
-    m_LastClickedID: 25320
-    m_ExpandedIDs: 00000000b6630000b8630000ba630000bc630000be630000c0630000c2630000c4630000c6630000c8630000ca630000cc630000ce630000d0630000
+    scrollPos: {x: 0, y: 250}
+    m_SelectedIDs: 62640000
+    m_LastClickedID: 25698
+    m_ExpandedIDs: 00000000be630000c0630000c2630000c4630000c6630000c8630000ca630000cc630000ce630000d0630000d2630000d4630000d6630000d86300004064000044640000466400005664000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -2235,7 +1964,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000b6630000b8630000ba630000bc630000be630000c0630000c2630000c4630000c6630000c8630000ca630000cc630000ce630000d0630000
+    m_ExpandedIDs: 00000000be630000c0630000c2630000c4630000c6630000c8630000ca630000cc630000ce630000d0630000d2630000d4630000d6630000d8630000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -2263,7 +1992,7 @@ MonoBehaviour:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
     m_HadKeyboardFocusLastEvent: 1
-    m_ExpandedInstanceIDs: c6230000
+    m_ExpandedInstanceIDs: c62300007e690000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -2279,7 +2008,7 @@ MonoBehaviour:
       m_IsRenaming: 0
       m_OriginalEventType: 11
       m_IsRenamingFilename: 1
-      m_ClientGUIView: {fileID: 5}
+      m_ClientGUIView: {fileID: 6}
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}
       m_InstanceID: 0
@@ -2291,7 +2020,7 @@ MonoBehaviour:
     m_GridSize: 64
   m_SkipHiddenPackages: 0
   m_DirectoriesAreaWidth: 207
---- !u!114 &14
+--- !u!114 &15
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2332,7 +2061,7 @@ MonoBehaviour:
   m_LockTracker:
     m_IsLocked: 0
   m_PreviewWindow: {fileID: 0}
---- !u!114 &15
+--- !u!114 &16
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2363,9 +2092,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: c6f9ffff
-      m_LastClickedID: -1594
-      m_ExpandedIDs: 2afbffff7e620000
+      m_SelectedIDs: 
+      m_LastClickedID: 0
+      m_ExpandedIDs: a4d7ffff2afbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -2381,7 +2110,7 @@ MonoBehaviour:
         m_IsRenaming: 0
         m_OriginalEventType: 11
         m_IsRenamingFilename: 0
-        m_ClientGUIView: {fileID: 4}
+        m_ClientGUIView: {fileID: 5}
       m_SearchString: 
     m_ExpandedScenes: []
     m_CurrenRootInstanceID: 0
@@ -2389,7 +2118,7 @@ MonoBehaviour:
       m_IsLocked: 0
     m_CurrentSortingName: TransformSorting
   m_WindowGUID: 4c969a2b90040154d917609493e03593
---- !u!114 &16
+--- !u!114 &17
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2411,7 +2140,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 652
     y: 73
-    width: 1973
+    width: 927
     height: 751
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
@@ -2488,7 +2217,7 @@ MonoBehaviour:
       floating: 0
       collapsed: 0
       displayed: 1
-      snapOffset: {x: 0, y: 0}
+      snapOffset: {x: 0, y: 25}
       snapOffsetDelta: {x: 0, y: 0}
       snapCorner: 0
       id: unity-transform-toolbar
@@ -2636,9 +2365,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 0.71430176, y: 0.73512197, z: 0.13331217}
+    m_Target: {x: -19.374691, y: 26.03891, z: -0.078296244}
     speed: 2
-    m_Value: {x: 0.71430176, y: 0.73512197, z: 0.13331217}
+    m_Value: {x: -20.542652, y: 26.091656, z: -0.13292676}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -2689,9 +2418,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 8.271344
+    m_Target: 115.93796
     speed: 2
-    m_Value: 8.271344
+    m_Value: 121.401
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -2716,7 +2445,7 @@ MonoBehaviour:
   m_SceneVisActive: 1
   m_LastLockedObject: {fileID: 0}
   m_ViewIsLockedToObject: 0
---- !u!114 &17
+--- !u!114 &18
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2736,9 +2465,9 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 652
+    x: 1581
     y: 73
-    width: 1973
+    width: 1044
     height: 751
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
@@ -2750,7 +2479,7 @@ MonoBehaviour:
   m_ShowGizmos: 0
   m_TargetDisplay: 0
   m_ClearColor: {r: 0, g: 0, b: 0, a: 0}
-  m_TargetSize: {x: 1973, y: 730}
+  m_TargetSize: {x: 1044, y: 730}
   m_TextureFilterMode: 0
   m_TextureHideFlags: 61
   m_RenderIMGUI: 1
@@ -2765,8 +2494,8 @@ MonoBehaviour:
     m_VRangeLocked: 0
     hZoomLockedByDefault: 0
     vZoomLockedByDefault: 0
-    m_HBaseRangeMin: -986.5
-    m_HBaseRangeMax: 986.5
+    m_HBaseRangeMin: -522
+    m_HBaseRangeMax: 522
     m_VBaseRangeMin: -365
     m_VBaseRangeMax: 365
     m_HAllowExceedBaseRangeMin: 1
@@ -2777,7 +2506,7 @@ MonoBehaviour:
     m_HSlider: 0
     m_VSlider: 0
     m_IgnoreScrollWheelUntilClicked: 0
-    m_EnableMouseInput: 0
+    m_EnableMouseInput: 1
     m_EnableSliderZoomHorizontal: 0
     m_EnableSliderZoomVertical: 0
     m_UniformScale: 1
@@ -2786,29 +2515,29 @@ MonoBehaviour:
       serializedVersion: 2
       x: 0
       y: 21
-      width: 1973
+      width: 1044
       height: 730
     m_Scale: {x: 1, y: 1}
-    m_Translation: {x: 986.5, y: 365}
+    m_Translation: {x: 522, y: 365}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -986.5
+      x: -522
       y: -365
-      width: 1973
+      width: 1044
       height: 730
     m_MinimalGUI: 1
   m_defaultScale: 1
-  m_LastWindowPixelSize: {x: 1973, y: 751}
+  m_LastWindowPixelSize: {x: 1044, y: 751}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000000000000
   m_XRRenderMode: 0
   m_RenderTexture: {fileID: 0}
---- !u!114 &18
+--- !u!114 &19
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
