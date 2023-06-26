@@ -44,3 +44,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3bee6e4d88d9ca543a205f33c6b0dd3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  uiHandler: {fileID: 0}
+  timeManager: {fileID: 0}
+  bubble: {fileID: 0}
+  spawner: {fileID: 3207706396871757997, guid: 506d094d039493b4fa560ad8770e6ab1, type: 3}

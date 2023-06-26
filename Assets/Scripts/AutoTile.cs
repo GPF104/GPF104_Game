@@ -29,7 +29,7 @@ public class AutoTile : MonoBehaviour
     public int numR;
 
     public int[,] terrainMap;
-    public Vector3Int tmpSize;
+    
     public Tilemap topMap;
     public Tilemap botMap;
     public RuleTile topTile;
@@ -42,7 +42,7 @@ public class AutoTile : MonoBehaviour
     int height;
 
     //  To-do: Corner detection.
-    public void doSim(int nu)
+    public void doSim(int nu, Vector3Int tmpSize)
     {
         clearMap(false);
         width = tmpSize.x;
@@ -78,9 +78,7 @@ public class AutoTile : MonoBehaviour
             {
                 terrainMap[x, y] = Random.Range(1, 101) < iniChance ? 1 : 0;
             }
-
         }
-
     }
 
     //  int vector
@@ -149,14 +147,6 @@ public class AutoTile : MonoBehaviour
         if (complete)
         {
             terrainMap = null;
-        }
-    }
-
-    public void RunSims(int num)
-	{
-        for (int i = 0; i < num; i++)
-        {
-            doSim(num);
         }
     }
 }

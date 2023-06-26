@@ -15,7 +15,7 @@ public class UIHandler : MonoBehaviour
 
 	GameObject[] UI;
 
-	GameManager gameManager;
+	public GameManager gameManager;
 	public UI_Timer timer;
 	public Overlay overlay;
 	public FrameControls frameControls;

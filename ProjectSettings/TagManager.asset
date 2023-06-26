@@ -8,6 +8,9 @@ TagManager:
   - World
   - Boundary
   - Overlay
+  - Bullet
+  - Spawner
+  - Bubble
   layers:
   - Default
   - TransparentFX

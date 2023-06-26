@@ -6,16 +6,24 @@ public class TimeManager : MonoBehaviour
 {
 	#region ExternalLinks
 
+	LevelGenerator levelGenerator;
 	GameManager gameManager;
 	UIHandler uiHandler;
+
+	GameObject towerTop;
 	#endregion
 
 	#region Attributes
 
+	[SerializeField] GameObject spawner;
 	//	Variables
 	private bool active = true;
 	private IEnumerator timer;
+	public float difficulty = 0;
 	private float secondCount, minuteCount;
+	private float a = 0.00f;
+	private float b = 0.1f;
+	private float c = 1.0f;
 	//	Methods
 	IEnumerator Timer(float interval)
 	{
@@ -24,10 +32,47 @@ public class TimeManager : MonoBehaviour
 			yield return new WaitForSeconds(interval);
 			secondCount += 1;
 			minuteCount = (int)Mathf.Floor(secondCount / 60);
-
+			difficulty = a * Mathf.Pow(secondCount, 2) + b * secondCount + c;
 			gameManager.uiHandler.timer.SetText(GetTimeString(minuteCount, secondCount));
+
+			if (secondCount % 2 == 0)
+			{
+				StartCoroutine(Bubble(2));
+			}
+
+			if (secondCount % 5 == 0)
+				//SpawnQueue(Mathf.FloorToInt(difficulty));
+
+			if (secondCount % 30 == 0)
+				StartCoroutine(DifficultyScale());
+
 			yield return Timer(interval);
 			Timer(interval);
+		}
+	}
+	IEnumerator DifficultyScale()
+	{
+		levelGenerator.AddSpawner(spawner);
+		Debug.Log(string.Format("Difficulty: {0} Spawner spawned. There are {1} spawners.", difficulty, levelGenerator.spawners.Count));
+		yield return new WaitUntil(() => secondCount % 30 == 0);
+	}
+
+	IEnumerator Bubble(float delay)
+	{
+		int randomSpawner = Random.Range(0, levelGenerator.spawners.Count);
+
+		GameObject bubble = Instantiate(gameManager.bubble, towerTop.transform);
+		yield return new WaitForSeconds(delay);
+		bubble.GetComponent<Bubble>().SetTarget(levelGenerator.spawners[randomSpawner].transform.position, 2);
+	}
+	void SpawnQueue(int difficulty)
+	{
+		int randomSpawner = Random.Range(0, levelGenerator.spawners.Count);
+		Debug.Log(randomSpawner + " " + difficulty);
+		for (int i = 0; i < difficulty+1; i++)
+		{
+			Spawner spawner = levelGenerator.spawners[randomSpawner].GetComponent<Spawner>();
+			spawner.Spawn(Mathf.FloorToInt(difficulty));
 		}
 	}
 
@@ -37,6 +82,8 @@ public class TimeManager : MonoBehaviour
 		minuteCount = 0;
 		timer = Timer(interval);
 		StartCoroutine(timer);
+		StartCoroutine(DifficultyScale());
+		
 	}
 	public void StopTimer()
 	{
@@ -62,6 +109,8 @@ public class TimeManager : MonoBehaviour
 	void Start()
     {
 		gameManager = GetComponentInParent<GameManager>();
+		levelGenerator = GameObject.FindObjectOfType<LevelGenerator>().GetComponent<LevelGenerator>();
+		towerTop = GameObject.Find("LightningRod");
     }
 	#endregion
 }
