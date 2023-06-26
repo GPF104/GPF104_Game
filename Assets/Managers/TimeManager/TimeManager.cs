@@ -46,6 +46,7 @@ public class TimeManager : MonoBehaviour
 
 	public string GetTimeString(float minutes, float seconds)
 	{
+		//Return time string
 		return minutes.ToString("0#") + ":" + (seconds % 60).ToString("0#");
 	}
 
@@ -60,8 +61,7 @@ public class TimeManager : MonoBehaviour
 	// Start is called before the first frame update
 	void Start()
     {
-		gameManager = this.GetComponentInParent<GameManager>();
-		uiHandler = this.GetComponentInParent<UIHandler>();
+		gameManager = GetComponentInParent<GameManager>();
     }
 	#endregion
 }

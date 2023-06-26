@@ -18,9 +18,8 @@ public class GameManager : MonoBehaviour
 
 	IEnumerator InitialLoad()
 	{
-		yield return new WaitForSeconds(2);
-		uiHandler = GameObject.FindObjectOfType<UIHandler>();
-		timeManager = GameObject.FindObjectOfType<TimeManager>();
+		yield return new WaitForSeconds(0.5f);
+
 
 		timeManager.StartTimer(1);
 	}
@@ -28,7 +27,9 @@ public class GameManager : MonoBehaviour
 	// Start is called before the first frame update
 	void Start()
     {
-        StartCoroutine(InitialLoad());
+		uiHandler = this.uiHandler.GetComponent<UIHandler>();
+		timeManager = this.timeManager.GetComponent<TimeManager>();
+		StartCoroutine(InitialLoad());
     }
 
     // Update is called once per frame
