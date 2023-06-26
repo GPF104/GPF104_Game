@@ -319,20 +319,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   iniChance: 25
-  birthLimit: 3
-  deathLimit: 2
-  numR: 1
+  birthLimit: 2
+  deathLimit: 1
+  numR: 2
   tmpSize: {x: 64, y: 64, z: 0}
   topMap: {fileID: 605524865}
   botMap: {fileID: 1926580356}
-  topTiles:
-  - {fileID: 11400000, guid: 9888e93c08cf5da49ae595984725073e, type: 2}
-  - {fileID: 11400000, guid: d499629eb8ee692499bfb3c4bc312d8c, type: 2}
-  - {fileID: 11400000, guid: d08b6d9d05d2a164082256ac270a12f0, type: 2}
-  botTiles:
-  - {fileID: 11400000, guid: 5a8ad29ad016fff4ba14b8ac5ae76d47, type: 2}
-  - {fileID: 11400000, guid: 61133e60de6730848994b85ed9f00e8b, type: 2}
-  - {fileID: 11400000, guid: c0337f840d8d42441817d8c0ccef2e06, type: 2}
+  topTile: {fileID: 11400000, guid: 46d93cd0764165041ac72c4463e45bee, type: 2}
+  botTile: {fileID: 11400000, guid: db4195a83fffc7d48a367cf2295ee3b1, type: 2}
 --- !u!4 &794826185
 Transform:
   m_ObjectHideFlags: 0

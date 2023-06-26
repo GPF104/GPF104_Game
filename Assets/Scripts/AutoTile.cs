@@ -21,8 +21,11 @@ public class AutoTile : MonoBehaviour
     public Vector3Int tmpSize;
     public Tilemap topMap;
     public Tilemap botMap;
-    public List<Tile> topTiles;
-    public List<Tile> botTiles;
+    public RuleTile topTile;
+    public RuleTile botTile;
+
+    //public List<Tile> topTiles;
+    //public List<Tile> botTiles;
 
     int width;
     int height;
@@ -50,8 +53,8 @@ public class AutoTile : MonoBehaviour
             for (int y = 0; y < height; y++)
             {
                 if (terrainMap[x, y] == 1)
-                    topMap.SetTile(new Vector3Int(-x + width / 2, -y + height / 2, 0), topTiles[Random.Range(0, topTiles.Count)]);
-                botMap.SetTile(new Vector3Int(-x + width / 2, -y + height / 2, 0), botTiles[Random.Range(0, botTiles.Count)]);
+                    topMap.SetTile(new Vector3Int(-x + width / 2, -y + height / 2, 0), topTile);
+                botMap.SetTile(new Vector3Int(-x + width / 2, -y + height / 2, 0), botTile);
             }
         }
     }
