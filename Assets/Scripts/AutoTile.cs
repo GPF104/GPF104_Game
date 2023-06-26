@@ -6,6 +6,17 @@ using UnityEditor;
 
 public class AutoTile : MonoBehaviour
 {
+
+    public enum TileTypes
+	{
+        grass,
+        dirt,
+        rock,
+        path
+	}
+
+    [Range(1, 10)]
+    public int numSims;
     //  Editor Variables
     [Range(0, 100)]
     public int iniChance;
@@ -17,7 +28,7 @@ public class AutoTile : MonoBehaviour
     [Range(1, 10)]
     public int numR;
 
-    private int[,] terrainMap;
+    public int[,] terrainMap;
     public Vector3Int tmpSize;
     public Tilemap topMap;
     public Tilemap botMap;
@@ -122,6 +133,14 @@ public class AutoTile : MonoBehaviour
         return newMap;
     }
 
+    public bool GetTile(Vector3 position, TileTypes tileType)
+	{
+        if (tileType == TileTypes.grass)
+		{
+            return topMap.GetTile(Vector3Int.FloorToInt(position));
+		}
+        return false;
+	}
     public void clearMap(bool complete)
     {
 
@@ -133,21 +152,11 @@ public class AutoTile : MonoBehaviour
         }
     }
 
-    //  Unity Methods
-
-    void Update()
-    {
-
-        if (Input.GetMouseButtonDown(0))
+    public void RunSims(int num)
+	{
+        for (int i = 0; i < num; i++)
         {
-            doSim(numR);
+            doSim(num);
         }
-
-
-        if (Input.GetMouseButtonDown(1))
-        {
-            clearMap(true);
-        }
-
     }
 }

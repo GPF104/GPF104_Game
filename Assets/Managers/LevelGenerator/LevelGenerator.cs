@@ -2,11 +2,27 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+
 public class LevelGenerator : MonoBehaviour
 {
+
+    enum GenerateType {
+        Flora,
+        Rocks,
+        Props,
+        Decals
+    }
+
+    #region ExternalLinks
+
+    AutoTile autoTile;
+
+	#endregion
+
 	#region Attributes
 
-    //  Edit in Unity Editor
+	//  Edit in Unity Editor
 	[SerializeField] float radius = 20;
     [SerializeField] int MIN_DENSITY = 100;
     [SerializeField] int MAX_DENSITY = 1000;
@@ -32,17 +48,23 @@ public class LevelGenerator : MonoBehaviour
             }
         }
     }
-    void Generate(List<GameObject> gameObjects)
+    void Generate(List<GameObject> gameObjects, GenerateType type)
 	{
-        for (int i = 0; i < gameObjects.Count; i++)
+        if (type == GenerateType.Flora)
 		{
-            for (int j = 0; j < Random.Range(MIN_DENSITY, MAX_DENSITY); j++)
-			{
-                Vector2 pos = Random.insideUnitSphere * radius;
-                GameObject go = Instantiate(gameObjects[Random.Range(0, gameObjects.Count)]);
-                go.transform.position = pos;
+            for (int i = 0; i < gameObjects.Count; i++)
+            {
+                for (int j = 0; j < Random.Range(MIN_DENSITY, MAX_DENSITY); j++)
+                {
+                    Vector2 pos = Random.insideUnitSphere * radius;
+                    if (autoTile.GetTile(pos, AutoTile.TileTypes.grass))
+					{
+                        GameObject go = Instantiate(gameObjects[Random.Range(0, gameObjects.Count)]);
+                        go.transform.position = pos;
+                    }
+                }
             }
-		}
+        }
 	}
 	#endregion
 
@@ -50,8 +72,10 @@ public class LevelGenerator : MonoBehaviour
 	// Start is called before the first frame update
 	void Start()
     {
-        StartCoroutine(SlowGenerate(Flora));
-        //Generate(Flora);
+        autoTile = GameObject.FindObjectOfType<AutoTile>().GetComponent<AutoTile>();
+        autoTile.doSim(autoTile.numSims);
+        //StartCoroutine(SlowGenerate(Flora));
+        Generate(Flora, GenerateType.Flora);
         //Generate(Rocks);
         //Generate(Props);
         //Generate(Decals);
