@@ -60,6 +60,7 @@ public class LevelGenerator : MonoBehaviour
                     if (autoTile.GetTile(pos, AutoTile.TileTypes.grass))
 					{
                         GameObject go = Instantiate(gameObjects[Random.Range(0, gameObjects.Count)]);
+                        go.transform.SetParent(GameObject.Find("Flora").transform);
                         go.transform.position = pos;
                     }
                 }
@@ -76,6 +77,7 @@ public class LevelGenerator : MonoBehaviour
         autoTile.doSim(autoTile.numSims);
         //StartCoroutine(SlowGenerate(Flora));
         Generate(Flora, GenerateType.Flora);
+        Generate(Decals, GenerateType.Flora);
         //Generate(Rocks);
         //Generate(Props);
         //Generate(Decals);
