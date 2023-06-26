@@ -72,6 +72,7 @@ public class AutoTile : MonoBehaviour
 
     }
 
+    //  int vector
     public int[,] genTilePos(int[,] oldMap)
     {
         int[,] newMap = new int[width, height];
