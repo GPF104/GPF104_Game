@@ -6,6 +6,17 @@ using UnityEditor;
 
 public class AutoTile : MonoBehaviour
 {
+
+    public enum TileTypes
+	{
+        grass,
+        dirt,
+        rock,
+        path
+	}
+
+    [Range(1, 10)]
+    public int numSims;
     //  Editor Variables
     [Range(0, 100)]
     public int iniChance;
@@ -17,8 +28,8 @@ public class AutoTile : MonoBehaviour
     [Range(1, 10)]
     public int numR;
 
-    private int[,] terrainMap;
-    public Vector3Int tmpSize;
+    public int[,] terrainMap;
+    
     public Tilemap topMap;
     public Tilemap botMap;
     public RuleTile topTile;
@@ -31,7 +42,7 @@ public class AutoTile : MonoBehaviour
     int height;
 
     //  To-do: Corner detection.
-    public void doSim(int nu)
+    public void doSim(int nu, Vector3Int tmpSize)
     {
         clearMap(false);
         width = tmpSize.x;
@@ -67,9 +78,7 @@ public class AutoTile : MonoBehaviour
             {
                 terrainMap[x, y] = Random.Range(1, 101) < iniChance ? 1 : 0;
             }
-
         }
-
     }
 
     //  int vector
@@ -122,6 +131,14 @@ public class AutoTile : MonoBehaviour
         return newMap;
     }
 
+    public bool GetTile(Vector3 position, TileTypes tileType)
+	{
+        if (tileType == TileTypes.grass)
+		{
+            return topMap.GetTile(Vector3Int.FloorToInt(position));
+		}
+        return false;
+	}
     public void clearMap(bool complete)
     {
 
@@ -131,23 +148,5 @@ public class AutoTile : MonoBehaviour
         {
             terrainMap = null;
         }
-    }
-
-    //  Unity Methods
-
-    void Update()
-    {
-
-        if (Input.GetMouseButtonDown(0))
-        {
-            doSim(numR);
-        }
-
-
-        if (Input.GetMouseButtonDown(1))
-        {
-            clearMap(true);
-        }
-
     }
 }

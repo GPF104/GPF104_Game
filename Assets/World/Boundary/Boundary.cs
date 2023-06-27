@@ -10,11 +10,12 @@ public class Boundary : MonoBehaviour
 	float distance = 0;
 	float distanceFade = 0;
 	bool inarena = true;
-	[SerializeField] int MAX_DISTANCE = 80;
-	[SerializeField] int MIN_DISTANCE = 50;
+	[SerializeField] public int MAX_DISTANCE = 80;
+	[SerializeField] public int MIN_DISTANCE = 50;
 	IEnumerator OutofBounds()
 	{
 		yield return new WaitUntil(() => distance > 80);
+		Debug.Log(distance + " in arena? " + inarena + " distance opacity " + distanceFade);
 		inarena = false;
 		StartCoroutine(InBounds());
 		yield return new WaitForSeconds(1.5f);
@@ -45,7 +46,7 @@ public class Boundary : MonoBehaviour
 	{
 		yield return new WaitForSeconds(0.15f);
 		distance = Vector2.Distance(this.transform.position, target.transform.position);
-		Debug.Log(distance + " in arena? " + inarena + " distance opacity " + distanceFade);
+		//
 		StartCoroutine(DistanceFade(distance));
 		StartCoroutine(GetDistance());
 		StartCoroutine(OutofBounds());

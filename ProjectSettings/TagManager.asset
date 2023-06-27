@@ -8,11 +8,14 @@ TagManager:
   - World
   - Boundary
   - Overlay
+  - Bullet
+  - Spawner
+  - Bubble
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Actors
   - Water
   - UI
   - 
