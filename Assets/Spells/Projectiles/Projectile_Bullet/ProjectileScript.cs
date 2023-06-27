@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class ProjectileScript : MonoBehaviour
 {
-	#region ExternalLinks
+    #region ExternalLinks
+
+    HealthScript healthScript;
 
 	#endregion
 
@@ -24,9 +26,17 @@ public class ProjectileScript : MonoBehaviour
         StartCoroutine(LifeSpan(3));
     }
 
+    private bool ishit = false;
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        Destroy(this.gameObject);
+        if (collision.collider.tag == "Enemy" && ishit == false)
+		{
+            ishit = true;            
+            healthScript = collision.gameObject.GetComponent<HealthScript>();
+            healthScript.TakeDamage(1, collision.gameObject);
+            Destroy(this.gameObject);
+        }
         //check here to see if hitting enemy
     }
 	#endregion
