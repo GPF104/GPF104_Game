@@ -15,10 +15,11 @@ public class UIHandler : MonoBehaviour
 
 	GameObject[] UI;
 
-	GameManager gameManager;
+	public GameManager gameManager;
 	public UI_Timer timer;
 	public Overlay overlay;
 	public FrameControls frameControls;
+	public UI_Map uiMap;
 	#endregion
 
 	#region Attributes
@@ -42,9 +43,12 @@ public class UIHandler : MonoBehaviour
 	// Start is called before the first frame update
 	void Start()
     {
+		gameManager = GameObject.FindObjectOfType<GameManager>().GetComponent<GameManager>();
+
 		timer = GameObject.FindObjectOfType<UI_Timer>().GetComponent<UI_Timer>();
 		overlay = GameObject.FindObjectOfType<Overlay>().GetComponent<Overlay>();
 		frameControls = this.GetComponent<FrameControls>();
+		uiMap = GameObject.FindObjectOfType<UI_Map>().GetComponent<UI_Map>();
     }
 
 	#endregion

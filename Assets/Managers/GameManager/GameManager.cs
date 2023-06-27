@@ -8,6 +8,11 @@ public class GameManager : MonoBehaviour
 	public Player player;
 	public UIHandler uiHandler;
 	public TimeManager timeManager;
+
+	public GameObject bubble;
+	public GameObject spawner;
+
+	public LevelGenerator levelGenerator;
 	#endregion
 
 	#region Attributes
@@ -18,9 +23,9 @@ public class GameManager : MonoBehaviour
 
 	IEnumerator InitialLoad()
 	{
+
+		levelGenerator.GenerateLevel();
 		yield return new WaitForSeconds(0.5f);
-
-
 		timeManager.StartTimer(1);
 	}
 
@@ -29,6 +34,7 @@ public class GameManager : MonoBehaviour
     {
 		uiHandler = this.uiHandler.GetComponent<UIHandler>();
 		timeManager = this.timeManager.GetComponent<TimeManager>();
+		levelGenerator = GameObject.FindObjectOfType<LevelGenerator>().GetComponent<LevelGenerator>();
 		StartCoroutine(InitialLoad());
     }
 
