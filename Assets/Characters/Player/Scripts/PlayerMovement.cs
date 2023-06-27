@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
 	#region ExternalLinks
-
+    GameManager gameManager;
 	#endregion
 	#region Attributes
 
@@ -36,6 +36,7 @@ public class PlayerMovement : MonoBehaviour
         //  To-do ease in?
         rb2d.velocity = new Vector2(moveDirection.x * moveSpeed, moveDirection.y * moveSpeed);
         rb2d.rotation = Mathf.Atan2(aimDirection.y, aimDirection.x) * Mathf.Rad2Deg - 90f;
+        
     }
 
     #endregion
@@ -44,12 +45,14 @@ public class PlayerMovement : MonoBehaviour
     {
         rb2d = this.GetComponent<Rigidbody2D>();
         weapon = this.gameObject.GetComponentInChildren<Weapon>();
+        gameManager = GameObject.FindObjectOfType<GameManager>().GetComponent<GameManager>();
     }
     
     void Update()
     {
         ProcessInputs();
     }
+
     // Framerate Independent
     void FixedUpdate() 
     {

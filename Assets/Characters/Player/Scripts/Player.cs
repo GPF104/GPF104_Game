@@ -4,10 +4,20 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    GameManager gameManager;
+
+    IEnumerator UpdatePosition()
+	{
+        yield return new WaitForSeconds(0.5f);
+        gameManager.uiHandler.uiMap.UpdatePositions(this.transform.position);
+        StartCoroutine(UpdatePosition());
+    }
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        gameManager = GameObject.FindObjectOfType<GameManager>().GetComponent<GameManager>();
+        StartCoroutine(UpdatePosition());
     }
 
     // Update is called once per frame

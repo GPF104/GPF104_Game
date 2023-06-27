@@ -23,6 +23,7 @@ public class GameManager : MonoBehaviour
 
 	IEnumerator InitialLoad()
 	{
+
 		levelGenerator.GenerateLevel();
 		yield return new WaitForSeconds(0.5f);
 		timeManager.StartTimer(1);

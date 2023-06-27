@@ -18,6 +18,7 @@ public class LevelGenerator : MonoBehaviour
 
     AutoTile autoTile;
     Boundary boundary;
+    GameManager gameManager;
 
     #endregion
 
@@ -37,7 +38,7 @@ public class LevelGenerator : MonoBehaviour
     [SerializeField] List<GameObject> Props = new List<GameObject>();
     [SerializeField] List<GameObject> Decals = new List<GameObject>();
 
-    public Vector3Int levelSize;
+    public Vector3Int levelSize = new Vector3Int(120, 120, 0);
 
     #endregion
 
@@ -96,6 +97,8 @@ public class LevelGenerator : MonoBehaviour
             GameObject go = Instantiate(gobject, CalculateSpawnPosition(angle, distance), Quaternion.identity);
             spawners.Add(go);
             go.transform.SetParent(GameObject.Find("Spawners").transform);
+            gameManager.uiHandler.uiMap.AddMapElement(go);
+
 		}
 	}
 
@@ -121,7 +124,7 @@ public class LevelGenerator : MonoBehaviour
 	// Start is called before the first frame update
 	void Start()
     {
-
+        gameManager = GameObject.FindObjectOfType<GameManager>().GetComponent<GameManager>();
         //Generate(Rocks);
         //Generate(Props);
         //Generate(Decals);
