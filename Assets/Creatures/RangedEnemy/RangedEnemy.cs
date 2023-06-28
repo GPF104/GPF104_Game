@@ -13,9 +13,10 @@ public class RangedEnemy : MonoBehaviour
     public float shootingDistance = 5f;
     public float stoppingDistance = 3f;
 
+    public float fireForce = 20f;
     public float fireRate;
     private float timeToFire;
-    public Transform firingPoint;
+    public Transform firePoint;
 
     void Start()
     {
@@ -35,21 +36,23 @@ public class RangedEnemy : MonoBehaviour
 
         if (Vector2.Distance(player.position, transform.position) <= shootingDistance)
         {
-            Shoot();
+            Fire();
         }
     }
 
-    private void Shoot()
+    private void Fire()
     {
         if (timeToFire <= 0f)
         {
-            Instantiate(enemyProjectile, firingPoint.position, firingPoint.rotation);
+            Instantiate(enemyProjectile, firePoint.position, firePoint.rotation);
             timeToFire = fireRate;
         }
         else
         {
             timeToFire -= Time.deltaTime;
         }
+        GameObject bullet = Instantiate(enemyProjectile, firePoint.position, firePoint.rotation);
+        bullet.GetComponent<Rigidbody2D>().AddForce(firePoint.up * fireForce, ForceMode2D.Impulse);
     }
 
     private void FixedUpdate()

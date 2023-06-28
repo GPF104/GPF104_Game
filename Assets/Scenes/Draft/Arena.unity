@@ -747,6 +747,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 94487ff424c8d10498b6fd3f52f3a1f2, type: 3}
+--- !u!4 &860466274 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8340791649094103488, guid: 9fb78b581624a3b46b10adec2679858d, type: 3}
+  m_PrefabInstance: {fileID: 8340791648620530190}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &923822113
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2224,7 +2229,15 @@ PrefabInstance:
     - target: {fileID: 8340791649948962772, guid: 9fb78b581624a3b46b10adec2679858d, type: 3}
       propertyPath: player
       value: 
+      objectReference: {fileID: 6630951993476463365, guid: 3639e97faa0bf8b42a5078af82424d1c, type: 3}
+    - target: {fileID: 8340791649948962772, guid: 9fb78b581624a3b46b10adec2679858d, type: 3}
+      propertyPath: fireRate
+      value: 100
       objectReference: {fileID: 0}
+    - target: {fileID: 8340791649948962772, guid: 9fb78b581624a3b46b10adec2679858d, type: 3}
+      propertyPath: firePoint
+      value: 
+      objectReference: {fileID: 860466274}
     - target: {fileID: 8340791649948962773, guid: 9fb78b581624a3b46b10adec2679858d, type: 3}
       propertyPath: m_RootOrder
       value: 1
