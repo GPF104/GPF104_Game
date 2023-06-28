@@ -8,6 +8,7 @@ public class RangedEnemy : MonoBehaviour
     public float moveSpeed = 5f;
     private Rigidbody2D rb;
     private Vector2 movement;
+    public GameObject enemyProjectile;
 
     public float shootingDistance = 5f;
     public float stoppingDistance = 3f;
@@ -42,7 +43,7 @@ public class RangedEnemy : MonoBehaviour
     {
         if (timeToFire <= 0f)
         {
-            Debug.Log("Shoot");
+            Instantiate(enemyProjectile, firingPoint.position, firingPoint.rotation);
             timeToFire = fireRate;
         }
         else

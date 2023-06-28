@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 4245647849778599426}
   - component: {fileID: 4245647849778599430}
   - component: {fileID: 4245647849778599431}
+  - component: {fileID: -5359697689450555623}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -128,6 +129,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 10
+--- !u!114 &-5359697689450555623
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3388424831923934076}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56b7c87e76042ba4c8b8e25b5d7acd75, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 10
+  currentHealth: 0
 --- !u!1 &4245647849586323394
 GameObject:
   m_ObjectHideFlags: 0
@@ -203,8 +218,7 @@ SpriteRenderer:
   m_SortingLayerID: 1872427283
   m_SortingLayer: 3
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6,
-    type: 3}
+  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 0.3962264, g: 0.1999822, b: 0.1999822, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -227,8 +241,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee50192cf79babd469ca8c9f1085a650, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Projectile_Bullet: {fileID: 6503832657817774434, guid: 0eb8a4047ebf9284ca605c58800f2cae,
-    type: 3}
+  Projectile_Bullet: {fileID: 6503832657817774434, guid: 0eb8a4047ebf9284ca605c58800f2cae, type: 3}
   fireForce: 20
 --- !u!1 &4245647850716838104
 GameObject:
@@ -303,8 +316,7 @@ SpriteRenderer:
   m_SortingLayerID: 1872427283
   m_SortingLayer: 3
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2413806693520163455, guid: 5fc4ab4315cfbc9468190b5cc80f771e,
-    type: 3}
+  m_Sprite: {fileID: -2413806693520163455, guid: 5fc4ab4315cfbc9468190b5cc80f771e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

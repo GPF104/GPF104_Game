@@ -4,13 +4,22 @@ using UnityEngine;
 
 public class EnemyProjectileScript : MonoBehaviour
 {
+    #region ExternalLinks
+
     HealthScript healthScript;
 
+    #endregion
+
+    #region Attributes
+    
     IEnumerator LifeSpan(float interval)
     {
         yield return new WaitForSeconds(interval);
         Destroy(this.gameObject);
     }
+    #endregion
+
+    #region Unity
 
     void Start()
     {
@@ -30,4 +39,5 @@ public class EnemyProjectileScript : MonoBehaviour
         }
         //check here to see if hitting enemy
     }
+    #endregion
 }
