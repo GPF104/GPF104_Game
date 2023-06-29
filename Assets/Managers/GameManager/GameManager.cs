@@ -17,6 +17,13 @@ public class GameManager : MonoBehaviour
 
 	#region Attributes
 
+	public bool GameFinished = false;
+	public void GameOver()
+	{
+		GameFinished = true;
+		Time.timeScale = 0;
+	}
+
 	#endregion
 
 	#region Unity

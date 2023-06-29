@@ -11,7 +11,9 @@ public class EnemyProjectileScript : MonoBehaviour
     #endregion
 
     #region Attributes
-    
+
+    public int damage = 5;
+
     IEnumerator LifeSpan(float interval)
     {
         yield return new WaitForSeconds(interval);
@@ -27,17 +29,16 @@ public class EnemyProjectileScript : MonoBehaviour
     }
 
     private bool ishit = false;
-
+    
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.collider.tag == "Player" && ishit == false)
         {
             ishit = true;
-            healthScript = collision.gameObject.GetComponent<HealthScript>();
-            healthScript.TakeDamage(1, collision.gameObject);
             Destroy(this.gameObject);
         }
         //check here to see if hitting enemy
     }
+    
     #endregion
 }

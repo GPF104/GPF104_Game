@@ -20,6 +20,7 @@ public class UIHandler : MonoBehaviour
 	public Overlay overlay;
 	public FrameControls frameControls;
 	public UI_Map uiMap;
+	public UI_Health uiHealth;
 	#endregion
 
 	#region Attributes
@@ -49,6 +50,7 @@ public class UIHandler : MonoBehaviour
 		overlay = GameObject.FindObjectOfType<Overlay>().GetComponent<Overlay>();
 		frameControls = this.GetComponent<FrameControls>();
 		uiMap = GameObject.FindObjectOfType<UI_Map>().GetComponent<UI_Map>();
+		uiHealth = GameObject.FindObjectOfType<UI_Health>();
     }
 
 	#endregion

@@ -7,9 +7,10 @@ public class UI_Health : MonoBehaviour
 
     [SerializeField] GameObject HPBar;
     Image HP;
-    void SetHealth(int health)
+    public void SetHealth(int health)
 	{
-        HP.fillAmount = health;
+        Debug.Log("HP:" + (float)health/100 + " " + HP.fillAmount);
+        HP.fillAmount = (float)health / 100;
 	}
     // Start is called before the first frame update
     void Start()
