@@ -4,21 +4,37 @@ using UnityEngine;
 
 public class Spawner : MonoBehaviour
 {
+    GameManager gameManager;
+
 	[SerializeField] public List<GameObject> enemies = new List<GameObject>();
 
-    public void Spawn(int difficulty)
-	{
-        
-        GameObject go = Instantiate(enemies[Random.Range(0, enemies.Count)], this.transform);
-        go.transform.parent.SetParent(GameObject.Find("Enemies").transform);
-        Debug.Log("Difficulty: " + difficulty + " Spawned enemy at " + go.transform.position);
 
+    public void Spawn(float difficulty)
+    {
+        int enemyIndex = 0;
+        int random = Random.Range(0, (int)difficulty);
+        Debug.Log("RANDOM " + random + " DIFFICULTY" + difficulty);
+        
+        if (random >= 85 && random < 95)
+		{
+            enemyIndex = 1;
+		}
+        else if (random >= 95)
+		{
+            enemyIndex = 2;
+		}
+
+        GameObject go = Instantiate(enemies[enemyIndex], transform);
+        go.transform.SetParent(GameObject.Find("Enemies").transform);
+        go.transform.localScale = Vector3.one;
+        Debug.Log("Difficulty: " + difficulty + " Spawned enemy at " + go.transform.position);
     }
+
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        gameManager = GameObject.FindObjectOfType<GameManager>().GetComponent<GameManager>();
     }
 
     // Update is called once per frame
@@ -31,7 +47,7 @@ public class Spawner : MonoBehaviour
 	{
 		if (collision.tag == "Bubble")
 		{
-            Spawn(1);
+            Spawn(gameManager.timeManager.difficulty);
 		}
 	}
 }

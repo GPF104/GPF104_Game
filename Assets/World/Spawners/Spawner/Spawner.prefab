@@ -81,7 +81,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &3207706396871757997
@@ -132,6 +132,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemies:
   - {fileID: 3776832945650117191, guid: 41bcc802dbedd6d45ad1604153a1defe, type: 3}
+  - {fileID: 8340791649948962779, guid: 9fb78b581624a3b46b10adec2679858d, type: 3}
+  - {fileID: 8340791649948962779, guid: 9fb78b581624a3b46b10adec2679858d, type: 3}
 --- !u!58 &-9097163468560066954
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -230,7 +232,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &6113615158132239676
@@ -315,6 +317,6 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0

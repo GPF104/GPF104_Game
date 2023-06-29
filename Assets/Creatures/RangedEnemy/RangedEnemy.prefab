@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8340791649094103488}
   m_Layer: 0
-  m_Name: Firing Point
+  m_Name: FiringPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -81,12 +81,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 6630951993476463365, guid: 3639e97faa0bf8b42a5078af82424d1c, type: 3}
-  moveSpeed: 5
   enemyProjectile: {fileID: 51441537559747877, guid: 81961abe3415d7c4d8fddcc0e8377685, type: 3}
+  moveSpeed: 5
   shootingDistance: 10
   stoppingDistance: 5
+  fireForce: 20
   fireRate: 0.8
-  firingPoint: {fileID: 8340791649094103488}
+  timeToFire: 0.2
+  maxfireDelay: 1.2
+  firePoint: {fileID: 8340791649094103488}
 --- !u!114 &8340791649948962775
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -125,7 +128,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.8, y: 0.8}
   m_EdgeRadius: 0
 --- !u!50 &8340791649948962777
 Rigidbody2D:

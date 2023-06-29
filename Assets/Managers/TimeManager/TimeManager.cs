@@ -30,14 +30,19 @@ public class TimeManager : MonoBehaviour
 		while (active)
 		{
 			yield return new WaitForSeconds(interval);
+
 			secondCount += 1;
 			minuteCount = (int)Mathf.Floor(secondCount / 60);
-			difficulty = a * Mathf.Pow(secondCount, 2) + b * secondCount + c;
+			difficulty = 10 * (a * Mathf.Pow(secondCount, 2) + b * secondCount + c);
 			gameManager.uiHandler.timer.SetText(GetTimeString(minuteCount, secondCount));
 
-			if (secondCount % 2 == 0)
+			if (secondCount % 5 == 0)
 			{
-				StartCoroutine(Bubble(2));
+				for (int i = 0; i < levelGenerator.spawners.Count; i++)
+				{
+					yield return new WaitForSeconds(0.5f);
+					StartCoroutine(Bubble(2));
+				}
 			}
 
 			if (secondCount % 5 == 0)
@@ -54,27 +59,23 @@ public class TimeManager : MonoBehaviour
 	{
 		levelGenerator.AddSpawner(spawner);
 		Debug.Log(string.Format("Difficulty: {0} Spawner spawned. There are {1} spawners.", difficulty, levelGenerator.spawners.Count));
+
 		yield return new WaitUntil(() => secondCount % 30 == 0);
 	}
 
 	IEnumerator Bubble(float delay)
 	{
-		int randomSpawner = Random.Range(0, levelGenerator.spawners.Count);
+		yield return new WaitForSeconds(Random.Range(difficulty*0.5f, 10/difficulty));
 
-		GameObject bubble = Instantiate(gameManager.bubble, towerTop.transform);
+		int randomSpawner = Random.Range(0, levelGenerator.spawners.Count);
+		Vector3 pos = towerTop.transform.position;
+		GameObject bubble = Instantiate(gameManager.bubble, towerTop.transform.position, Quaternion.identity);
+
 		yield return new WaitForSeconds(delay);
+
 		bubble.GetComponent<Bubble>().SetTarget(levelGenerator.spawners[randomSpawner].transform.position, 2);
 	}
-	void SpawnQueue(int difficulty)
-	{
-		int randomSpawner = Random.Range(0, levelGenerator.spawners.Count);
-		Debug.Log(randomSpawner + " " + difficulty);
-		for (int i = 0; i < difficulty+1; i++)
-		{
-			Spawner spawner = levelGenerator.spawners[randomSpawner].GetComponent<Spawner>();
-			spawner.Spawn(Mathf.FloorToInt(difficulty));
-		}
-	}
+
 
 	public void StartTimer(float interval)
 	{
