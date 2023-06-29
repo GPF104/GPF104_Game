@@ -19,16 +19,31 @@ public class PlayerMovement : MonoBehaviour
 
     void ProcessInputs()
     {
-        float moveX = Input.GetAxisRaw("Horizontal");
-        float moveY = Input.GetAxisRaw("Vertical");
+        if (Input.GetKeyDown(KeyCode.Escape))
+		{
+            if (gameManager.GamePaused)
+			{
+                gameManager.Unpause();
+			}
+            else
+			{
+                gameManager.Pause();
+			}
+		}
 
-        if (Input.GetMouseButtonDown(0) && gameManager.GameFinished == false)
-        {
-            weapon.Fire();
+        if (gameManager.GamePaused == false && gameManager.GameFinished == false)
+		{
+            float moveX = Input.GetAxisRaw("Horizontal");
+            float moveY = Input.GetAxisRaw("Vertical");
+
+            if (Input.GetMouseButtonDown(0))
+            {
+                weapon.Fire();
+            }
+
+            moveDirection = new Vector2(moveX, moveY).normalized;
+            mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         }
-
-        moveDirection = new Vector2(moveX, moveY).normalized;
-        mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
     }
 
     void Move()

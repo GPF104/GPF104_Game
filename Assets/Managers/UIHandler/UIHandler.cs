@@ -16,12 +16,21 @@ public class UIHandler : MonoBehaviour
 	GameObject[] UI;
 
 	public GameManager gameManager;
-	public UI_Timer timer;
+	public UI_Timer uiTimer;
 	public Overlay overlay;
 	public FrameControls frameControls;
 	public UI_Map uiMap;
 	public UI_Health uiHealth;
+	public UI_GameOver uiGameOver;
+	public GameObject gameOverObject;
+	public GameObject uiMenu;
+
 	#endregion
+
+	public void Display(GameObject frame, bool active)
+	{
+		frame.SetActive(active);
+	}
 
 	#region Attributes
 	IEnumerator FadeOut(float speed)
@@ -45,13 +54,18 @@ public class UIHandler : MonoBehaviour
 	void Start()
     {
 		gameManager = GameObject.FindObjectOfType<GameManager>().GetComponent<GameManager>();
-
-		timer = GameObject.FindObjectOfType<UI_Timer>().GetComponent<UI_Timer>();
+		uiTimer = GameObject.FindObjectOfType<UI_Timer>().GetComponent<UI_Timer>();
 		overlay = GameObject.FindObjectOfType<Overlay>().GetComponent<Overlay>();
 		frameControls = this.GetComponent<FrameControls>();
 		uiMap = GameObject.FindObjectOfType<UI_Map>().GetComponent<UI_Map>();
-		uiHealth = GameObject.FindObjectOfType<UI_Health>();
+		uiHealth = GameObject.FindObjectOfType<UI_Health>().GetComponent<UI_Health>();
+
+		gameOverObject.SetActive(false);
+		uiMenu.SetActive(false);
+		
     }
 
 	#endregion
+
 }
+
