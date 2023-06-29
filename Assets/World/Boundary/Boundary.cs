@@ -14,7 +14,7 @@ public class Boundary : MonoBehaviour
 	[SerializeField] public int MIN_DISTANCE = 50;
 	IEnumerator OutofBounds()
 	{
-		yield return new WaitUntil(() => distance > 80);
+		yield return new WaitUntil(() => distance > MAX_DISTANCE);
 		Debug.Log(distance + " in arena? " + inarena + " distance opacity " + distanceFade);
 		inarena = false;
 		StartCoroutine(InBounds());
@@ -25,7 +25,7 @@ public class Boundary : MonoBehaviour
 
 	IEnumerator InBounds()
 	{
-		yield return new WaitUntil(() => distance < 80);
+		yield return new WaitUntil(() => distance < MAX_DISTANCE);
 		inarena = true;
 		yield return new WaitForSeconds(1.5f);
 		gameManager.uiHandler.frameControls.FrameFade(overlay, Fade.Out, 1);

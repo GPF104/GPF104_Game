@@ -21,7 +21,6 @@ public class UI_Map : MonoBehaviour
 	{
         if (xRatio != float.NaN && yRatio != float.NaN)
 		{
-            Debug.Log(xRatio + " " + yRatio);
             playerPos.anchoredPosition = new Vector3(position.x * xRatio, position.y * yRatio, 0);
         }
 	}        

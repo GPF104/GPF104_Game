@@ -6,6 +6,8 @@ public class Player : MonoBehaviour
 {
     GameManager gameManager;
 
+    int Health = 100;
+
     IEnumerator UpdatePosition()
 	{
         yield return new WaitForSeconds(0.5f);
@@ -13,6 +15,16 @@ public class Player : MonoBehaviour
         StartCoroutine(UpdatePosition());
     }
 
+    void TakeDamage(int amount)
+	{
+        Health = Health - amount;
+        gameManager.uiHandler.uiHealth.SetHealth(Health);
+        if (Health <= 0)
+		{
+            gameManager.GameOver();
+		}
+        
+	}
     // Start is called before the first frame update
     void Start()
     {
@@ -24,5 +36,13 @@ public class Player : MonoBehaviour
     void Update()
     {
         
+    }
+
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.tag == "EnemyBullet")
+		{
+            TakeDamage(other.gameObject.GetComponent<EnemyProjectileScript>().damage);
+		}
     }
 }
