@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
 	#region ExternalLinks
+
     GameManager gameManager;
 	#endregion
 	#region Attributes
@@ -39,9 +40,10 @@ public class PlayerMovement : MonoBehaviour
         
     }
 
-    #endregion
-    //
-    void Start()
+	#endregion
+	//
+	#region Unity
+	void Start()
     {
         rb2d = this.GetComponent<Rigidbody2D>();
         weapon = this.gameObject.GetComponentInChildren<Weapon>();
@@ -59,6 +61,5 @@ public class PlayerMovement : MonoBehaviour
         //Physics Calculations
         Move();
     }
-
-    
+	#endregion
 }
