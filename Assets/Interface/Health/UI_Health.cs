@@ -9,7 +9,6 @@ public class UI_Health : MonoBehaviour
     Image HP;
     public void SetHealth(int health)
 	{
-        Debug.Log("HP:" + (float)health/100 + " " + HP.fillAmount);
         HP.fillAmount = (float)health / 100;
 	}
     // Start is called before the first frame update

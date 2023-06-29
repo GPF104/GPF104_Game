@@ -34,7 +34,7 @@ public class TimeManager : MonoBehaviour
 			secondCount += 1;
 			minuteCount = (int)Mathf.Floor(secondCount / 60);
 			difficulty = 10 * (a * Mathf.Pow(secondCount, 2) + b * secondCount + c);
-			gameManager.uiHandler.timer.SetText(GetTimeString(minuteCount, secondCount));
+			gameManager.uiHandler.uiTimer.SetText(GetTimeString(minuteCount, secondCount));
 
 			if (secondCount % 5 == 0)
 			{
