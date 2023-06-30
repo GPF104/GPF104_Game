@@ -724,7 +724,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6344822991956903794, guid: 94487ff424c8d10498b6fd3f52f3a1f2, type: 3}
       propertyPath: MIN_DENSITY
-      value: 500
+      value: 250
       objectReference: {fileID: 0}
     - target: {fileID: 6344822991956903794, guid: 94487ff424c8d10498b6fd3f52f3a1f2, type: 3}
       propertyPath: numSpawners
@@ -758,6 +758,14 @@ PrefabInstance:
       propertyPath: Flora.Array.data[4]
       value: 
       objectReference: {fileID: 5377458968873894635, guid: d31027af2957df143bc5ba92c228fb29, type: 3}
+    - target: {fileID: 6344822991956903794, guid: 94487ff424c8d10498b6fd3f52f3a1f2, type: 3}
+      propertyPath: Flora.Array.data[5]
+      value: 
+      objectReference: {fileID: 2115658149419121264, guid: b5931354123a15f4199bc2785b417923, type: 3}
+    - target: {fileID: 6344822991956903794, guid: 94487ff424c8d10498b6fd3f52f3a1f2, type: 3}
+      propertyPath: Flora.Array.data[6]
+      value: 
+      objectReference: {fileID: 2115658149419121264, guid: 634e5f453ac559449a0376539d23d65f, type: 3}
     - target: {fileID: 6344822991956903794, guid: 94487ff424c8d10498b6fd3f52f3a1f2, type: 3}
       propertyPath: Decals.Array.data[0]
       value: 

@@ -39,9 +39,12 @@ public class EnemyProjectileScript : MonoBehaviour
         }
         else
 		{
-            Destroy(this.gameObject);
+            if (collision.collider.tag == "World")
+			{
+                Destroy(this.gameObject);
+            }
+            
 		}
-        //check here to see if hitting enemy
     }
     
     #endregion

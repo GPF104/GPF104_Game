@@ -37,6 +37,9 @@ public class LevelGenerator : MonoBehaviour
     [SerializeField] List<GameObject> Rocks = new List<GameObject>();
     [SerializeField] List<GameObject> Props = new List<GameObject>();
     [SerializeField] List<GameObject> Decals = new List<GameObject>();
+    [SerializeField] float MIN_SCALE = 0.85f;
+    [SerializeField] float MAX_SCALE = 1.2f;
+
 
     public Vector3Int levelSize = new Vector3Int(120, 120, 0);
 
@@ -57,6 +60,22 @@ public class LevelGenerator : MonoBehaviour
             }
         }
     }
+
+    GameObject AddProp(GameObject prop, Vector2 pos, GenerateType type)
+	{
+        GameObject go = Instantiate(prop);
+        float scale = Random.Range(MIN_SCALE, MAX_SCALE);
+        go.transform.localScale = go.transform.localScale * scale;
+        go.transform.position = pos;
+
+        if (type == GenerateType.Flora)
+		{
+            go.transform.SetParent(GameObject.Find("Flora").transform);
+        }
+        
+        
+        return go;
+    }
     void Generate(List<GameObject> gameObjects, GenerateType type)
 	{
         if (type == GenerateType.Flora)
@@ -68,11 +87,7 @@ public class LevelGenerator : MonoBehaviour
                     Vector2 pos = Random.insideUnitSphere * radius;
                     if (autoTile.GetTile(pos, AutoTile.TileTypes.grass))
 					{
-                        GameObject go = Instantiate(gameObjects[Random.Range(0, gameObjects.Count)]);
-                        float scale = Random.Range(0.5f, 1.5f);
-                        go.transform.localScale = go.transform.localScale * scale;
-                        go.transform.SetParent(GameObject.Find("Flora").transform);
-                        go.transform.position = pos;
+                        GameObject go = AddProp(gameObjects[i], pos, type);
                     }
                 }
             }

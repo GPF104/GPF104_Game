@@ -8,25 +8,40 @@ public class ProjectileScript : MonoBehaviour
 
     HealthScript healthScript;
 
-	#endregion
+    public GameObject particlesPrefab;
+    private GameObject particleObject;
 
-	#region Attributes
 
-	IEnumerator LifeSpan(float interval)
+    #endregion
+
+    #region Attributes
+
+    IEnumerator LifeSpan(float interval)
 	{
         yield return new WaitForSeconds(interval);
-        Destroy(this.gameObject);
+        Kill();
     }
-	#endregion
+    #endregion
 
-	#region Unity
+    #region Unity
+    void Kill()
+    {
+        particleObject.GetComponent<ParticleEmitter>().Remove();
+        Destroy(gameObject); // Destroy the bullet
+    }
 
-	void Start()
+    void Start()
     {
         StartCoroutine(LifeSpan(3));
+        particleObject = Instantiate(particlesPrefab, transform.position, Quaternion.identity);
     }
+	void Update()
+	{
+		particleObject.transform.position = this.transform.position;
+	}
 
-    private bool ishit = false;
+
+	private bool ishit = false;
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -36,15 +51,15 @@ public class ProjectileScript : MonoBehaviour
             ishit = true;            
             healthScript = collision.gameObject.GetComponent<HealthScript>();
             healthScript.TakeDamage(1, collision.gameObject);
-            Destroy(this.gameObject);
+            Kill();
         }
         else
 		{
             Debug.Log("Hit world");
-            Destroy(this.gameObject);
+            Kill();
         }
 
         //check here to see if hitting enemy
     }
-	#endregion
+    #endregion
 }
