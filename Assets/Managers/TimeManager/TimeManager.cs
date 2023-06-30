@@ -65,7 +65,7 @@ public class TimeManager : MonoBehaviour
 
 	IEnumerator Bubble(float delay)
 	{
-		yield return new WaitForSeconds(Random.Range(difficulty*0.5f, 10/difficulty));
+		yield return new WaitForSeconds(Random.Range(difficulty * 0.5f, 10 / difficulty));
 
 		int randomSpawner = Random.Range(0, levelGenerator.spawners.Count);
 		Vector3 pos = towerTop.transform.position;

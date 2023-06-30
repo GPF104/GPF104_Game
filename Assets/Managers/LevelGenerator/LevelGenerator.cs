@@ -93,7 +93,7 @@ public class LevelGenerator : MonoBehaviour
         for (int i = 0; i < num; i++)
 		{
             float angle = Random.Range(i * angleIncrement, (i + 1) * angleIncrement);
-            float distance = Random.Range(boundary.MIN_DISTANCE, boundary.MAX_DISTANCE);
+            float distance = Random.Range(boundary.MIN_DISTANCE * 0.5f, boundary.MAX_DISTANCE);
             GameObject go = Instantiate(gobject, CalculateSpawnPosition(angle, distance), Quaternion.identity);
             spawners.Add(go);
             go.transform.SetParent(GameObject.Find("Spawners").transform);

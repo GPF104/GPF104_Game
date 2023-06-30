@@ -28,6 +28,9 @@ public class RangedEnemy : MonoBehaviour
     private Rigidbody2D rb;
     public Transform firePoint;
 
+    private bool isStuck = false;
+    private Vector2 oldPosition;
+
     #endregion
 
 
@@ -41,7 +44,7 @@ public class RangedEnemy : MonoBehaviour
     IEnumerator ShootChecker()
 	{
         yield return new WaitForSeconds(Random.Range(timeToFire, maxfireDelay));
-        if (Vector2.Distance(player.position, transform.position) <= shootingDistance)
+        if (Vector2.Distance(player.position, transform.position) <= Random.Range(shootingDistance, 10) && !isStuck)
         {
             StartCoroutine(Fire());
         }
@@ -50,7 +53,27 @@ public class RangedEnemy : MonoBehaviour
 
     void moveEnemy(Vector2 direction)
     {
-        rb.MovePosition((Vector2)transform.position + (direction * moveSpeed * Time.deltaTime));
+        if (!isStuck)
+		{
+            rb.MovePosition((Vector2)transform.position + (direction * moveSpeed * Time.deltaTime));
+        }
+    }
+
+    IEnumerator IsStuck()
+    {
+        oldPosition = transform.position;
+        yield return new WaitForSeconds(0.25f);
+        float distance = Vector2.Distance(oldPosition, transform.position);
+
+        if (distance < 0.5f)
+        {
+            isStuck = true;
+        }
+        else
+        {
+            isStuck = false;
+        }
+        StartCoroutine(IsStuck());
     }
 
     #region Unity
@@ -60,6 +83,7 @@ public class RangedEnemy : MonoBehaviour
         rb = this.GetComponent<Rigidbody2D>();
         timeToFire = 0f;
         StartCoroutine(ShootChecker());
+        StartCoroutine(IsStuck());
     }
 
     // Update is called once per frame

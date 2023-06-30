@@ -15,7 +15,7 @@ public class Player : MonoBehaviour
         StartCoroutine(UpdatePosition());
     }
 
-    void TakeDamage(int amount)
+    public void TakeDamage(int amount)
 	{
         Health = Health - amount;
         gameManager.uiHandler.uiHealth.SetHealth(Health);
