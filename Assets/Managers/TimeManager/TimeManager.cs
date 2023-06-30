@@ -58,7 +58,7 @@ public class TimeManager : MonoBehaviour
 	IEnumerator DifficultyScale()
 	{
 		levelGenerator.AddSpawner(spawner);
-		Debug.Log(string.Format("Difficulty: {0} Spawner spawned. There are {1} spawners.", difficulty, levelGenerator.spawners.Count));
+		Debug.Log(string.Format("Difficulty: {0} Spawner spawned. There are {1} active spawners.", difficulty, levelGenerator.spawners.Count));
 
 		yield return new WaitUntil(() => secondCount % 30 == 0);
 	}

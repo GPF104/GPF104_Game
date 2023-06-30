@@ -12,13 +12,15 @@ public class EnemyBehaviour : MonoBehaviour
 
     #region Attributes
 
+    public int scoreValue = 15;
+
     public float moveSpeed = 5f;
     private Rigidbody2D rb;
     private Vector2 movement;
     private Vector2 oldPosition;
     private bool isStuck = false;
     private bool canAttack = false;
-
+    public int damage = 5;
     private bool hitPlayer = false;
     [SerializeField] float cooldown = 1.0f;
 
@@ -28,10 +30,6 @@ public class EnemyBehaviour : MonoBehaviour
 		{
             rb.MovePosition((Vector2)transform.position + (direction * moveSpeed * Time.deltaTime));
         }
-        else
-		{
-
-		}   
     }
 
     IEnumerator CoolDown(float cooldown)
@@ -137,9 +135,10 @@ public class EnemyBehaviour : MonoBehaviour
 		{
             Debug.Log("Hit Player");
             hitPlayer = true;
-            collision.gameObject.GetComponent<Player>().TakeDamage(5);
+            collision.gameObject.GetComponent<Player>().TakeDamage(damage);
             StartCoroutine(CoolDown(cooldown));
 		}
+
 	}
 	#endregion
 }

@@ -37,6 +37,10 @@ public class EnemyProjectileScript : MonoBehaviour
             ishit = true;
             Destroy(this.gameObject);
         }
+        else
+		{
+            Destroy(this.gameObject);
+		}
         //check here to see if hitting enemy
     }
     

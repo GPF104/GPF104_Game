@@ -12,6 +12,8 @@ TagManager:
   - Spawner
   - Bubble
   - EnemyBullet
+  - RangedEnemy
+  - StrongEnemy
   layers:
   - Default
   - TransparentFX

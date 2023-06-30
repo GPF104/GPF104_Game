@@ -17,6 +17,7 @@ public class UIHandler : MonoBehaviour
 
 	public GameManager gameManager;
 	public UI_Timer uiTimer;
+	public UI_Score uiScore;
 	public Overlay overlay;
 	public FrameControls frameControls;
 	public UI_Map uiMap;
@@ -55,6 +56,7 @@ public class UIHandler : MonoBehaviour
     {
 		gameManager = GameObject.FindObjectOfType<GameManager>().GetComponent<GameManager>();
 		uiTimer = GameObject.FindObjectOfType<UI_Timer>().GetComponent<UI_Timer>();
+		uiScore = GameObject.FindObjectOfType<UI_Score>().GetComponent<UI_Score>();
 		overlay = GameObject.FindObjectOfType<Overlay>().GetComponent<Overlay>();
 		frameControls = this.GetComponent<FrameControls>();
 		uiMap = GameObject.FindObjectOfType<UI_Map>().GetComponent<UI_Map>();

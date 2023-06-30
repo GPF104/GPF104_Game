@@ -69,6 +69,8 @@ public class LevelGenerator : MonoBehaviour
                     if (autoTile.GetTile(pos, AutoTile.TileTypes.grass))
 					{
                         GameObject go = Instantiate(gameObjects[Random.Range(0, gameObjects.Count)]);
+                        float scale = Random.Range(0.5f, 1.5f);
+                        go.transform.localScale = go.transform.localScale * scale;
                         go.transform.SetParent(GameObject.Find("Flora").transform);
                         go.transform.position = pos;
                     }

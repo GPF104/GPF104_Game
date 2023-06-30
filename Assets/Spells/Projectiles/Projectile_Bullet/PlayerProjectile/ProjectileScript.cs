@@ -30,13 +30,20 @@ public class ProjectileScript : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.collider.tag == "Enemy" && ishit == false)
+
+        if (collision.collider.tag == "Enemy" || collision.collider.tag == "RangedEnemy" || collision.collider.tag == "StrongEnemy" && ishit == false)
 		{
             ishit = true;            
             healthScript = collision.gameObject.GetComponent<HealthScript>();
             healthScript.TakeDamage(1, collision.gameObject);
             Destroy(this.gameObject);
         }
+        else
+		{
+            Debug.Log("Hit world");
+            Destroy(this.gameObject);
+        }
+
         //check here to see if hitting enemy
     }
 	#endregion

@@ -10,13 +10,20 @@ public class PlayerMovement : MonoBehaviour
 	#endregion
 	#region Attributes
 
+    Animator animator;
 	public float moveSpeed = 10;
+    public float cooldown = 0.1f;
     Rigidbody2D rb2d;
     Weapon weapon;
 
     Vector2 moveDirection = new Vector2(0, 0);
     Vector2 mousePosition = new Vector2(0, 0);
-
+    IEnumerator FireAnim(float cooldown)
+	{
+        animator.SetBool("isAttacking", true);
+        yield return new WaitForSeconds(cooldown);
+        animator.SetBool("isAttacking", false);
+    }
     void ProcessInputs()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
@@ -38,7 +45,9 @@ public class PlayerMovement : MonoBehaviour
 
             if (Input.GetMouseButtonDown(0))
             {
+                StartCoroutine(FireAnim(cooldown));
                 weapon.Fire();
+
             }
 
             moveDirection = new Vector2(moveX, moveY).normalized;
@@ -62,6 +71,7 @@ public class PlayerMovement : MonoBehaviour
     {
         rb2d = this.GetComponent<Rigidbody2D>();
         weapon = this.gameObject.GetComponentInChildren<Weapon>();
+        animator = GetComponent<Animator>();
         gameManager = GameObject.FindObjectOfType<GameManager>().GetComponent<GameManager>();
     }
     
