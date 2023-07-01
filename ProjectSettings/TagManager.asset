@@ -12,6 +12,7 @@ TagManager:
   - Spawner
   - Bubble
   - EnemyBullet
+  - Environment
   layers:
   - Default
   - TransparentFX

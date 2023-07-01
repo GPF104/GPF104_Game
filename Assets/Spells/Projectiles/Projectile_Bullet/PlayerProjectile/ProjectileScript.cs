@@ -37,6 +37,11 @@ public class ProjectileScript : MonoBehaviour
             healthScript.TakeDamage(1, collision.gameObject);
             Destroy(this.gameObject);
         }
+        else if (collision.collider.tag == "Environment" && ishit == false)
+        {
+            ishit = true;
+            Destroy(this.gameObject);
+        }
         //check here to see if hitting enemy
     }
 	#endregion
