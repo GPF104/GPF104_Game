@@ -37,6 +37,13 @@ public class ProjectileScript : MonoBehaviour
             healthScript.TakeDamage(1, collision.gameObject);
             Destroy(this.gameObject);
         }
+        else if (collision.collider.tag == "RangedEnemy" && ishit == false)
+        {
+            ishit = true;
+            healthScript = collision.gameObject.GetComponent<HealthScript>();
+            healthScript.TakeDamage(1, collision.gameObject);
+            Destroy(this.gameObject);
+        }
         else if (collision.collider.tag == "Environment" && ishit == false)
         {
             ishit = true;

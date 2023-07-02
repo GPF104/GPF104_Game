@@ -13,6 +13,7 @@ TagManager:
   - Bubble
   - EnemyBullet
   - Environment
+  - RangedEnemy
   layers:
   - Default
   - TransparentFX
