@@ -17,15 +17,22 @@ public class GameManager : MonoBehaviour
 
 	#region Attributes
 
+	public int score = 0;
 	public bool GameFinished = false;
 	public bool GamePaused = false;
+
+	public void AddScore(int input)
+	{
+		score += input;
+		uiHandler.uiScore.SetText(score.ToString());
+	}
 	public void GameOver()
 	{
 		GameFinished = true;
 		uiHandler.Display(uiHandler.gameOverObject, true);
 		uiHandler.Display(uiHandler.uiHealth.gameObject, false);
 		uiHandler.Display(uiHandler.uiMap.gameObject, false);
-		uiHandler.Display(uiHandler.uiTimer.gameObject, false);
+		//uiHandler.Display(uiHandler.uiTimer.gameObject, false);
 		Time.timeScale = 0;
 	}
 
@@ -43,6 +50,7 @@ public class GameManager : MonoBehaviour
 		GamePaused = false;
 		Time.timeScale = 1;
 	}
+
 
 	#endregion
 
