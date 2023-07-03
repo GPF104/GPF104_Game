@@ -6,6 +6,8 @@ public class HealthScript : MonoBehaviour
 {
     public int maxHealth = 5;
     public int currentHealth;
+    public int scoreValue = 5;
+
 
     void Start()
     {
@@ -14,6 +16,7 @@ public class HealthScript : MonoBehaviour
 
     void die(GameObject character)
     {
+        GameObject.FindObjectOfType<GameManager>().GetComponent<GameManager>().AddScore(scoreValue);
         Destroy(character);
     }
     public void TakeDamage(int amount, GameObject character)

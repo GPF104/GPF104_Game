@@ -37,7 +37,28 @@ public class EnemyProjectileScript : MonoBehaviour
             ishit = true;
             Destroy(this.gameObject);
         }
+<<<<<<< HEAD
+        else
+		{
+            if (collision.collider.tag == "World")
+			{
+                Destroy(this.gameObject);
+            }
+            
+		}
+=======
+        else if (collision.collider.tag == "Environment" && ishit == false)
+        {
+            ishit = true;
+            Destroy(this.gameObject);
+        }
+        else if (collision.collider.tag == "Enemy" && ishit == false)
+        {
+            ishit = true;
+            Destroy(this.gameObject);
+        }
         //check here to see if hitting enemy
+>>>>>>> Sean
     }
     
     #endregion
