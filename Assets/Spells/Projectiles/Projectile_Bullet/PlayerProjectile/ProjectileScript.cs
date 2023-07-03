@@ -53,12 +53,27 @@ public class ProjectileScript : MonoBehaviour
             healthScript.TakeDamage(1, collision.gameObject);
             Kill();
         }
+<<<<<<< HEAD
         else
 		{
             Debug.Log("Hit world");
             Kill();
         }
 
+=======
+        else if (collision.collider.tag == "RangedEnemy" && ishit == false)
+        {
+            ishit = true;
+            healthScript = collision.gameObject.GetComponent<HealthScript>();
+            healthScript.TakeDamage(1, collision.gameObject);
+            Destroy(this.gameObject);
+        }
+        else if (collision.collider.tag == "Environment" && ishit == false)
+        {
+            ishit = true;
+            Destroy(this.gameObject);
+        }
+>>>>>>> Sean
         //check here to see if hitting enemy
     }
     #endregion
