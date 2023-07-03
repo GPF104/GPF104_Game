@@ -52,6 +52,7 @@ public class ProjectileScript : MonoBehaviour
             healthScript = collision.gameObject.GetComponent<HealthScript>();
             healthScript.TakeDamage(1, collision.gameObject);
             Kill();
+<<<<<<< HEAD
         }
 <<<<<<< HEAD
         else
@@ -67,7 +68,17 @@ public class ProjectileScript : MonoBehaviour
             healthScript = collision.gameObject.GetComponent<HealthScript>();
             healthScript.TakeDamage(1, collision.gameObject);
             Destroy(this.gameObject);
+=======
+>>>>>>> 63f5e525dab2bba4a62dffd70f0cad176288e96b
         }
+<<<<<<< HEAD
+        else
+		{
+            Debug.Log("Hit world");
+            Kill();
+        }
+
+=======
         else if (collision.collider.tag == "RangedEnemy" && ishit == false)
         {
             ishit = true;
