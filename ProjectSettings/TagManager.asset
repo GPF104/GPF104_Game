@@ -15,6 +15,7 @@ TagManager:
   - Environment
   - RangedEnemy
   - RangedEnemy
+  - RangedEnemy
   - StrongEnemy
   layers:
   - Default
