@@ -15,6 +15,7 @@ TagManager:
   - RangedEnemy
   - StrongEnemy
   - Scroll
+  - Light
   layers:
   - Default
   - TransparentFX
