@@ -102,6 +102,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 8
   currentHealth: 0
+  scoreValue: 5
 --- !u!114 &1034198007210746328
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -115,7 +116,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 6630951993476463365, guid: 3639e97faa0bf8b42a5078af82424d1c, type: 3}
-  moveSpeed: 3
+  scoreValue: 30
+  moveSpeed: 4
   damage: 15
   cooldown: 1
 --- !u!50 &8544359085233012282
