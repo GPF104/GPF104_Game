@@ -12,7 +12,7 @@ public class TowerProp : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
 
         float epsilon = 0.01f;
-        int sortingOrder = (int)(Camera.main.WorldToScreenPoint(transform.position).y * -1 + epsilon);
+        int sortingOrder = Mathf.RoundToInt(-this.transform.position.y * 100f);
 
         // Apply the sorting order to the player sprite
         spriteRenderer.sortingOrder = sortingOrder;
