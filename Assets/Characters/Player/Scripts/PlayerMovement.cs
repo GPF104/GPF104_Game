@@ -15,6 +15,7 @@ public class PlayerMovement : MonoBehaviour
     public float cooldown = 0.1f;
     Rigidbody2D rb2d;
     Weapon weapon;
+    private SpriteRenderer tempRend;
 
     Vector2 moveDirection = new Vector2(0, 0);
     Vector2 mousePosition = new Vector2(0, 0);
@@ -73,6 +74,7 @@ public class PlayerMovement : MonoBehaviour
         weapon = this.gameObject.GetComponentInChildren<Weapon>();
         animator = GetComponent<Animator>();
         gameManager = GameObject.FindObjectOfType<GameManager>().GetComponent<GameManager>();
+        tempRend = this.GetComponent<SpriteRenderer>();
     }
     
     void Update()
@@ -80,8 +82,13 @@ public class PlayerMovement : MonoBehaviour
         ProcessInputs();
     }
 
-    // Framerate Independent
-    void FixedUpdate() 
+	void LateUpdate()
+	{
+        tempRend.sortingOrder = (int)Camera.main.WorldToScreenPoint(tempRend.bounds.min).y * -1;
+    }
+
+	// Framerate Independent
+	void FixedUpdate() 
     {
         //Physics Calculations
         Move();

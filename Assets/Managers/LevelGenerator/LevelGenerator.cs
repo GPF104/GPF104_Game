@@ -80,6 +80,13 @@ public class LevelGenerator : MonoBehaviour
             go.transform.SetParent(GameObject.Find("Lighting").transform);
         }
 
+        if (type != GenerateType.Lighting)
+		{
+            SpriteRenderer sr;
+            sr = go.GetComponent<SpriteRenderer>();
+            sr.sortingOrder = (int)Camera.main.WorldToScreenPoint(sr.bounds.min).y * -1; ;
+        }
+
         return go;
     }
     void Generate(GenerateType type)
