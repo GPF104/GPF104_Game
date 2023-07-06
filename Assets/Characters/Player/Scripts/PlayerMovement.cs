@@ -7,8 +7,11 @@ public class PlayerMovement : MonoBehaviour
 	#region ExternalLinks
 
     GameManager gameManager;
-	#endregion
-	#region Attributes
+    #endregion
+    #region Attributes
+
+    [SerializeField] private Transform playerTransform;
+    [SerializeField] private LayerMask objectLayerMask;
 
     Animator animator;
 	public float moveSpeed = 10;
@@ -65,10 +68,27 @@ public class PlayerMovement : MonoBehaviour
         
     }
 
-	#endregion
-	//
-	#region Unity
-	void Start()
+    private void UpdateSortingOrder()
+    {
+        SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
+
+        // Get the player's y-position and the tree object's y-position
+        float playerY = playerTransform.position.y;
+        float treeY = transform.position.y;
+
+        // Set the initial sorting order based on the y-position and player position relative to the tree object
+        int sortingOrder = Mathf.RoundToInt(-treeY * 100f);
+        if (playerY > treeY)
+        {
+            sortingOrder -= 1;
+        }
+        spriteRenderer.sortingOrder = sortingOrder;
+    }
+
+    #endregion
+    //
+    #region Unity
+    void Start()
     {
         rb2d = this.GetComponent<Rigidbody2D>();
         weapon = this.gameObject.GetComponentInChildren<Weapon>();
@@ -80,15 +100,12 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         ProcessInputs();
+        UpdateSortingOrder();
     }
 
-	void LateUpdate()
-	{
-        tempRend.sortingOrder = (int)Camera.main.WorldToScreenPoint(tempRend.bounds.min).y * -1;
-    }
 
-	// Framerate Independent
-	void FixedUpdate() 
+    // Framerate Independent
+    void FixedUpdate() 
     {
         //Physics Calculations
         Move();

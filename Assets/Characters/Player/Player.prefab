@@ -176,6 +176,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f617ec331b246a94d9498fd617e7072d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerTransform: {fileID: 0}
+  objectLayerMask:
+    serializedVersion: 2
+    m_Bits: 8
   moveSpeed: 0
   cooldown: 0.1
 --- !u!114 &7392110112727841557
@@ -241,6 +245,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f617ec331b246a94d9498fd617e7072d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerTransform: {fileID: 0}
+  objectLayerMask:
+    serializedVersion: 2
+    m_Bits: 0
   moveSpeed: 10
   cooldown: 0.1
 --- !u!114 &-5359697689450555623

@@ -84,7 +84,8 @@ public class LevelGenerator : MonoBehaviour
 		{
             SpriteRenderer sr;
             sr = go.GetComponent<SpriteRenderer>();
-            sr.sortingOrder = (int)Camera.main.WorldToScreenPoint(sr.bounds.min).y * -1; ;
+            sr.sortingOrder = Mathf.RoundToInt(-go.transform.position.y * 100f);
+            //sr.sortingOrder = (int)(Camera.main.WorldToScreenPoint(transform.position).y * -1 + 0.01f);
         }
 
         return go;
