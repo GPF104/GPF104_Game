@@ -137,7 +137,8 @@ public class AutoTile : MonoBehaviour
 		{
             return topMap.GetTile(Vector3Int.FloorToInt(position));
 		}
-        return false;
+
+        return topMap.GetTile(Vector3Int.FloorToInt(position));
 	}
     public void clearMap(bool complete)
     {

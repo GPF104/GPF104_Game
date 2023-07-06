@@ -11,6 +11,7 @@ public class LevelGenerator : MonoBehaviour
         Flora,
         Rocks,
         Props,
+        Lighting,
         Decals
     }
 
@@ -37,9 +38,11 @@ public class LevelGenerator : MonoBehaviour
     [SerializeField] List<GameObject> Rocks = new List<GameObject>();
     [SerializeField] List<GameObject> Props = new List<GameObject>();
     [SerializeField] List<GameObject> Decals = new List<GameObject>();
+    [SerializeField] List<GameObject> Shadows = new List<GameObject>();
     [SerializeField] float MIN_SCALE = 0.85f;
     [SerializeField] float MAX_SCALE = 1.2f;
-
+    [SerializeField] float MIN_BRIGHTNESS = 0.5f;
+    [SerializeField] float MAX_BRIGHTNESS = 1;
 
     public Vector3Int levelSize = new Vector3Int(120, 120, 0);
 
@@ -72,27 +75,43 @@ public class LevelGenerator : MonoBehaviour
 		{
             go.transform.SetParent(GameObject.Find("Flora").transform);
         }
-        
-        
+        if (type == GenerateType.Lighting)
+        {
+            go.transform.SetParent(GameObject.Find("Lighting").transform);
+        }
+
         return go;
     }
-    void Generate(List<GameObject> gameObjects, GenerateType type)
+    void Generate(GenerateType type)
 	{
-        if (type == GenerateType.Flora)
+        int minimumDensity = MIN_DENSITY;
+
+        if (type == GenerateType.Lighting)
 		{
-            for (int i = 0; i < gameObjects.Count; i++)
-            {
-                for (int j = 0; j < Random.Range(MIN_DENSITY, MAX_DENSITY); j++)
+            minimumDensity += 2500;
+		}
+
+        for (int i = 0; i < Random.Range(minimumDensity, MAX_DENSITY); i++)
+		{
+            Vector2 pos = Random.insideUnitSphere * radius;
+
+            if (type == GenerateType.Flora)
+			{
+                if (autoTile.GetTile(pos, AutoTile.TileTypes.grass))
                 {
-                    Vector2 pos = Random.insideUnitSphere * radius;
-                    if (autoTile.GetTile(pos, AutoTile.TileTypes.grass))
-					{
-                        GameObject go = AddProp(gameObjects[i], pos, type);
-                    }
+                    GameObject go = AddProp(Flora[Random.Range(1, Flora.Count)], pos, type);
                 }
             }
+            if (type == GenerateType.Lighting)
+			{
+                if (!autoTile.GetTile(pos, AutoTile.TileTypes.grass))
+				{
+                    GameObject go = AddProp(Shadows[Random.Range(1, Shadows.Count)], pos, type);
+                    go.GetComponent<UnityEngine.Rendering.Universal.Light2D>().intensity = Random.Range(MIN_BRIGHTNESS, MAX_BRIGHTNESS);
+                }
+			}
         }
-	}
+    }
     private Vector2 CalculateSpawnPosition(float angle, float distance)
 	{
         float radianAngle = angle * Mathf.Deg2Rad;
@@ -133,8 +152,8 @@ public class LevelGenerator : MonoBehaviour
         levelSize = new Vector3Int(boundary.MAX_DISTANCE + (int)radius, boundary.MAX_DISTANCE + (int)radius, 0);
         autoTile.doSim(autoTile.numSims, levelSize);
         //StartCoroutine(SlowGenerate(Flora));
-        Generate(Flora, GenerateType.Flora);
-        Generate(Decals, GenerateType.Flora);
+        Generate(GenerateType.Flora);
+        Generate(GenerateType.Lighting);
     }
 
 	#region Unity
