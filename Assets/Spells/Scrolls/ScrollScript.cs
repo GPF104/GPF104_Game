@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class ScrollScript : MonoBehaviour
 {
+    public int value;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -14,5 +16,14 @@ public class ScrollScript : MonoBehaviour
     void Update()
     {
         
+    }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+        {
+            Destroy(gameObject);
+            ScrollCounter.instance.IncreaseScrolls(value);
+        }
     }
 }

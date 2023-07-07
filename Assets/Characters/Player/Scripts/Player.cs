@@ -46,5 +46,6 @@ public class Player : MonoBehaviour
 		{
             TakeDamage(other.gameObject.GetComponent<EnemyProjectileScript>().damage);
 		}
+             
     }
 }

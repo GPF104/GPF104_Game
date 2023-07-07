@@ -11,8 +11,7 @@ GameObject:
   - component: {fileID: 7144711045632652931}
   - component: {fileID: 7144711045632652930}
   - component: {fileID: 7144711045632652933}
-  - component: {fileID: 7144711045632652932}
-  - component: {fileID: -4904749711741399669}
+  - component: {fileID: 7036884817276842802}
   m_Layer: 0
   m_Name: ScrollPrefab
   m_TagString: Scroll
@@ -97,7 +96,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -113,28 +112,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!50 &7144711045632652932
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7144711045632652935}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 4
---- !u!114 &-4904749711741399669
+--- !u!114 &7036884817276842802
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -143,6 +121,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7144711045632652935}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fd018732a4cefd8449234c9885001b5f, type: 3}
+  m_Script: {fileID: 11500000, guid: 57971d7300e518846bdd934d898ae3bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  value: 1
