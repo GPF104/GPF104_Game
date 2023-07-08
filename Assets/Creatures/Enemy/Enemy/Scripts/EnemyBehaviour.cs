@@ -29,6 +29,7 @@ public class EnemyBehaviour : MonoBehaviour
         if (!isStuck && !canAttack)
 		{
             rb.MovePosition((Vector2)transform.position + (direction * moveSpeed * Time.deltaTime));
+            rb.rotation = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg + 90f;
         }
     }
 
@@ -49,6 +50,7 @@ public class EnemyBehaviour : MonoBehaviour
 
             // Set the enemy's velocity to lunge towards the player
             rb.velocity = direction * 10;
+            rb.rotation = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg + 90f;
             Debug.Log("Lunge");
             // Wait for a short duration before resetting the velocity
             yield return new WaitForSeconds(0.5f);
@@ -113,8 +115,8 @@ public class EnemyBehaviour : MonoBehaviour
     void Update()
     {
         movement = player.position - transform.position;
-        float angle = Mathf.Atan2(movement.y, movement.x) * Mathf.Rad2Deg;
-        rb.rotation = angle;
+        //float angle = Mathf.Atan2(movement.y, movement.x) * Mathf.Rad2Deg;
+        //rb.rotation = angle;
         movement.Normalize();
     }
 

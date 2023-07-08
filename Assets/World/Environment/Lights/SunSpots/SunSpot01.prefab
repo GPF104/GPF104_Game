@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8192373630422289726}
   - component: {fileID: 464994220728880984}
+  - component: {fileID: -967117199341858225}
   m_Layer: 0
   m_Name: SunSpot01
   m_TagString: Untagged
@@ -1343,3 +1344,15 @@ MonoBehaviour:
   - {x: 0.5, y: -0.5, z: 0}
   - {x: 0.5, y: 0.5, z: 0}
   - {x: -0.5, y: 0.5, z: 0}
+--- !u!114 &-967117199341858225
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5388884999251518331}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9845b1c369a64a4ab2171f82ed187ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
