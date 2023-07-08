@@ -22,8 +22,8 @@ public class ScrollScript : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
+            other.gameObject.GetComponent<Player>().AddScroll(1);
             Destroy(gameObject);
-            ScrollCounter.instance.IncreaseScrolls(value);
         }
     }
 }

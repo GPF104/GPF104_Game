@@ -53,6 +53,12 @@ public class PlayerMovement : MonoBehaviour
                 weapon.Fire();
 
             }
+            //Inferno Setup
+            else if (Input.GetMouseButtonDown(1))
+            {
+                StartCoroutine(FireAnim(cooldown));
+                weapon.Inferno();
+            }
 
             moveDirection = new Vector2(moveX, moveY).normalized;
             mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);

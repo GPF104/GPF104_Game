@@ -5,19 +5,13 @@ using TMPro;
 
 public class ScrollCounter : MonoBehaviour
 {
-    public static ScrollCounter instance;
-
-    public TMP_Text scrollText;
+    private TMP_Text scrollText;
     public int currentScrolls = 0;
-
-    void Awake()
-    {
-        instance= this;
-    }
 
     // Start is called before the first frame update
     void Start()
     {
+        scrollText = this.gameObject.GetComponentInChildren<TMP_Text>();
         scrollText.text = "SCROLLS: " + currentScrolls.ToString();
     }
 
@@ -26,5 +20,9 @@ public class ScrollCounter : MonoBehaviour
     {
         currentScrolls += v;
         scrollText.text = "SCROLLS: " + currentScrolls.ToString();
+    }
+    public void SetScroll(int scrollNumber)
+    {
+        scrollText.text = "SCROLLS: " + scrollNumber.ToString();
     }
 }

@@ -25,6 +25,14 @@ public class Player : MonoBehaviour
 		}
         
 	}
+    public int scrolls = 0;
+
+    public void AddScroll(int amount)
+    {
+        scrolls += amount;
+        Debug.Log("Logging: " + scrolls);
+        gameManager.uiHandler.scrollCounter.SetScroll(scrolls);
+    }
     // Start is called before the first frame update
     void Start()
     {
