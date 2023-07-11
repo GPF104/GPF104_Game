@@ -54,6 +54,10 @@ public class Player : MonoBehaviour
 		{
             TakeDamage(other.gameObject.GetComponent<EnemyProjectileScript>().damage);
 		}
+        if (other.gameObject.tag == "Bindi")
+        {
+            TakeDamage(other.gameObject.GetComponent<BindiScript>().damage);
+        }
              
     }
 }

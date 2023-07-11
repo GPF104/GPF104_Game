@@ -37,14 +37,10 @@ public class EnemyProjectileScript : MonoBehaviour
             ishit = true;
             Destroy(this.gameObject);
         }
-        else
+        if (collision.collider.tag == "World")
 		{
-            if (collision.collider.tag == "World")
-			{
-                Destroy(this.gameObject);
-            }
-            
-		}
+            Destroy(this.gameObject);
+        }
     }
     
     #endregion
