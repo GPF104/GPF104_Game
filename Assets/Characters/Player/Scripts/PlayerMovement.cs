@@ -71,6 +71,7 @@ public class PlayerMovement : MonoBehaviour
         //  To-do ease in?
         rb2d.velocity = new Vector2(moveDirection.x * moveSpeed, moveDirection.y * moveSpeed);
         rb2d.rotation = Mathf.Atan2(aimDirection.y, aimDirection.x) * Mathf.Rad2Deg - 90f;
+        gameManager.MoveCamera(this.transform.position);
         
     }
 

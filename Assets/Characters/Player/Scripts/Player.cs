@@ -15,6 +15,7 @@ public class Player : MonoBehaviour
         StartCoroutine(UpdatePosition());
     }
 
+
     public void TakeDamage(int amount)
 	{
         Health = Health - amount;
@@ -53,11 +54,15 @@ public class Player : MonoBehaviour
         if (other.gameObject.tag == "EnemyBullet")
 		{
             TakeDamage(other.gameObject.GetComponent<EnemyProjectileScript>().damage);
-		}
-        if (other.gameObject.tag == "Bindi")
-        {
-            TakeDamage(other.gameObject.GetComponent<BindiScript>().damage);
-        }
-             
+		}             
     }
+
+	private void OnTriggerEnter2D(Collider2D collision)
+	{
+		if (collision.gameObject.tag == "Bindi")
+		{
+            Debug.Log("DAMAGE " + collision.gameObject.GetComponent<BindiScript>().damage);
+            TakeDamage(collision.gameObject.GetComponent<BindiScript>().damage);
+        }
+	}
 }

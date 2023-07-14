@@ -12,7 +12,8 @@ public class LevelGenerator : MonoBehaviour
         Rocks,
         Props,
         Lighting,
-        Decals
+        Decals,
+        Obstracles,
     }
 
     #region ExternalLinks
@@ -39,6 +40,7 @@ public class LevelGenerator : MonoBehaviour
     [SerializeField] List<GameObject> Props = new List<GameObject>();
     [SerializeField] List<GameObject> Decals = new List<GameObject>();
     [SerializeField] List<GameObject> Shadows = new List<GameObject>();
+	[SerializeField] List<GameObject> BadObstacles = new List<GameObject>();
     [SerializeField] float MIN_SCALE = 0.85f;
     [SerializeField] float MAX_SCALE = 1.2f;
     [SerializeField] float MIN_BRIGHTNESS = 0.5f;
@@ -79,7 +81,11 @@ public class LevelGenerator : MonoBehaviour
         {
             go.transform.SetParent(GameObject.Find("Lighting").transform);
         }
-
+        if (type == GenerateType.Obstracles)
+        {
+            go.transform.SetParent(GameObject.Find("Obstacles").transform);
+            go.transform.localScale = go.transform.localScale * 0.2f;
+        }
         if (type != GenerateType.Lighting)
 		{
             SpriteRenderer sr;
@@ -88,13 +94,14 @@ public class LevelGenerator : MonoBehaviour
             //sr.sortingOrder = (int)(Camera.main.WorldToScreenPoint(transform.position).y * -1 + 0.01f);
         }
 
+
         return go;
     }
     void Generate(GenerateType type)
 	{
         int minimumDensity = MIN_DENSITY;
 
-        if (type == GenerateType.Lighting)
+        if (type == GenerateType.Lighting || type == GenerateType.Obstracles)
 		{
             minimumDensity += 2500;
 		}
@@ -107,14 +114,21 @@ public class LevelGenerator : MonoBehaviour
 			{
                 if (autoTile.GetTile(pos, AutoTile.TileTypes.grass))
                 {
-                    GameObject go = AddProp(Flora[Random.Range(1, Flora.Count)], pos, type);
+                    GameObject go = AddProp(Flora[Random.Range(0, Flora.Count)], pos, type);
+                }
+            }
+            if (type == GenerateType.Obstracles)
+            {
+                if (autoTile.GetTile(pos, AutoTile.TileTypes.grass))
+                {
+                    GameObject go = AddProp(BadObstacles[Random.Range(0, BadObstacles.Count)], pos, type);
                 }
             }
             if (type == GenerateType.Lighting)
 			{
                 if (!autoTile.GetTile(pos, AutoTile.TileTypes.grass))
 				{
-                    GameObject go = AddProp(Shadows[Random.Range(1, Shadows.Count)], pos, type);
+                    GameObject go = AddProp(Shadows[Random.Range(0, Shadows.Count)], pos, type);
                     go.GetComponent<UnityEngine.Rendering.Universal.Light2D>().intensity = Random.Range(MIN_BRIGHTNESS, MAX_BRIGHTNESS);
                 }
 			}
@@ -162,6 +176,7 @@ public class LevelGenerator : MonoBehaviour
         //StartCoroutine(SlowGenerate(Flora));
         Generate(GenerateType.Flora);
         Generate(GenerateType.Lighting);
+        Generate(GenerateType.Obstracles);
     }
 
 	#region Unity

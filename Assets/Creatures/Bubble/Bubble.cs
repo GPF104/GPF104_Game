@@ -43,7 +43,6 @@ public class Bubble : MonoBehaviour
 		if (collision.tag == "Bullet" && !invincible)
 		{
 			GameObject.FindObjectOfType<GameManager>().GetComponent<GameManager>().AddScore(value);
-			Destroy(collision.gameObject);
 			Kill();
 		}
 	}

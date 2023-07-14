@@ -9,6 +9,7 @@ public class ParticleEmitter : MonoBehaviour
 
     private IEnumerator FadeOutAndDestroy()
     {
+        Debug.Log("Destroy");
         float elapsedTime = 0f;
         Color originalColor = particleSystem.main.startColor.color;
         ParticleSystem.MainModule mainModule = particleSystem.main;
