@@ -12,7 +12,6 @@ public class GameManager : MonoBehaviour
 	public GameObject bubble;
 	public GameObject spawner;
 
-	public GameObject camera;
 
 	public LevelGenerator levelGenerator;
 	#endregion
@@ -53,10 +52,7 @@ public class GameManager : MonoBehaviour
 		Time.timeScale = 1;
 	}
 
-	public void MoveCamera(Vector2 position)
-	{
-		camera.transform.position = position;
-	}
+
 	#endregion
 
 	#region Unity
@@ -78,7 +74,6 @@ public class GameManager : MonoBehaviour
 		uiHandler = this.uiHandler.GetComponent<UIHandler>();
 		timeManager = this.timeManager.GetComponent<TimeManager>();
 		levelGenerator = GameObject.FindObjectOfType<LevelGenerator>().GetComponent<LevelGenerator>();
-		camera = GameObject.FindGameObjectWithTag("MainCamera");
 		StartCoroutine(InitialLoad());
     }
 

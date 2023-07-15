@@ -31,7 +31,7 @@ public class TimeManager : MonoBehaviour
 		while (active)
 		{
 			yield return new WaitForSeconds(interval);
-
+			Debug.Log(Time.deltaTime);
 			secondCount += 1;
 			minuteCount = (int)Mathf.Floor(secondCount / 60);
 			difficulty = 10 * (a * Mathf.Pow(secondCount, 2) + b * secondCount + c);

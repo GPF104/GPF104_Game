@@ -9,7 +9,6 @@ public class Projectile_Inferno : MonoBehaviour
     [SerializeField] float moveSpeed = 2f;
     [SerializeField] GameObject explosion;
     Rigidbody2D rb2d;
-    float lerpT = 0f;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,13 +19,10 @@ public class Projectile_Inferno : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        Vector3 direction = ((Vector3)destination - transform.position).normalized;
-        lerpT += moveSpeed * Time.fixedDeltaTime;
 
-        Vector3 currentPosition = transform.position;
-        Vector3 lerpedPosition = Vector3.Lerp(currentPosition, destination, lerpT);
+        Vector3 destinationPoint = Vector3.Lerp(transform.position, destination, moveSpeed * Time.fixedDeltaTime);
 
-        rb2d.MovePosition(lerpedPosition);
+        rb2d.MovePosition(destinationPoint);
 
         if (Vector3.Distance(transform.position, destination) < 0.15f)
         {
