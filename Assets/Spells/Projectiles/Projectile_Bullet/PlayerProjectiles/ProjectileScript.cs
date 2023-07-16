@@ -54,50 +54,12 @@ public class ProjectileScript : MonoBehaviour
             healthScript = collision.gameObject.GetComponent<HealthScript>();
             healthScript.TakeDamage(1, collision.gameObject);
             Kill();
-<<<<<<< HEAD
         }
-<<<<<<< HEAD:Assets/Spells/Projectiles/Projectile_Bullet/PlayerProjectile/ProjectileScript.cs
-<<<<<<< HEAD
-=======
->>>>>>> master:Assets/Spells/Projectiles/Projectile_Bullet/PlayerProjectiles/ProjectileScript.cs
         else
 		{
             Kill();
         }
 
-<<<<<<< HEAD:Assets/Spells/Projectiles/Projectile_Bullet/PlayerProjectile/ProjectileScript.cs
-=======
-        else if (collision.collider.tag == "RangedEnemy" && ishit == false)
-        {
-            ishit = true;
-            healthScript = collision.gameObject.GetComponent<HealthScript>();
-            healthScript.TakeDamage(1, collision.gameObject);
-            Destroy(this.gameObject);
-=======
->>>>>>> 63f5e525dab2bba4a62dffd70f0cad176288e96b
-        }
-<<<<<<< HEAD
-        else
-		{
-            Kill();
-        }
-
-=======
-        else if (collision.collider.tag == "RangedEnemy" && ishit == false)
-        {
-            ishit = true;
-            healthScript = collision.gameObject.GetComponent<HealthScript>();
-            healthScript.TakeDamage(1, collision.gameObject);
-            Destroy(this.gameObject);
-        }
-        else if (collision.collider.tag == "Environment" && ishit == false)
-        {
-            ishit = true;
-            Destroy(this.gameObject);
-        }
->>>>>>> Sean
-=======
->>>>>>> master:Assets/Spells/Projectiles/Projectile_Bullet/PlayerProjectiles/ProjectileScript.cs
         //check here to see if hitting enemy
     }
     #endregion
