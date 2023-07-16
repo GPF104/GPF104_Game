@@ -43,7 +43,6 @@ public class EnemyBehaviour : MonoBehaviour
         if (canAttack)
         {
             yield return new WaitForSeconds(0.05f);
-            Debug.Log("ATTACK");
 
             // Calculate the direction from the enemy to the player
             Vector2 direction = ((Vector2)player.transform.position - (Vector2)transform.position).normalized;
@@ -51,7 +50,6 @@ public class EnemyBehaviour : MonoBehaviour
             // Set the enemy's velocity to lunge towards the player
             rb.velocity = direction * 10;
             rb.rotation = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg + 90f;
-            Debug.Log("Lunge");
             // Wait for a short duration before resetting the velocity
             yield return new WaitForSeconds(0.5f);
 

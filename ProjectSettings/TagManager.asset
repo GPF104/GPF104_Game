@@ -17,6 +17,15 @@ TagManager:
   - Scroll
   - Light
   - Bindi
+  - NoSpawn
+  - NoSpawn
+  - Environment
+  - RangedEnemy
+  - RangedEnemy
+  - StrongEnemy
+  - RangedEnemy
+  - RangedEnemy
+  - StrongEnemy
   layers:
   - Default
   - TransparentFX

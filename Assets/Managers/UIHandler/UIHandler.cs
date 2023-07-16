@@ -5,11 +5,7 @@ using UnityEngine;
 public class UIHandler : MonoBehaviour
 {
 
-	public enum Fade
-	{
-		fadeout = 0,
-		fadein = 1
-	}
+
 
 	#region ExternalLinks
 
@@ -29,12 +25,18 @@ public class UIHandler : MonoBehaviour
 
 	#endregion
 
+
+
+	#region Attributes
+	public enum Fade
+	{
+		fadeout = 0,
+		fadein = 1
+	}
 	public void Display(GameObject frame, bool active)
 	{
 		frame.SetActive(active);
 	}
-
-	#region Attributes
 	IEnumerator FadeOut(float speed)
 	{
 		yield return new WaitForSeconds(speed);

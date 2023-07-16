@@ -124,7 +124,6 @@ GameObject:
   - component: {fileID: 7392110112727841557}
   - component: {fileID: 4245647849778599426}
   - component: {fileID: 4245647849778599430}
-  - component: {fileID: 4245647849778599431}
   - component: {fileID: -5359697689450555623}
   - component: {fileID: 4382676923746674429}
   - component: {fileID: 3003460288895935175}
@@ -164,6 +163,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72a1e3a1abae98144b5e3fab5e5a4d28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damageSFX:
+  - {fileID: 8300000, guid: 8a04630fe77072a4cadd5750103d83f7, type: 3}
+  - {fileID: 8300000, guid: 386b8c39217be454ca5ce08c4ff64f02, type: 3}
+  scrolls: 0
 --- !u!114 &4607041984463194022
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -196,6 +199,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Projectile_Bullet: {fileID: 6503832657817774434, guid: 0eb8a4047ebf9284ca605c58800f2cae, type: 3}
   Inferno_Bomb: {fileID: 2507912890639806683, guid: a896bf618559c7d4c8c8f116bb82aabd, type: 3}
+  fizzle: {fileID: 0}
   fireForce: 20
 --- !u!50 &4245647849778599426
 Rigidbody2D:
@@ -234,24 +238,6 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.35
---- !u!114 &4245647849778599431
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3388424831923934076}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f617ec331b246a94d9498fd617e7072d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerTransform: {fileID: 0}
-  objectLayerMask:
-    serializedVersion: 2
-    m_Bits: 0
-  moveSpeed: 10
-  cooldown: 0.1
 --- !u!114 &-5359697689450555623
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -267,6 +253,8 @@ MonoBehaviour:
   maxHealth: 10
   currentHealth: 0
   scoreValue: 5
+  damageSFX: {fileID: 0}
+  damageParticles: {fileID: 1232776670957128206, guid: 4653494e9ecf64248993b3d344e724e1, type: 3}
 --- !u!95 &4382676923746674429
 Animator:
   serializedVersion: 4
@@ -439,6 +427,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Projectile_Bullet: {fileID: 6503832657817774434, guid: 0eb8a4047ebf9284ca605c58800f2cae, type: 3}
   Inferno_Bomb: {fileID: 0}
+  fizzle: {fileID: 1232776670957128206, guid: 84d13bf7b5a85664880c99f4408ad20e, type: 3}
   fireForce: 20
 --- !u!1 &4245647851456359255
 GameObject:

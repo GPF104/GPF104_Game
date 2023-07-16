@@ -4,7 +4,15 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    GameManager gameManager;
+	#region ExternalLinks
+
+	GameManager gameManager;
+
+	#endregion
+
+	#region Attributes
+
+	[SerializeField] List<AudioClip> damageSFX = new List<AudioClip>();
 
     int Health = 100;
 
@@ -15,39 +23,34 @@ public class Player : MonoBehaviour
         StartCoroutine(UpdatePosition());
     }
 
-
     public void TakeDamage(int amount)
 	{
         Health = Health - amount;
         gameManager.uiHandler.uiHealth.SetHealth(Health);
+        gameManager.mainCamera.DoShake(0.25f);
+        gameManager.audioManager.PlayAudio(damageSFX[0]);
         if (Health <= 0)
 		{
             gameManager.GameOver();
 		}
-        
 	}
     public int scrolls = 0;
 
     public void AddScroll(int amount)
     {
         scrolls += amount;
-        Debug.Log("Logging: " + scrolls);
         gameManager.uiHandler.scrollCounter.SetScroll(scrolls);
     }
-    // Start is called before the first frame update
-    void Start()
+
+	#endregion
+
+	#region Unity
+	// Start is called before the first frame update
+	void Start()
     {
         gameManager = GameObject.FindObjectOfType<GameManager>().GetComponent<GameManager>();
         StartCoroutine(UpdatePosition());
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-
 
     private void OnCollisionEnter2D(Collision2D other)
     {
@@ -61,8 +64,8 @@ public class Player : MonoBehaviour
 	{
 		if (collision.gameObject.tag == "Bindi")
 		{
-            Debug.Log("DAMAGE " + collision.gameObject.GetComponent<BindiScript>().damage);
             TakeDamage(collision.gameObject.GetComponent<BindiScript>().damage);
         }
 	}
+	#endregion
 }

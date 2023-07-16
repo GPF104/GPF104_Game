@@ -28,10 +28,10 @@ public class TimeManager : MonoBehaviour
 	//	Methods
 	IEnumerator Timer(float interval)
 	{
+		//To-do spawn queue
 		while (active)
 		{
 			yield return new WaitForSeconds(interval);
-			Debug.Log(Time.deltaTime);
 			secondCount += 1;
 			minuteCount = (int)Mathf.Floor(secondCount / 60);
 			difficulty = 10 * (a * Mathf.Pow(secondCount, 2) + b * secondCount + c);
@@ -50,9 +50,6 @@ public class TimeManager : MonoBehaviour
 			{
 				StartCoroutine(Scroll());
 			}
-
-			if (secondCount % 5 == 0)
-				//SpawnQueue(Mathf.FloorToInt(difficulty));
 
 			if (secondCount % 30 == 0)
 				StartCoroutine(DifficultyScale());

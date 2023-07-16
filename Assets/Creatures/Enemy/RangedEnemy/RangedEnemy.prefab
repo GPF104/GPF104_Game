@@ -105,6 +105,8 @@ MonoBehaviour:
   maxHealth: 2
   currentHealth: 0
   scoreValue: 5
+  damageSFX: {fileID: 8300000, guid: 33c80692ee32f75489f7dfbb26e4d411, type: 3}
+  damageParticles: {fileID: 1232776670957128206, guid: 4653494e9ecf64248993b3d344e724e1, type: 3}
 --- !u!50 &8340791649948962777
 Rigidbody2D:
   serializedVersion: 4
@@ -193,4 +195,4 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.32
+  m_Radius: 0.3

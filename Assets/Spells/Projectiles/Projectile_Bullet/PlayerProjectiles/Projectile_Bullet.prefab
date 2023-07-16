@@ -49,6 +49,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   particlesPrefab: {fileID: 4165828070706285882, guid: 864af6e10aba8f14791818bbeb8ff8c6, type: 3}
+  soundFX:
+  - {fileID: 8300000, guid: a3bd4d0c008c9124eb548b490c6a81ae, type: 3}
+  - {fileID: 8300000, guid: 02d59d1fad78c5c4f81cf95f5dd727ba, type: 3}
 --- !u!212 &443770733045036479
 SpriteRenderer:
   m_ObjectHideFlags: 0

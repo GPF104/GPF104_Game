@@ -7,14 +7,7 @@ using UnityEngine;
 public class LevelGenerator : MonoBehaviour
 {
 
-    enum GenerateType {
-        Flora,
-        Rocks,
-        Props,
-        Lighting,
-        Decals,
-        Obstracles,
-    }
+
 
     #region ExternalLinks
 
@@ -26,26 +19,36 @@ public class LevelGenerator : MonoBehaviour
 
     #region Attributes
 
-    //  Edit in Unity Editor
-
-
+    enum GenerateType
+    {
+        Flora,
+        Trees,
+        Rocks,
+        Props,
+        Lighting,
+        Decals,
+        Obstacles,
+    }
+    //  Editable in Unity Editor
     [SerializeField] GameObject Spawner;
     public List<GameObject> spawners = new List<GameObject>();
 
     [SerializeField] float radius = 20;
     [SerializeField] int MIN_DENSITY = 100;
     [SerializeField] int MAX_DENSITY = 1000;
+    [SerializeField] List<GameObject> Trees = new List<GameObject>();
     [SerializeField] List<GameObject> Flora = new List<GameObject>();
     [SerializeField] List<GameObject> Rocks = new List<GameObject>();
     [SerializeField] List<GameObject> Props = new List<GameObject>();
     [SerializeField] List<GameObject> Decals = new List<GameObject>();
     [SerializeField] List<GameObject> Shadows = new List<GameObject>();
 	[SerializeField] List<GameObject> BadObstacles = new List<GameObject>();
-    [SerializeField] float MIN_SCALE = 0.85f;
-    [SerializeField] float MAX_SCALE = 1.2f;
+    [SerializeField] float MIN_SCALE = 0.95f;
+    [SerializeField] float MAX_SCALE = 1.5f;
     [SerializeField] float MIN_BRIGHTNESS = 0.5f;
     [SerializeField] float MAX_BRIGHTNESS = 1;
 
+    //  Control the size of the generated tilemap level
     public Vector3Int levelSize = new Vector3Int(120, 120, 0);
 
     #endregion
@@ -70,38 +73,43 @@ public class LevelGenerator : MonoBehaviour
 	{
         GameObject go = Instantiate(prop);
         float scale = Random.Range(MIN_SCALE, MAX_SCALE);
-        go.transform.localScale = go.transform.localScale * scale;
+        go.transform.localScale = new Vector3(scale, scale, scale);
         go.transform.position = pos;
 
         if (type == GenerateType.Flora)
 		{
             go.transform.SetParent(GameObject.Find("Flora").transform);
+            go.transform.localScale = go.transform.localScale * 2;
+        }
+        if (type == GenerateType.Trees)
+        {
+            go.transform.SetParent(GameObject.Find("Trees").transform);
         }
         if (type == GenerateType.Lighting)
         {
             go.transform.SetParent(GameObject.Find("Lighting").transform);
         }
-        if (type == GenerateType.Obstracles)
+        if (type == GenerateType.Obstacles)
         {
             go.transform.SetParent(GameObject.Find("Obstacles").transform);
-            go.transform.localScale = go.transform.localScale * 0.2f;
+            go.transform.localScale = go.transform.localScale * 1;
         }
         if (type != GenerateType.Lighting)
 		{
             SpriteRenderer sr;
             sr = go.GetComponent<SpriteRenderer>();
             sr.sortingOrder = Mathf.RoundToInt(-go.transform.position.y * 100f);
-            //sr.sortingOrder = (int)(Camera.main.WorldToScreenPoint(transform.position).y * -1 + 0.01f);
         }
 
 
         return go;
     }
+    // Quick generate, does things instantly, but might need to use slowgenerate.
     void Generate(GenerateType type)
 	{
         int minimumDensity = MIN_DENSITY;
 
-        if (type == GenerateType.Lighting || type == GenerateType.Obstracles)
+        if (type == GenerateType.Lighting || type == GenerateType.Obstacles)
 		{
             minimumDensity += 2500;
 		}
@@ -117,7 +125,14 @@ public class LevelGenerator : MonoBehaviour
                     GameObject go = AddProp(Flora[Random.Range(0, Flora.Count)], pos, type);
                 }
             }
-            if (type == GenerateType.Obstracles)
+            if (type == GenerateType.Trees)
+            {
+                if (autoTile.GetTile(pos, AutoTile.TileTypes.grass))
+                {
+                    GameObject go = AddProp(Trees[Random.Range(0, Trees.Count)], pos, type);
+                }
+            }
+            if (type == GenerateType.Obstacles)
             {
                 if (autoTile.GetTile(pos, AutoTile.TileTypes.grass))
                 {
@@ -171,12 +186,13 @@ public class LevelGenerator : MonoBehaviour
         boundary = GameObject.FindObjectOfType<Boundary>().GetComponent<Boundary>();
         autoTile = GameObject.FindObjectOfType<AutoTile>().GetComponent<AutoTile>();
 
-        levelSize = new Vector3Int(boundary.MAX_DISTANCE + (int)radius, boundary.MAX_DISTANCE + (int)radius, 0);
+        //levelSize = new Vector3Int(boundary.MAX_DISTANCE + (int)radius, boundary.MAX_DISTANCE + (int)radius, 0);
         autoTile.doSim(autoTile.numSims, levelSize);
         //StartCoroutine(SlowGenerate(Flora));
         Generate(GenerateType.Flora);
+        Generate(GenerateType.Trees);
         Generate(GenerateType.Lighting);
-        Generate(GenerateType.Obstracles);
+        Generate(GenerateType.Obstacles);
     }
 
 	#region Unity
@@ -184,9 +200,6 @@ public class LevelGenerator : MonoBehaviour
 	void Start()
     {
         gameManager = GameObject.FindObjectOfType<GameManager>().GetComponent<GameManager>();
-        //Generate(Rocks);
-        //Generate(Props);
-        //Generate(Decals);
     }
 	#endregion
 }

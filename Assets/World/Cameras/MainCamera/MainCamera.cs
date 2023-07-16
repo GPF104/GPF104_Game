@@ -10,7 +10,34 @@ public class MainCamera : MonoBehaviour
 
     [SerializeField] float followSpeed = 2;
     Vector3 newPosition = new Vector3(0, 0, -10);
+    [SerializeField] AnimationCurve curve;
+
+    IEnumerator Shaking(float duration)
+    {
+        float elapsedTime = 0f;
+
+        while (elapsedTime < duration)
+        {
+            elapsedTime += Time.deltaTime;
+            float strength = curve.Evaluate(elapsedTime / duration);
+            transform.position = newPosition + Random.insideUnitSphere * strength;
+            yield return null;
+        }
+
+        this.transform.position = newPosition;
+    }
+    public void DoShake(float duration)
+	{
+        StartCoroutine(Shaking(duration));
+	}
+
+    public void StopShake()
+	{
+        StopAllCoroutines();
+	}
     // Start is called before the first frame update
+
+
     void Start()
     {
         cam = GetComponent<Camera>();

@@ -21,7 +21,6 @@ public class SpawnTable : MonoBehaviour
 	[SerializeField] List<float> spawnChance;
 	void OnValidate()
 	{
-		Debug.Log("spawntable changed");
 		spawnChance = new List<float>();
 		for (int i = 0; i < enemyObjects.Count; i++)
 		{

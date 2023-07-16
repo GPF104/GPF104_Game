@@ -4,9 +4,13 @@ using UnityEngine;
 
 public class Bubble : MonoBehaviour
 {
+	#region ExternalLinks
+
 	public GameObject particlePrefab;
 	private GameObject particleObject;
+	#endregion
 
+	#region Attributes
 	Rigidbody2D rb2d;
 	bool invincible = true;
 	public int value = 50;
@@ -22,8 +26,11 @@ public class Bubble : MonoBehaviour
 		Destroy(gameObject); // Destroy the bullet
 	}
 
-    // Start is called before the first frame update
-    void Start()
+	#endregion
+
+	#region Unity
+	// Start is called before the first frame update
+	void Start()
     {
 		rb2d = this.GetComponent<Rigidbody2D>();
 		particleObject = Instantiate(particlePrefab, this.transform.position, Quaternion.identity);
@@ -46,4 +53,5 @@ public class Bubble : MonoBehaviour
 			Kill();
 		}
 	}
+	#endregion
 }

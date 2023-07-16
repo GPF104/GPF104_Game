@@ -4,16 +4,19 @@ using UnityEngine;
 
 public class Spawner : MonoBehaviour
 {
-    GameManager gameManager;
+	#region ExternalLinks
+
+	GameManager gameManager;
 
 	[SerializeField] public List<GameObject> enemies = new List<GameObject>();
+	#endregion
 
+	#region Attributes
 
-    public void Spawn(float difficulty)
+	public void Spawn(float difficulty)
     {
         int enemyIndex = 0;
         int random = Random.Range(0, (int)difficulty);
-        Debug.Log("RANDOM " + random + " DIFFICULTY" + difficulty);
         
         if (random >= 85 && random < 120)
 		{
@@ -23,24 +26,19 @@ public class Spawner : MonoBehaviour
 		{
             enemyIndex = 2;
 		}
-
+        float randomScale = Random.Range(1, 1.5f);
         GameObject go = Instantiate(enemies[enemyIndex], transform);
         go.transform.SetParent(GameObject.Find("Enemies").transform);
-        go.transform.localScale = Vector3.one;
+        go.transform.localScale = Vector3.one * randomScale;
         Debug.Log("Difficulty: " + difficulty + " Spawned enemy at " + go.transform.position);
     }
+	#endregion
 
-
-    // Start is called before the first frame update
-    void Start()
+	#region Unity
+	// Start is called before the first frame update
+	void Start()
     {
         gameManager = GameObject.FindObjectOfType<GameManager>().GetComponent<GameManager>();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
 	private void OnTriggerEnter2D(Collider2D collision)
@@ -50,4 +48,5 @@ public class Spawner : MonoBehaviour
             Spawn(gameManager.timeManager.difficulty);
 		}
 	}
+	#endregion
 }
