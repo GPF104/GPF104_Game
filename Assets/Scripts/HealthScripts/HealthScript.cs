@@ -24,7 +24,6 @@ public class HealthScript : MonoBehaviour
     public void TakeDamage(int amount, GameObject character)
     {
         currentHealth -= amount;
-        Debug.Log(amount);
         Instantiate(damageParticles, this.transform.position, Quaternion.identity);
 
         if(currentHealth <= 0)

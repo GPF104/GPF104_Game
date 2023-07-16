@@ -34,7 +34,6 @@ public class Player : MonoBehaviour
     public void AddScroll(int amount)
     {
         scrolls += amount;
-        Debug.Log("Logging: " + scrolls);
         gameManager.uiHandler.scrollCounter.SetScroll(scrolls);
     }
     // Start is called before the first frame update
@@ -64,7 +63,6 @@ public class Player : MonoBehaviour
 	{
 		if (collision.gameObject.tag == "Bindi")
 		{
-            Debug.Log("DAMAGE " + collision.gameObject.GetComponent<BindiScript>().damage);
             TakeDamage(collision.gameObject.GetComponent<BindiScript>().damage);
         }
 	}

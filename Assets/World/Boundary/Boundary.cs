@@ -16,7 +16,6 @@ public class Boundary : MonoBehaviour
 	private int dmgCounter = 0;
 	IEnumerator BoundDamage()
 	{
-		Debug.Log(dmgCounter);
 		dmgCounter++;
 		yield return new WaitUntil(() => canDamage == true);
 		yield return new WaitForSeconds(1f);

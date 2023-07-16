@@ -13,7 +13,6 @@ public class Spawner : MonoBehaviour
     {
         int enemyIndex = 0;
         int random = Random.Range(0, (int)difficulty);
-        Debug.Log("RANDOM " + random + " DIFFICULTY" + difficulty);
         
         if (random >= 85 && random < 120)
 		{
