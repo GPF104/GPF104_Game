@@ -7,15 +7,7 @@ using UnityEngine;
 public class LevelGenerator : MonoBehaviour
 {
 
-    enum GenerateType {
-        Flora,
-        Trees,
-        Rocks,
-        Props,
-        Lighting,
-        Decals,
-        Obstacles,
-    }
+
 
     #region ExternalLinks
 
@@ -27,9 +19,17 @@ public class LevelGenerator : MonoBehaviour
 
     #region Attributes
 
-    //  Edit in Unity Editor
-
-
+    enum GenerateType
+    {
+        Flora,
+        Trees,
+        Rocks,
+        Props,
+        Lighting,
+        Decals,
+        Obstacles,
+    }
+    //  Editable in Unity Editor
     [SerializeField] GameObject Spawner;
     public List<GameObject> spawners = new List<GameObject>();
 
@@ -48,6 +48,7 @@ public class LevelGenerator : MonoBehaviour
     [SerializeField] float MIN_BRIGHTNESS = 0.5f;
     [SerializeField] float MAX_BRIGHTNESS = 1;
 
+    //  Control the size of the generated tilemap level
     public Vector3Int levelSize = new Vector3Int(120, 120, 0);
 
     #endregion
@@ -103,6 +104,7 @@ public class LevelGenerator : MonoBehaviour
 
         return go;
     }
+    // Quick generate, does things instantly, but might need to use slowgenerate.
     void Generate(GenerateType type)
 	{
         int minimumDensity = MIN_DENSITY;
@@ -198,9 +200,6 @@ public class LevelGenerator : MonoBehaviour
 	void Start()
     {
         gameManager = GameObject.FindObjectOfType<GameManager>().GetComponent<GameManager>();
-        //Generate(Rocks);
-        //Generate(Props);
-        //Generate(Decals);
     }
 	#endregion
 }

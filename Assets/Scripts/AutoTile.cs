@@ -6,8 +6,8 @@ using UnityEditor;
 
 public class AutoTile : MonoBehaviour
 {
-
-    public enum TileTypes
+	#region Attributes
+	public enum TileTypes
 	{
         grass,
         dirt,
@@ -35,13 +35,9 @@ public class AutoTile : MonoBehaviour
     public RuleTile topTile;
     public RuleTile botTile;
 
-    //public List<Tile> topTiles;
-    //public List<Tile> botTiles;
-
     int width;
     int height;
 
-    //  To-do: Corner detection.
     public void doSim(int nu, Vector3Int tmpSize)
     {
         clearMap(false);
@@ -175,4 +171,5 @@ public class AutoTile : MonoBehaviour
             terrainMap = null;
         }
     }
+	#endregion
 }

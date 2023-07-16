@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class EnemyDamage : MonoBehaviour
 {
-    // Start is called before the first frame update
     ParticleSystem m_ParticleSystem;
     IEnumerator LifeSpan()
 	{

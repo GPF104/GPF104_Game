@@ -4,9 +4,15 @@ using UnityEngine;
 
 public class Boundary : MonoBehaviour
 {
+	#region ExternalLinks
+
 	GameManager gameManager;
 	[SerializeField] GameObject target;
 	[SerializeField] GameObject overlay;
+	#endregion
+
+	#region Attributes
+
 	float distance = 0;
 	float distanceFade = 0;
 	bool inarena = true;
@@ -22,6 +28,7 @@ public class Boundary : MonoBehaviour
 
 		Debug.Log("DAMAGE OUT OF BOUNDS");
 		GameObject.FindObjectOfType<Player>().TakeDamage(5);
+
 		//Wait another half second before allowing the player to be damaged again.
 		yield return new WaitForSeconds(0.5f);
 		dmgCounter = 0;
@@ -36,8 +43,6 @@ public class Boundary : MonoBehaviour
 		canDamage = true;
 		StartCoroutine(InBounds());
 		yield return new WaitForSeconds(1.5f);
-		
-		//gameManager.uiHandler.frameControls.FrameFade(overlay, Fade.In, 1);
 	}
 
 	IEnumerator InBounds()
@@ -46,7 +51,6 @@ public class Boundary : MonoBehaviour
 		inarena = true;
 		canDamage = false;
 		yield return new WaitForSeconds(1.5f);
-		//gameManager.uiHandler.frameControls.FrameFade(overlay, Fade.Out, 1);
 	}
 
 	IEnumerator DistanceFade(float distance)
@@ -73,7 +77,9 @@ public class Boundary : MonoBehaviour
 			StartCoroutine(BoundDamage());
 		}
 	}
+	#endregion
 
+	#region Unity
 	// Start is called before the first frame update
 	void Start()
 	{
@@ -82,6 +88,6 @@ public class Boundary : MonoBehaviour
 		{
 			StartCoroutine(GetDistance());
 		}
-		
     }
+	#endregion
 }

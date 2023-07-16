@@ -4,10 +4,15 @@ using UnityEngine;
 
 public class Weapon : MonoBehaviour
 {
-    public GameObject Projectile_Bullet;
+	#region ExternalLinks
+	public GameObject Projectile_Bullet;
     public GameObject Inferno_Bomb;
     [SerializeField] GameObject fizzle;
-    Transform firePoint;
+
+	#endregion
+
+	#region Attributes
+	Transform firePoint;
     public float fireForce = 20f;
 
     public void Fire()
@@ -30,9 +35,13 @@ public class Weapon : MonoBehaviour
         }
         
     }
+	#endregion
+
+	#region Unity
 
 	void Start()
 	{
         firePoint = GameObject.Find("FirePoint").GetComponent<Transform>();
 	}
+	#endregion
 }

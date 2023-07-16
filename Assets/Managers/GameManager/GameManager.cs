@@ -64,7 +64,7 @@ public class GameManager : MonoBehaviour
 		GameFinished = false;
 		GamePaused = false;
 		Time.timeScale = 1;
-		levelGenerator.GenerateLevel();
+		levelGenerator.GenerateLevel(); // Generates the level
 		yield return new WaitForSeconds(0.5f);
 		
 		timeManager.StartTimer(1);

@@ -4,13 +4,20 @@ using UnityEngine;
 
 public class Projectile_Inferno : MonoBehaviour
 {
-    Vector2 destination = new Vector2(0, 0);
+
+	#region Attributes
+	Vector2 destination = new Vector2(0, 0);
 
     [SerializeField] float moveSpeed = 2f;
     [SerializeField] GameObject explosion;
     Rigidbody2D rb2d;
-    // Start is called before the first frame update
-    void Start()
+
+	#endregion
+
+	#region Unity
+
+	// Start is called before the first frame update
+	void Start()
     {
         rb2d = this.GetComponent<Rigidbody2D>();
         destination = Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -30,4 +37,5 @@ public class Projectile_Inferno : MonoBehaviour
             Destroy(this.gameObject);
         }
     }
+	#endregion
 }

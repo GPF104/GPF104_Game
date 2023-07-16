@@ -4,7 +4,14 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    GameManager gameManager;
+	#region ExternalLinks
+
+	GameManager gameManager;
+
+	#endregion
+
+	#region Attributes
+
 	[SerializeField] List<AudioClip> damageSFX = new List<AudioClip>();
 
     int Health = 100;
@@ -16,7 +23,6 @@ public class Player : MonoBehaviour
         StartCoroutine(UpdatePosition());
     }
 
-
     public void TakeDamage(int amount)
 	{
         Health = Health - amount;
@@ -27,7 +33,6 @@ public class Player : MonoBehaviour
 		{
             gameManager.GameOver();
 		}
-        
 	}
     public int scrolls = 0;
 
@@ -36,20 +41,16 @@ public class Player : MonoBehaviour
         scrolls += amount;
         gameManager.uiHandler.scrollCounter.SetScroll(scrolls);
     }
-    // Start is called before the first frame update
-    void Start()
+
+	#endregion
+
+	#region Unity
+	// Start is called before the first frame update
+	void Start()
     {
         gameManager = GameObject.FindObjectOfType<GameManager>().GetComponent<GameManager>();
         StartCoroutine(UpdatePosition());
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-
 
     private void OnCollisionEnter2D(Collision2D other)
     {
@@ -66,4 +67,5 @@ public class Player : MonoBehaviour
             TakeDamage(collision.gameObject.GetComponent<BindiScript>().damage);
         }
 	}
+	#endregion
 }
