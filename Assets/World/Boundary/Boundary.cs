@@ -12,29 +12,42 @@ public class Boundary : MonoBehaviour
 	bool inarena = true;
 	[SerializeField] public int MAX_DISTANCE = 80;
 	[SerializeField] public int MIN_DISTANCE = 50;
-	float boundCount = 0;
+	private bool canDamage = false;
+	private int dmgCounter = 0;
+	IEnumerator BoundDamage()
+	{
+		Debug.Log(dmgCounter);
+		dmgCounter++;
+		yield return new WaitUntil(() => canDamage == true);
+		yield return new WaitForSeconds(1f);
+
+		Debug.Log("DAMAGE OUT OF BOUNDS");
+		GameObject.FindObjectOfType<Player>().TakeDamage(5);
+		//Wait another half second before allowing the player to be damaged again.
+		yield return new WaitForSeconds(0.5f);
+		dmgCounter = 0;
+
+
+	}
 	IEnumerator OutofBounds()
 	{
-		if (boundCount > 1)
-		{
-			GameObject.FindObjectOfType<Player>().TakeDamage(5);
-		}
 		yield return new WaitUntil(() => distance > MAX_DISTANCE);
 		Debug.Log(distance + " in arena? " + inarena + " distance opacity " + distanceFade);
 		inarena = false;
+		canDamage = true;
 		StartCoroutine(InBounds());
 		yield return new WaitForSeconds(1.5f);
-		boundCount++;
-		gameManager.uiHandler.frameControls.FrameFade(overlay, Fade.In, 1);
+		
+		//gameManager.uiHandler.frameControls.FrameFade(overlay, Fade.In, 1);
 	}
 
 	IEnumerator InBounds()
 	{
 		yield return new WaitUntil(() => distance < MAX_DISTANCE);
-		boundCount = 0;
 		inarena = true;
+		canDamage = false;
 		yield return new WaitForSeconds(1.5f);
-		gameManager.uiHandler.frameControls.FrameFade(overlay, Fade.Out, 1);
+		//gameManager.uiHandler.frameControls.FrameFade(overlay, Fade.Out, 1);
 	}
 
 	IEnumerator DistanceFade(float distance)
@@ -56,8 +69,10 @@ public class Boundary : MonoBehaviour
 		StartCoroutine(DistanceFade(distance));
 		StartCoroutine(GetDistance());
 		StartCoroutine(OutofBounds());
-		
-
+		if (dmgCounter == 0)
+		{
+			StartCoroutine(BoundDamage());
+		}
 	}
 
 	// Start is called before the first frame update
