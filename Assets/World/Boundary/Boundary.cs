@@ -12,20 +12,26 @@ public class Boundary : MonoBehaviour
 	bool inarena = true;
 	[SerializeField] public int MAX_DISTANCE = 80;
 	[SerializeField] public int MIN_DISTANCE = 50;
+	float boundCount = 0;
 	IEnumerator OutofBounds()
 	{
+		if (boundCount > 1)
+		{
+			GameObject.FindObjectOfType<Player>().TakeDamage(5);
+		}
 		yield return new WaitUntil(() => distance > MAX_DISTANCE);
 		Debug.Log(distance + " in arena? " + inarena + " distance opacity " + distanceFade);
 		inarena = false;
 		StartCoroutine(InBounds());
 		yield return new WaitForSeconds(1.5f);
-
+		boundCount++;
 		gameManager.uiHandler.frameControls.FrameFade(overlay, Fade.In, 1);
 	}
 
 	IEnumerator InBounds()
 	{
 		yield return new WaitUntil(() => distance < MAX_DISTANCE);
+		boundCount = 0;
 		inarena = true;
 		yield return new WaitForSeconds(1.5f);
 		gameManager.uiHandler.frameControls.FrameFade(overlay, Fade.Out, 1);

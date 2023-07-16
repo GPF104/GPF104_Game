@@ -8,7 +8,8 @@ public class GameManager : MonoBehaviour
 	public Player player;
 	public UIHandler uiHandler;
 	public TimeManager timeManager;
-
+	public MainCamera mainCamera;
+	public AudioManager audioManager;
 	public GameObject bubble;
 	public GameObject spawner;
 
@@ -30,6 +31,7 @@ public class GameManager : MonoBehaviour
 	public void GameOver()
 	{
 		GameFinished = true;
+		mainCamera.StopShake();
 		uiHandler.Display(uiHandler.gameOverObject, true);
 		uiHandler.Display(uiHandler.uiHealth.gameObject, false);
 		uiHandler.Display(uiHandler.uiMap.gameObject, false);
@@ -71,8 +73,10 @@ public class GameManager : MonoBehaviour
 	// Start is called before the first frame update
 	void Start()
     {
+		mainCamera = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<MainCamera>();
 		uiHandler = this.uiHandler.GetComponent<UIHandler>();
 		timeManager = this.timeManager.GetComponent<TimeManager>();
+		audioManager = this.audioManager.GetComponent<AudioManager>();
 		levelGenerator = GameObject.FindObjectOfType<LevelGenerator>().GetComponent<LevelGenerator>();
 		StartCoroutine(InitialLoad());
     }

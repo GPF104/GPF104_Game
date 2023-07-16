@@ -103,6 +103,8 @@ MonoBehaviour:
   maxHealth: 8
   currentHealth: 0
   scoreValue: 5
+  damageSFX: {fileID: 8300000, guid: 66d382d97152ee044ac96221059e4cf8, type: 3}
+  damageParticles: {fileID: 1232776670957128206, guid: d1db02191fca8e84faddeeb5106bcf4b, type: 3}
 --- !u!114 &1034198007210746328
 MonoBehaviour:
   m_ObjectHideFlags: 0

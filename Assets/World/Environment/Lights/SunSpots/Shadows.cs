@@ -7,7 +7,7 @@ public class Shadows : MonoBehaviour
     [SerializeField] float moveSpeed = 0.25f;
     IEnumerator Move(float moveSpeed)
     {
-        yield return new WaitForSeconds(0.25f);
+        yield return new WaitForSeconds(0.05f);
         float randomOffset = Random.Range(0.5f, 1.2f);
 
         Vector3 originalPosition = transform.position; // Store the original position

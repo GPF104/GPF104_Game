@@ -11,6 +11,7 @@ public class ProjectileScript : MonoBehaviour
     public GameObject particlesPrefab;
     private GameObject particleObject;
 
+    [SerializeField] List<AudioClip> soundFX;
 
     #endregion
 
@@ -34,6 +35,7 @@ public class ProjectileScript : MonoBehaviour
     {
         StartCoroutine(LifeSpan(3));
         particleObject = Instantiate(particlesPrefab, transform.position, Quaternion.identity);
+		GameObject.FindObjectOfType<GameManager>().GetComponent<GameManager>().audioManager.PlayAudio(soundFX[Random.Range(0, soundFX.Count)]);
     }
 	void Update()
 	{
@@ -55,7 +57,6 @@ public class ProjectileScript : MonoBehaviour
         }
         else
 		{
-            Debug.Log("Hit world");
             Kill();
         }
 

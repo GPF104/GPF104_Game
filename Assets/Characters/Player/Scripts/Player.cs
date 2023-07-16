@@ -5,6 +5,7 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     GameManager gameManager;
+	[SerializeField] List<AudioClip> damageSFX = new List<AudioClip>();
 
     int Health = 100;
 
@@ -20,6 +21,8 @@ public class Player : MonoBehaviour
 	{
         Health = Health - amount;
         gameManager.uiHandler.uiHealth.SetHealth(Health);
+        gameManager.mainCamera.DoShake(0.25f);
+        gameManager.audioManager.PlayAudio(damageSFX[0]);
         if (Health <= 0)
 		{
             gameManager.GameOver();
