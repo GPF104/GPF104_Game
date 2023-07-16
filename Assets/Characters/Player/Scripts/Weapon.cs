@@ -6,6 +6,7 @@ public class Weapon : MonoBehaviour
 {
     public GameObject Projectile_Bullet;
     public GameObject Inferno_Bomb;
+    [SerializeField] GameObject fizzle;
     Transform firePoint;
     public float fireForce = 20f;
 
@@ -19,6 +20,8 @@ public class Weapon : MonoBehaviour
 
     public void Inferno()
     {
+        Instantiate(fizzle, firePoint.position, firePoint.rotation);
+
         if (GameObject.FindObjectOfType<Player>().GetComponent<Player>().scrolls > 0)
         {
             GameObject inferno = Instantiate(Inferno_Bomb, firePoint.position, firePoint.rotation);

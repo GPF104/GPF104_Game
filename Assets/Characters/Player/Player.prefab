@@ -199,6 +199,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Projectile_Bullet: {fileID: 6503832657817774434, guid: 0eb8a4047ebf9284ca605c58800f2cae, type: 3}
   Inferno_Bomb: {fileID: 2507912890639806683, guid: a896bf618559c7d4c8c8f116bb82aabd, type: 3}
+  fizzle: {fileID: 0}
   fireForce: 20
 --- !u!50 &4245647849778599426
 Rigidbody2D:
@@ -426,6 +427,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Projectile_Bullet: {fileID: 6503832657817774434, guid: 0eb8a4047ebf9284ca605c58800f2cae, type: 3}
   Inferno_Bomb: {fileID: 0}
+  fizzle: {fileID: 1232776670957128206, guid: 84d13bf7b5a85664880c99f4408ad20e, type: 3}
   fireForce: 20
 --- !u!1 &4245647851456359255
 GameObject:
