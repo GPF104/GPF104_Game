@@ -8,11 +8,13 @@ public class AudioManager : MonoBehaviour
     [SerializeField] List<AudioClip> ambience = new List<AudioClip>();
     AudioSource audioSource;
 
-    void PlayAmbience()
+    IEnumerator PlayAmbience()
 	{
         audioSource.clip = ambience[Random.Range(0, ambience.Count)];
         audioSource.Play();
-	}
+        yield return new WaitForSeconds(audioSource.clip.length);
+        StartCoroutine(PlayAmbience());
+    }
 
     public void PlayAudio(AudioClip clip)
 	{
@@ -22,12 +24,6 @@ public class AudioManager : MonoBehaviour
     void Start()
     {
         audioSource = this.GetComponent<AudioSource>();
-        PlayAmbience();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        StartCoroutine(PlayAmbience());
     }
 }

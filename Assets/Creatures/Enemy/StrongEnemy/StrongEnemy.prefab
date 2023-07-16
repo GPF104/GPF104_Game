@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5498972864540742439}
   - component: {fileID: 1034198007210746328}
   - component: {fileID: 8544359085233012282}
-  - component: {fileID: 5297989436408592881}
+  - component: {fileID: 7305139610697636500}
   m_Layer: 0
   m_Name: StrongEnemy
   m_TagString: StrongEnemy
@@ -143,8 +143,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!60 &5297989436408592881
-PolygonCollider2D:
+--- !u!58 &7305139610697636500
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -157,20 +157,5 @@ PolygonCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.64, y: 0.64}
-    newSize: {x: 1, y: 0.8828125}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: -0.25, y: 0.43359375}
-      - {x: -0.5, y: 0}
-      - {x: -0.25, y: -0.43359375}
-      - {x: 0.25, y: -0.43359375}
-      - {x: 0.5, y: 0}
-      - {x: 0.25, y: 0.43359375}
+  serializedVersion: 2
+  m_Radius: 0.25
