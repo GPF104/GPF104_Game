@@ -12,6 +12,12 @@ TagManager:
   - Spawner
   - Bubble
   - EnemyBullet
+  - RangedEnemy
+  - StrongEnemy
+  - Scroll
+  - Light
+  - Bindi
+  - NoSpawn
   - Environment
   - RangedEnemy
   - RangedEnemy

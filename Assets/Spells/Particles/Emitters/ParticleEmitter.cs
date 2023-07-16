@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class ParticleEmitter : MonoBehaviour
 {
-    private ParticleSystem particleSystem;
+    ParticleSystem particles;
 	private float fadeDuration = 0.25f; // Duration of the fade in seconds
 
     private IEnumerator FadeOutAndDestroy()
     {
         float elapsedTime = 0f;
-        Color originalColor = particleSystem.main.startColor.color;
-        ParticleSystem.MainModule mainModule = particleSystem.main;
+        Color originalColor = particles.main.startColor.color;
+        ParticleSystem.MainModule mainModule = particles.main;
 
         while (elapsedTime < fadeDuration)
         {
@@ -27,13 +27,13 @@ public class ParticleEmitter : MonoBehaviour
     }
     public void Remove()
 	{
-        particleSystem.Stop();
+        particles.Stop();
         StartCoroutine(FadeOutAndDestroy());
     }
 	// Start is called before the first frame update
 	void Start()
     {
-        particleSystem = this.GetComponent<ParticleSystem>();
-        fadeDuration = particleSystem.main.duration;
+        particles = this.GetComponent<ParticleSystem>();
+        fadeDuration = particles.main.duration;
     }
 }

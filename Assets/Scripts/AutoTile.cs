@@ -6,8 +6,8 @@ using UnityEditor;
 
 public class AutoTile : MonoBehaviour
 {
-
-    public enum TileTypes
+	#region Attributes
+	public enum TileTypes
 	{
         grass,
         dirt,
@@ -35,13 +35,9 @@ public class AutoTile : MonoBehaviour
     public RuleTile topTile;
     public RuleTile botTile;
 
-    //public List<Tile> topTiles;
-    //public List<Tile> botTiles;
-
     int width;
     int height;
 
-    //  To-do: Corner detection.
     public void doSim(int nu, Vector3Int tmpSize)
     {
         clearMap(false);
@@ -63,9 +59,34 @@ public class AutoTile : MonoBehaviour
         {
             for (int y = 0; y < height; y++)
             {
+                Vector3Int tilePosition = new Vector3Int(-x + width / 2, -y + height / 2, 0);
                 if (terrainMap[x, y] == 1)
-                    topMap.SetTile(new Vector3Int(-x + width / 2, -y + height / 2, 0), topTile);
-                botMap.SetTile(new Vector3Int(-x + width / 2, -y + height / 2, 0), botTile);
+				{
+                    Vector3 worldPosition = topMap.CellToWorld(tilePosition);
+                    Collider2D[] overlapColliders = Physics2D.OverlapPointAll(worldPosition);
+                    bool hasSpawn = false;
+                    foreach (Collider2D collider in overlapColliders)
+                    {
+                        if (collider.gameObject.CompareTag("NoSpawn"))
+                        {
+                            hasSpawn = true;
+                            break;
+                        }
+                    }
+
+                    if (hasSpawn)
+					{
+                        botMap.SetTile(tilePosition, botTile);
+                        continue;
+                    }
+                    else
+					{
+                        topMap.SetTile(tilePosition, topTile);
+                    }
+                    
+                }
+                    
+                botMap.SetTile(tilePosition, botTile);
             }
         }
     }
@@ -137,7 +158,8 @@ public class AutoTile : MonoBehaviour
 		{
             return topMap.GetTile(Vector3Int.FloorToInt(position));
 		}
-        return false;
+
+        return topMap.GetTile(Vector3Int.FloorToInt(position));
 	}
     public void clearMap(bool complete)
     {
@@ -149,4 +171,5 @@ public class AutoTile : MonoBehaviour
             terrainMap = null;
         }
     }
+	#endregion
 }

@@ -16,6 +16,7 @@ public class TimeManager : MonoBehaviour
 	#region Attributes
 
 	[SerializeField] GameObject spawner;
+	[SerializeField] GameObject scrolls;
 	//	Variables
 	private bool active = true;
 	private IEnumerator timer;
@@ -27,10 +28,10 @@ public class TimeManager : MonoBehaviour
 	//	Methods
 	IEnumerator Timer(float interval)
 	{
+		//To-do spawn queue
 		while (active)
 		{
 			yield return new WaitForSeconds(interval);
-
 			secondCount += 1;
 			minuteCount = (int)Mathf.Floor(secondCount / 60);
 			difficulty = 10 * (a * Mathf.Pow(secondCount, 2) + b * secondCount + c);
@@ -45,8 +46,10 @@ public class TimeManager : MonoBehaviour
 				}
 			}
 
-			if (secondCount % 5 == 0)
-				//SpawnQueue(Mathf.FloorToInt(difficulty));
+			if (secondCount % Random.Range(10, 30) == 0)
+			{
+				StartCoroutine(Scroll());
+			}
 
 			if (secondCount % 30 == 0)
 				StartCoroutine(DifficultyScale());
@@ -63,6 +66,16 @@ public class TimeManager : MonoBehaviour
 		yield return new WaitUntil(() => secondCount % 30 == 0);
 	}
 
+	IEnumerator Scroll()
+	{
+		yield return new WaitForSeconds(0.25f);
+		
+		GameObject scroll = Instantiate(scrolls);
+		Vector2 randomVector = Random.insideUnitCircle.normalized * 3;
+
+		scroll.transform.position = gameManager.player.transform.position + (Vector3)randomVector;
+		Debug.Log("Scroll spawned at: " + scroll.transform.position);
+	}
 	IEnumerator Bubble(float delay)
 	{
 		yield return new WaitForSeconds(Random.Range(difficulty * 0.5f, 10 / difficulty));

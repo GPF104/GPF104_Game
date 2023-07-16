@@ -38,6 +38,7 @@ public class EnemyProjectileScript : MonoBehaviour
             Destroy(this.gameObject);
         }
 <<<<<<< HEAD
+<<<<<<< HEAD
         else
 		{
             if (collision.collider.tag == "World")
@@ -59,6 +60,12 @@ public class EnemyProjectileScript : MonoBehaviour
         }
         //check here to see if hitting enemy
 >>>>>>> Sean
+=======
+        if (collision.collider.tag == "World")
+		{
+            Destroy(this.gameObject);
+        }
+>>>>>>> master
     }
     
     #endregion

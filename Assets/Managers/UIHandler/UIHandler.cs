@@ -5,11 +5,7 @@ using UnityEngine;
 public class UIHandler : MonoBehaviour
 {
 
-	public enum Fade
-	{
-		fadeout = 0,
-		fadein = 1
-	}
+
 
 	#region ExternalLinks
 
@@ -25,15 +21,22 @@ public class UIHandler : MonoBehaviour
 	public UI_GameOver uiGameOver;
 	public GameObject gameOverObject;
 	public GameObject uiMenu;
+	public ScrollCounter scrollCounter;
 
 	#endregion
 
+
+
+	#region Attributes
+	public enum Fade
+	{
+		fadeout = 0,
+		fadein = 1
+	}
 	public void Display(GameObject frame, bool active)
 	{
 		frame.SetActive(active);
 	}
-
-	#region Attributes
 	IEnumerator FadeOut(float speed)
 	{
 		yield return new WaitForSeconds(speed);
@@ -61,6 +64,7 @@ public class UIHandler : MonoBehaviour
 		frameControls = this.GetComponent<FrameControls>();
 		uiMap = GameObject.FindObjectOfType<UI_Map>().GetComponent<UI_Map>();
 		uiHealth = GameObject.FindObjectOfType<UI_Health>().GetComponent<UI_Health>();
+		scrollCounter = GameObject.FindObjectOfType<ScrollCounter>().GetComponent<ScrollCounter>();
 
 		gameOverObject.SetActive(false);
 		uiMenu.SetActive(false);
