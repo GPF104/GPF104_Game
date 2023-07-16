@@ -23,10 +23,10 @@ public class Spawner : MonoBehaviour
 		{
             enemyIndex = 2;
 		}
-
+        float randomScale = Random.Range(1, 1.5f);
         GameObject go = Instantiate(enemies[enemyIndex], transform);
         go.transform.SetParent(GameObject.Find("Enemies").transform);
-        go.transform.localScale = Vector3.one;
+        go.transform.localScale = Vector3.one * randomScale;
         Debug.Log("Difficulty: " + difficulty + " Spawned enemy at " + go.transform.position);
     }
 
