@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2780753923916086254}
   - component: {fileID: 2876977201507915180}
   m_Layer: 0
-  m_Name: Text
+  m_Name: GOText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -83,7 +83,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 0
+  m_PresetInfoIsWorld: 1
 --- !u!114 &2876977201507915180
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -631,6 +631,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a024aa0e8089c9a4d8e59c5e33db84ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tmpText: {fileID: 8535761637119510284}
 --- !u!1 &7298320170872501557
 GameObject:
   m_ObjectHideFlags: 0
@@ -643,7 +644,7 @@ GameObject:
   - component: {fileID: 7566606630060452203}
   - component: {fileID: 8535761637119510284}
   m_Layer: 0
-  m_Name: Text (TMP)
+  m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

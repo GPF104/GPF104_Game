@@ -111,6 +111,10 @@ public class TimeManager : MonoBehaviour
 		return minutes.ToString("0#") + ":" + (seconds % 60).ToString("0#");
 	}
 
+	public string CurrentTime()
+	{
+		return GetTimeString(minuteCount, secondCount);
+	}
 	public float GetTime()
 	{
 		return (minuteCount*60) + secondCount;

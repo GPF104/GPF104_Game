@@ -35,6 +35,7 @@ public class GameManager : MonoBehaviour
 		uiHandler.Display(uiHandler.gameOverObject, true);
 		uiHandler.Display(uiHandler.uiHealth.gameObject, false);
 		uiHandler.Display(uiHandler.uiMap.gameObject, false);
+		uiHandler.uiGameOver.GetComponent<UI_GameOver>().SetText("Time: " + timeManager.CurrentTime() + " \n Score: " + score);
 		//uiHandler.Display(uiHandler.uiTimer.gameObject, false);
 		Time.timeScale = 0;
 	}
