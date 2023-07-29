@@ -54,7 +54,7 @@ public class PlayerMovement : MonoBehaviour
 
             }
             //Inferno Setup
-            else if (Input.GetMouseButtonDown(1))
+            if (Input.GetMouseButtonDown(1))
             {
                 StartCoroutine(FireAnim(cooldown));
                 weapon.Inferno();

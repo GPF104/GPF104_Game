@@ -11,18 +11,18 @@ public class ScrollCounter : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        scrollText = this.gameObject.GetComponentInChildren<TMP_Text>();
-        scrollText.text = "SCROLLS: " + currentScrolls.ToString();
+        scrollText = gameObject.GetComponentInChildren<TMP_Text>();
+        scrollText.text = ": " + currentScrolls.ToString();
     }
 
     // Update is called once per frame
     public void IncreaseScrolls(int v)
     {
         currentScrolls += v;
-        scrollText.text = "SCROLLS: " + currentScrolls.ToString();
+        scrollText.text = ": " + currentScrolls.ToString();
     }
     public void SetScroll(int scrollNumber)
     {
-        scrollText.text = "SCROLLS: " + scrollNumber.ToString();
+        scrollText.text = ": " + scrollNumber.ToString();
     }
 }
