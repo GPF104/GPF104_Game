@@ -18,6 +18,9 @@ TagManager:
   - Light
   - Bindi
   - NoSpawn
+  - Music
+  - Fader
+  - SceneControl
   layers:
   - Default
   - TransparentFX

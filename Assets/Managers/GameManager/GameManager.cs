@@ -39,7 +39,10 @@ public class GameManager : MonoBehaviour
 		//uiHandler.Display(uiHandler.uiTimer.gameObject, false);
 		Time.timeScale = 0;
 	}
-
+	public void PrepareGame()
+	{
+		Time.timeScale = 0;
+	}
 	public void Pause()
 	{
 		Debug.Log("Paused");
@@ -54,21 +57,28 @@ public class GameManager : MonoBehaviour
 		GamePaused = false;
 		Time.timeScale = 1;
 	}
-
-
+	[ContextMenu("StartGame")]
+	public void StartGame()
+	{
+		GameObject.FindGameObjectWithTag("Fader").GetComponent<SceneFader>().FadeOut();
+		audioManager.Initialize();
+		timeManager.StartTimer(1);
+		GamePaused = false;
+		Time.timeScale = 1;
+	}
 	#endregion
 
 	#region Unity
 
 	IEnumerator InitialLoad()
 	{
+		PrepareGame();
 		GameFinished = false;
-		GamePaused = false;
-		Time.timeScale = 1;
+		GamePaused = true;
 		levelGenerator.GenerateLevel(); // Generates the level
 		yield return new WaitForSeconds(0.5f);
 		
-		timeManager.StartTimer(1);
+		//timeManager.StartTimer(1);
 	}
 
 	// Start is called before the first frame update

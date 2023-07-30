@@ -15,6 +15,10 @@ public class AudioManager : MonoBehaviour
         yield return new WaitForSeconds(audioSource.clip.length);
         StartCoroutine(PlayAmbience());
     }
+    public void Initialize()
+	{
+        StartCoroutine(PlayAmbience());
+    }
 
     public void PlayAudio(AudioClip clip)
 	{
@@ -24,6 +28,5 @@ public class AudioManager : MonoBehaviour
     void Start()
     {
         audioSource = this.GetComponent<AudioSource>();
-        StartCoroutine(PlayAmbience());
     }
 }
