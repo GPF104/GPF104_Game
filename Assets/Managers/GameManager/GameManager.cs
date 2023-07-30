@@ -13,6 +13,7 @@ public class GameManager : MonoBehaviour
 	public GameObject bubble;
 	public GameObject spawner;
 
+	[SerializeField] bool isDev = false;
 
 	public LevelGenerator levelGenerator;
 	#endregion
@@ -83,7 +84,10 @@ public class GameManager : MonoBehaviour
 		GamePaused = true;
 		levelGenerator.GenerateLevel(); // Generates the level
 		yield return new WaitForSeconds(0.5f);
-		
+		if (isDev)
+		{
+			StartGame();
+		}
 		//timeManager.StartTimer(1);
 	}
 
