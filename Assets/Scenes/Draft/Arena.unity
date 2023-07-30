@@ -773,7 +773,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5621535237721690807, guid: 2887e19ba90eda248bc9bb05943a1f37, type: 3}
       propertyPath: orthographic size
-      value: 10
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 5621535237721690807, guid: 2887e19ba90eda248bc9bb05943a1f37, type: 3}
       propertyPath: m_BackGroundColor.b
@@ -2130,11 +2130,11 @@ PrefabInstance:
       objectReference: {fileID: 1004243562}
     - target: {fileID: -3918450974019917998, guid: 1b74c51eabb3fa34c87987d2af264fd1, type: 3}
       propertyPath: MAX_DISTANCE
-      value: 120
+      value: 80
       objectReference: {fileID: 0}
     - target: {fileID: -3918450974019917998, guid: 1b74c51eabb3fa34c87987d2af264fd1, type: 3}
       propertyPath: MIN_DISTANCE
-      value: 80
+      value: 70
       objectReference: {fileID: 0}
     - target: {fileID: 2191087987663063165, guid: 1b74c51eabb3fa34c87987d2af264fd1, type: 3}
       propertyPath: m_Name

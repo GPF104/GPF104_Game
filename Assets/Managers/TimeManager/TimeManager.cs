@@ -25,6 +25,11 @@ public class TimeManager : MonoBehaviour
 	private float a = 0.00f;
 	private float b = 0.1f;
 	private float c = 1.0f;
+
+	//	Spawn Timers
+	[SerializeField] float BubbleInterval = 2;
+	[SerializeField] float SpawnerInterval = 15;
+	[SerializeField] float ScrollChance = 30;
 	//	Methods
 	IEnumerator Timer(float interval)
 	{
@@ -37,7 +42,7 @@ public class TimeManager : MonoBehaviour
 			difficulty = 10 * (a * Mathf.Pow(secondCount, 2) + b * secondCount + c);
 			gameManager.uiHandler.uiTimer.SetText(GetTimeString(minuteCount, secondCount));
 
-			if (secondCount % 5 == 0)
+			if (secondCount % BubbleInterval == 0)
 			{
 				for (int i = 0; i < levelGenerator.spawners.Count; i++)
 				{
@@ -46,12 +51,12 @@ public class TimeManager : MonoBehaviour
 				}
 			}
 
-			if (secondCount % Random.Range(10, 30) == 0)
+			if (secondCount % Random.Range(10, ScrollChance) == 0)
 			{
 				StartCoroutine(Scroll());
 			}
 
-			if (secondCount % 30 == 0)
+			if (secondCount % SpawnerInterval == 0)
 				StartCoroutine(DifficultyScale());
 
 			yield return Timer(interval);
