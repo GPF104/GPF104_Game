@@ -98,8 +98,8 @@ MonoBehaviour:
     m_Extent: {x: 0.9985302, y: 0.99853027, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
-  m_PointLightInnerRadius: 0
-  m_PointLightOuterRadius: 0.55
+  m_PointLightInnerRadius: 0.88
+  m_PointLightOuterRadius: 15.53
   m_ShapeLightParametricSides: 5
   m_ShapeLightParametricAngleOffset: 0
   m_ShapeLightParametricRadius: 1
@@ -121,13 +121,12 @@ GameObject:
   - component: {fileID: 6630951993476463365}
   - component: {fileID: 7773913081694607278}
   - component: {fileID: 4607041984463194022}
-  - component: {fileID: 7392110112727841557}
   - component: {fileID: 4245647849778599426}
   - component: {fileID: 4245647849778599430}
   - component: {fileID: -5359697689450555623}
   - component: {fileID: 4382676923746674429}
   - component: {fileID: 3003460288895935175}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -163,6 +162,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72a1e3a1abae98144b5e3fab5e5a4d28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isDev: 0
   damageSFX:
   - {fileID: 8300000, guid: 8a04630fe77072a4cadd5750103d83f7, type: 3}
   - {fileID: 8300000, guid: 386b8c39217be454ca5ce08c4ff64f02, type: 3}
@@ -179,28 +179,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f617ec331b246a94d9498fd617e7072d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerTransform: {fileID: 0}
+  playerTransform: {fileID: 6630951993476463365}
   objectLayerMask:
     serializedVersion: 2
-    m_Bits: 8
-  moveSpeed: 0
+    m_Bits: 9
+  moveSpeed: 10
   cooldown: 0.1
---- !u!114 &7392110112727841557
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3388424831923934076}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ee50192cf79babd469ca8c9f1085a650, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Projectile_Bullet: {fileID: 6503832657817774434, guid: 0eb8a4047ebf9284ca605c58800f2cae, type: 3}
-  Inferno_Bomb: {fileID: 2507912890639806683, guid: a896bf618559c7d4c8c8f116bb82aabd, type: 3}
-  fizzle: {fileID: 0}
-  fireForce: 20
 --- !u!50 &4245647849778599426
 Rigidbody2D:
   serializedVersion: 4
@@ -253,7 +237,7 @@ MonoBehaviour:
   maxHealth: 10
   currentHealth: 0
   scoreValue: 5
-  damageSFX: {fileID: 0}
+  damageSFX: {fileID: 8300000, guid: 8a04630fe77072a4cadd5750103d83f7, type: 3}
   damageParticles: {fileID: 1232776670957128206, guid: 4653494e9ecf64248993b3d344e724e1, type: 3}
 --- !u!95 &4382676923746674429
 Animator:
@@ -338,7 +322,7 @@ GameObject:
   - component: {fileID: 4245647849586323397}
   - component: {fileID: 4245647849586323396}
   - component: {fileID: 4245647849586323399}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Weapon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -426,7 +410,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Projectile_Bullet: {fileID: 6503832657817774434, guid: 0eb8a4047ebf9284ca605c58800f2cae, type: 3}
-  Inferno_Bomb: {fileID: 0}
+  Inferno_Bomb: {fileID: 1463727473882351806, guid: 157be4917d404f245a3c8278b831297e, type: 3}
+  Healing_Spell: {fileID: 0}
   fizzle: {fileID: 1232776670957128206, guid: 84d13bf7b5a85664880c99f4408ad20e, type: 3}
   fireForce: 20
 --- !u!1 &4245647851456359255
@@ -438,7 +423,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4245647851456359254}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: FirePoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -8,10 +8,11 @@ public class Player : MonoBehaviour
 
 	GameManager gameManager;
 
-	#endregion
+    #endregion
 
-	#region Attributes
+    #region Attributes
 
+    [SerializeField] public bool isDev = false;
 	[SerializeField] List<AudioClip> damageSFX = new List<AudioClip>();
 
     int Health = 100;
@@ -48,8 +49,11 @@ public class Player : MonoBehaviour
 	// Start is called before the first frame update
 	void Start()
     {
-        gameManager = GameObject.FindObjectOfType<GameManager>().GetComponent<GameManager>();
-        StartCoroutine(UpdatePosition());
+        if (!isDev)
+		{
+            gameManager = GameObject.FindObjectOfType<GameManager>().GetComponent<GameManager>();
+            StartCoroutine(UpdatePosition());
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D other)

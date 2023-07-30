@@ -19,7 +19,7 @@ public class MusicPlayer : MonoBehaviour
     IEnumerator LoopMusic()
 	{
         audioSource.clip = MusicFile;
-        Fade("in");
+        audioSource.Play();
         yield return new WaitForSeconds(MusicFile.length);
         StartCoroutine(LoopMusic());
     }
@@ -50,50 +50,14 @@ public class MusicPlayer : MonoBehaviour
 
     }
 
-    IEnumerator FadeOut()
-    {
-        float timer = 0f;
-        while (timer < fadeDuration)
-        {
-            timer += Time.deltaTime;
-            float vol = Mathf.Lerp(audioSource.volume, 0f, timer / fadeDuration);
-            Debug.Log(vol);
-            audioSource.volume = vol;
-            yield return null;
-        }
-        audioSource.Stop();
-    }
 
-    IEnumerator FadeIn()
-    {
-        audioSource.PlayOneShot(audioSource.clip);
-        audioSource.volume = 0f;
-        float timer = 0f;
-        while (timer < fadeDuration)
-        {
-            timer += Time.deltaTime;
-            audioSource.volume = Mathf.Lerp(audioSource.volume, startingVolume, timer / fadeDuration);
-            yield return null;
-        }
-    }
     public void SetClip(AudioClip clip)
 	{
         StopAllCoroutines();
         audioSource.clip = clip;
         audioSource.Play();
 	}
-    public void Fade(string input)
-    {
-        if (input == "out")
-        {
-            StartCoroutine(FadeOut());
-        }
-        else if (input == "in")
-        {
-            StartCoroutine(FadeIn());
-        }
-    }
-    
+
     public void StopMusic()
 	{
         audioSource.Stop();

@@ -47,6 +47,7 @@ public class LevelGenerator : MonoBehaviour
     [SerializeField] float MAX_SCALE = 1.5f;
     [SerializeField] float MIN_BRIGHTNESS = 0.5f;
     [SerializeField] float MAX_BRIGHTNESS = 1;
+    [SerializeField] float generateTime = 0.5f;
 
     //  Control the size of the generated tilemap level
     public Vector3Int levelSize = new Vector3Int(120, 120, 0);
@@ -55,18 +56,50 @@ public class LevelGenerator : MonoBehaviour
 
     #region Generation
     //  Slower generation - Might need this for when our objects get more complex.
-    IEnumerator SlowGenerate(List<GameObject> gameObjects)
+    IEnumerator SlowGenerate(GenerateType type)
 	{
-        for (int i = 0; i < gameObjects.Count; i++)
+        int minimumDensity = MIN_DENSITY;
+
+        if (type == GenerateType.Lighting || type == GenerateType.Obstacles)
         {
-            for (int j = 0; j < Random.Range(MIN_DENSITY, MAX_DENSITY); j++)
+            minimumDensity += 2500;
+        }
+
+        for (int i = 0; i < Random.Range(minimumDensity, MAX_DENSITY); i++)
+        {
+            Vector2 pos = Random.insideUnitSphere * radius;
+
+            if (type == GenerateType.Flora)
             {
-                Vector2 pos = Random.insideUnitSphere * radius;
-                GameObject go = Instantiate(gameObjects[Random.Range(0, gameObjects.Count)]);
-                go.transform.position = pos;
-                yield return new WaitForSeconds(0.05f);
+                if (autoTile.GetTile(pos, AutoTile.TileTypes.grass))
+                {
+                    GameObject go = AddProp(Flora[Random.Range(0, Flora.Count)], pos, type);
+                }
+            }
+            if (type == GenerateType.Trees)
+            {
+                if (autoTile.GetTile(pos, AutoTile.TileTypes.grass))
+                {
+                    GameObject go = AddProp(Trees[Random.Range(0, Trees.Count)], pos, type);
+                }
+            }
+            if (type == GenerateType.Obstacles)
+            {
+                if (autoTile.GetTile(pos, AutoTile.TileTypes.grass))
+                {
+                    GameObject go = AddProp(BadObstacles[Random.Range(0, BadObstacles.Count)], pos, type);
+                }
+            }
+            if (type == GenerateType.Lighting)
+            {
+                if (!autoTile.GetTile(pos, AutoTile.TileTypes.grass))
+                {
+                    GameObject go = AddProp(Shadows[Random.Range(0, Shadows.Count)], pos, type);
+                    go.GetComponent<UnityEngine.Rendering.Universal.Light2D>().intensity = Random.Range(MIN_BRIGHTNESS, MAX_BRIGHTNESS);
+                }
             }
         }
+        yield return new WaitForSeconds(generateTime);
     }
 
     GameObject AddProp(GameObject prop, Vector2 pos, GenerateType type)
@@ -189,10 +222,10 @@ public class LevelGenerator : MonoBehaviour
         //levelSize = new Vector3Int(boundary.MAX_DISTANCE + (int)radius, boundary.MAX_DISTANCE + (int)radius, 0);
         autoTile.doSim(autoTile.numSims, levelSize);
         //StartCoroutine(SlowGenerate(Flora));
-        Generate(GenerateType.Flora);
-        Generate(GenerateType.Trees);
-        Generate(GenerateType.Lighting);
-        Generate(GenerateType.Obstacles);
+        StartCoroutine(SlowGenerate(GenerateType.Flora));
+        StartCoroutine(SlowGenerate(GenerateType.Trees));
+        StartCoroutine(SlowGenerate(GenerateType.Lighting));
+        StartCoroutine(SlowGenerate(GenerateType.Obstacles));
     }
 
 	#region Unity

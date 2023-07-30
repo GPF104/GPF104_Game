@@ -7,34 +7,38 @@ public class MainMenu : MonoBehaviour
 {
 
     bool isBackgroundSceneLoaded = false;
+    [SerializeField] SceneFader fader;
     IEnumerator Fade()
 	{
-        yield return new WaitForSeconds(GameObject.FindGameObjectWithTag("Fader").GetComponent<SceneFader>().fadeTime);
-        GameObject.FindGameObjectWithTag("Fader").GetComponent<SceneFader>().FadeOut();
+        yield return new WaitForSeconds(fader.fadeTime);
+        fader.FadeOut();
     }
 
     IEnumerator BackgroundLoad()
     {
-        Debug.Log("Loading Scene async in background");
-        yield return new WaitForSeconds(2);
-        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(2, LoadSceneMode.Additive);
+        if (!SceneManager.GetSceneByName("Arena").isLoaded)
+		{
+            Debug.Log("Loading Scene async in background");
+            yield return new WaitForSeconds(2);
+            AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(2, LoadSceneMode.Additive);
 
-        // Wait until the scene is fully loaded
-        while (!asyncLoad.isDone)
-        {
-            // Optional: You can display a progress bar or loading text here
-            // to show the loading progress.
-
-            // Check if the scene is fully loaded.
-            if (asyncLoad.progress >= 1.0f && asyncLoad.isDone)
+            // Wait until the scene is fully loaded
+            while (!asyncLoad.isDone)
             {
-                // The scene is fully loaded.
-                isBackgroundSceneLoaded = true;
-                Debug.Log("Loaded Scene in background");
-                break;
-            }
+                // Optional: You can display a progress bar or loading text here
+                // to show the loading progress.
 
-            yield return null;
+                // Check if the scene is fully loaded.
+                if (asyncLoad.progress >= 1.0f && asyncLoad.isDone)
+                {
+                    // The scene is fully loaded.
+                    isBackgroundSceneLoaded = true;
+                    Debug.Log("Loaded Scene in background");
+                    break;
+                }
+
+                yield return null;
+            }
         }
     }
 
@@ -51,9 +55,8 @@ public class MainMenu : MonoBehaviour
 
     IEnumerator FadeOutPlay(Scene scene)
 	{
-        GameObject.FindGameObjectWithTag("Fader").GetComponent<SceneFader>().FadeIn();
-        GameObject.FindGameObjectWithTag("Music").GetComponent<MusicPlayer>().Fade("out");
-        yield return new WaitForSeconds(GameObject.FindGameObjectWithTag("Fader").GetComponent<SceneFader>().fadeTime);
+        fader.FadeIn();
+        yield return new WaitForSeconds(fader.fadeTime);
         
 
         Debug.Log("PLAY GAME");

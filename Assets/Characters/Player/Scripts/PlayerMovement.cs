@@ -104,8 +104,13 @@ public class PlayerMovement : MonoBehaviour
         rb2d = this.GetComponent<Rigidbody2D>();
         weapon = this.gameObject.GetComponentInChildren<Weapon>();
         animator = GetComponent<Animator>();
-        gameManager = GameObject.FindObjectOfType<GameManager>().GetComponent<GameManager>();
         tempRend = this.GetComponent<SpriteRenderer>();
+
+        if (this.gameObject.GetComponent<Player>().isDev == false)
+		{
+            gameManager = GameObject.FindObjectOfType<GameManager>().GetComponent<GameManager>();
+        }
+        
     }
     
     void Update()
