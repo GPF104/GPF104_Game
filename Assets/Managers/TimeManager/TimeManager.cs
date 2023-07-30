@@ -29,7 +29,7 @@ public class TimeManager : MonoBehaviour
 	//	Spawn Timers
 	[SerializeField] float BubbleInterval = 2;
 	[SerializeField] float SpawnerInterval = 15;
-	[SerializeField] int ScrollChance = 20;
+	[SerializeField] int ScrollChance = 5;
 	//	Methods
 	IEnumerator Timer(float interval)
 	{
@@ -51,10 +51,10 @@ public class TimeManager : MonoBehaviour
 					StartCoroutine(Bubble(2));
 				}
 			}
-			
+			Debug.Log("SCROLL ROLL:" + scrollRoll + " " + (100 - ScrollChance));
 			if (scrollRoll > (100-ScrollChance))
 			{
-				Debug.Log("SCROLL ROLL:" + scrollRoll + " " + (100 - ScrollChance));
+				
 				StartCoroutine(Scroll());
 			}
 
