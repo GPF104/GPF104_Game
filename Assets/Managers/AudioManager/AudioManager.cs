@@ -6,6 +6,7 @@ public class AudioManager : MonoBehaviour
 {
 
     [SerializeField] List<AudioClip> ambience = new List<AudioClip>();
+	[SerializeField] List<AudioClip> music = new List<AudioClip> ();
     AudioSource audioSource;
 
     IEnumerator PlayAmbience()
@@ -18,6 +19,8 @@ public class AudioManager : MonoBehaviour
     public void Initialize()
 	{
         StartCoroutine(PlayAmbience());
+        //GameObject.FindGameObjectWithTag("Music").GetComponent<MusicPlayer>().SetClip(music[0]);
+        //GameObject.FindGameObjectWithTag("Music").GetComponent<MusicPlayer>().Fade("in");
     }
 
     public void PlayAudio(AudioClip clip)

@@ -49,21 +49,30 @@ public class MainMenu : MonoBehaviour
 	}
     // Call this method when the play button is clicked or when you want to activate the background scene.
 
+    IEnumerator FadeOutPlay(Scene scene)
+	{
+        GameObject.FindGameObjectWithTag("Fader").GetComponent<SceneFader>().FadeIn();
+        GameObject.FindGameObjectWithTag("Music").GetComponent<MusicPlayer>().Fade("out");
+        yield return new WaitForSeconds(GameObject.FindGameObjectWithTag("Fader").GetComponent<SceneFader>().fadeTime);
+        
+
+        Debug.Log("PLAY GAME");
+        // Unload the current menu scene.
+        SceneManager.UnloadSceneAsync("Main Menu");
+
+        // Activate the background scene by setting allowSceneActivation to true.
+        SceneManager.SetActiveScene(scene);
+
+        // Call the StartGame method on the GameManager in the background scene.
+        GameObject.FindGameObjectWithTag("GameController").GetComponent<GameManager>().StartGame();
+    }
     public void PlayGame()
     {
         // Check if the background scene is already loaded.
         Scene backgroundScene = SceneManager.GetSceneByName("Arena");
         if (backgroundScene.IsValid() && backgroundScene.isLoaded)
         {
-            Debug.Log("PLAY GAME");
-            // Unload the current menu scene.
-            SceneManager.UnloadSceneAsync("Main Menu");
-
-            // Activate the background scene by setting allowSceneActivation to true.
-            SceneManager.SetActiveScene(backgroundScene);
-
-            // Call the StartGame method on the GameManager in the background scene.
-            GameObject.FindGameObjectWithTag("GameController").GetComponent<GameManager>().StartGame();
+            StartCoroutine(FadeOutPlay(backgroundScene));
 
         }
     }

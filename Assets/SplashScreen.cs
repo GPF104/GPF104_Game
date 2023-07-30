@@ -19,6 +19,13 @@ public class SplashScreen : MonoBehaviour
         GameObject.FindGameObjectWithTag("Fader").GetComponent<SceneFader>().FadeOut();
         StartCoroutine(Wait());
     }
-
+	void Update()
+	{
+		if (Input.GetKey(KeyCode.Escape))
+		{
+            StopCoroutine(Wait());
+            SceneManager.LoadSceneAsync(1);
+        }
+	}
 
 }

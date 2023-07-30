@@ -64,6 +64,7 @@ public class GameManager : MonoBehaviour
 		audioManager.Initialize();
 		timeManager.StartTimer(1);
 		GamePaused = false;
+		mainCamera = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<MainCamera>();
 		GameObject.FindGameObjectWithTag("Fader").GetComponent<SceneFader>().FadeOut();
 	}
 	[ContextMenu("StartGame")]
