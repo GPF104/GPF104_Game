@@ -348,7 +348,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 50
   m_TargetDisplay: 0
 --- !u!224 &277817009
 RectTransform:
@@ -1259,7 +1259,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1783784978}
   - component: {fileID: 1783784977}
-  - component: {fileID: 1783784976}
   - component: {fileID: 1783784979}
   m_Layer: 0
   m_Name: Main Camera
@@ -1268,14 +1267,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &1783784976
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1783784975}
-  m_Enabled: 1
 --- !u!20 &1783784977
 Camera:
   m_ObjectHideFlags: 0

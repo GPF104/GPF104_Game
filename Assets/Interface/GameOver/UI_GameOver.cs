@@ -20,10 +20,6 @@ public class UI_GameOver : MonoBehaviour
     public void Quit()
 	{
         Debug.Log("Quit");
-        Application.Quit();
-	}
-	void Start()
-	{
-
+		SceneManager.LoadScene(1);
 	}
 }

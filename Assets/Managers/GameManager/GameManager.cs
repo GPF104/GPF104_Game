@@ -41,7 +41,7 @@ public class GameManager : MonoBehaviour
 	}
 	public void PrepareGame()
 	{
-		Time.timeScale = 0;
+		//Time.timeScale = 0;
 	}
 	public void Pause()
 	{
@@ -57,14 +57,19 @@ public class GameManager : MonoBehaviour
 		GamePaused = false;
 		Time.timeScale = 1;
 	}
-	[ContextMenu("StartGame")]
-	public void StartGame()
+
+	IEnumerator PlayGame()
 	{
-		GameObject.FindGameObjectWithTag("Fader").GetComponent<SceneFader>().FadeOut();
+		yield return new WaitForSeconds(0.5f);
 		audioManager.Initialize();
 		timeManager.StartTimer(1);
 		GamePaused = false;
-		Time.timeScale = 1;
+		GameObject.FindGameObjectWithTag("Fader").GetComponent<SceneFader>().FadeOut();
+	}
+	[ContextMenu("StartGame")]
+	public void StartGame()
+	{
+		StartCoroutine(PlayGame());
 	}
 	#endregion
 

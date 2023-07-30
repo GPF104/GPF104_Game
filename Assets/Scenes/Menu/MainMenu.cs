@@ -15,9 +15,9 @@ public class MainMenu : MonoBehaviour
 
     IEnumerator BackgroundLoad()
     {
+        Debug.Log("Loading Scene async in background");
         yield return new WaitForSeconds(2);
-        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync("Arena", LoadSceneMode.Additive);
-        asyncLoad.allowSceneActivation = false;
+        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(2, LoadSceneMode.Additive);
 
         // Wait until the scene is fully loaded
         while (!asyncLoad.isDone)
@@ -38,20 +38,32 @@ public class MainMenu : MonoBehaviour
         }
     }
 
-    void Start()
+	private void Awake()
+	{
+        StartCoroutine(BackgroundLoad());
+    }
+	void Start()
 	{
         StartCoroutine(Fade());
-        StartCoroutine(BackgroundLoad());
 	}
     // Call this method when the play button is clicked or when you want to activate the background scene.
 
     public void PlayGame()
     {
-        // Activate the background scene by setting allowSceneActivation to true.
+        // Check if the background scene is already loaded.
         Scene backgroundScene = SceneManager.GetSceneByName("Arena");
-        if (backgroundScene.IsValid() && !backgroundScene.isLoaded)
+        if (backgroundScene.IsValid() && backgroundScene.isLoaded)
         {
+            Debug.Log("PLAY GAME");
+            // Unload the current menu scene.
+            SceneManager.UnloadSceneAsync("Main Menu");
+
+            // Activate the background scene by setting allowSceneActivation to true.
             SceneManager.SetActiveScene(backgroundScene);
+
+            // Call the StartGame method on the GameManager in the background scene.
+            GameObject.FindGameObjectWithTag("GameController").GetComponent<GameManager>().StartGame();
+
         }
     }
 
