@@ -54,11 +54,16 @@ public class PlayerMovement : MonoBehaviour
 
             }
             //Inferno Setup
-            else if (Input.GetMouseButtonDown(1))
+            if (Input.GetMouseButtonDown(1)) //need to create spin wheel
             {
                 StartCoroutine(FireAnim(cooldown));
                 weapon.Inferno();
             }
+            /*heal setup
+            if (Input.GetMouseButtonDown(1))
+            {
+                weapon.Heal();
+            }*/
 
             moveDirection = new Vector2(moveX, moveY).normalized;
             mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
