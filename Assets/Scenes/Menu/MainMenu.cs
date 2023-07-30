@@ -44,6 +44,7 @@ public class MainMenu : MonoBehaviour
     }
 	void Start()
 	{
+        Time.timeScale = 1.0f;
         StartCoroutine(Fade());
 	}
     // Call this method when the play button is clicked or when you want to activate the background scene.
