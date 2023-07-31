@@ -54,16 +54,15 @@ public class TimeManager : MonoBehaviour
 					StartCoroutine(Bubble(2));
 				}
 			}
-			Debug.Log("SCROLL ROLL:" + scrollRoll + " " + (100 - ScrollChance));
 			if (scrollRoll > (100-ScrollChance))
 			{
-				
+				Debug.Log("SCROLL ROLL:" + scrollRoll + " " + (100 - ScrollChance));
 				StartCoroutine(Scroll());
 			}
             if (potionRoll > (100 - PotionChance))
             {
-
-                StartCoroutine(Potion());
+				Debug.Log("Potion ROLL:" + potionRoll + " " + (100 - PotionChance));
+				StartCoroutine(Potion());
             }
 
             if (secondCount % SpawnerInterval == 0)

@@ -2,18 +2,34 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.EventSystems;
 
 public class MainMenu : MonoBehaviour
 {
-
-    bool isBackgroundSceneLoaded = false;
     [SerializeField] SceneFader fader;
+	[SerializeField] EventSystem eventSystem;
+	[SerializeField] GameObject musicPlayer;
+    GameObject musicPlayerPrefab;
     IEnumerator Fade()
 	{
         yield return new WaitForSeconds(fader.fadeTime);
         fader.FadeOut();
-    }
 
+    }
+    void Initialize()
+	{
+        if (SceneManager.GetSceneByName("SplashScreen").isLoaded)
+		{
+            SceneManager.UnloadSceneAsync("SplashScreen");
+        }
+
+        eventSystem.enabled = true;
+        Debug.Log("Number of AudioListeners: " + GameObject.FindGameObjectsWithTag("Music").Length);
+        if (GameObject.FindGameObjectsWithTag("Music").Length == 0)
+		{
+            musicPlayerPrefab = Instantiate(musicPlayer);
+        }
+    }
     IEnumerator BackgroundLoad()
     {
         if (!SceneManager.GetSceneByName("Arena").isLoaded)
@@ -32,7 +48,6 @@ public class MainMenu : MonoBehaviour
                 if (asyncLoad.progress >= 1.0f && asyncLoad.isDone)
                 {
                     // The scene is fully loaded.
-                    isBackgroundSceneLoaded = true;
                     Debug.Log("Loaded Scene in background");
                     break;
                 }
@@ -48,6 +63,7 @@ public class MainMenu : MonoBehaviour
     }
 	void Start()
 	{
+        Initialize();
         Time.timeScale = 1.0f;
         StartCoroutine(Fade());
 	}
@@ -56,9 +72,9 @@ public class MainMenu : MonoBehaviour
     IEnumerator FadeOutPlay(Scene scene)
 	{
         fader.FadeIn();
+        // Ensure only 1 audiolistener active.
         foreach (GameObject gameObject in GameObject.FindGameObjectsWithTag("Music"))
         {
-            Debug.Log(gameObject.scene.name);
             if (gameObject.scene.name != "Arena")
             {
                 Destroy(gameObject);

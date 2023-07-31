@@ -5,8 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class SplashScreen : MonoBehaviour
 {
-    [SerializeField] float interval = 2;
     bool isLoaded = false;
+    bool isSkipping = true;
+    [SerializeField] GameObject eventListener;
     IEnumerator Wait()
 	{
         yield return new WaitForSeconds(3f);
@@ -34,14 +35,41 @@ public class SplashScreen : MonoBehaviour
                 {
                     // The scene is fully loaded.
                     Debug.Log("Loaded Scene in background");
-                    isLoaded = true;
                     break;
                 }
+                isLoaded = true;
                 yield return null;
             }
+            if (!isSkipping)
+			{
+                // Find the Arena scene and mark it as DontDestroyOnLoad
+                StartCoroutine(Wait());
+            }
+        }
+    }
 
-            // Find the Arena scene and mark it as DontDestroyOnLoad
-            StartCoroutine(Wait());
+    IEnumerator Skip()
+	{
+        StopCoroutine(Wait());
+        Destroy(eventListener);
+
+        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(1, LoadSceneMode.Additive);
+        while (!asyncLoad.isDone)
+        {
+            // Optional: You can display a progress bar or loading text here
+            // to show the loading progress.
+
+            // Check if the scene is fully loaded.
+            if (asyncLoad.progress >= 1.0f && asyncLoad.isDone)
+            {
+                // The scene is fully loaded.
+                Debug.Log("Loaded Scene in background");
+                SceneManager.UnloadSceneAsync("SplashScreen");
+                SceneManager.SetActiveScene(SceneManager.GetSceneByName("Main Menu"));
+                break;
+            }
+            isLoaded = true;
+            yield return null;
         }
     }
     // Start is called before the first frame update
@@ -52,10 +80,16 @@ public class SplashScreen : MonoBehaviour
     }
 	void Update()
 	{
-		if (Input.GetKeyDown(KeyCode.Escape) && isLoaded)
+		if (Input.GetKeyDown(KeyCode.Escape))
 		{
-            StopCoroutine(Wait());
-            SceneManager.LoadSceneAsync(1);
+            Debug.Log("Skip");
+            if (isLoaded)
+			{
+                isSkipping = true;
+                StartCoroutine(Skip());
+                Debug.Log("Actually skipping");
+            }
+
         }
 	}
 

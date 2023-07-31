@@ -390,7 +390,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04cde41f4a03ea04a8b7c4a33293183a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interval: 10
+  eventListener: {fileID: 705656043}
 --- !u!1 &1368062381
 GameObject:
   m_ObjectHideFlags: 0

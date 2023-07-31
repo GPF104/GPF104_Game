@@ -27,6 +27,7 @@ public class GameManager : MonoBehaviour
 	public int score = 0;
 	public bool GameFinished = false;
 	public bool GamePaused = false;
+	private bool isInBackground = true;
 
 	public void AddScore(int input)
 	{
@@ -50,17 +51,23 @@ public class GameManager : MonoBehaviour
 	}
 	public void Pause()
 	{
-		Debug.Log("Paused");
-		GamePaused = true;
-		Time.timeScale = 0;
-		uiHandler.Display(uiHandler.uiMenu, true);
+		if (!isInBackground)
+		{
+			Debug.Log("Paused");
+			GamePaused = true;
+			Time.timeScale = 0;
+			uiHandler.Display(uiHandler.uiMenu, true);
+		}
 	}
 	public void Unpause()
 	{
-		uiHandler.Display(uiHandler.uiMenu, false);
-		Debug.Log("Unpaused");
-		GamePaused = false;
-		Time.timeScale = 1;
+		if (!isInBackground)
+		{
+			uiHandler.Display(uiHandler.uiMenu, false);
+			Debug.Log("Unpaused");
+			GamePaused = false;
+			Time.timeScale = 1;
+		}
 	}
 
 	IEnumerator PlayGame()
@@ -68,6 +75,7 @@ public class GameManager : MonoBehaviour
 		yield return new WaitForSeconds(0.5f);
 		musicPlayer.SetEnabled(true);
 		uiHandler.EnableEventController(true);
+		isInBackground = false;
 		audioManager.Initialize();
 		timeManager.StartTimer(1);
 		GamePaused = false;

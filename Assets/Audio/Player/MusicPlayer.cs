@@ -14,7 +14,6 @@ public class MusicPlayer : MonoBehaviour
         get { return instance; }
     }
 
-    [SerializeField] float fadeDuration = 2f;
     [SerializeField] float startingVolume;
     IEnumerator LoopMusic()
 	{
