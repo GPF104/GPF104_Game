@@ -17,6 +17,7 @@ public class Player : MonoBehaviour
 
     int Health = 100;
 
+    
     IEnumerator UpdatePosition()
 	{
         yield return new WaitForSeconds(0.5f);
@@ -35,6 +36,17 @@ public class Player : MonoBehaviour
             gameManager.GameOver();
 		}
 	}
+
+    public void Heal(int heal)
+    {
+        Health = Health + heal;
+        if (Health >= 100)
+        {
+            Health = 100;
+        }
+        Debug.Log("healing");
+    }
+
     public int scrolls = 0;
 
     public void AddScroll(int amount)
@@ -69,7 +81,7 @@ public class Player : MonoBehaviour
 		if (collision.gameObject.tag == "Bindi")
 		{
             TakeDamage(collision.gameObject.GetComponent<BindiScript>().damage);
-        }
-	}
+        }        
+    }
 	#endregion
 }

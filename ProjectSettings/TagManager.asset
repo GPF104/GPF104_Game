@@ -21,6 +21,7 @@ TagManager:
   - Music
   - Fader
   - SceneControl
+  - Potion
   layers:
   - Default
   - TransparentFX
