@@ -627,6 +627,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 3207706396871757997, guid: 506d094d039493b4fa560ad8770e6ab1, type: 3}
     - target: {fileID: 7933867572526841010, guid: 078f26bae120ec64899e587b6f0c5226, type: 3}
+      propertyPath: PotionChance
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7933867572526841010, guid: 078f26bae120ec64899e587b6f0c5226, type: 3}
       propertyPath: ScrollChance
       value: 5
       objectReference: {fileID: 0}
@@ -646,6 +650,10 @@ PrefabInstance:
     - target: {fileID: 3388424831923934076, guid: 3639e97faa0bf8b42a5078af82424d1c, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 4607041984463194022, guid: 3639e97faa0bf8b42a5078af82424d1c, type: 3}
+      propertyPath: moveSpeed
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 6630951993476463365, guid: 3639e97faa0bf8b42a5078af82424d1c, type: 3}
       propertyPath: m_RootOrder
@@ -3345,7 +3353,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2686934745940856077, guid: 4f2c6f4ccfb5ed347a3d18852d7e6812, type: 3}
       propertyPath: isDev
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2686934745940856077, guid: 4f2c6f4ccfb5ed347a3d18852d7e6812, type: 3}
       propertyPath: bubble
