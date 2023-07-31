@@ -13,12 +13,16 @@ public class GameManager : MonoBehaviour
 	public GameObject bubble;
 	public GameObject spawner;
 
+	[SerializeField] MusicPlayer musicPlayer;
+
 	[SerializeField] bool isDev = false;
 
 	public LevelGenerator levelGenerator;
 	#endregion
 
 	#region Attributes
+
+	EventSystemController eventSystemController;
 
 	public int score = 0;
 	public bool GameFinished = false;
@@ -62,11 +66,16 @@ public class GameManager : MonoBehaviour
 	IEnumerator PlayGame()
 	{
 		yield return new WaitForSeconds(0.5f);
+		musicPlayer.SetEnabled(true);
+		uiHandler.EnableEventController(true);
 		audioManager.Initialize();
 		timeManager.StartTimer(1);
 		GamePaused = false;
 		mainCamera = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<MainCamera>();
 		GameObject.FindGameObjectWithTag("Fader").GetComponent<SceneFader>().FadeOut();
+
+		yield return new WaitForSeconds(0.5f);
+		musicPlayer.SetClip(audioManager.RandomMusic());
 	}
 	[ContextMenu("StartGame")]
 	public void StartGame()

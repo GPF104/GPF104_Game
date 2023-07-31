@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cdefb9136ae620c41b22e7f0699a5875, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MusicFile: {fileID: 0}
+  MusicFile: {fileID: 8300000, guid: 8b279fcf730016e49b1024cd2b6715d5, type: 3}
   fadeDuration: 2
   startingVolume: 0
 --- !u!82 &-6337234857590980940

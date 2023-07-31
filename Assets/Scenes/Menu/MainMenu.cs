@@ -56,6 +56,14 @@ public class MainMenu : MonoBehaviour
     IEnumerator FadeOutPlay(Scene scene)
 	{
         fader.FadeIn();
+        foreach (GameObject gameObject in GameObject.FindGameObjectsWithTag("Music"))
+        {
+            Debug.Log(gameObject.scene.name);
+            if (gameObject.scene.name != "Arena")
+            {
+                Destroy(gameObject);
+            }
+        }
         yield return new WaitForSeconds(fader.fadeTime);
         
 
@@ -67,6 +75,7 @@ public class MainMenu : MonoBehaviour
         SceneManager.SetActiveScene(scene);
 
         // Call the StartGame method on the GameManager in the background scene.
+
         GameObject.FindGameObjectWithTag("GameController").GetComponent<GameManager>().StartGame();
     }
     public void PlayGame()
