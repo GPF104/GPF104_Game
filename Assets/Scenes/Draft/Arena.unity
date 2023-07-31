@@ -1235,12 +1235,20 @@ PrefabInstance:
       objectReference: {fileID: 5388884999251518331, guid: 826aacce03c553a44bce3f9531cdc83c, type: 3}
     - target: {fileID: 6344822991956903794, guid: 94487ff424c8d10498b6fd3f52f3a1f2, type: 3}
       propertyPath: BadObstacles.Array.size
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6344822991956903794, guid: 94487ff424c8d10498b6fd3f52f3a1f2, type: 3}
       propertyPath: BadObstacles.Array.data[0]
       value: 
       objectReference: {fileID: 595497307229826450, guid: 4ab38c7d9e7e214468089445d42e5693, type: 3}
+    - target: {fileID: 6344822991956903794, guid: 94487ff424c8d10498b6fd3f52f3a1f2, type: 3}
+      propertyPath: BadObstacles.Array.data[1]
+      value: 
+      objectReference: {fileID: 8440841642638495221, guid: 5ea1d640539dcab4b9cd10a67020c540, type: 3}
+    - target: {fileID: 6344822991956903794, guid: 94487ff424c8d10498b6fd3f52f3a1f2, type: 3}
+      propertyPath: BadObstacles.Array.data[2]
+      value: 
+      objectReference: {fileID: 4064390928359141007, guid: e1f893f2ab4d11545a599feb8821d3c6, type: 3}
     - target: {fileID: 7201497462738954843, guid: 94487ff424c8d10498b6fd3f52f3a1f2, type: 3}
       propertyPath: m_RootOrder
       value: 1

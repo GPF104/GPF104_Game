@@ -22,6 +22,7 @@ TagManager:
   - Fader
   - SceneControl
   - Potion
+  - Trap
   layers:
   - Default
   - TransparentFX

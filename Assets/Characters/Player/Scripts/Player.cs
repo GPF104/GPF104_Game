@@ -81,7 +81,7 @@ public class Player : MonoBehaviour
     public int heal = 30;
 	private void OnTriggerEnter2D(Collider2D collision)
 	{
-		if (collision.gameObject.tag == "Bindi")
+		if (collision.gameObject.tag == "Trap")
 		{
             TakeDamage(collision.gameObject.GetComponent<BindiScript>().damage);
         }
