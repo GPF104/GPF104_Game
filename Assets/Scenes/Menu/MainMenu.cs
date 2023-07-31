@@ -5,8 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
-
-    bool isBackgroundSceneLoaded = false;
     [SerializeField] SceneFader fader;
     IEnumerator Fade()
 	{
@@ -32,7 +30,6 @@ public class MainMenu : MonoBehaviour
                 if (asyncLoad.progress >= 1.0f && asyncLoad.isDone)
                 {
                     // The scene is fully loaded.
-                    isBackgroundSceneLoaded = true;
                     Debug.Log("Loaded Scene in background");
                     break;
                 }

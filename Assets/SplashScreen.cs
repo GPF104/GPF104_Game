@@ -5,7 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class SplashScreen : MonoBehaviour
 {
-    [SerializeField] float interval = 2;
     bool isLoaded = false;
     IEnumerator Wait()
 	{
