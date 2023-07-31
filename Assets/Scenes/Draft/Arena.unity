@@ -130,6 +130,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -6337234857590980940, guid: b3b3d07c2874cd64d943db6fd8d46a9e, type: 3}
+      propertyPath: m_Volume
+      value: 0.25
+      objectReference: {fileID: 0}
     - target: {fileID: 1404494836443662226, guid: b3b3d07c2874cd64d943db6fd8d46a9e, type: 3}
       propertyPath: m_Name
       value: MusicPlayer
@@ -1701,7 +1705,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6681916400860183685, guid: 5b01b90968878ca42a20c5684dc2f991, type: 3}
       propertyPath: music.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6681916400860183685, guid: 5b01b90968878ca42a20c5684dc2f991, type: 3}
       propertyPath: music.Array.data[0]
