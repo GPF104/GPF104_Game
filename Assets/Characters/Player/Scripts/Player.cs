@@ -1,3 +1,4 @@
+using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -37,14 +38,15 @@ public class Player : MonoBehaviour
 		}
 	}
 
-    public void Heal(int heal)
+    public void Heal(int amount)
     {
-        Health = Health + heal;
+        Health = Health + amount;
+        gameManager.uiHandler.uiHealth.SetHealth(Health);
         if (Health >= 100)
         {
             Health = 100;
         }
-        Debug.Log("healing");
+        Debug.Log("healing" + Health);
     }
 
     public int scrolls = 0;
@@ -76,12 +78,17 @@ public class Player : MonoBehaviour
 		}             
     }
 
+    public int heal = 30;
 	private void OnTriggerEnter2D(Collider2D collision)
 	{
 		if (collision.gameObject.tag == "Bindi")
 		{
             TakeDamage(collision.gameObject.GetComponent<BindiScript>().damage);
-        }        
+        }
+        if (collision.gameObject.tag == "Potion")
+        {            
+            Heal(heal);
+        }
     }
 	#endregion
 }

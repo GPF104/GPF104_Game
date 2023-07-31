@@ -17,6 +17,7 @@ public class TimeManager : MonoBehaviour
 
 	[SerializeField] GameObject spawner;
 	[SerializeField] GameObject scrolls;
+	[SerializeField] GameObject potions;
 	//	Variables
 	private bool active = true;
 	private IEnumerator timer;
@@ -30,6 +31,7 @@ public class TimeManager : MonoBehaviour
 	[SerializeField] float BubbleInterval = 2;
 	[SerializeField] float SpawnerInterval = 15;
 	[SerializeField] int ScrollChance = 5;
+	[SerializeField] int PotionChance = 10;
 	//	Methods
 	IEnumerator Timer(float interval)
 	{
@@ -42,6 +44,7 @@ public class TimeManager : MonoBehaviour
 			difficulty = 10 * (a * Mathf.Pow(secondCount, 2) + b * secondCount + c);
 			gameManager.uiHandler.uiTimer.SetText(GetTimeString(minuteCount, secondCount));
 			int scrollRoll = Random.Range(1, 100);
+			int potionRoll = Random.Range(1, 100);
 
 			if (secondCount % BubbleInterval == 0)
 			{
@@ -57,8 +60,13 @@ public class TimeManager : MonoBehaviour
 				
 				StartCoroutine(Scroll());
 			}
+            if (potionRoll > (100 - PotionChance))
+            {
 
-			if (secondCount % SpawnerInterval == 0)
+                StartCoroutine(Potion());
+            }
+
+            if (secondCount % SpawnerInterval == 0)
 				StartCoroutine(DifficultyScale());
 
 			yield return Timer(interval);
@@ -83,7 +91,17 @@ public class TimeManager : MonoBehaviour
 		scroll.transform.position = gameManager.player.transform.position + (Vector3)randomVector;
 		Debug.Log("Scroll spawned at: " + scroll.transform.position);
 	}
-	IEnumerator Bubble(float delay)
+    IEnumerator Potion()
+    {
+        yield return new WaitForSeconds(0.25f);
+
+        GameObject potion = Instantiate(potions);
+        Vector2 randomVector = Random.insideUnitCircle.normalized * 3;
+
+        potion.transform.position = gameManager.player.transform.position + (Vector3)randomVector;
+        Debug.Log("Scroll spawned at: " + potion.transform.position);
+    }
+    IEnumerator Bubble(float delay)
 	{
 		yield return new WaitForSeconds(Random.Range(difficulty * 0.5f, 10 / difficulty));
 
