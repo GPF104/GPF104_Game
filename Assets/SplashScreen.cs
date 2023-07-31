@@ -64,8 +64,8 @@ public class SplashScreen : MonoBehaviour
             {
                 // The scene is fully loaded.
                 Debug.Log("Loaded Scene in background");
+                SceneManager.UnloadSceneAsync("SplashScreen");
                 SceneManager.SetActiveScene(SceneManager.GetSceneByName("Main Menu"));
-                SceneManager.UnloadSceneAsync(0);
                 break;
             }
             isLoaded = true;

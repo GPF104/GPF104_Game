@@ -18,6 +18,11 @@ public class MainMenu : MonoBehaviour
     }
     void Initialize()
 	{
+        if (SceneManager.GetSceneByName("SplashScreen").isLoaded)
+		{
+            SceneManager.UnloadSceneAsync("SplashScreen");
+        }
+
         eventSystem.enabled = true;
         Debug.Log("Number of AudioListeners: " + GameObject.FindGameObjectsWithTag("Music").Length);
         if (GameObject.FindGameObjectsWithTag("Music").Length == 0)
