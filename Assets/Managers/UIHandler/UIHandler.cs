@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class UIHandler : MonoBehaviour
 {
@@ -23,6 +24,10 @@ public class UIHandler : MonoBehaviour
 	public GameObject uiMenu;
 	public ScrollCounter scrollCounter;
 
+	[SerializeField] GameObject eventSystemObject;
+
+	private EventSystem eventSystem;
+
 	#endregion
 
 
@@ -32,6 +37,17 @@ public class UIHandler : MonoBehaviour
 	{
 		fadeout = 0,
 		fadein = 1
+	}
+	public void EnableEventController(bool enabled)
+	{
+		if (eventSystem != null)
+		{
+			eventSystem.enabled = enabled;
+		}
+		else
+		{
+			Debug.LogWarning("eventSystemController is null. Make sure eventSystemObject is assigned correctly.");
+		}
 	}
 	public void Display(GameObject frame, bool active)
 	{
@@ -57,6 +73,15 @@ public class UIHandler : MonoBehaviour
 	// Start is called before the first frame update
 	void Start()
     {
+		if (eventSystemObject != null)
+		{
+			eventSystem = eventSystemObject.GetComponent<EventSystem>();
+		}
+		else
+		{
+			Debug.LogWarning("eventSystemObject is not assigned in the Inspector.");
+		}
+
 		gameManager = GameObject.FindObjectOfType<GameManager>().GetComponent<GameManager>();
 		uiTimer = GameObject.FindObjectOfType<UI_Timer>().GetComponent<UI_Timer>();
 		uiScore = GameObject.FindObjectOfType<UI_Score>().GetComponent<UI_Score>();

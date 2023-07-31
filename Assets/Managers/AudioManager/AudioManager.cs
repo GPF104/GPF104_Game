@@ -23,6 +23,10 @@ public class AudioManager : MonoBehaviour
         //GameObject.FindGameObjectWithTag("Music").GetComponent<MusicPlayer>().Fade("in");
     }
 
+    public AudioClip RandomMusic()
+	{
+        return music[Random.Range(0, music.Count)];
+	}
     public void PlayAudio(AudioClip clip)
 	{
         audioSource.PlayOneShot(clip);
