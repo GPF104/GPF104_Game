@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class SplashScreen : MonoBehaviour
 {
     bool isLoaded = false;
-    bool isSkipping = true;
+    bool isSkipping = false;
     [SerializeField] GameObject eventListener;
     IEnumerator Wait()
 	{
@@ -15,6 +15,30 @@ public class SplashScreen : MonoBehaviour
         yield return new WaitForSeconds(GameObject.FindGameObjectWithTag("Fader").GetComponent<SceneFader>().fadeTime);
         SceneManager.LoadSceneAsync(1, LoadSceneMode.Additive);
         SceneManager.UnloadSceneAsync(0);
+    }
+    IEnumerator Skip()
+    {
+        StopCoroutine(Wait());
+        Destroy(eventListener);
+
+        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(1, LoadSceneMode.Additive);
+        while (!asyncLoad.isDone)
+        {
+            // Optional: You can display a progress bar or loading text here
+            // to show the loading progress.
+
+            // Check if the scene is fully loaded.
+            if (asyncLoad.progress >= 1.0f && asyncLoad.isDone)
+            {
+                // The scene is fully loaded.
+                Debug.Log("Loaded Scene in background");
+                SceneManager.UnloadSceneAsync("SplashScreen");
+                SceneManager.SetActiveScene(SceneManager.GetSceneByName("Main Menu"));
+                break;
+            }
+            isLoaded = true;
+            yield return null;
+        }
     }
     IEnumerator BackgroundLoad()
     {
@@ -43,35 +67,12 @@ public class SplashScreen : MonoBehaviour
             if (!isSkipping)
 			{
                 // Find the Arena scene and mark it as DontDestroyOnLoad
+                Debug.Log("Finished Loading");
                 StartCoroutine(Wait());
             }
         }
     }
 
-    IEnumerator Skip()
-	{
-        StopCoroutine(Wait());
-        Destroy(eventListener);
-
-        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(1, LoadSceneMode.Additive);
-        while (!asyncLoad.isDone)
-        {
-            // Optional: You can display a progress bar or loading text here
-            // to show the loading progress.
-
-            // Check if the scene is fully loaded.
-            if (asyncLoad.progress >= 1.0f && asyncLoad.isDone)
-            {
-                // The scene is fully loaded.
-                Debug.Log("Loaded Scene in background");
-                SceneManager.UnloadSceneAsync("SplashScreen");
-                SceneManager.SetActiveScene(SceneManager.GetSceneByName("Main Menu"));
-                break;
-            }
-            isLoaded = true;
-            yield return null;
-        }
-    }
     // Start is called before the first frame update
     void Start()
     {
