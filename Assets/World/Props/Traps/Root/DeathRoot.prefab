@@ -32,7 +32,8 @@ Transform:
   m_LocalPosition: {x: -5.97, y: 3.34, z: -2.0153763}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: [{fileID: 8743374594212116627}]
+  m_Children:
+  - {fileID: 8743374594212116627}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -142,6 +143,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 2
+  SFX: {fileID: 8300000, guid: 66d382d97152ee044ac96221059e4cf8, type: 3}
 --- !u!61 &4911717107991359259
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -166,7 +168,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 10, y: 10}
   m_EdgeRadius: 0
 --- !u!1 &6566115253028039602
 GameObject:

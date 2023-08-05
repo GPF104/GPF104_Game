@@ -68,7 +68,7 @@ public class BindiScript : MonoBehaviour
     IEnumerator StayOpen()
     {
         yield return new WaitForSeconds(0.15f);
-        if (distance <= 5 && isOpen == true)
+        if (distance <= animator.GetFloat("minDist") && isOpen == true)
         {
             animator.SetInteger("openState", 1);
         }
