@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Draft/Arena.unity
     guid: 37d065b95e2783a409e2b92d327d3ede
+  - enabled: 1
+    path: Assets/Scenes/Draft/Tutorial.unity
+    guid: 7e01cf5ba6050a34aaf1d8ed9bfcea28
   m_configObjects: {}
