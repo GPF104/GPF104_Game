@@ -7,6 +7,7 @@ public class PlayerMovement : MonoBehaviour
 	#region ExternalLinks
 
     GameManager gameManager;
+    Player player;
     #endregion
     #region Attributes
 
@@ -59,6 +60,13 @@ public class PlayerMovement : MonoBehaviour
                 StartCoroutine(FireAnim(cooldown));
                 weapon.Inferno();
             }
+
+            // Push Button Heal Setup
+
+            if (Input.GetKeyDown(KeyCode.Q))
+			{
+                player.Heal();
+			}
             /*heal setup
             if (Input.GetMouseButtonDown(1))
             {
@@ -105,6 +113,7 @@ public class PlayerMovement : MonoBehaviour
         weapon = this.gameObject.GetComponentInChildren<Weapon>();
         animator = GetComponent<Animator>();
         tempRend = this.GetComponent<SpriteRenderer>();
+        player = this.gameObject.GetComponent<Player>();
 
         if (this.gameObject.GetComponent<Player>().isDev == false)
 		{

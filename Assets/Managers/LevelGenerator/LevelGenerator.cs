@@ -49,6 +49,8 @@ public class LevelGenerator : MonoBehaviour
     [SerializeField] float MAX_BRIGHTNESS = 1;
     [SerializeField] float generateTime = 0.5f;
 
+    [SerializeField] int TrapDensity = 1500;
+
     //  Control the size of the generated tilemap level
     public Vector3Int levelSize = new Vector3Int(120, 120, 0);
 
@@ -59,13 +61,20 @@ public class LevelGenerator : MonoBehaviour
     IEnumerator SlowGenerate(GenerateType type)
 	{
         int minimumDensity = MIN_DENSITY;
+        int maximumDensity = MAX_DENSITY;
 
-        if (type == GenerateType.Lighting || type == GenerateType.Obstacles)
+        if (type == GenerateType.Lighting)
         {
             minimumDensity += 2500;
         }
 
-        for (int i = 0; i < Random.Range(minimumDensity, MAX_DENSITY); i++)
+        if (type == GenerateType.Obstacles)
+		{
+            minimumDensity = TrapDensity;
+            maximumDensity = TrapDensity + 500;
+        }
+
+        for (int i = 0; i < Random.Range(minimumDensity, maximumDensity); i++)
         {
             Vector2 pos = Random.insideUnitSphere * radius;
 

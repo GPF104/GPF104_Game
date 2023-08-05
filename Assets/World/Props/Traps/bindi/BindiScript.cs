@@ -13,9 +13,14 @@ public class BindiScript : MonoBehaviour
     Animator animator;
     BoxCollider2D bc2d;    
 
+    //For sound
+    [SerializeField] AudioClip SFX;
+    AudioSource audioSource;
+
     private void Start()
     {
         cc2d = GetComponent<CircleCollider2D>();
+        audioSource = GetComponent<AudioSource>();
         if (gameObject.GetComponent<Animator>() != null)
         {
             animator= gameObject.GetComponent<Animator>();
@@ -24,43 +29,45 @@ public class BindiScript : MonoBehaviour
         }        
     }
 
-    public void OnTriggerEnter2D(Collider2D other)
-    {        
-        if(other is CircleCollider2D)
-        {
-            if (other.gameObject.tag == "Player")
-            {
-                other.gameObject.GetComponent<Player>().TakeDamage(damage);
-            }
-        }
-    }
 
     float distance;
     bool isOpen = false;
 
     void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision is BoxCollider2D)
-        {
-            if (collision.gameObject.tag == "Player" && collision == bc2d)
+        if (animator != null)
+		{
+            if (collision.gameObject.tag == "Player")
             {
                 distance = Vector2.Distance(this.transform.position, collision.gameObject.transform.position);
                 animator.SetFloat("distance", distance);
-                Debug.Log("PlayerDetected" + distance);
-                if (distance < 11)
+                if (distance < animator.GetFloat("minDist"))
                 {
                     isOpen = true;
+                    if (audioSource != null && SFX != null)
+					{
+                        StartCoroutine(PlaySound());
+                    }
                 }
                 else
                 {
                     isOpen = false;
                 }
             }
-        }        
+        }
     }    
+    IEnumerator PlaySound()
+	{
+        if (isOpen)
+		{
+            audioSource.PlayOneShot(SFX);
+            yield return new WaitForSeconds(SFX.length + 0.15f);
+            StartCoroutine(PlaySound());
+        }
+    }
     IEnumerator StayOpen()
     {
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(0.15f);
         if (distance <= 5 && isOpen == true)
         {
             animator.SetInteger("openState", 1);
