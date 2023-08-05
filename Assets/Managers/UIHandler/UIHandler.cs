@@ -23,6 +23,7 @@ public class UIHandler : MonoBehaviour
 	public GameObject gameOverObject;
 	public GameObject uiMenu;
 	public ScrollCounter scrollCounter;
+	public PotionCounter potionCounter;
 
 	[SerializeField] GameObject eventSystemObject;
 
@@ -62,10 +63,6 @@ public class UIHandler : MonoBehaviour
 		yield return new WaitForSeconds(speed);
 	}
 
-	public void FrameFade(GameObject gobject, Fade fade, float speed)
-	{
-
-	}
 
 	#endregion
 
@@ -90,6 +87,7 @@ public class UIHandler : MonoBehaviour
 		uiMap = GameObject.FindObjectOfType<UI_Map>().GetComponent<UI_Map>();
 		uiHealth = GameObject.FindObjectOfType<UI_Health>().GetComponent<UI_Health>();
 		scrollCounter = GameObject.FindObjectOfType<ScrollCounter>().GetComponent<ScrollCounter>();
+		potionCounter = GameObject.FindObjectOfType<PotionCounter>().GetComponent<PotionCounter>();
 
 		gameOverObject.SetActive(false);
 		uiMenu.SetActive(false);

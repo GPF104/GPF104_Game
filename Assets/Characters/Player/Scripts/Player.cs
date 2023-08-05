@@ -17,8 +17,10 @@ public class Player : MonoBehaviour
 	[SerializeField] List<AudioClip> damageSFX = new List<AudioClip>();
 
     int Health = 100;
+    public int scrolls = 0;
+    public int potions = 0;
+    public int healAmount = 30;
 
-    
     IEnumerator UpdatePosition()
 	{
         yield return new WaitForSeconds(0.5f);
@@ -38,24 +40,33 @@ public class Player : MonoBehaviour
 		}
 	}
 
-    public void Heal(int amount)
+    public void Heal()
     {
-        Health = Health + amount;
-        gameManager.uiHandler.uiHealth.SetHealth(Health);
-        if (Health >= 100)
-        {
-            Health = 100;
+        if (potions > 0)
+		{
+            Health = Health + healAmount;
+            AddPotion(-1);
+            if (Health >= 100)
+            {
+                Health = 100;
+            }
+            gameManager.uiHandler.uiHealth.SetHealth(Health);
+            Debug.Log("healing" + Health);
         }
-        Debug.Log("healing" + Health);
     }
 
-    public int scrolls = 0;
+    
 
     public void AddScroll(int amount)
     {
         scrolls += amount;
         gameManager.uiHandler.scrollCounter.SetScroll(scrolls);
     }
+    public void AddPotion(int amount)
+	{
+        potions += amount;
+        gameManager.uiHandler.potionCounter.SetPotion(potions);
+	}
 
 	#endregion
 
@@ -76,15 +87,6 @@ public class Player : MonoBehaviour
 		{
             TakeDamage(other.gameObject.GetComponent<EnemyProjectileScript>().damage);
 		}             
-    }
-
-    public int heal = 30;
-	private void OnTriggerEnter2D(Collider2D collision)
-	{		
-        if (collision.gameObject.tag == "Potion")
-        {            
-            Heal(heal);
-        }
     }
 	#endregion
 }

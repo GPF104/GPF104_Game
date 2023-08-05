@@ -89,13 +89,19 @@ AnimatorController:
   m_AnimatorParameters:
   - m_Name: distance
     m_Type: 1
-    m_DefaultFloat: 0
+    m_DefaultFloat: 10
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 0}
   - m_Name: openState
     m_Type: 3
     m_DefaultFloat: 0
+    m_DefaultInt: 0
+    m_DefaultBool: 0
+    m_Controller: {fileID: 0}
+  - m_Name: minDist
+    m_Type: 1
+    m_DefaultFloat: 3
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 0}
