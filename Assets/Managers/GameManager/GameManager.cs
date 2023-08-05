@@ -37,6 +37,7 @@ public class GameManager : MonoBehaviour
 	public void GameOver()
 	{
 		GameFinished = true;
+		GamePaused = true;
 		mainCamera.StopShake();
 		uiHandler.Display(uiHandler.gameOverObject, true);
 		uiHandler.Display(uiHandler.uiHealth.gameObject, false);
