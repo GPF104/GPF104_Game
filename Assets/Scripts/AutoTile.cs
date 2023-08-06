@@ -166,9 +166,8 @@ public class AutoTile : MonoBehaviour
         return topMap.GetTile(Vector3Int.FloorToInt(position));
 	}
 
-    public void UnsetTile(Vector2 position, float radius)
+    public IEnumerator UnsetTile(Vector2 position, float radius)
     {
-        Debug.Log("UNSET PLS");
         LayerMask grassLayerMask = LayerMask.GetMask("grassLayer");
 
         // Get the bounds of the circle area in world space
@@ -187,7 +186,9 @@ public class AutoTile : MonoBehaviour
                 if (circleBounds.Contains(topMap.GetCellCenterWorld(tilePosition)))
                 {
                     topMap.SetTile(tilePosition, null);
+                    Debug.Log("Unset Tile " + tilePosition);
                 }
+                yield return new WaitForSeconds(Time.deltaTime);
             }
         }
 

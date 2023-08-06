@@ -3024,11 +3024,11 @@ PrefabInstance:
       objectReference: {fileID: 1004243562}
     - target: {fileID: -3918450974019917998, guid: 1b74c51eabb3fa34c87987d2af264fd1, type: 3}
       propertyPath: MAX_DISTANCE
-      value: 80
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: -3918450974019917998, guid: 1b74c51eabb3fa34c87987d2af264fd1, type: 3}
       propertyPath: MIN_DISTANCE
-      value: 70
+      value: 120
       objectReference: {fileID: 0}
     - target: {fileID: 2191087987663063165, guid: 1b74c51eabb3fa34c87987d2af264fd1, type: 3}
       propertyPath: m_Name

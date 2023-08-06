@@ -38,7 +38,7 @@ public class Spawner : MonoBehaviour
 
     private void ClearArea()
     {
-        GameObject.FindObjectOfType<AutoTile>().UnsetTile(this.transform.position, clearRadius);
+        StartCoroutine(GameObject.FindObjectOfType<AutoTile>().UnsetTile(this.transform.position, clearRadius));
     }
 
     IEnumerator SpawnIn()
