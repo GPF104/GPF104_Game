@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6004745009823857442}
   - component: {fileID: 2534739200131879010}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Light 2D
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -126,7 +126,7 @@ GameObject:
   - component: {fileID: -5359697689450555623}
   - component: {fileID: 4382676923746674429}
   - component: {fileID: 3003460288895935175}
-  m_Layer: 3
+  m_Layer: 7
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -167,6 +167,8 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 8a04630fe77072a4cadd5750103d83f7, type: 3}
   - {fileID: 8300000, guid: 386b8c39217be454ca5ce08c4ff64f02, type: 3}
   scrolls: 0
+  potions: 0
+  healAmount: 30
 --- !u!114 &4607041984463194022
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -322,7 +324,7 @@ GameObject:
   - component: {fileID: 4245647849586323397}
   - component: {fileID: 4245647849586323396}
   - component: {fileID: 4245647849586323399}
-  m_Layer: 3
+  m_Layer: 7
   m_Name: Weapon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -423,7 +425,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4245647851456359254}
-  m_Layer: 3
+  m_Layer: 7
   m_Name: FirePoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}

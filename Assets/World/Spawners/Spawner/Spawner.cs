@@ -9,6 +9,7 @@ public class Spawner : MonoBehaviour
 	GameManager gameManager;
 
 	[SerializeField] public List<GameObject> enemies = new List<GameObject>();
+	[SerializeField] int collisionDamage = 2;
 	#endregion
 
 	#region Attributes
@@ -46,6 +47,10 @@ public class Spawner : MonoBehaviour
 		if (collision.tag == "Bubble")
 		{
             Spawn(gameManager.timeManager.difficulty);
+		}
+		if (collision.tag == "Player")
+		{
+			collision.gameObject.GetComponent<Player>().TakeDamage(collisionDamage);
 		}
 	}
 	#endregion

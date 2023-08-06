@@ -52,7 +52,7 @@ public class TimeManager : MonoBehaviour
 
 			if (secondCount % BubbleInterval == 0)
 			{
-				for (int i = 0; i < levelGenerator.spawners.Count; i++)
+				for (int i = 0; i < Random.Range(1, levelGenerator.spawners.Count); i++)
 				{
 					yield return new WaitForSeconds(0.5f);
 					StartCoroutine(Bubble(2));

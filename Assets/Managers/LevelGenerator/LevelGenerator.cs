@@ -230,7 +230,7 @@ public class LevelGenerator : MonoBehaviour
         autoTile = GameObject.FindObjectOfType<AutoTile>().GetComponent<AutoTile>();
 
         //levelSize = new Vector3Int(boundary.MAX_DISTANCE + (int)radius, boundary.MAX_DISTANCE + (int)radius, 0);
-        autoTile.doSim(autoTile.numSims, levelSize);
+        StartCoroutine(autoTile.doSim(autoTile.numSims, levelSize));
         //StartCoroutine(SlowGenerate(Flora));
         StartCoroutine(SlowGenerate(GenerateType.Flora));
         StartCoroutine(SlowGenerate(GenerateType.Trees));

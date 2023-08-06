@@ -1007,11 +1007,15 @@ PrefabInstance:
       objectReference: {fileID: 3207706396871757997, guid: 506d094d039493b4fa560ad8770e6ab1, type: 3}
     - target: {fileID: 7933867572526841010, guid: 078f26bae120ec64899e587b6f0c5226, type: 3}
       propertyPath: PotionChance
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7933867572526841010, guid: 078f26bae120ec64899e587b6f0c5226, type: 3}
       propertyPath: ScrollChance
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7933867572526841010, guid: 078f26bae120ec64899e587b6f0c5226, type: 3}
+      propertyPath: BubbleInterval
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 078f26bae120ec64899e587b6f0c5226, type: 3}
@@ -1897,7 +1901,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 11
+  m_SortingOrder: 10
   m_TargetDisplay: 0
 --- !u!4 &1134031225 stripped
 Transform:

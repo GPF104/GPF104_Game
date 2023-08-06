@@ -38,7 +38,7 @@ public class AutoTile : MonoBehaviour
     int width;
     int height;
 
-    public void doSim(int nu, Vector3Int tmpSize)
+    public IEnumerator doSim(int nu, Vector3Int tmpSize)
     {
         clearMap(false);
         width = tmpSize.x;
@@ -85,7 +85,7 @@ public class AutoTile : MonoBehaviour
                     }
                     
                 }
-                    
+                yield return new WaitForSeconds(Time.deltaTime);
                 botMap.SetTile(tilePosition, botTile);
             }
         }
