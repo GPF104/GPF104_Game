@@ -165,7 +165,7 @@ public class AutoTile : MonoBehaviour
 
         return topMap.GetTile(Vector3Int.FloorToInt(position));
 	}
-
+    
     public IEnumerator UnsetTile(Vector2 position, float radius)
     {
         LayerMask grassLayerMask = LayerMask.GetMask("grassLayer");
@@ -186,10 +186,10 @@ public class AutoTile : MonoBehaviour
                 if (circleBounds.Contains(topMap.GetCellCenterWorld(tilePosition)))
                 {
                     topMap.SetTile(tilePosition, null);
-                    Debug.Log("Unset Tile " + tilePosition);
                 }
                 yield return new WaitForSeconds(Time.deltaTime);
             }
+            yield return new WaitForSeconds(Time.deltaTime);
         }
 
         // Remove props
@@ -201,11 +201,15 @@ public class AutoTile : MonoBehaviour
         foreach (RaycastHit2D objectHit in objectHits)
         {
             // Remove objects with specific tags
-            GameObject objectToRemove = objectHit.collider.gameObject;
-            Destroy(objectToRemove);
+            if (objectHit.collider != null)
+			{
+                GameObject objectToRemove = objectHit.collider.gameObject;
+                Destroy(objectToRemove);
+            }
+            yield return new WaitForSeconds(Time.deltaTime);
         }
     }
-
+    
     public void clearMap(bool complete)
     {
 

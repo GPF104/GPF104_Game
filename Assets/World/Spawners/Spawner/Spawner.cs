@@ -7,8 +7,9 @@ public class Spawner : MonoBehaviour
 	#region ExternalLinks
 
 	GameManager gameManager;
+    LevelGenerator levelGenerator;
 
-	[SerializeField] public List<GameObject> enemies = new List<GameObject>();
+    [SerializeField] public List<GameObject> enemies = new List<GameObject>();
 	[SerializeField] int collisionDamage = 2;
     [SerializeField] float clearRadius = 2f;
 
@@ -53,6 +54,7 @@ public class Spawner : MonoBehaviour
 	void Start()
     {
         gameManager = GameObject.FindObjectOfType<GameManager>().GetComponent<GameManager>();
+        levelGenerator = GameObject.FindObjectOfType<LevelGenerator>().GetComponent<LevelGenerator>();
         StartCoroutine(SpawnIn());
     }
 
@@ -66,6 +68,14 @@ public class Spawner : MonoBehaviour
 		{
 			collision.gameObject.GetComponent<Player>().TakeDamage(collisionDamage);
 		}
+        if (collision.tag == "Spawner")
+		{
+            Debug.Log("OVERLAPPING WITH TELEPORTER");
+		}
+	}
+	void OnDestroy()
+	{
+        levelGenerator.RemoveSpawner(this.gameObject);
 	}
 	#endregion
 }
