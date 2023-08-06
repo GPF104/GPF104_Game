@@ -10,7 +10,7 @@ public class Spawner : MonoBehaviour
 
 	[SerializeField] public List<GameObject> enemies = new List<GameObject>();
 	[SerializeField] int collisionDamage = 2;
-
+    [SerializeField] float clearRadius = 2f;
 
     #endregion
 
@@ -38,9 +38,7 @@ public class Spawner : MonoBehaviour
 
     private void ClearArea()
     {
-        GameObject.FindObjectOfType<AutoTile>().UnsetTile(this.transform.position, 3f);
-
-
+        GameObject.FindObjectOfType<AutoTile>().UnsetTile(this.transform.position, clearRadius);
     }
 
     IEnumerator SpawnIn()

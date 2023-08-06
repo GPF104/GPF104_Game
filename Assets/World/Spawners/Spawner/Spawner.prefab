@@ -51,6 +51,7 @@ MonoBehaviour:
   - {fileID: 8340791649948962779, guid: 9fb78b581624a3b46b10adec2679858d, type: 3}
   - {fileID: 4197288224427436328, guid: dcf849ba5ccb8a044b87533673e70a5a, type: 3}
   collisionDamage: 2
+  clearRadius: 3
 --- !u!58 &-9097163468560066954
 CircleCollider2D:
   m_ObjectHideFlags: 0
