@@ -10,11 +10,13 @@ public class Spawner : MonoBehaviour
 
 	[SerializeField] public List<GameObject> enemies = new List<GameObject>();
 	[SerializeField] int collisionDamage = 2;
-	#endregion
 
-	#region Attributes
 
-	public void Spawn(float difficulty)
+    #endregion
+
+    #region Attributes
+
+    public void Spawn(float difficulty)
     {
         int enemyIndex = 0;
         int random = Random.Range(0, (int)difficulty);
@@ -33,6 +35,19 @@ public class Spawner : MonoBehaviour
         go.transform.localScale = Vector3.one * randomScale;
         Debug.Log("Difficulty: " + difficulty + " Spawned enemy at " + go.transform.position);
     }
+
+    private void ClearArea()
+    {
+        GameObject.FindObjectOfType<AutoTile>().UnsetTile(this.transform.position, 3f);
+
+
+    }
+
+    IEnumerator SpawnIn()
+	{
+        yield return new WaitForSeconds(0.5f);
+        ClearArea();
+    }
 	#endregion
 
 	#region Unity
@@ -40,6 +55,7 @@ public class Spawner : MonoBehaviour
 	void Start()
     {
         gameManager = GameObject.FindObjectOfType<GameManager>().GetComponent<GameManager>();
+        StartCoroutine(SpawnIn());
     }
 
 	private void OnTriggerEnter2D(Collider2D collision)

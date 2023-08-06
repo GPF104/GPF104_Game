@@ -24,6 +24,8 @@ TagManager:
   - Potion
   - Trap
   - Boss
+  - grassTile
+  - topMap
   layers:
   - Default
   - TransparentFX
@@ -33,7 +35,7 @@ TagManager:
   - UI
   - PortalColl
   - Player
-  - 
+  - grassLayer
   - 
   - 
   - 

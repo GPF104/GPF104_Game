@@ -38,6 +38,10 @@ public class AutoTile : MonoBehaviour
     int width;
     int height;
 
+    public void RemoveTile(Vector3Int tilePos)
+	{
+        Debug.Log("Remove Tile " + tilePos);
+	}
     public void doSim(int nu, Vector3Int tmpSize)
     {
         clearMap(false);
@@ -161,6 +165,46 @@ public class AutoTile : MonoBehaviour
 
         return topMap.GetTile(Vector3Int.FloorToInt(position));
 	}
+
+    public void UnsetTile(Vector2 position, float radius)
+    {
+        Debug.Log("UNSET PLS");
+        LayerMask grassLayerMask = LayerMask.GetMask("grassLayer");
+
+        // Get the bounds of the circle area in world space
+        Bounds circleBounds = new Bounds(position, new Vector3(radius * 2, radius * 2, 0));
+
+        // Get the tile positions within the circle bounds
+        Vector3Int minCell = topMap.WorldToCell(circleBounds.min);
+        Vector3Int maxCell = topMap.WorldToCell(circleBounds.max);
+
+        for (int x = minCell.x; x <= maxCell.x; x++)
+        {
+            for (int y = minCell.y; y <= maxCell.y; y++)
+            {
+                Vector3Int tilePosition = new Vector3Int(x, y, 0);
+
+                if (circleBounds.Contains(topMap.GetCellCenterWorld(tilePosition)))
+                {
+                    topMap.SetTile(tilePosition, null);
+                }
+            }
+        }
+
+        // Remove props
+
+        LayerMask objectLayerMask = LayerMask.GetMask("World", "Traps");
+
+        RaycastHit2D[] objectHits = Physics2D.CircleCastAll(position, radius, Vector2.zero, Mathf.Infinity, objectLayerMask);
+
+        foreach (RaycastHit2D objectHit in objectHits)
+        {
+            // Remove objects with specific tags
+            GameObject objectToRemove = objectHit.collider.gameObject;
+            Destroy(objectToRemove);
+        }
+    }
+
     public void clearMap(bool complete)
     {
 
