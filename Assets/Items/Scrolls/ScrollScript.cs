@@ -4,25 +4,27 @@ using UnityEngine;
 
 public class ScrollScript : MonoBehaviour
 {
-    public int value;
+    public int value = 1;
 
-    // Start is called before the first frame update
+    GameObject blip;
     void Start()
     {
-        
+        if (blip == null)
+        {
+            blip = GameObject.FindObjectOfType<GameManager>().uiHandler.uiMap.AddMapElement(BlipType.item);
+            GameObject.FindObjectOfType<GameManager>().uiHandler.uiMap.UpdateBlipPosition(blip, this.transform.position);
+        }
     }
-
-    // Update is called once per frame
-    void Update()
+    void OnDestroy()
     {
-        
+        Destroy(blip);
     }
 
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            other.gameObject.GetComponent<Player>().AddScroll(1);
+            other.gameObject.GetComponent<Player>().AddScroll(value);
             Destroy(gameObject);
         }
     }

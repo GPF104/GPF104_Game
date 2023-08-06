@@ -23,6 +23,7 @@ TagManager:
   - SceneControl
   - Potion
   - Trap
+  - Boss
   layers:
   - Default
   - TransparentFX

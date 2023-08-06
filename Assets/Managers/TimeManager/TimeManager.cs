@@ -32,6 +32,10 @@ public class TimeManager : MonoBehaviour
 	[SerializeField] float SpawnerInterval = 15;
 	[SerializeField] int ScrollChance = 5;
 	[SerializeField] int PotionChance = 10;
+
+
+	// Boss Trackers
+
 	//	Methods
 	IEnumerator Timer(float interval)
 	{
@@ -67,6 +71,11 @@ public class TimeManager : MonoBehaviour
 
             if (secondCount % SpawnerInterval == 0)
 				StartCoroutine(DifficultyScale());
+
+			if (gameManager.score % 1000 == 0)
+			{
+
+			}
 
 			yield return Timer(interval);
 			Timer(interval);

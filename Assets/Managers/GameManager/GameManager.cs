@@ -13,6 +13,8 @@ public class GameManager : MonoBehaviour
 	public GameObject bubble;
 	public GameObject spawner;
 
+	public BossManager bossManager;
+
 	[SerializeField] MusicPlayer musicPlayer;
 
 	[SerializeField] bool isDev = false;
@@ -91,6 +93,12 @@ public class GameManager : MonoBehaviour
 	{
 		StartCoroutine(PlayGame());
 	}
+
+	[ContextMenu("SpawnBoss")]
+	public void SpawnBoss()
+	{
+		bossManager.Initialize();
+	}
 	#endregion
 
 	#region Unity
@@ -117,6 +125,7 @@ public class GameManager : MonoBehaviour
 		timeManager = this.timeManager.GetComponent<TimeManager>();
 		audioManager = this.audioManager.GetComponent<AudioManager>();
 		levelGenerator = GameObject.FindObjectOfType<LevelGenerator>().GetComponent<LevelGenerator>();
+		bossManager = GameObject.FindObjectOfType<BossManager>();
 		StartCoroutine(InitialLoad());
     }
 

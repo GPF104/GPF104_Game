@@ -212,9 +212,10 @@ public class LevelGenerator : MonoBehaviour
             GameObject go = Instantiate(gobject, CalculateSpawnPosition(angle, distance), Quaternion.identity);
             spawners.Add(go);
             go.transform.SetParent(GameObject.Find("Spawners").transform);
-            gameManager.uiHandler.uiMap.AddMapElement(go);
+            GameObject portal = gameManager.uiHandler.uiMap.AddMapElement(BlipType.portal);
 
-		}
+            gameManager.uiHandler.uiMap.UpdateBlipPosition(portal, go.transform.position);
+        }
 	}
 
     public void AddSpawner(GameObject gobject)
