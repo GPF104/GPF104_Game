@@ -18,7 +18,6 @@ public class GameManager : MonoBehaviour
 
 	[SerializeField] MusicPlayer musicPlayer;
 
-	[SerializeField] bool isDev = false;
 
 	public LevelGenerator levelGenerator;
 	#endregion
@@ -115,12 +114,6 @@ public class GameManager : MonoBehaviour
 		GamePaused = true;
 		levelGenerator.GenerateLevel(); // Generates the level
 		yield return new WaitForSeconds(0.5f);
-		if (isDev)
-		{
-			StartGame();
-		}
-		bool arena = false;
-		bool dontdestroy = false;
 
 		if (SceneManager.sceneCount == 1)
 		{
@@ -129,7 +122,6 @@ public class GameManager : MonoBehaviour
 				StartGame();
 			}
 		}
-		//timeManager.StartTimer(1);
 	}
 
 	// Start is called before the first frame update
