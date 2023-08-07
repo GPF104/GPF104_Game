@@ -687,6 +687,10 @@ PrefabInstance:
       propertyPath: BossHP
       value: 
       objectReference: {fileID: 2051983257}
+    - target: {fileID: -2878536533362407952, guid: c6bce65ff0ca780428344401f3df82bc, type: 3}
+      propertyPath: BossObject
+      value: 
+      objectReference: {fileID: 7341920797157244463, guid: 2fae3ba64ad01f041a5985f771db2ca0, type: 3}
     - target: {fileID: 3798704121731839826, guid: c6bce65ff0ca780428344401f3df82bc, type: 3}
       propertyPath: m_Name
       value: BossManager
@@ -858,7 +862,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5716184787750440584, guid: 2f54476031578614e8b2529c40df0fc2, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 13.377201
+      value: 14.1987705
+      objectReference: {fileID: 0}
+    - target: {fileID: 5716184787750440584, guid: 2f54476031578614e8b2529c40df0fc2, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5716184787750440584, guid: 2f54476031578614e8b2529c40df0fc2, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5716184787750440584, guid: 2f54476031578614e8b2529c40df0fc2, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5716184787750440584, guid: 2f54476031578614e8b2529c40df0fc2, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -866,7 +882,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5716184787750440584, guid: 2f54476031578614e8b2529c40df0fc2, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -1.1000061
+      value: -0.6893921
+      objectReference: {fileID: 0}
+    - target: {fileID: 5716184787750440584, guid: 2f54476031578614e8b2529c40df0fc2, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8228673136479383902, guid: 2f54476031578614e8b2529c40df0fc2, type: 3}
       propertyPath: m_text
@@ -874,7 +894,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8228673136479383902, guid: 2f54476031578614e8b2529c40df0fc2, type: 3}
       propertyPath: m_fontSize
-      value: 24
+      value: 42
       objectReference: {fileID: 0}
     - target: {fileID: 8228673136479383902, guid: 2f54476031578614e8b2529c40df0fc2, type: 3}
       propertyPath: m_margin.y
@@ -894,7 +914,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8228673136479383902, guid: 2f54476031578614e8b2529c40df0fc2, type: 3}
       propertyPath: m_fontSizeBase
-      value: 24
+      value: 42
       objectReference: {fileID: 0}
     - target: {fileID: 8228673136479383902, guid: 2f54476031578614e8b2529c40df0fc2, type: 3}
       propertyPath: m_fontColor32.rgba
@@ -1737,6 +1757,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: UI_Map
       objectReference: {fileID: 0}
+    - target: {fileID: 3519754277199564742, guid: 600dcb04abdf3f3408da542aae9407e7, type: 3}
+      propertyPath: bossTracker
+      value: 
+      objectReference: {fileID: 8770026010458981711, guid: aba3ba304896afe4896a3291fc16b913, type: 3}
     - target: {fileID: 3519754277199564742, guid: 600dcb04abdf3f3408da542aae9407e7, type: 3}
       propertyPath: itemTracker
       value: 
@@ -4103,7 +4127,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2686934745940856077, guid: 4f2c6f4ccfb5ed347a3d18852d7e6812, type: 3}
       propertyPath: isDev
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2686934745940856077, guid: 4f2c6f4ccfb5ed347a3d18852d7e6812, type: 3}
       propertyPath: bubble
@@ -4588,7 +4612,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2243415265611227885, guid: 29f40b68270031e4ab9f0b310f188b3d, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 6.4124
+      value: 5.211649
       objectReference: {fileID: 0}
     - target: {fileID: 2243415265611227885, guid: 29f40b68270031e4ab9f0b310f188b3d, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -4596,7 +4620,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2243415265611227885, guid: 29f40b68270031e4ab9f0b310f188b3d, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.40478516
+      value: -0.19586182
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 29f40b68270031e4ab9f0b310f188b3d, type: 3}

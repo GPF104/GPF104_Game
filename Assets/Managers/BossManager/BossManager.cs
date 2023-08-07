@@ -7,6 +7,8 @@ public class BossManager : MonoBehaviour
     GameManager gameManager;
     [SerializeField] GameObject BossHP;
     [SerializeField] GameObject BossObject;
+    GameObject Spawner;
+    GameObject Boss;
     IEnumerator SpawnBossFX()
 	{
         yield return new WaitForSeconds(1);
@@ -25,6 +27,13 @@ public class BossManager : MonoBehaviour
     public void Initialize()
 	{
         gameManager.uiHandler.Display(gameManager.uiHandler.bossHealthObject, true);
+        Spawner = gameManager.levelGenerator.RandomSpawner();
+        Boss = Instantiate(BossObject);
+        Boss.transform.position = Spawner.transform.position;
+
+	}
+    public void Damaged()
+	{
 
 	}
     void Defeated()

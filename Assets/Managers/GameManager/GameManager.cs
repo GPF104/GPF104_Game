@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -36,6 +37,8 @@ public class GameManager : MonoBehaviour
 		score += input;
 		uiHandler.uiScore.SetText(score.ToString());
 	}
+
+	[ContextMenu("GameOver")]
 	public void GameOver()
 	{
 		GameFinished = true;
@@ -99,6 +102,8 @@ public class GameManager : MonoBehaviour
 	{
 		bossManager.Initialize();
 	}
+
+	
 	#endregion
 
 	#region Unity
@@ -114,12 +119,23 @@ public class GameManager : MonoBehaviour
 		{
 			StartGame();
 		}
+		bool arena = false;
+		bool dontdestroy = false;
+
+		if (SceneManager.sceneCount == 1)
+		{
+			if (SceneManager.GetSceneAt(0).name == "Arena")
+			{
+				StartGame();
+			}
+		}
 		//timeManager.StartTimer(1);
 	}
 
 	// Start is called before the first frame update
 	void Start()
     {
+		Time.timeScale = 1;
 		mainCamera = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<MainCamera>();
 		uiHandler = this.uiHandler.GetComponent<UIHandler>();
 		timeManager = this.timeManager.GetComponent<TimeManager>();

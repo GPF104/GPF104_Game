@@ -72,6 +72,10 @@ public class UI_Map : MonoBehaviour
 		{
             blip = Instantiate(itemTracker);
 		}
+        if (type == BlipType.boss)
+		{
+            blip = Instantiate(bossTracker);
+		}
         //go.transform.SetParent(GameObject.Find("Spawners").transform);
         blip.transform.SetParent(MapBG.transform);
         return blip;

@@ -49,6 +49,12 @@ public class TimeManager : MonoBehaviour
 	{
 		return 10 * (a * Mathf.Pow(secondCount, 2) + b * secondCount + c);
 	}
+
+	[ContextMenu("AddScore")]
+	void AddScore()
+	{
+		gameManager.score += 1000;
+	}
 	// Boss Trackers
 
 	//	Methods
@@ -87,9 +93,10 @@ public class TimeManager : MonoBehaviour
 			if (secondCount % SpawnerInterval == 0)
 				AddSpawner();
 
-			if (gameManager.score % 1000 == 0)
+			if (gameManager.score > 0 && gameManager.score % 1000 == 0 && !GameObject.FindGameObjectWithTag("Boss"))
 			{
 				// Boss
+				gameManager.bossManager.Initialize();
 			}
 
 			yield return Timer(interval);
