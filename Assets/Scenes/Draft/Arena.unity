@@ -377,7 +377,7 @@ MonoBehaviour:
   numR: 1
   topMap: {fileID: 1988247876}
   botMap: {fileID: 1304902036}
-  topTile: {fileID: 11400000, guid: 8570acceeb8c993e0b33a811117df8af, type: 2}
+  topTile: {fileID: 11400000, guid: ce415d6f0c0d29b4f8399b5705940537, type: 2}
   botTile: {fileID: 11400000, guid: db4195a83fffc7d48a367cf2295ee3b1, type: 2}
 --- !u!4 &305359519
 Transform:
