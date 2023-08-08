@@ -22,7 +22,7 @@ public class Spawner : MonoBehaviour
         int enemyIndex = 0;
         int random = Random.Range(0, (int)difficulty);
         
-        if (random >= 85 && random < 120)
+        if (random >= 50 && random < 120)
 		{
             enemyIndex = 1;
 		}

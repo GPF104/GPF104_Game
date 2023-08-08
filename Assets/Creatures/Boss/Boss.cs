@@ -13,6 +13,9 @@ public class Boss : MonoBehaviour
     [SerializeField] public int Health = 250;
     [SerializeField] int Damage = 15;
 
+
+    public float moveSpeed = 2.0f;
+    public Vector3 targetPosition;
     IEnumerator Tracker()
 	{
         yield return new WaitForSeconds(0.25f);
@@ -21,7 +24,20 @@ public class Boss : MonoBehaviour
             GameObject.FindObjectOfType<GameManager>().uiHandler.uiMap.UpdateBlipPosition(blip, this.transform.position);
         }
     }
+    private IEnumerator MoveToMiddle()
+    {
+        while (Vector3.Distance(transform.position, targetPosition) > 0.01f)
+        {
+            // Calculate the step to move towards the target position
+            float step = moveSpeed * Time.deltaTime;
 
+            // Move the boss towards the target position
+            transform.position = Vector3.MoveTowards(transform.position, targetPosition, step);
+
+            // Yield until the next frame
+            yield return null;
+        }
+    }
     IEnumerator Die()
 	{
         yield return new WaitForSeconds(0.25f);
@@ -58,6 +74,10 @@ public class Boss : MonoBehaviour
         }
         healthUI.SetBoss(this.gameObject);
         StartCoroutine(Tracker());
+        targetPosition = GameObject.Find("Tower").transform.position;
+
+        // Start the movement coroutine
+        StartCoroutine(MoveToMiddle());
     }
 
     void OnDestroy()

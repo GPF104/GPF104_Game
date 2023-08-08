@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7341920797157244457}
   - component: {fileID: 7341920797157244456}
   - component: {fileID: 3957954398615623223}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Boss
   m_TagString: Boss
   m_Icon: {fileID: 0}
@@ -157,4 +157,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d33f3738a46bd1f47bbd2e4c2abdb261, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MAX_HEALTH: 250
   Health: 250
+  Damage: 15
+  moveSpeed: 2
+  targetPosition: {x: 0, y: 0, z: 0}
