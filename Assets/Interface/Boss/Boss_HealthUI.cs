@@ -6,15 +6,14 @@ using UnityEngine.UI;
 public class Boss_HealthUI : MonoBehaviour
 {
     [SerializeField] TMP_Text text;
-    [SerializeField] Image hpImage;
+    Image hpImage;
     GameObject BossObject;
-    int MaxHealth = 100;
     int currentHealth = 100;
 
     public void SetHealth(int health)
 	{
         currentHealth = health;
-        hpImage.fillAmount = currentHealth / MaxHealth;
+        hpImage.fillAmount = (float)currentHealth / BossObject.GetComponent<Boss>().MAX_HEALTH;
 	}
 
     public void SetBoss(GameObject gobject)
@@ -22,8 +21,12 @@ public class Boss_HealthUI : MonoBehaviour
         if (gobject != null)
 		{
             BossObject = gobject;
-            MaxHealth = BossObject.GetComponent<HealthScript>().maxHealth;
-            currentHealth = BossObject.GetComponent<HealthScript>().currentHealth;
+            currentHealth = BossObject.GetComponent<Boss>().Health;
 		}
+	}
+
+	void Start()
+	{
+        hpImage = GameObject.Find("HP").GetComponent<Image>();
 	}
 }

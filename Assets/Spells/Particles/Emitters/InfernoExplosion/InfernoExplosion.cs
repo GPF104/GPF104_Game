@@ -22,5 +22,9 @@ public class InfernoExplosion : MonoBehaviour
 		{
 			collision.gameObject.GetComponent<HealthScript>().TakeDamage(5, collision.gameObject);
 		}
+		if (collision.gameObject.tag == "Boss")
+		{
+			collision.gameObject.GetComponent<Boss>().TakeDamage(5);
+		}
 	}
 }

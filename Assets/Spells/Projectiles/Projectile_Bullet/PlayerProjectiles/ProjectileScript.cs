@@ -17,6 +17,7 @@ public class ProjectileScript : MonoBehaviour
 
     #region Attributes
 
+    public int damage = 5;
     IEnumerator LifeSpan(float interval)
 	{
         yield return new WaitForSeconds(interval);

@@ -9,6 +9,9 @@ public class Boss : MonoBehaviour
     HealthScript health;
 
     GameObject blip;
+    [SerializeField] public int MAX_HEALTH = 250;
+    [SerializeField] public int Health = 250;
+    [SerializeField] int Damage = 15;
 
     IEnumerator Tracker()
 	{
@@ -22,12 +25,23 @@ public class Boss : MonoBehaviour
     IEnumerator Die()
 	{
         yield return new WaitForSeconds(0.25f);
+        Destroy(this.gameObject);
     }
 
     public void Defeat()
 	{
         StartCoroutine(Die());
 	}
+
+    public void TakeDamage(int damage)
+    {
+        Health += -damage;
+        healthUI.SetHealth(Health);
+        if (Health <= 0)
+		{
+            Defeat();
+		}
+    }
     // Start is called before the first frame update
     void Start()
     {
@@ -42,24 +56,23 @@ public class Boss : MonoBehaviour
         {
             blip = GameObject.FindObjectOfType<GameManager>().uiHandler.uiMap.AddMapElement(BlipType.boss);
         }
-
+        healthUI.SetBoss(this.gameObject);
         StartCoroutine(Tracker());
     }
 
-    public void TakeDamage(int damage)
-	{
-
-	}
     void OnDestroy()
     {
         Destroy(blip);
+        healthUI.SetHealth(MAX_HEALTH);
+        gameManager.bossManager.Defeated();
     }
 
 	private void OnCollisionEnter2D(Collision2D collision)
 	{
-		if (collision.gameObject.tag == "Projectile")
+		if (collision.gameObject.tag == "Bullet")
 		{
             Debug.Log("Boss Hit");
+            TakeDamage(collision.gameObject.GetComponent<ProjectileScript>().damage);
 		}
 	}
 }

@@ -36,10 +36,10 @@ public class BossManager : MonoBehaviour
 	{
 
 	}
-    void Defeated()
+    public void Defeated()
 	{
-
-	}
+        gameManager.uiHandler.Display(gameManager.uiHandler.bossHealthObject, false);
+    }
     // Start is called before the first frame update
     void Start()
     {
