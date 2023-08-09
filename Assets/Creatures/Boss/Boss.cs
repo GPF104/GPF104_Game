@@ -9,16 +9,19 @@ public class Boss : MonoBehaviour
     HealthScript health;
 
 
-    GameObject blip;
+    GameObject blip; //Minimap blip
     [SerializeField] public int MAX_HEALTH = 250;
     [SerializeField] public int Health = 250;
     [SerializeField] int Damage = 15;
 
+    GameObject Player;
+    [SerializeField] float AttackThreshold = 10f;
 
     public float moveSpeed = 2.0f;
     public Vector3 targetPosition;
 
     bool isAttacking = false;
+    [SerializeField] GameObject AttackObject;
     IEnumerator Tracker()
 	{
         yield return new WaitForSeconds(0.25f);
@@ -26,6 +29,7 @@ public class Boss : MonoBehaviour
         {
             GameObject.FindObjectOfType<GameManager>().uiHandler.uiMap.UpdateBlipPosition(blip, this.transform.position);
         }
+        StartCoroutine(Tracker());
     }
     private IEnumerator MoveToMiddle()
     {
@@ -41,6 +45,10 @@ public class Boss : MonoBehaviour
 
                 // Yield until the next frame
                 yield return null;
+            }
+            else
+			{
+                yield return new WaitForSeconds(0.5f);
             }
         }
     }
@@ -65,16 +73,38 @@ public class Boss : MonoBehaviour
 		}
     }
 
-    IEnumerator Attack()
+    float distance = 10;
+    float secondCount = 0f;
+    IEnumerator TrackPlayer(GameObject gobject)
 	{
-
         yield return new WaitForSeconds(0.25f);
+        distance = Vector2.Distance(this.transform.position, gobject.transform.position);
+        if (distance < 15)
+		{
+            secondCount += 0.25f;
+            if (secondCount > 1.5)
+			{
+                Debug.Log("BOSS ATTACK");
+                isAttacking = true;
+                yield return new WaitForSeconds(0.5f);
+                GameObject go = Instantiate(AttackObject);
+                go.transform.position = gobject.transform.position;
+            }
+		}
+		else
+		{
+            secondCount = 0f;
+            isAttacking = false;
+		}
+        StartCoroutine(TrackPlayer(gobject));
     }
     // Start is called before the first frame update
     void Start()
     {
         gameManager = GameObject.FindObjectOfType<GameManager>();
         health = this.gameObject.GetComponent<HealthScript>();
+        Player = GameObject.FindWithTag("Player");
+
         if (GameObject.FindObjectOfType<Boss_HealthUI>())
 		{
             healthUI = GameObject.FindObjectOfType<Boss_HealthUI>().GetComponent<Boss_HealthUI>();
@@ -90,6 +120,7 @@ public class Boss : MonoBehaviour
 
         // Start the movement coroutine
         StartCoroutine(MoveToMiddle());
+        StartCoroutine(TrackPlayer(Player));
     }
 
     void OnDestroy()
@@ -105,14 +136,6 @@ public class Boss : MonoBehaviour
 		{
             Debug.Log("Boss Hit");
             TakeDamage(collision.gameObject.GetComponent<ProjectileScript>().damage);
-		}
-	}
-
-	private void OnTriggerStay2D(Collider2D collision)
-	{
-		if (collision.gameObject.tag == "Player")
-		{
-            StartCoroutine(Attack());
 		}
 	}
 }
