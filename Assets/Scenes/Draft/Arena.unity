@@ -3906,7 +3906,7 @@ PrefabInstance:
     - target: {fileID: 2922081607804358035, guid: 134b7a88512243648bc7b3c0f0c4d955, type: 3}
       propertyPath: text
       value: 
-      objectReference: {fileID: 2092005710}
+      objectReference: {fileID: 0}
     - target: {fileID: 2922081607804358035, guid: 134b7a88512243648bc7b3c0f0c4d955, type: 3}
       propertyPath: hpImage
       value: 
@@ -4139,17 +4139,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a024aa0e8089c9a4d8e59c5e33db84ca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &2092005710 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7557765774255930865, guid: 134b7a88512243648bc7b3c0f0c4d955, type: 3}
-  m_PrefabInstance: {fileID: 2051983255}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &2109686906
