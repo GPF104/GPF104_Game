@@ -8,6 +8,7 @@ public class Boss : MonoBehaviour
     GameManager gameManager;
     HealthScript health;
 
+
     GameObject blip;
     [SerializeField] public int MAX_HEALTH = 250;
     [SerializeField] public int Health = 250;
@@ -16,6 +17,8 @@ public class Boss : MonoBehaviour
 
     public float moveSpeed = 2.0f;
     public Vector3 targetPosition;
+
+    bool isAttacking = false;
     IEnumerator Tracker()
 	{
         yield return new WaitForSeconds(0.25f);
@@ -28,14 +31,17 @@ public class Boss : MonoBehaviour
     {
         while (Vector3.Distance(transform.position, targetPosition) > 0.01f)
         {
-            // Calculate the step to move towards the target position
-            float step = moveSpeed * Time.deltaTime;
+            if (!isAttacking)
+			{
+                // Calculate the step to move towards the target position
+                float step = moveSpeed * Time.deltaTime;
 
-            // Move the boss towards the target position
-            transform.position = Vector3.MoveTowards(transform.position, targetPosition, step);
+                // Move the boss towards the target position
+                transform.position = Vector3.MoveTowards(transform.position, targetPosition, step);
 
-            // Yield until the next frame
-            yield return null;
+                // Yield until the next frame
+                yield return null;
+            }
         }
     }
     IEnumerator Die()
@@ -57,6 +63,12 @@ public class Boss : MonoBehaviour
 		{
             Defeat();
 		}
+    }
+
+    IEnumerator Attack()
+	{
+
+        yield return new WaitForSeconds(0.25f);
     }
     // Start is called before the first frame update
     void Start()
@@ -93,6 +105,14 @@ public class Boss : MonoBehaviour
 		{
             Debug.Log("Boss Hit");
             TakeDamage(collision.gameObject.GetComponent<ProjectileScript>().damage);
+		}
+	}
+
+	private void OnTriggerStay2D(Collider2D collision)
+	{
+		if (collision.gameObject.tag == "Player")
+		{
+            StartCoroutine(Attack());
 		}
 	}
 }

@@ -26,6 +26,7 @@ TagManager:
   - Boss
   - grassTile
   - topMap
+  - LevelLight
   layers:
   - Default
   - TransparentFX

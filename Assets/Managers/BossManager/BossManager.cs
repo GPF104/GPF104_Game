@@ -9,6 +9,7 @@ public class BossManager : MonoBehaviour
     [SerializeField] GameObject BossObject;
     GameObject Spawner;
     GameObject Boss;
+
     IEnumerator SpawnBossFX()
 	{
         yield return new WaitForSeconds(1);
@@ -44,6 +45,8 @@ public class BossManager : MonoBehaviour
     void Start()
     {
         gameManager = GameObject.FindObjectOfType<GameManager>().GetComponent<GameManager>();
+
+        
     }
 
 

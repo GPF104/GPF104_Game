@@ -1050,6 +1050,10 @@ PrefabInstance:
       propertyPath: maxHealth
       value: 100
       objectReference: {fileID: 0}
+    - target: {fileID: 3279298957786270169, guid: 3639e97faa0bf8b42a5078af82424d1c, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 3388424831923934076, guid: 3639e97faa0bf8b42a5078af82424d1c, type: 3}
       propertyPath: m_Name
       value: Player
@@ -3646,7 +3650,7 @@ GameObject:
   - component: {fileID: 1941363681}
   m_Layer: 0
   m_Name: Global_Illumination
-  m_TagString: Untagged
+  m_TagString: LevelLight
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
