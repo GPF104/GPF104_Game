@@ -24,12 +24,17 @@ public class EnemyBehaviour : MonoBehaviour
     private bool hitPlayer = false;
     [SerializeField] float cooldown = 1.0f;
 
+
+    //Minimap blip
+
+    GameObject blip;
     void moveEnemy(Vector2 direction)
     {
         if (!isStuck && !canAttack)
 		{
             rb.MovePosition((Vector2)transform.position + (direction * moveSpeed * Time.deltaTime));
             rb.rotation = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg + 90f;
+            
         }
     }
 
@@ -83,6 +88,10 @@ public class EnemyBehaviour : MonoBehaviour
 
     IEnumerator IsStuck()
 	{
+        if (blip != null)
+		{
+            GameObject.FindObjectOfType<GameManager>().uiHandler.uiMap.UpdateBlipPosition(blip, this.transform.position);
+        }
         oldPosition = transform.position;
         yield return new WaitForSeconds(0.25f);
         float distance = Vector2.Distance(oldPosition, transform.position);
@@ -97,16 +106,22 @@ public class EnemyBehaviour : MonoBehaviour
 
         StartCoroutine(IsStuck());
     }
-    #endregion
 
-    #region Unity
 
-    void Start()
+	#endregion
+
+	#region Unity
+
+	void Start()
     {
         player = GameObject.FindObjectOfType<Player>().GetComponent<Transform>();
         rb = this.GetComponent<Rigidbody2D>();
         StartCoroutine(IsStuck());
         StartCoroutine(CanAttack());
+        if (blip == null)
+		{
+            blip = GameObject.FindObjectOfType<GameManager>().uiHandler.uiMap.AddMapElement(BlipType.enemy);
+		}
     }
 
     // Update is called once per frame
@@ -140,5 +155,10 @@ public class EnemyBehaviour : MonoBehaviour
 		}
 
 	}
-	#endregion
+
+    void OnDestroy()
+    {
+        Destroy(blip);
+    }
+    #endregion
 }

@@ -201,9 +201,29 @@ public class LevelGenerator : MonoBehaviour
         return new Vector2(x, y);
     }
 
+    IEnumerator SpawnSpawner(GameObject gobject)
+	{
+
+        //int num = spawners.Count == 0 ? 1 : (int)Mathf.Floor(spawners.Count / 2);
+        int num = Random.Range(1, 5);
+        float angleIncrement = 360f / num;
+        for (int i = 0; i < num; i++)
+        {
+            float angle = Random.Range(i * angleIncrement, (i + 1) * angleIncrement);
+            float distance = Random.Range(boundary.MIN_DISTANCE * 0.5f, boundary.MAX_DISTANCE);
+            GameObject go = Instantiate(gobject, CalculateSpawnPosition(angle, distance), Quaternion.identity);
+            spawners.Add(go);
+            go.transform.SetParent(GameObject.Find("Spawners").transform);
+            GameObject portal = gameManager.uiHandler.uiMap.AddMapElement(BlipType.portal);
+            gameManager.uiHandler.uiMap.UpdateBlipPosition(portal, go.transform.position);
+            yield return new WaitForSeconds(Time.deltaTime);
+        }
+
+    }
     void Spawn(GameObject gobject)
 	{
-        int num = spawners.Count == 0 ? 1 : spawners.Count;
+        // This is causing spawners to double
+        int num = spawners.Count == 0 ? 1 : (int)Mathf.Floor(spawners.Count / 2);
         float angleIncrement = 360f / num;
         for (int i = 0; i < num; i++)
 		{
@@ -212,14 +232,24 @@ public class LevelGenerator : MonoBehaviour
             GameObject go = Instantiate(gobject, CalculateSpawnPosition(angle, distance), Quaternion.identity);
             spawners.Add(go);
             go.transform.SetParent(GameObject.Find("Spawners").transform);
-            gameManager.uiHandler.uiMap.AddMapElement(go);
+            GameObject portal = gameManager.uiHandler.uiMap.AddMapElement(BlipType.portal);
 
-		}
+            gameManager.uiHandler.uiMap.UpdateBlipPosition(portal, go.transform.position);
+        }
 	}
-
+    public GameObject RandomSpawner()
+	{
+        return spawners[Random.Range(0, spawners.Count)];
+	}
+    public void RemoveSpawner(GameObject gobject)
+	{
+        spawners.Remove(gobject);
+        Debug.Log("Spawner Removed " + spawners.Count);
+	}
     public void AddSpawner(GameObject gobject)
 	{
-        Spawn(gobject);
+        //Spawn(gobject);
+        StartCoroutine(SpawnSpawner(gobject));
 	}
 	#endregion
 
@@ -229,6 +259,7 @@ public class LevelGenerator : MonoBehaviour
         autoTile = GameObject.FindObjectOfType<AutoTile>().GetComponent<AutoTile>();
 
         //levelSize = new Vector3Int(boundary.MAX_DISTANCE + (int)radius, boundary.MAX_DISTANCE + (int)radius, 0);
+
         autoTile.doSim(autoTile.numSims, levelSize);
         //StartCoroutine(SlowGenerate(Flora));
         StartCoroutine(SlowGenerate(GenerateType.Flora));

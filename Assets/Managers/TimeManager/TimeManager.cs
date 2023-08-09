@@ -31,7 +31,35 @@ public class TimeManager : MonoBehaviour
 	[SerializeField] float BubbleInterval = 2;
 	[SerializeField] float SpawnerInterval = 15;
 	[SerializeField] int ScrollChance = 5;
-	[SerializeField] int PotionChance = 10;
+	[SerializeField] int PotionChance = 13;
+	[SerializeField] int bossSpawnScoreThreshold = 450;
+	[SerializeField] int bossSpawnTimeThreshold = 120;
+
+	int bossCounter = 1;
+	[ContextMenu("AddTime")]
+	void AddTime()
+	{
+		secondCount = 120;
+		difficulty = SetDifficulty();
+	}
+
+	[ContextMenu("AddSpawner")]
+	void AddPortal()
+	{
+		StartCoroutine(DifficultyScale());
+	}
+	float SetDifficulty()
+	{
+		return 10 * (a * Mathf.Pow(secondCount, 2) + b * secondCount + c);
+	}
+
+	[ContextMenu("AddScore")]
+	void AddScore()
+	{
+		gameManager.score += 1000;
+	}
+	// Boss Trackers
+
 	//	Methods
 	IEnumerator Timer(float interval)
 	{
@@ -48,7 +76,7 @@ public class TimeManager : MonoBehaviour
 
 			if (secondCount % BubbleInterval == 0)
 			{
-				for (int i = 0; i < levelGenerator.spawners.Count; i++)
+				for (int i = 0; i < Random.Range(1, Mathf.Floor(levelGenerator.spawners.Count/2)); i++)
 				{
 					yield return new WaitForSeconds(0.5f);
 					StartCoroutine(Bubble(2));
@@ -65,12 +93,28 @@ public class TimeManager : MonoBehaviour
 				StartCoroutine(Potion());
             }
 
-            if (secondCount % SpawnerInterval == 0)
-				StartCoroutine(DifficultyScale());
+			if (secondCount % SpawnerInterval == 0)
+				AddSpawner();
+
+			if (gameManager.score > 0 && gameManager.score > (bossSpawnScoreThreshold * bossCounter) || secondCount % bossSpawnTimeThreshold == 0)
+			{
+
+				if (!GameObject.FindGameObjectWithTag("Boss"))
+				{
+					gameManager.bossManager.Initialize();
+					bossCounter++;
+				}
+			}
 
 			yield return Timer(interval);
 			Timer(interval);
 		}
+	}
+
+	void AddSpawner()
+	{
+		levelGenerator.AddSpawner(spawner);
+		Debug.Log(string.Format("Difficulty: {0} Spawner spawned. There are {1} active spawners.", difficulty, levelGenerator.spawners.Count));
 	}
 	IEnumerator DifficultyScale()
 	{
@@ -109,8 +153,8 @@ public class TimeManager : MonoBehaviour
 		GameObject bubble = Instantiate(gameManager.bubble, towerTop.transform.position, Quaternion.identity);
 
 		yield return new WaitForSeconds(delay);
-
-		bubble.GetComponent<Bubble>().SetTarget(levelGenerator.spawners[randomSpawner].transform.position, 2);
+		GameObject goTo = levelGenerator.RandomSpawner();
+		bubble.GetComponent<Bubble>().SetTarget(goTo.transform.position, 2);
 	}
 
 

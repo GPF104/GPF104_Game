@@ -20,6 +20,7 @@ public class Player : MonoBehaviour
     public int scrolls = 0;
     public int potions = 0;
     public int healAmount = 30;
+    [SerializeField] bool godMode = false;
 
     IEnumerator UpdatePosition()
 	{
@@ -30,14 +31,17 @@ public class Player : MonoBehaviour
 
     public void TakeDamage(int amount)
 	{
-        Health = Health - amount;
-        gameManager.uiHandler.uiHealth.SetHealth(Health);
-        gameManager.mainCamera.DoShake(0.25f);
-        gameManager.audioManager.PlayAudio(damageSFX[0]);
-        if (Health <= 0)
+        if (!godMode)
 		{
-            gameManager.GameOver();
-		}
+            Health = Health - amount;
+            gameManager.uiHandler.uiHealth.SetHealth(Health);
+            gameManager.mainCamera.DoShake(0.25f);
+            gameManager.audioManager.PlayAudio(damageSFX[0]);
+            if (Health <= 0)
+            {
+                gameManager.GameOver();
+            }
+        }
 	}
 
     public void Heal()

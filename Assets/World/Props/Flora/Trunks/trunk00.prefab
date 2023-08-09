@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4562686086476621138}
   - component: {fileID: 3258117833240452663}
   - component: {fileID: 8854894951592897586}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: trunk00
   m_TagString: World
   m_Icon: {fileID: 0}

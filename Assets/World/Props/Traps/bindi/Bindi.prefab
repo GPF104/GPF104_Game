@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8221479044518755464}
   - component: {fileID: 4144817823027454557}
   - component: {fileID: 2743134673940727237}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Bindi
   m_TagString: Trap
   m_Icon: {fileID: 0}
@@ -159,7 +159,8 @@ GameObject:
   m_Component:
   - component: {fileID: 7698334758532001347}
   - component: {fileID: 444856813244326508}
-  m_Layer: 0
+  - component: {fileID: 4601846079405156646}
+  m_Layer: 9
   m_Name: Damage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -193,3 +194,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 347b246df451210419ebfd7aba4eb78e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!58 &4601846079405156646
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2275853208455169211}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5

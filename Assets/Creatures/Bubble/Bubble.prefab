@@ -101,6 +101,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   particlePrefab: {fileID: 3756785441667148048, guid: 4b434bddcb4f9d94595d88402a5e30e4, type: 3}
+  BurstFX: {fileID: 2700628735152313163, guid: e5d77ecb49bd6964bbd18cc48b71b5ee, type: 3}
   value: 50
 --- !u!58 &-9140680191503440804
 CircleCollider2D:

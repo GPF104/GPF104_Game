@@ -17,15 +17,26 @@ public class HealthScript : MonoBehaviour
 
     void die(GameObject character)
     {
-        GameObject.FindObjectOfType<GameManager>().GetComponent<GameManager>().AddScore(scoreValue);
-        GameObject.FindObjectOfType<GameManager>().GetComponent<GameManager>().audioManager.PlayAudio(damageSFX);
-        Destroy(character);
+        if (this.gameObject.tag == "Boss")
+		{
+            this.gameObject.GetComponent<Boss>().Defeat();
+		}
+        else
+		{
+            GameObject.FindObjectOfType<GameManager>().GetComponent<GameManager>().AddScore(scoreValue);
+            GameObject.FindObjectOfType<GameManager>().GetComponent<GameManager>().audioManager.PlayAudio(damageSFX);
+            Destroy(character);
+        }
     }
     public void TakeDamage(int amount, GameObject character)
     {
         currentHealth -= amount;
         Instantiate(damageParticles, this.transform.position, Quaternion.identity);
 
+        if (this.gameObject.tag == "Boss")
+		{
+            this.gameObject.GetComponent<Boss>().TakeDamage(amount);
+        }
         if(currentHealth <= 0)
         {
             die(character);

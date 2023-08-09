@@ -7,18 +7,22 @@ public class Spawner : MonoBehaviour
 	#region ExternalLinks
 
 	GameManager gameManager;
+    LevelGenerator levelGenerator;
 
-	[SerializeField] public List<GameObject> enemies = new List<GameObject>();
-	#endregion
+    [SerializeField] public List<GameObject> enemies = new List<GameObject>();
+	[SerializeField] int collisionDamage = 2;
+    [SerializeField] float clearRadius = 2f;
 
-	#region Attributes
+    #endregion
 
-	public void Spawn(float difficulty)
+    #region Attributes
+
+    public void Spawn(float difficulty)
     {
         int enemyIndex = 0;
         int random = Random.Range(0, (int)difficulty);
         
-        if (random >= 85 && random < 120)
+        if (random >= 50 && random < 120)
 		{
             enemyIndex = 1;
 		}
@@ -32,6 +36,17 @@ public class Spawner : MonoBehaviour
         go.transform.localScale = Vector3.one * randomScale;
         Debug.Log("Difficulty: " + difficulty + " Spawned enemy at " + go.transform.position);
     }
+
+    private void ClearArea()
+    {
+        StartCoroutine(GameObject.FindObjectOfType<AutoTile>().UnsetTile(this.transform.position, clearRadius));
+    }
+
+    IEnumerator SpawnIn()
+	{
+        yield return new WaitForSeconds(0.5f);
+        ClearArea();
+    }
 	#endregion
 
 	#region Unity
@@ -39,6 +54,8 @@ public class Spawner : MonoBehaviour
 	void Start()
     {
         gameManager = GameObject.FindObjectOfType<GameManager>().GetComponent<GameManager>();
+        levelGenerator = GameObject.FindObjectOfType<LevelGenerator>().GetComponent<LevelGenerator>();
+        StartCoroutine(SpawnIn());
     }
 
 	private void OnTriggerEnter2D(Collider2D collision)
@@ -47,6 +64,18 @@ public class Spawner : MonoBehaviour
 		{
             Spawn(gameManager.timeManager.difficulty);
 		}
+		if (collision.tag == "Player")
+		{
+			collision.gameObject.GetComponent<Player>().TakeDamage(collisionDamage);
+		}
+        if (collision.tag == "Spawner")
+		{
+            Debug.Log("OVERLAPPING WITH TELEPORTER");
+		}
+	}
+	void OnDestroy()
+	{
+        levelGenerator.RemoveSpawner(this.gameObject);
 	}
 	#endregion
 }

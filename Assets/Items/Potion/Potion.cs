@@ -4,7 +4,20 @@ using UnityEngine;
 
 public class Potion : MonoBehaviour
 {
-    public void OnTriggerEnter2D(Collider2D collision)
+    GameObject blip;
+	void Start()
+	{
+		if (blip == null)
+		{
+            blip = GameObject.FindObjectOfType<GameManager>().uiHandler.uiMap.AddMapElement(BlipType.item);
+            GameObject.FindObjectOfType<GameManager>().uiHandler.uiMap.UpdateBlipPosition(blip, this.transform.position);
+        }
+	}
+	void OnDestroy()
+	{
+        Destroy(blip);
+	}
+	public void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
         {

@@ -24,6 +24,7 @@ public class UIHandler : MonoBehaviour
 	public GameObject uiMenu;
 	public ScrollCounter scrollCounter;
 	public PotionCounter potionCounter;
+	public GameObject bossHealthObject;
 
 	[SerializeField] GameObject eventSystemObject;
 
@@ -91,6 +92,7 @@ public class UIHandler : MonoBehaviour
 
 		gameOverObject.SetActive(false);
 		uiMenu.SetActive(false);
+		bossHealthObject.SetActive(false);
 		
     }
 

@@ -8,6 +8,7 @@ public class Bubble : MonoBehaviour
 
 	public GameObject particlePrefab;
 	private GameObject particleObject;
+	[SerializeField] GameObject BurstFX;
 	#endregion
 
 	#region Attributes
@@ -23,6 +24,9 @@ public class Bubble : MonoBehaviour
 	void Kill()
 	{
 		particleObject.GetComponent<ParticleEmitter>().Remove();
+		Debug.Log("Bubble burst");
+		GameObject go = Instantiate(BurstFX);
+		go.transform.position = this.transform.position;
 		Destroy(gameObject); // Destroy the bullet
 	}
 

@@ -45,6 +45,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d3084bdcae645041ad480fb3c225506, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bossTracker: {fileID: 8770026010458981711, guid: 4ee426671e897be4d93b596fb4edb848, type: 3}
+  portalTracker: {fileID: 8770026010458981711, guid: 405c4e63832cc494f85406adbf505ce7, type: 3}
+  enemyTracker: {fileID: 8770026010458981711, guid: 4ee426671e897be4d93b596fb4edb848, type: 3}
 --- !u!1 &5267497274544649118
 GameObject:
   m_ObjectHideFlags: 0

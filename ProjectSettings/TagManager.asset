@@ -23,6 +23,10 @@ TagManager:
   - SceneControl
   - Potion
   - Trap
+  - Boss
+  - grassTile
+  - topMap
+  - LevelLight
   layers:
   - Default
   - TransparentFX
@@ -30,11 +34,11 @@ TagManager:
   - Actors
   - Water
   - UI
-  - 
-  - 
-  - 
-  - 
-  - 
+  - PortalColl
+  - Player
+  - grassLayer
+  - Traps
+  - World
   - 
   - 
   - 

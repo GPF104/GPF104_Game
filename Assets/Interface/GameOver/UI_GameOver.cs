@@ -15,7 +15,7 @@ public class UI_GameOver : MonoBehaviour
     public void Replay()
 	{
         Debug.Log("Play again");
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        SceneManager.LoadScene("Arena");
 	}
     public void Quit()
 	{

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -13,9 +14,10 @@ public class GameManager : MonoBehaviour
 	public GameObject bubble;
 	public GameObject spawner;
 
+	public BossManager bossManager;
+
 	[SerializeField] MusicPlayer musicPlayer;
 
-	[SerializeField] bool isDev = false;
 
 	public LevelGenerator levelGenerator;
 	#endregion
@@ -34,6 +36,8 @@ public class GameManager : MonoBehaviour
 		score += input;
 		uiHandler.uiScore.SetText(score.ToString());
 	}
+
+	[ContextMenu("GameOver")]
 	public void GameOver()
 	{
 		GameFinished = true;
@@ -91,6 +95,14 @@ public class GameManager : MonoBehaviour
 	{
 		StartCoroutine(PlayGame());
 	}
+
+	[ContextMenu("SpawnBoss")]
+	public void SpawnBoss()
+	{
+		bossManager.Initialize();
+	}
+
+	
 	#endregion
 
 	#region Unity
@@ -102,21 +114,26 @@ public class GameManager : MonoBehaviour
 		GamePaused = true;
 		levelGenerator.GenerateLevel(); // Generates the level
 		yield return new WaitForSeconds(0.5f);
-		if (isDev)
+
+		if (SceneManager.sceneCount == 1)
 		{
-			StartGame();
+			if (SceneManager.GetSceneAt(0).name == "Arena")
+			{
+				StartGame();
+			}
 		}
-		//timeManager.StartTimer(1);
 	}
 
 	// Start is called before the first frame update
 	void Start()
     {
+		Time.timeScale = 1;
 		mainCamera = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<MainCamera>();
 		uiHandler = this.uiHandler.GetComponent<UIHandler>();
 		timeManager = this.timeManager.GetComponent<TimeManager>();
 		audioManager = this.audioManager.GetComponent<AudioManager>();
 		levelGenerator = GameObject.FindObjectOfType<LevelGenerator>().GetComponent<LevelGenerator>();
+		bossManager = GameObject.FindObjectOfType<BossManager>();
 		StartCoroutine(InitialLoad());
     }
 
