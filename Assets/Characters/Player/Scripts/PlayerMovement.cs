@@ -17,6 +17,7 @@ public class PlayerMovement : MonoBehaviour
     Animator animator;
 	public float moveSpeed = 10;
     public float cooldown = 0.1f;
+    public float fireRate = 0.25f;
     Rigidbody2D rb2d;
     Weapon weapon;
     private SpriteRenderer tempRend;
@@ -28,7 +29,12 @@ public class PlayerMovement : MonoBehaviour
         animator.SetBool("isAttacking", true);
         yield return new WaitForSeconds(cooldown);
         animator.SetBool("isAttacking", false);
+        if (Input.GetMouseButton(0)) 
+        {
+            StartCoroutine(FireAnim(cooldown));
+        }
     }
+    
     void ProcessInputs()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
@@ -48,12 +54,14 @@ public class PlayerMovement : MonoBehaviour
             float moveX = Input.GetAxisRaw("Horizontal");
             float moveY = Input.GetAxisRaw("Vertical");
 
+            
             if (Input.GetMouseButtonDown(0))
             {
-                StartCoroutine(FireAnim(cooldown));
                 weapon.Fire();
-
+                StartCoroutine(weapon.KeepFiring(fireRate));
+                StartCoroutine(FireAnim(cooldown));
             }
+            
             //Inferno Setup
             if (Input.GetMouseButtonDown(1)) //need to create spin wheel
             {
@@ -76,7 +84,7 @@ public class PlayerMovement : MonoBehaviour
             moveDirection = new Vector2(moveX, moveY).normalized;
             mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         }
-    }
+    }    
 
     void Move()
     {
@@ -119,9 +127,10 @@ public class PlayerMovement : MonoBehaviour
 		{
             gameManager = GameObject.FindObjectOfType<GameManager>().GetComponent<GameManager>();
         }
-        
     }
+
     
+
     void Update()
     {
         ProcessInputs();

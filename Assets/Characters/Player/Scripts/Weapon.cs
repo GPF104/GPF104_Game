@@ -16,10 +16,21 @@ public class Weapon : MonoBehaviour
 	Transform firePoint;
     public float fireForce = 20f;
 
+    
     public void Fire()
     {
         GameObject bullet = Instantiate(Projectile_Bullet, firePoint.position, firePoint.rotation);
         bullet.GetComponent<Rigidbody2D>().AddForce(firePoint.up * fireForce, ForceMode2D.Impulse);
+    }
+
+    public IEnumerator KeepFiring(float fireRate)
+    {
+        yield return new WaitForSeconds(fireRate);
+        if(Input.GetMouseButton(0)) 
+        { 
+            Fire();
+            StartCoroutine(KeepFiring(fireRate));
+        }        
     }
 
 
