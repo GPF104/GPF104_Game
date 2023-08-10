@@ -1122,6 +1122,10 @@ PrefabInstance:
       propertyPath: godMode
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7773913081694607278, guid: 3639e97faa0bf8b42a5078af82424d1c, type: 3}
+      propertyPath: scrolls
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3639e97faa0bf8b42a5078af82424d1c, type: 3}
 --- !u!1 &696081738 stripped
@@ -3903,6 +3907,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 104172380}
     m_Modifications:
+    - target: {fileID: 410133072445941031, guid: 134b7a88512243648bc7b3c0f0c4d955, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -1.0542603
+      objectReference: {fileID: 0}
+    - target: {fileID: 410133072445941031, guid: 134b7a88512243648bc7b3c0f0c4d955, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.4677124
+      objectReference: {fileID: 0}
+    - target: {fileID: 1940457519141329964, guid: 134b7a88512243648bc7b3c0f0c4d955, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 1.345459
+      objectReference: {fileID: 0}
     - target: {fileID: 2922081607804358035, guid: 134b7a88512243648bc7b3c0f0c4d955, type: 3}
       propertyPath: text
       value: 

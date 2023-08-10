@@ -8,7 +8,7 @@ public class Projectile_Inferno : MonoBehaviour
 	#region Attributes
 	Vector2 destination = new Vector2(0, 0);
 
-    [SerializeField] float moveSpeed = 2f;
+    [SerializeField] float moveSpeed = 1.5f;
     [SerializeField] GameObject explosion;
     Rigidbody2D rb2d;
 
