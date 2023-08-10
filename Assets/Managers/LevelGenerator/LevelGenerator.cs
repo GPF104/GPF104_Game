@@ -73,6 +73,11 @@ public class LevelGenerator : MonoBehaviour
             minimumDensity = TrapDensity;
             maximumDensity = TrapDensity + 500;
         }
+        if (type == GenerateType.Props)
+        {
+            minimumDensity = 120;
+            maximumDensity = 150;
+        }
 
         for (int i = 0; i < Random.Range(minimumDensity, maximumDensity); i++)
         {
@@ -90,6 +95,7 @@ public class LevelGenerator : MonoBehaviour
                 if (autoTile.GetTile(pos, AutoTile.TileTypes.grass))
                 {
                     GameObject go = AddProp(Trees[Random.Range(0, Trees.Count)], pos, type);
+
                 }
             }
             if (type == GenerateType.Obstacles)
@@ -97,6 +103,13 @@ public class LevelGenerator : MonoBehaviour
                 if (autoTile.GetTile(pos, AutoTile.TileTypes.grass))
                 {
                     GameObject go = AddProp(BadObstacles[Random.Range(0, BadObstacles.Count)], pos, type);
+                }
+            }
+            if (type == GenerateType.Props)
+            {
+                if (autoTile.GetTile(pos, AutoTile.TileTypes.grass))
+                {
+                    GameObject go = AddProp(Props[Random.Range(0, Props.Count)], pos, type);
                 }
             }
             if (type == GenerateType.Lighting)
@@ -126,6 +139,7 @@ public class LevelGenerator : MonoBehaviour
         if (type == GenerateType.Trees)
         {
             go.transform.SetParent(GameObject.Find("Trees").transform);
+            go.transform.localScale = go.transform.localScale * 4;
         }
         if (type == GenerateType.Lighting)
         {
@@ -135,6 +149,11 @@ public class LevelGenerator : MonoBehaviour
         {
             go.transform.SetParent(GameObject.Find("Obstacles").transform);
             go.transform.localScale = go.transform.localScale * 1;
+        }
+        if (type == GenerateType.Props)
+        {
+            go.transform.SetParent(GameObject.Find("Props").transform);
+            go.transform.localScale = go.transform.localScale * 1.5f;
         }
         if (type != GenerateType.Lighting)
 		{
@@ -265,6 +284,7 @@ public class LevelGenerator : MonoBehaviour
         StartCoroutine(SlowGenerate(GenerateType.Trees));
         StartCoroutine(SlowGenerate(GenerateType.Lighting));
         StartCoroutine(SlowGenerate(GenerateType.Obstacles));
+        StartCoroutine(SlowGenerate(GenerateType.Props));
     }
 
 	#region Unity
