@@ -244,7 +244,6 @@ public class LevelGenerator : MonoBehaviour
     public void RemoveSpawner(GameObject gobject)
 	{
         spawners.Remove(gobject);
-        Debug.Log("Spawner Removed " + spawners.Count);
 	}
     public void AddSpawner(GameObject gobject)
 	{
