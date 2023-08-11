@@ -4825,3 +4825,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9509439e9198ab54298811eb13956612, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  emitterClip: {fileID: 0}
+  isBubble: 1

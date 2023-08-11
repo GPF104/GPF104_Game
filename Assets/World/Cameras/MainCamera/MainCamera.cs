@@ -6,7 +6,9 @@ public class MainCamera : MonoBehaviour
 {
     Camera cam;
 
-	[SerializeField] GameObject target;
+    [SerializeField] public bool isArena = false;
+
+    [SerializeField] GameObject target;
 
     [SerializeField] float followSpeed = 2;
     Vector3 newPosition = new Vector3(0, 0, -10);
@@ -37,7 +39,11 @@ public class MainCamera : MonoBehaviour
 	}
     // Start is called before the first frame update
 
-
+    //Attach audiolistener to camera rather than a global thing
+    public void StartListening()
+	{
+        this.GetComponent<AudioListener>().enabled = true;
+	}
     void Start()
     {
         cam = GetComponent<Camera>();

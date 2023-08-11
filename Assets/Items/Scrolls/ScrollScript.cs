@@ -7,8 +7,15 @@ public class ScrollScript : MonoBehaviour
     public int value = 1;
 
     GameObject blip;
+    AudioSource audioSource;
+    [SerializeField] AudioClip spawnSFX;
     void Start()
     {
+        audioSource = GetComponent<AudioSource>();
+        if (spawnSFX != null)
+        {
+            audioSource.PlayOneShot(spawnSFX);
+        }
         if (blip == null)
         {
             blip = GameObject.FindObjectOfType<GameManager>().uiHandler.uiMap.AddMapElement(BlipType.item);
