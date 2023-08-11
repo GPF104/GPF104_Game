@@ -14,6 +14,7 @@ public class EnemyDamage : MonoBehaviour
     void Start()
     {
         m_ParticleSystem = GetComponent<ParticleSystem>();
+        // Destroy enemy defeat particles once they've played.
         StartCoroutine(LifeSpan());
     }
 }
