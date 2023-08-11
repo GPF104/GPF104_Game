@@ -40,6 +40,7 @@ public class GameManager : MonoBehaviour
 		uiHandler.uiScore.SetText(score.ToString());
 	}
 
+	// Gradually slwo the game down when it's game over.
 	IEnumerator SlowDown()
 	{
 		float targetTimeScale = 0.0f;
