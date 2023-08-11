@@ -140,6 +140,7 @@ public class EnemyBehaviour : MonoBehaviour
             if (Vector2.Distance(player.position, transform.position) >= 2)
 			{
                 moveEnemy(movement);
+                UpdateSortingOrder();
             }
         }
     }
@@ -155,7 +156,22 @@ public class EnemyBehaviour : MonoBehaviour
 		}
 
 	}
+    private void UpdateSortingOrder()
+    {
+        SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
 
+        // Get the player's y-position and the tree object's y-position
+        float enemyY = this.gameObject.transform.position.y;
+        float treeY = transform.position.y;
+
+        // Set the initial sorting order based on the y-position and enemy position relative to the tree object
+        int sortingOrder = Mathf.RoundToInt(-treeY * 100f);
+        if (enemyY > treeY)
+        {
+            sortingOrder -= 1;
+        }
+        spriteRenderer.sortingOrder = sortingOrder;
+    }
     void OnDestroy()
     {
         Destroy(blip);
