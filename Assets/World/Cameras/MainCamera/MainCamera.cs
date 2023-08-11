@@ -39,6 +39,7 @@ public class MainCamera : MonoBehaviour
 	}
     // Start is called before the first frame update
 
+    //Attach audiolistener to camera rather than a global thing
     public void StartListening()
 	{
         this.GetComponent<AudioListener>().enabled = true;
