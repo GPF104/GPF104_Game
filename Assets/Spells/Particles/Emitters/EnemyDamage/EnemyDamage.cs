@@ -10,10 +10,10 @@ public class EnemyDamage : MonoBehaviour
         yield return new WaitForSeconds(m_ParticleSystem.main.duration);
         Destroy(this);
     }
+
     void Start()
     {
         m_ParticleSystem = GetComponent<ParticleSystem>();
+        StartCoroutine(LifeSpan());
     }
-
-
 }
