@@ -10,6 +10,7 @@ public class ParticleEmitter : MonoBehaviour
     AudioSource emitter;
     [SerializeField] AudioClip emitterClip;
     [SerializeField] bool isBubble = false;
+    public bool hitWorld = true;
 
     private IEnumerator FadeOutAndDestroy()
     {
@@ -29,6 +30,13 @@ public class ParticleEmitter : MonoBehaviour
 
         Destroy(gameObject);
     }
+    public void PlaySFX(AudioClip clip)
+	{
+        if (emitter != null)
+		{
+            emitter.PlayOneShot(clip);
+        }
+    }
     public void Remove()
 	{
         particles.Stop();
@@ -40,7 +48,6 @@ public class ParticleEmitter : MonoBehaviour
         if (this.GetComponent<AudioSource>() != null)
 		{
             emitter = GetComponent<AudioSource>();
-            emitter.PlayOneShot(emitterClip);
 		}
         particles = this.GetComponent<ParticleSystem>();
         fadeDuration = particles.main.duration;

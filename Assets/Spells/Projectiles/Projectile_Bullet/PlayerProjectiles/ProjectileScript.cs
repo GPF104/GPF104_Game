@@ -20,6 +20,7 @@ public class ProjectileScript : MonoBehaviour
 
     AudioSource audioSource;
     [SerializeField] List<AudioClip> soundFX;
+    [SerializeField] AudioClip hitSFX;
 
     public int damage = 5;
     bool destroyed = false;
@@ -68,6 +69,7 @@ public class ProjectileScript : MonoBehaviour
             healthScript = collision.gameObject.GetComponent<HealthScript>();
             healthScript.TakeDamage(1, collision.gameObject);
             GameObject gobject = Instantiate(HitParticles);
+            gobject.GetComponent<ParticleEmitter>().hitWorld = false;
             gobject.transform.position = this.transform.position;
             Kill();
         }
@@ -75,6 +77,8 @@ public class ProjectileScript : MonoBehaviour
 		{
             GameObject gobject = Instantiate(HitParticles);
             gobject.transform.position = this.transform.position;
+
+            gobject.GetComponent<ParticleEmitter>().PlaySFX(hitSFX);
             Kill();
         }
 

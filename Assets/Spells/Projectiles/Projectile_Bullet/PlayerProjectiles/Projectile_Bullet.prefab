@@ -54,6 +54,7 @@ MonoBehaviour:
   soundFX:
   - {fileID: 8300000, guid: a3bd4d0c008c9124eb548b490c6a81ae, type: 3}
   - {fileID: 8300000, guid: 02d59d1fad78c5c4f81cf95f5dd727ba, type: 3}
+  hitSFX: {fileID: 8300000, guid: 207cecae69628c04da9a5e3d38880ac0, type: 3}
   damage: 5
 --- !u!212 &443770733045036479
 SpriteRenderer:
