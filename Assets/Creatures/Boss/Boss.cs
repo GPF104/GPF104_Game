@@ -26,6 +26,10 @@ public class Boss : MonoBehaviour
     //Audio
     AudioSource audioSource;
     [SerializeField] AudioClip bossEntry;
+    [SerializeField] AudioClip bossStop;
+
+    //Sprite
+    SpriteRenderer sr;
 
     public float checkInterval = 3f; // Time interval to check for getting stuck
     public float unstuckDistance = 1f; // Minimum distance to move to consider the enemy unstuck
@@ -109,7 +113,7 @@ public class Boss : MonoBehaviour
 
                 // Move the boss towards the target position
                 transform.position = Vector3.MoveTowards(transform.position, targetPosition, step);
-
+                UpdateSortingOrder();
                 // Yield until the next frame
                 yield return null;
             }
@@ -119,12 +123,37 @@ public class Boss : MonoBehaviour
             }
         }
     }
+    bool isAlive = true;
+    IEnumerator Despawn(GameObject character)
+    {
+        isAlive = false;
+        float fadeDuration = 5;
+        float elapsedTime = 0.0f;
+        Color initialColor = sr.color;
+
+        while (elapsedTime < fadeDuration)
+        {
+            float normalizedTime = elapsedTime / fadeDuration;
+            sr.color = Color.Lerp(initialColor, new Color(0, 0, 0, 0), normalizedTime);
+            elapsedTime += Time.deltaTime;
+            yield return null;
+        }
+
+        // Make sure the character is fully transparent
+        sr.color = new Color(initialColor.r, initialColor.g, initialColor.b, 0);
+
+        // Destroy the character after fading
+        Destroy(character);
+    }
+	
     IEnumerator Die()
 	{
+        StartCoroutine(Despawn(this.gameObject));
+        audioSource.PlayOneShot(bossStop);
         yield return new WaitForSeconds(0.25f);
-        Destroy(this.gameObject);
     }
 
+    [ContextMenu("Defeat")]
     public void Defeat()
 	{
         StartCoroutine(Die());
@@ -147,9 +176,13 @@ public class Boss : MonoBehaviour
         yield return new WaitForSeconds(0.25f);
         targetPosition = gobject.transform.position;
         distance = Vector2.Distance(this.transform.position, gobject.transform.position);
-        if (distance < 15)
+        if (distance < 15 && isAlive)
 		{
             secondCount += 0.25f;
+            if (secondCount == 0.25)
+			{
+                audioSource.PlayOneShot(bossStop);
+			}
             if (secondCount > 1.5)
 			{
                 Debug.Log("BOSS ATTACK");
@@ -165,7 +198,23 @@ public class Boss : MonoBehaviour
             isAttacking = false;
 		}
         StartCoroutine(TrackPlayer(gobject));
+    }
 
+    private void UpdateSortingOrder()
+    {
+        SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
+
+        // Get the player's y-position and the tree object's y-position
+        float enemyY = this.gameObject.transform.position.y;
+        float treeY = transform.position.y;
+
+        // Set the initial sorting order based on the y-position and enemy position relative to the tree object
+        int sortingOrder = Mathf.RoundToInt(-treeY * 100f);
+        if (enemyY > treeY)
+        {
+            sortingOrder -= 1;
+        }
+        spriteRenderer.sortingOrder = sortingOrder;
     }
     // Start is called before the first frame update
     void Start()
@@ -173,6 +222,7 @@ public class Boss : MonoBehaviour
         gameManager = GameObject.FindObjectOfType<GameManager>();
         health = this.gameObject.GetComponent<HealthScript>();
         audioSource = this.GetComponent<AudioSource>();
+        sr = GetComponent<SpriteRenderer>();
         Player = GameObject.FindWithTag("Player");
 
         if (GameObject.FindObjectOfType<Boss_HealthUI>())

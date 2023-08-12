@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 7341920797157244456}
   - component: {fileID: 3957954398615623223}
   - component: {fileID: -8006995631340084122}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Boss
   m_TagString: Boss
   m_Icon: {fileID: 0}
@@ -78,7 +78,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1872427283
   m_SortingLayer: 3
-  m_SortingOrder: 0
+  m_SortingOrder: 200
   m_Sprite: {fileID: 21300000, guid: 32845b1a5dcafd84cbc13b55befcf12b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -124,7 +124,7 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.61}
+  m_Offset: {x: 0, y: 0.1}
   m_Size: {x: 0.5018612, y: 0.23534511}
   m_Direction: 1
 --- !u!58 &1073929174372755718
@@ -182,7 +182,8 @@ MonoBehaviour:
   moveSpeed: 2
   targetPosition: {x: 0, y: 0, z: 0}
   AttackObject: {fileID: 2681233863822183792, guid: 5e0fa406f03e91e489b06e7dd40f1cba, type: 3}
-  bossEntry: {fileID: 8300000, guid: 528ac912943b8134a8462287744993c3, type: 3}
+  bossEntry: {fileID: 8300000, guid: 8660d0be9374ea440ab0ba81e60e5f81, type: 3}
+  bossStop: {fileID: 8300000, guid: eac85fc880573d141b438f9043aa0670, type: 3}
   checkInterval: 3
   unstuckDistance: 1
   maxUnstuckAttempts: 5
