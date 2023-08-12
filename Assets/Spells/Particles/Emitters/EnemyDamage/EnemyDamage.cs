@@ -8,7 +8,6 @@ public class EnemyDamage : MonoBehaviour
     IEnumerator LifeSpan()
 	{
         yield return new WaitForSeconds(m_ParticleSystem.main.duration);
-        Debug.LogWarning("Destroy Bonedust");
         Destroy(this.gameObject);
     }
 

@@ -16,7 +16,8 @@ GameObject:
   - component: {fileID: 3163563294759735972}
   - component: {fileID: -170640505252810208}
   - component: {fileID: -2437823585712769646}
-  m_Layer: 0
+  - component: {fileID: 3133041686325044229}
+  m_Layer: 12
   m_Name: Projectile_Inferno
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5079,3 +5080,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!58 &3133041686325044229
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1463727473882351806}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 1

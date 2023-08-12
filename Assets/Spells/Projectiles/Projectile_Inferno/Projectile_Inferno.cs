@@ -43,5 +43,15 @@ public class Projectile_Inferno : MonoBehaviour
             Destroy(this.gameObject);
         }
     }
+
+	private void OnCollisionEnter2D(Collision2D collision)
+	{
+		if (collision.collider.tag == "Enemy" || collision.collider.tag == "World")
+		{
+            Instantiate(explosion, transform.position, Quaternion.identity);
+            Destroy(this.gameObject);
+
+        }
+	}
 	#endregion
 }
