@@ -70,7 +70,7 @@ public class GameManager : MonoBehaviour
 		//uiHandler.Display(uiHandler.uiTimer.gameObject, false);
 		//Time.timeScale = 0;
 		StartCoroutine(SlowDown());
-		//GameObject.FindGameObjectWithTag("Fader").GetComponent<SceneFader>().FadeIn();
+		GameObject.FindGameObjectWithTag("Fader").GetComponent<SceneFader>().FadeIn();
 	}
 	public void PrepareGame()
 	{
