@@ -21,6 +21,13 @@ public class Player : MonoBehaviour
     public int potions = 0;
     public int healAmount = 30;
     public bool isPushed = false;
+
+    // Audio
+    AudioSource audioSource;
+    [SerializeField] AudioClip potionHeal;
+    [SerializeField] AudioClip potionPickup;
+
+
     [SerializeField] bool godMode = false;
 
     IEnumerator UpdatePosition()
@@ -47,15 +54,17 @@ public class Player : MonoBehaviour
 
     public void Heal()
     {
-        if (potions > 0)
+        if (potions > 0 && Health != 100)
 		{
             Health = Health + healAmount;
             AddPotion(-1);
+            audioSource.PlayOneShot(potionHeal);
             if (Health >= 100)
             {
                 Health = 100;
             }
             gameManager.uiHandler.uiHealth.SetHealth(Health);
+
             Debug.Log("healing" + Health);
         }
     }
@@ -81,6 +90,7 @@ public class Player : MonoBehaviour
     public void AddPotion(int amount)
 	{
         potions += amount;
+        audioSource.PlayOneShot(potionPickup);
         gameManager.uiHandler.potionCounter.SetPotion(potions);
 	}
 
@@ -93,6 +103,7 @@ public class Player : MonoBehaviour
         if (!isDev)
 		{
             gameManager = GameObject.FindObjectOfType<GameManager>().GetComponent<GameManager>();
+            audioSource = this.GetComponent<AudioSource>();
             StartCoroutine(UpdatePosition());
         }
     }

@@ -138,7 +138,7 @@ void Initialize()
         {
             if (gameObject.scene.name != "Arena")
             {
-                if (!isArena)
+                if (isArena)
 				{
                     Destroy(gameObject);
                 }
