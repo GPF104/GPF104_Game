@@ -52,7 +52,7 @@ public class HealthScript : MonoBehaviour
         // Destroy the character after fading
         Destroy(character);
     }
-    void die(GameObject character)
+    public void die(GameObject character)
     {
         if (this.gameObject.tag == "Boss")
 		{

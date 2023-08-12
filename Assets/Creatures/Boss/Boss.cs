@@ -26,6 +26,66 @@ public class Boss : MonoBehaviour
     //Audio
     AudioSource audioSource;
     [SerializeField] AudioClip bossEntry;
+
+    public float checkInterval = 3f; // Time interval to check for getting stuck
+    public float unstuckDistance = 1f; // Minimum distance to move to consider the enemy unstuck
+    public float maxUnstuckAttempts = 5; // Maximum number of attempts to get unstuck
+
+    private Vector3 initialPosition;
+    private float timeSinceLastMove;
+
+    bool isStuck = false;
+
+    private IEnumerator CheckForStuck()
+    {
+        while (true)
+        {
+            yield return new WaitForSeconds(checkInterval);
+
+            // Calculate the distance moved since the last check
+            float distanceMoved = Vector3.Distance(transform.position, initialPosition);
+
+            // If the distance moved is less than the unstuck distance
+            if (distanceMoved < unstuckDistance)
+            {
+                isStuck = true;
+                // Try to find a new position to get unstuck
+                for (int i = 0; i < maxUnstuckAttempts; i++)
+                {
+                    Vector2 randomDirection = Random.insideUnitCircle.normalized * unstuckDistance;
+                    Vector3 newTarget = transform.position + (Vector3)randomDirection;
+
+                    if (CanMoveToPosition(newTarget))
+                    {
+                        float step = moveSpeed * Time.deltaTime;
+                        transform.position = Vector3.MoveTowards(transform.position, newTarget, step);
+                        break;
+                    }
+                }
+            }
+            else
+            {
+                // Reset the initial position and update the time since last move
+                initialPosition = transform.position;
+                timeSinceLastMove = 0f;
+                isStuck = false;
+            }
+        }
+    }
+
+    private bool CanMoveToPosition(Vector3 targetPosition)
+    {
+        // Cast a ray from the enemy's current position to the target position to check for obstacles
+        Vector3 direction = targetPosition - transform.position;
+        float distance = direction.magnitude;
+
+        if (Physics.Raycast(transform.position, direction, distance, LayerMask.GetMask("World")))
+        {
+            return false; // Obstacle detected, cannot move
+        }
+
+        return true;
+    }
     IEnumerator Tracker()
 	{
         
@@ -36,12 +96,12 @@ public class Boss : MonoBehaviour
         }
         StartCoroutine(Tracker());
     }
-    private IEnumerator MoveToMiddle()
+    private IEnumerator MoveToPlayer()
     {
         
         while (Vector3.Distance(transform.position, targetPosition) > 0.01f)
         {
-            if (!isAttacking)
+            if (!isAttacking && !isStuck)
 			{
                 // Calculate the step to move towards the target position
                 float step = moveSpeed * Time.deltaTime;
@@ -104,6 +164,7 @@ public class Boss : MonoBehaviour
             isAttacking = false;
 		}
         StartCoroutine(TrackPlayer(gobject));
+
     }
     // Start is called before the first frame update
     void Start()
@@ -131,7 +192,8 @@ public class Boss : MonoBehaviour
         
 
         // Start the movement coroutine
-        StartCoroutine(MoveToMiddle());
+        StartCoroutine(MoveToPlayer());
+        StartCoroutine(CheckForStuck());
         StartCoroutine(TrackPlayer(Player));
     }
 
