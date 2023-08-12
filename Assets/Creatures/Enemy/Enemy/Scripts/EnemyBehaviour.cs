@@ -25,6 +25,8 @@ public class EnemyBehaviour : MonoBehaviour
     private bool hitPlayer = false;
     [SerializeField] float cooldown = 1.0f;
 
+    AudioSource audioSource;
+    [SerializeField] List<AudioClip> attackSounds = new List<AudioClip>();
 
     //Minimap blip
 
@@ -44,10 +46,19 @@ public class EnemyBehaviour : MonoBehaviour
         yield return new WaitForSeconds(cooldown);
         hitPlayer = false;
     }
+    bool isAttacking = false;
     IEnumerator Attack()
     {
         if (canAttack)
         {
+            if (!isAttacking)
+			{
+                if (audioSource != null)
+				{
+					audioSource.PlayOneShot(attackSounds[Random.Range(0, attackSounds.Count)]);
+                    isAttacking = true;
+                }
+			}
             yield return new WaitForSeconds(0.05f);
 
             // Calculate the direction from the enemy to the player
@@ -61,12 +72,14 @@ public class EnemyBehaviour : MonoBehaviour
 
             // Reset the enemy's velocity
             canAttack = false;
+            isAttacking = false;
             rb.velocity = Vector2.zero;
 
         }
         else
 		{
             canAttack = false;
+            isAttacking = false;
 		}
     }
 
@@ -126,7 +139,7 @@ public class EnemyBehaviour : MonoBehaviour
     {
         player = GameObject.FindObjectOfType<Player>().GetComponent<Transform>();
         rb = this.GetComponent<Rigidbody2D>();
-
+        audioSource = this.GetComponent<AudioSource>();
         StartCoroutine(Spawn());
     }
 

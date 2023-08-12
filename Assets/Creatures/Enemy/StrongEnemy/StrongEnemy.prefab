@@ -105,7 +105,7 @@ MonoBehaviour:
   maxHealth: 8
   currentHealth: 0
   scoreValue: 5
-  damageSFX: {fileID: 8300000, guid: 66d382d97152ee044ac96221059e4cf8, type: 3}
+  damageSFX: {fileID: 8300000, guid: 7ee29938f5fb7cd4ba39f9796e640f2f, type: 3}
   damageParticles: {fileID: 1232776670957128206, guid: d1db02191fca8e84faddeeb5106bcf4b, type: 3}
   fadeDuration: 0.5
   isAlive: 1
@@ -126,6 +126,10 @@ MonoBehaviour:
   moveSpeed: 4
   damage: 15
   cooldown: 1
+  attackSounds:
+  - {fileID: 8300000, guid: 7ee29938f5fb7cd4ba39f9796e640f2f, type: 3}
+  - {fileID: 8300000, guid: 0a6eeff114e51a84eacba915401f32cb, type: 3}
+  - {fileID: 8300000, guid: 916b16c639219734c82a8a0b4f53080c, type: 3}
 --- !u!50 &8544359085233012282
 Rigidbody2D:
   serializedVersion: 4

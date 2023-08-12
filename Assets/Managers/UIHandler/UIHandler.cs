@@ -53,7 +53,10 @@ public class UIHandler : MonoBehaviour
 	}
 	public void Display(GameObject frame, bool active)
 	{
-		frame.SetActive(active);
+		if (frame)
+		{
+			frame.SetActive(active);
+		}
 	}
 	IEnumerator FadeOut(float speed)
 	{

@@ -3,12 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class MainMenu : MonoBehaviour
 {
     [SerializeField] SceneFader fader;
 	[SerializeField] EventSystem eventSystem;
 	[SerializeField] GameObject musicPlayer;
+    [SerializeField] Image overlayImage;
+    public float fadeDuration = 1.0f; // Time taken for one fade cycle
     GameObject musicPlayerPrefab;
     IEnumerator Fade()
 	{
@@ -16,7 +19,47 @@ public class MainMenu : MonoBehaviour
         fader.FadeOut();
 
     }
-    void Initialize()
+    IEnumerator MenuAnimation()
+    {
+        while (true)
+        {
+            fadeDuration = Random.Range(1f, 2f);
+            float elapsedTime = 0;
+
+            // Fade from 0 to 1
+            while (elapsedTime < fadeDuration)
+            {
+                float normalizedTime = elapsedTime / fadeDuration;
+                Color color = overlayImage.color;
+                color.a = Mathf.Lerp(0, 1, normalizedTime);
+                overlayImage.color = color;
+
+                elapsedTime += Time.deltaTime;
+                yield return null;
+            }
+
+            // Wait for a delay
+            yield return new WaitForSeconds(2);
+
+            elapsedTime = 0;
+
+            // Fade from 1 to 0
+            while (elapsedTime < fadeDuration)
+            {
+                float normalizedTime = elapsedTime / fadeDuration;
+                Color color = overlayImage.color;
+                color.a = Mathf.Lerp(1, 0, normalizedTime);
+                overlayImage.color = color;
+
+                elapsedTime += Time.deltaTime;
+                yield return null;
+            }
+
+            // Wait for a delay before repeating
+            yield return new WaitForSeconds(2);
+        }
+    }
+void Initialize()
 	{
         if (SceneManager.GetSceneByName("SplashScreen").isLoaded)
 		{
@@ -66,7 +109,9 @@ public class MainMenu : MonoBehaviour
         Initialize();
         Time.timeScale = 1.0f;
         StartCoroutine(Fade());
-	}
+        StartCoroutine(MenuAnimation());
+
+    }
     // Call this method when the play button is clicked or when you want to activate the background scene.
 
     IEnumerator FadeOutPlay(Scene scene)

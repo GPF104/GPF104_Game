@@ -54,9 +54,11 @@ public class BossAttack : MonoBehaviour
         // Destroy the character after fading
         Destroy(this.gameObject);
     }
+    bool exploded = false;
     void DamageAndPush()
     {
         Debug.Log("BOSS DAMAGE");
+        exploded = true;
         audioSource.PlayOneShot(soundFX[Random.Range(0, soundFX.Count)]);
         if (isNear)
         {
@@ -112,6 +114,11 @@ public class BossAttack : MonoBehaviour
 		if (collision.gameObject.tag == "Player")
 		{
 			isNear = true;
+		}
+        if (collision.gameObject.tag == "World" && exploded)
+		{
+            Destroy(collision.gameObject);
+            Debug.LogWarning("Boss Destroyed a Tree");
 		}
 	}
 	void OnTriggerExit2D(Collider2D collision)

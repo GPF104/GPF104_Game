@@ -70,6 +70,7 @@ public class Boss : MonoBehaviour
                 timeSinceLastMove = 0f;
                 isStuck = false;
             }
+            isStuck = false;
         }
     }
 
@@ -211,5 +212,25 @@ public class Boss : MonoBehaviour
             Debug.Log("Boss Hit");
             TakeDamage(collision.gameObject.GetComponent<ProjectileScript>().damage);
 		}
+        if (collision.gameObject.tag == "Player")
+        {
+            collision.gameObject.GetComponent<Player>().TakeDamage(15);
+        }
+    }
+	private void OnCollisionStay2D(Collision2D collision)
+	{
+		if (collision.gameObject.tag == "World" && isStuck == true)
+		{
+            Debug.LogWarning("Boss destroyed a tree.");
+            Vector2 playerDirection = (targetPosition - transform.position).normalized;
+            RaycastHit2D hit = Physics2D.Raycast(transform.position, playerDirection, Mathf.Infinity, LayerMask.GetMask("TreeLayer"));
+
+            if (hit.collider != null && hit.collider.CompareTag("World"))
+            {
+                GameObject go = Instantiate(AttackObject);
+                go.transform.position = hit.collider.gameObject.transform.position;
+                Debug.LogWarning("Boss destroyed a tree.");
+            }
+        }
 	}
 }

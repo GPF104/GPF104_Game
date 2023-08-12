@@ -54,6 +54,9 @@ MonoBehaviour:
   moveSpeed: 6
   damage: 5
   cooldown: 1
+  attackSounds:
+  - {fileID: 8300000, guid: 81faa12872f5c6f4484807b6833df57f, type: 3}
+  - {fileID: 8300000, guid: 1d6610cc169ccc04c823ee481cdcb792, type: 3}
 --- !u!114 &9117879354712563956
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -69,7 +72,7 @@ MonoBehaviour:
   maxHealth: 2
   currentHealth: 0
   scoreValue: 15
-  damageSFX: {fileID: 8300000, guid: ea46c5c25ae9a5f4495f8ab7fd6b7d35, type: 3}
+  damageSFX: {fileID: 8300000, guid: f2dcb5179434d5c43a2034fe97013ec4, type: 3}
   damageParticles: {fileID: 1232776670957128206, guid: d1db02191fca8e84faddeeb5106bcf4b, type: 3}
   fadeDuration: 0.5
   isAlive: 1

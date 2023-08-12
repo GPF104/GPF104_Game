@@ -33,9 +33,9 @@ public class TimeManager : MonoBehaviour
 	[SerializeField] int ScrollChance = 5;
 	[SerializeField] int PotionChance = 13;
 	[SerializeField] int bossSpawnScoreThreshold = 450;
-	[SerializeField] int bossSpawnTimeThreshold = 120;
+	[SerializeField] int bossSpawnTimeThreshold = 240;
 
-	int bossCounter = 1;
+	int bossCounter = 0;
 	[ContextMenu("AddTime")]
 	void AddTime()
 	{
@@ -101,13 +101,15 @@ public class TimeManager : MonoBehaviour
 			if (secondCount % SpawnerInterval == 0)
 				AddSpawner();
 
-			if (gameManager.score > 0 && gameManager.score > (bossSpawnScoreThreshold * bossCounter) || secondCount % bossSpawnTimeThreshold == 0)
+			if (gameManager.score > 0 && gameManager.score > (bossSpawnScoreThreshold))
 			{
 
 				if (!GameObject.FindGameObjectWithTag("Boss"))
 				{
 					gameManager.bossManager.Initialize();
 					bossCounter++;
+					bossSpawnScoreThreshold = bossSpawnScoreThreshold * (bossCounter + 2);
+					Debug.LogWarning("Next Boss Score Threshold: " + bossSpawnScoreThreshold);
 				}
 			}
 

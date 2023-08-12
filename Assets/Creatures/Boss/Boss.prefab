@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 7341920797157244456}
   - component: {fileID: 3957954398615623223}
   - component: {fileID: -8006995631340084122}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Boss
   m_TagString: Boss
   m_Icon: {fileID: 0}
@@ -124,7 +124,7 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0011641739, y: -0.20253575}
+  m_Offset: {x: 0, y: -0.61}
   m_Size: {x: 0.5018612, y: 0.23534511}
   m_Direction: 1
 --- !u!58 &1073929174372755718
