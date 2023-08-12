@@ -20,6 +20,7 @@ public class Player : MonoBehaviour
     public int scrolls = 0;
     public int potions = 0;
     public int healAmount = 30;
+    public bool isPushed = false;
     [SerializeField] bool godMode = false;
 
     IEnumerator UpdatePosition()
@@ -59,7 +60,18 @@ public class Player : MonoBehaviour
         }
     }
 
-    
+    IEnumerator PushCooldown()
+	{
+        yield return new WaitForSeconds(0.25f);
+        isPushed = false;
+    }
+    public void Push(Vector2 source)
+	{
+        // Apply a force to push the player away
+        isPushed = true;
+        this.GetComponent<Rigidbody2D>().AddForce(source, ForceMode2D.Impulse);
+        StartCoroutine(PushCooldown());
+    }
 
     public void AddScroll(int amount)
     {

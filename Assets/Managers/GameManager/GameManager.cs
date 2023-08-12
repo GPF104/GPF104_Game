@@ -31,10 +31,29 @@ public class GameManager : MonoBehaviour
 	public bool GamePaused = false;
 	private bool isInBackground = true;
 
+	public float slowdownFactor = 0.05f; // Adjust this to control the rate of slowdown
+	public float slowdownDuration = 2.0f;
+
 	public void AddScore(int input)
 	{
 		score += input;
 		uiHandler.uiScore.SetText(score.ToString());
+	}
+
+	// Gradually slwo the game down when it's game over.
+	IEnumerator SlowDown()
+	{
+		float targetTimeScale = 0.0f;
+
+		while (Time.timeScale > targetTimeScale)
+		{
+			Time.timeScale -= slowdownFactor * Time.deltaTime / slowdownDuration;
+			Time.timeScale = Mathf.Clamp(Time.timeScale, targetTimeScale, 1.0f);
+
+			yield return null; // Wait for the next frame
+		}
+
+		Time.timeScale = targetTimeScale; // Ensure timeScale reaches exactly 0
 	}
 
 	[ContextMenu("GameOver")]
@@ -48,7 +67,8 @@ public class GameManager : MonoBehaviour
 		uiHandler.Display(uiHandler.uiMap.gameObject, false);
 		uiHandler.uiGameOver.GetComponent<UI_GameOver>().SetText("Time: " + timeManager.CurrentTime() + " \n Score: " + score);
 		//uiHandler.Display(uiHandler.uiTimer.gameObject, false);
-		Time.timeScale = 0;
+		StartCoroutine(SlowDown());
+		GameObject.FindGameObjectWithTag("Fader").GetComponent<SceneFader>().FadeIn();
 	}
 	public void PrepareGame()
 	{
@@ -85,6 +105,7 @@ public class GameManager : MonoBehaviour
 		timeManager.StartTimer(1);
 		GamePaused = false;
 		mainCamera = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<MainCamera>();
+		mainCamera.GetComponent<MainCamera>().StartListening();
 		GameObject.FindGameObjectWithTag("Fader").GetComponent<SceneFader>().FadeOut();
 
 		yield return new WaitForSeconds(0.5f);

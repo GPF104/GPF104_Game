@@ -13,6 +13,9 @@ public class Spawner : MonoBehaviour
 	[SerializeField] int collisionDamage = 2;
     [SerializeField] float clearRadius = 2f;
 
+    [SerializeField] AudioClip soundFX;
+    AudioSource audioSource;
+
     #endregion
 
     #region Attributes
@@ -44,6 +47,7 @@ public class Spawner : MonoBehaviour
 
     IEnumerator SpawnIn()
 	{
+        audioSource.PlayOneShot(soundFX);
         yield return new WaitForSeconds(0.5f);
         ClearArea();
     }
@@ -55,6 +59,7 @@ public class Spawner : MonoBehaviour
     {
         gameManager = GameObject.FindObjectOfType<GameManager>().GetComponent<GameManager>();
         levelGenerator = GameObject.FindObjectOfType<LevelGenerator>().GetComponent<LevelGenerator>();
+        audioSource = this.GetComponent<AudioSource>();
         StartCoroutine(SpawnIn());
     }
 

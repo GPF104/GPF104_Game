@@ -13,17 +13,40 @@ public class BossAttack : MonoBehaviour
     [SerializeField] int damage = 25;
 	float secondCounter = 0f;
 
-	Color endColor = Color.red;
+	Color endColor = new Color(0,0,0,1);
 
-    void Damage()
-	{
+    float CalculatePushForce(float distance, float maxDistance)
+    {
+        // Use a custom function to calculate push force based on distance
+        // You can adjust this function to achieve the desired behavior
+        float minForce = 5f; // Minimum push force
+        float maxForce = 10f; // Maximum push force
+
+        // Linearly interpolate the force based on distance
+        float t = Mathf.Clamp01(distance / maxDistance);
+        float pushForce = Mathf.Lerp(maxForce, minForce, t);
+
+        return pushForce;
+    }
+
+    void DamageAndPush()
+    {
         if (isNear)
-		{
-            Player.GetComponent<Player>().TakeDamage(damage);
+        {
+            Player player = GameObject.FindWithTag("Player").GetComponent<Player>();
+            GameObject Boss = GameObject.FindWithTag("Boss");
+            Vector3 pushDirection = player.transform.position - Boss.transform.position;
+            pushDirection.Normalize();
+
+            player.Push(pushDirection * Random.Range(20,30));
+            player.TakeDamage(damage);
+
             Debug.Log("PLAYER CAUGHT IN RADIUS");
         }
-        Destroy(this.gameObject);
-	}
+
+        Destroy(gameObject);
+    }
+
 
     private IEnumerator WindUp()
     {
@@ -39,7 +62,7 @@ public class BossAttack : MonoBehaviour
             sr.color = Color.Lerp(startColor, endColor, t);
             yield return null;
         }
-        Damage();
+        DamageAndPush();
     }
     IEnumerator Delay()
 	{

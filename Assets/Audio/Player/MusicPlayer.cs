@@ -50,13 +50,19 @@ public class MusicPlayer : MonoBehaviour
         }
         else
 		{
-            this.GetComponent<AudioListener>().enabled = false;
+            if (this.GetComponent<AudioListener>())
+			{
+                this.GetComponent<AudioListener>().enabled = false;
+            }
         }
     }
 
 	public void SetEnabled(bool input)
 	{
-        this.GetComponent<AudioListener>().enabled = input;
+        if (this.GetComponent<AudioListener>())
+        {
+            this.GetComponent<AudioListener>().enabled = input;
+        }
     }
 	public void SetClip(AudioClip input)
 	{

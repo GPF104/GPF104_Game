@@ -88,11 +88,13 @@ public class PlayerMovement : MonoBehaviour
 
     void Move()
     {
-        Vector2 aimDirection = mousePosition - rb2d.position;
-        //  To-do ease in?
-        rb2d.velocity = new Vector2(moveDirection.x * moveSpeed, moveDirection.y * moveSpeed);
-        rb2d.rotation = Mathf.Atan2(aimDirection.y, aimDirection.x) * Mathf.Rad2Deg - 90f;
-        
+        if (this.GetComponent<Player>().isPushed == false)
+		{
+            Vector2 aimDirection = mousePosition - rb2d.position;
+            //  To-do ease in?
+            rb2d.velocity = new Vector2(moveDirection.x * moveSpeed, moveDirection.y * moveSpeed);
+            rb2d.rotation = Mathf.Atan2(aimDirection.y, aimDirection.x) * Mathf.Rad2Deg - 90f;
+        }
     }
 
     private void UpdateSortingOrder()

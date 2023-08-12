@@ -12,15 +12,21 @@ public class Projectile_Inferno : MonoBehaviour
     [SerializeField] GameObject explosion;
     Rigidbody2D rb2d;
 
-	#endregion
+    AudioSource audioSource;
+    [SerializeField] AudioClip shootSFX;
 
-	#region Unity
 
-	// Start is called before the first frame update
-	void Start()
+    #endregion
+
+    #region Unity
+
+    // Start is called before the first frame update
+    void Start()
     {
         rb2d = this.GetComponent<Rigidbody2D>();
         destination = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        audioSource = GetComponent<AudioSource>();
+        audioSource.PlayOneShot(shootSFX);
     }
 
     // Update is called once per frame

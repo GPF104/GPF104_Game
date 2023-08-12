@@ -169,6 +169,8 @@ MonoBehaviour:
   scrolls: 0
   potions: 0
   healAmount: 30
+  isPushed: 0
+  godMode: 0
 --- !u!114 &4607041984463194022
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -187,6 +189,7 @@ MonoBehaviour:
     m_Bits: 9
   moveSpeed: 10
   cooldown: 0.1
+  fireRate: 0.25
 --- !u!50 &4245647849778599426
 Rigidbody2D:
   serializedVersion: 4
@@ -241,6 +244,8 @@ MonoBehaviour:
   scoreValue: 5
   damageSFX: {fileID: 8300000, guid: 8a04630fe77072a4cadd5750103d83f7, type: 3}
   damageParticles: {fileID: 1232776670957128206, guid: 4653494e9ecf64248993b3d344e724e1, type: 3}
+  fadeDuration: 0.5
+  isAlive: 1
 --- !u!95 &4382676923746674429
 Animator:
   serializedVersion: 4
@@ -302,7 +307,7 @@ SpriteRenderer:
   m_SortingLayerID: 1872427283
   m_SortingLayer: 3
   m_SortingOrder: 0
-  m_Sprite: {fileID: -822786058, guid: 981b08b83fd1a124b8aa59a0b7b8bfdc, type: 3}
+  m_Sprite: {fileID: 1002144488, guid: 5eca453404fe456428d39900a3f5ee92, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

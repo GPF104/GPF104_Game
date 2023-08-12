@@ -7,6 +7,7 @@ public class EnemyBehaviour : MonoBehaviour
 	#region ExternalLinks
 
 	public Transform player;
+    GameManager gameManager;
 
     #endregion
 
@@ -107,7 +108,16 @@ public class EnemyBehaviour : MonoBehaviour
         StartCoroutine(IsStuck());
     }
 
-
+    IEnumerator Spawn()
+	{
+        yield return new WaitForSeconds(0.25f);
+        if (blip == null)
+        {
+            blip = GameObject.FindObjectOfType<GameManager>().uiHandler.uiMap.AddMapElement(BlipType.enemy);
+        }
+        StartCoroutine(IsStuck());
+        StartCoroutine(CanAttack());
+    }
 	#endregion
 
 	#region Unity
@@ -116,12 +126,8 @@ public class EnemyBehaviour : MonoBehaviour
     {
         player = GameObject.FindObjectOfType<Player>().GetComponent<Transform>();
         rb = this.GetComponent<Rigidbody2D>();
-        StartCoroutine(IsStuck());
-        StartCoroutine(CanAttack());
-        if (blip == null)
-		{
-            blip = GameObject.FindObjectOfType<GameManager>().uiHandler.uiMap.AddMapElement(BlipType.enemy);
-		}
+
+        StartCoroutine(Spawn());
     }
 
     // Update is called once per frame
@@ -135,7 +141,7 @@ public class EnemyBehaviour : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (!canAttack && !isStuck)
+        if (!canAttack && !isStuck && this.gameObject.GetComponent<HealthScript>().isAlive == true)
 		{
             if (Vector2.Distance(player.position, transform.position) >= 2)
 			{
