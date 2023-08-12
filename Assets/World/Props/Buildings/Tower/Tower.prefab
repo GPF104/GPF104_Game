@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 671298991366891794}
   - component: {fileID: 3907668607440196762}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: LightningRod
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -97,7 +97,7 @@ GameObject:
   - component: {fileID: 588156253521809341}
   - component: {fileID: 5257169462271365715}
   - component: {fileID: 8249115472093836692}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Tower
   m_TagString: World
   m_Icon: {fileID: 0}
@@ -250,7 +250,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5722597653932212957}
   - component: {fileID: 7360351246190327666}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: TowerTop
   m_TagString: Untagged
   m_Icon: {fileID: 0}

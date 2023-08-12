@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 4037334365475781153}
   - component: {fileID: 1896172691360883557}
   - component: {fileID: -6045201207414006167}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Enemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -70,8 +70,7 @@ MonoBehaviour:
   currentHealth: 0
   scoreValue: 15
   damageSFX: {fileID: 8300000, guid: ea46c5c25ae9a5f4495f8ab7fd6b7d35, type: 3}
-  damageParticles: {fileID: 1232776670957128206, guid: d1db02191fca8e84faddeeb5106bcf4b,
-    type: 3}
+  damageParticles: {fileID: 1232776670957128206, guid: d1db02191fca8e84faddeeb5106bcf4b, type: 3}
   fadeDuration: 0.5
   isAlive: 1
 --- !u!212 &-5270974488518648505
