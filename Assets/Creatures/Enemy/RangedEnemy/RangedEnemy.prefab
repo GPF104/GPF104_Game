@@ -82,8 +82,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 6630951993476463365, guid: 3639e97faa0bf8b42a5078af82424d1c, type: 3}
-  enemyProjectile: {fileID: 51441537559747877, guid: 81961abe3415d7c4d8fddcc0e8377685,
-    type: 3}
+  enemyProjectile: {fileID: 4520442368462321786, guid: 81961abe3415d7c4d8fddcc0e8377685, type: 3}
   moveSpeed: 5
   shootingDistance: 10
   stoppingDistance: 5
@@ -108,8 +107,7 @@ MonoBehaviour:
   currentHealth: 0
   scoreValue: 5
   damageSFX: {fileID: 8300000, guid: 33c80692ee32f75489f7dfbb26e4d411, type: 3}
-  damageParticles: {fileID: 1232776670957128206, guid: 4653494e9ecf64248993b3d344e724e1,
-    type: 3}
+  damageParticles: {fileID: 1232776670957128206, guid: 4653494e9ecf64248993b3d344e724e1, type: 3}
   fadeDuration: 0.5
   isAlive: 1
 --- !u!50 &8340791649948962777
