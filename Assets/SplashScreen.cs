@@ -10,9 +10,9 @@ public class SplashScreen : MonoBehaviour
     [SerializeField] GameObject eventListener;
     IEnumerator Wait()
 	{
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(0.25f);
         GameObject.FindGameObjectWithTag("Fader").GetComponent<SceneFader>().FadeIn();
-        yield return new WaitForSeconds(GameObject.FindGameObjectWithTag("Fader").GetComponent<SceneFader>().fadeTime);
+        yield return new WaitForSeconds(GameObject.FindGameObjectWithTag("Fader").GetComponent<SceneFader>().fadeTime-0.75f);
         SceneManager.LoadSceneAsync(1, LoadSceneMode.Additive);
         SceneManager.UnloadSceneAsync(0);
     }
@@ -42,10 +42,10 @@ public class SplashScreen : MonoBehaviour
     }
     IEnumerator BackgroundLoad()
     {
+        yield return new WaitForSeconds(2.5f);
         if (!SceneManager.GetSceneByName("Arena").isLoaded)
         {
             Debug.Log("Loading Scene async in background");
-            yield return new WaitForSeconds(2f);
             AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(2, LoadSceneMode.Additive);
 
             // Wait until the scene is fully loaded

@@ -78,6 +78,16 @@ public class LevelGenerator : MonoBehaviour
             minimumDensity = 120;
             maximumDensity = 150;
         }
+        if (type == GenerateType.Trees)
+        {
+            minimumDensity = 3000;
+            maximumDensity = 5000;
+        }
+        if (type == GenerateType.Flora)
+        {
+            minimumDensity = 2000;
+            maximumDensity = 3000;
+        }
 
         for (int i = 0; i < Random.Range(minimumDensity, maximumDensity); i++)
         {
