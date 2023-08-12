@@ -47,8 +47,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9509439e9198ab54298811eb13956612, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  emitterClip: {fileID: 8300000, guid: b503a5e0f5e8b2146bc68f77e64d9383, type: 3}
+  emitterClips:
+  - {fileID: 8300000, guid: e59a3476d5c534244885953faf145fc6, type: 3}
+  - {fileID: 8300000, guid: d3466caa7c172594ba1d4c3cac8624e6, type: 3}
   isBubble: 0
+  hitWorld: 1
 --- !u!198 &-8723974349875615892
 ParticleSystem:
   m_ObjectHideFlags: 0
@@ -4898,7 +4901,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 0.25
+  m_Volume: 0.741
   m_Pitch: 0.5
   Loop: 0
   Mute: 0

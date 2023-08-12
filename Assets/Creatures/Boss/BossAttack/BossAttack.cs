@@ -11,7 +11,11 @@ public class BossAttack : MonoBehaviour
 	[SerializeField] float duration = 1.5f;
     [SerializeField] float delay = 0.75f;
     [SerializeField] int damage = 25;
+
+    AudioSource audioSource;
+    [SerializeField] List<AudioClip> soundFX = new List<AudioClip>();
 	float secondCounter = 0f;
+    float fadeDuration = 1f;
 
 	Color endColor = new Color(0,0,0,1);
 
@@ -28,23 +32,48 @@ public class BossAttack : MonoBehaviour
 
         return pushForce;
     }
+    IEnumerator Despawn()
+    {
 
+        float elapsedTime = 0.0f;
+        Color initialColor = sr.color;
+
+
+
+        while (elapsedTime < fadeDuration)
+        {
+            float normalizedTime = elapsedTime / fadeDuration;
+            sr.color = Color.Lerp(initialColor, new Color(initialColor.r, initialColor.g, initialColor.b, 0), normalizedTime);
+            elapsedTime += Time.deltaTime;
+            yield return null;
+        }
+
+        // Make sure the character is fully transparent
+        sr.color = new Color(initialColor.r, initialColor.g, initialColor.b, 0);
+
+        // Destroy the character after fading
+        Destroy(this.gameObject);
+    }
     void DamageAndPush()
     {
+        Debug.Log("BOSS DAMAGE");
+        audioSource.PlayOneShot(soundFX[Random.Range(0, soundFX.Count)]);
         if (isNear)
         {
             Player player = GameObject.FindWithTag("Player").GetComponent<Player>();
-            GameObject Boss = GameObject.FindWithTag("Boss");
-            Vector3 pushDirection = player.transform.position - Boss.transform.position;
-            pushDirection.Normalize();
+            
+            if (GameObject.FindWithTag("Boss"))
+			{
+                GameObject Boss = GameObject.FindWithTag("Boss");
+                Vector3 pushDirection = player.transform.position - Boss.transform.position;
+                pushDirection.Normalize();
 
-            player.Push(pushDirection * Random.Range(20,30));
+                player.Push(pushDirection * Random.Range(20, 30));
+                Debug.Log("PLAYER CAUGHT IN RADIUS");
+            }
             player.TakeDamage(damage);
-
-            Debug.Log("PLAYER CAUGHT IN RADIUS");
         }
-
-        Destroy(gameObject);
+        StartCoroutine(Despawn());
     }
 
 
@@ -72,6 +101,7 @@ public class BossAttack : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        audioSource = this.GetComponent<AudioSource>();
         sr = this.GetComponent<SpriteRenderer>();
         Player = GameObject.FindWithTag("Player");
 		StartCoroutine(Delay());

@@ -59,7 +59,12 @@ public class TimeManager : MonoBehaviour
 		gameManager.score += 1000;
 	}
 	// Boss Trackers
-
+	[ContextMenu("SpawnBubble")]
+	void SpawnBubble()
+	{
+		Debug.Log("Spawned Bubbles");
+		StartCoroutine(Bubble(0.1f));
+	}
 	//	Methods
 	IEnumerator Timer(float interval)
 	{
