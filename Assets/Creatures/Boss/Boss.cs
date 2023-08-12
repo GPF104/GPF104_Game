@@ -22,8 +22,13 @@ public class Boss : MonoBehaviour
 
     bool isAttacking = false;
     [SerializeField] GameObject AttackObject;
+
+    //Audio
+    AudioSource audioSource;
+    [SerializeField] AudioClip bossEntry;
     IEnumerator Tracker()
 	{
+        
         yield return new WaitForSeconds(0.25f);
         if (blip != null)
         {
@@ -33,6 +38,7 @@ public class Boss : MonoBehaviour
     }
     private IEnumerator MoveToMiddle()
     {
+        
         while (Vector3.Distance(transform.position, targetPosition) > 0.01f)
         {
             if (!isAttacking)
@@ -78,6 +84,7 @@ public class Boss : MonoBehaviour
     IEnumerator TrackPlayer(GameObject gobject)
 	{
         yield return new WaitForSeconds(0.25f);
+        targetPosition = gobject.transform.position;
         distance = Vector2.Distance(this.transform.position, gobject.transform.position);
         if (distance < 15)
 		{
@@ -103,6 +110,7 @@ public class Boss : MonoBehaviour
     {
         gameManager = GameObject.FindObjectOfType<GameManager>();
         health = this.gameObject.GetComponent<HealthScript>();
+        audioSource = this.GetComponent<AudioSource>();
         Player = GameObject.FindWithTag("Player");
 
         if (GameObject.FindObjectOfType<Boss_HealthUI>())
@@ -114,9 +122,13 @@ public class Boss : MonoBehaviour
         {
             blip = GameObject.FindObjectOfType<GameManager>().uiHandler.uiMap.AddMapElement(BlipType.boss);
         }
+        if (bossEntry != null)
+		{
+            audioSource.PlayOneShot(bossEntry);
+		}
         healthUI.SetBoss(this.gameObject);
         StartCoroutine(Tracker());
-        targetPosition = GameObject.Find("Tower").transform.position;
+        
 
         // Start the movement coroutine
         StartCoroutine(MoveToMiddle());

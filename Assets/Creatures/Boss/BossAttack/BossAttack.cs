@@ -73,7 +73,6 @@ public class BossAttack : MonoBehaviour
             }
             player.TakeDamage(damage);
         }
-
         StartCoroutine(Despawn());
     }
 

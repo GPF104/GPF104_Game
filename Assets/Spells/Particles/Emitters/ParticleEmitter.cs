@@ -8,7 +8,8 @@ public class ParticleEmitter : MonoBehaviour
 	private float fadeDuration = 0.25f; // Duration of the fade in seconds
 
     AudioSource emitter;
-    [SerializeField] AudioClip emitterClip;
+    [SerializeField] List<AudioClip> emitterClips = new List<AudioClip>();
+
     [SerializeField] bool isBubble = false;
     public bool hitWorld = true;
 
@@ -53,6 +54,11 @@ public class ParticleEmitter : MonoBehaviour
         fadeDuration = particles.main.duration;
         if (!isBubble)
 		{
+            if (emitterClips.Count > 0)
+			{
+                PlaySFX(emitterClips[Random.Range(0, emitterClips.Count)]);
+            }
+            
             StartCoroutine(FadeOutAndDestroy());
         }
     }
