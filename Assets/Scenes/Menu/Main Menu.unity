@@ -175,6 +175,8 @@ MonoBehaviour:
   fader: {fileID: 2045344193}
   eventSystem: {fileID: 686276789}
   musicPlayer: {fileID: 1404494836443662226, guid: b3b3d07c2874cd64d943db6fd8d46a9e, type: 3}
+  overlayImage: {fileID: 1623487615}
+  fadeDuration: 1
 --- !u!1 &277817005
 GameObject:
   m_ObjectHideFlags: 0
@@ -1071,7 +1073,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: d44ce1095b2a63747a4c97aaf0015763, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4e005ca47ff59d84e84ec53de83459a7, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1147,7 +1149,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: d44ce1095b2a63747a4c97aaf0015763, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5bd0648c9a49bca4997a8a13c878e2aa, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1417,6 +1419,10 @@ PrefabInstance:
     - target: {fileID: 159896932095944206, guid: 0c6a0274815aba24aa9fff0cace2ae36, type: 3}
       propertyPath: m_Name
       value: Fader
+      objectReference: {fileID: 0}
+    - target: {fileID: 159896932095944206, guid: 0c6a0274815aba24aa9fff0cace2ae36, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2327154481797054152, guid: 0c6a0274815aba24aa9fff0cace2ae36, type: 3}
       propertyPath: m_SortingOrder

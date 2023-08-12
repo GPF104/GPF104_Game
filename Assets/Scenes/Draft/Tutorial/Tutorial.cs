@@ -7,6 +7,7 @@ public class Tutorial : MonoBehaviour
 {
     public void MainMenu()
     {
-        SceneManager.LoadScene("Main Menu");
+        SceneManager.UnloadSceneAsync("Tutorial");
+        GameObject.FindObjectOfType<MainMenu>().eventSystem.enabled = true;
     }
 }

@@ -7,6 +7,7 @@ public class Credits : MonoBehaviour
 {
     public void MainMenu()
     {
-        SceneManager.LoadScene("Main Menu");
+        SceneManager.UnloadSceneAsync("Credits");
+        GameObject.FindObjectOfType<MainMenu>().eventSystem.enabled = true;
     }
 }

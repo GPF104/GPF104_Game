@@ -8,7 +8,7 @@ using UnityEngine.UI;
 public class MainMenu : MonoBehaviour
 {
     [SerializeField] SceneFader fader;
-	[SerializeField] EventSystem eventSystem;
+	[SerializeField] public EventSystem eventSystem;
 	[SerializeField] GameObject musicPlayer;
     [SerializeField] Image overlayImage;
     public float fadeDuration = 1.0f; // Time taken for one fade cycle
@@ -99,8 +99,24 @@ void Initialize()
             }
         }
     }
+    public void LoadSceneAsync(string sceneName)
+    {
+        StartCoroutine(LoadSceneAsyncCoroutine(sceneName));
+    }
 
-	private void Awake()
+    IEnumerator LoadSceneAsyncCoroutine(string sceneName)
+    {
+        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(sceneName, LoadSceneMode.Additive);
+
+        while (!asyncLoad.isDone)
+        {
+            yield return null;
+        }
+        eventSystem.enabled = false;
+        SceneManager.SetActiveScene(SceneManager.GetSceneByName(sceneName));
+        
+    }
+    private void Awake()
 	{
         StartCoroutine(BackgroundLoad());
     }
@@ -114,7 +130,7 @@ void Initialize()
     }
     // Call this method when the play button is clicked or when you want to activate the background scene.
 
-    IEnumerator FadeOutPlay(Scene scene)
+    IEnumerator FadeOutPlay(Scene scene, bool isArena)
 	{
         fader.FadeIn();
         // Ensure only 1 audiolistener active.
@@ -122,7 +138,10 @@ void Initialize()
         {
             if (gameObject.scene.name != "Arena")
             {
-                Destroy(gameObject);
+                if (!isArena)
+				{
+                    Destroy(gameObject);
+                }
             }
         }
         yield return new WaitForSeconds(fader.fadeTime);
@@ -136,8 +155,10 @@ void Initialize()
         SceneManager.SetActiveScene(scene);
 
         // Call the StartGame method on the GameManager in the background scene.
-
-        GameObject.FindGameObjectWithTag("GameController").GetComponent<GameManager>().StartGame();
+        if (isArena)
+		{
+            GameObject.FindGameObjectWithTag("GameController").GetComponent<GameManager>().StartGame();
+        }
     }
     public void PlayGame()
     {
@@ -145,14 +166,14 @@ void Initialize()
         Scene backgroundScene = SceneManager.GetSceneByName("Arena");
         if (backgroundScene.IsValid() && backgroundScene.isLoaded)
         {
-            StartCoroutine(FadeOutPlay(backgroundScene));
+            StartCoroutine(FadeOutPlay(backgroundScene, true));
 
         }
     }
 
     public void LoadTutorial()
     {
-        SceneManager.LoadScene("Tutorial");
+        LoadSceneAsync("Tutorial");
     }
 
     public void LoadStory()
@@ -162,7 +183,7 @@ void Initialize()
 
     public void LoadCredits()
     {
-        SceneManager.LoadScene("Credits");
+        LoadSceneAsync("Credits");
     }
 
     public void QuitGame()
