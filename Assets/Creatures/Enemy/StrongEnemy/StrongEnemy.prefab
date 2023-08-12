@@ -30,14 +30,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4197288224427436328}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
   m_LocalPosition: {x: 4.5951, y: 6.4628, z: 0}
   m_LocalScale: {x: 8, y: 8, z: 8}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
 --- !u!212 &5774845373748070464
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -82,7 +82,7 @@ SpriteRenderer:
   m_Sprite: {fileID: 957589965, guid: e9056a190bbb14346b11b570be89ffe8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
-  m_FlipY: 0
+  m_FlipY: 1
   m_DrawMode: 0
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
@@ -106,8 +106,7 @@ MonoBehaviour:
   currentHealth: 0
   scoreValue: 5
   damageSFX: {fileID: 8300000, guid: 66d382d97152ee044ac96221059e4cf8, type: 3}
-  damageParticles: {fileID: 1232776670957128206, guid: d1db02191fca8e84faddeeb5106bcf4b,
-    type: 3}
+  damageParticles: {fileID: 1232776670957128206, guid: d1db02191fca8e84faddeeb5106bcf4b, type: 3}
   fadeDuration: 0.5
   isAlive: 1
 --- !u!114 &1034198007210746328
