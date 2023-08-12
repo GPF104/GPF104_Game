@@ -97,6 +97,7 @@ GameObject:
   - component: {fileID: 588156253521809341}
   - component: {fileID: 5257169462271365715}
   - component: {fileID: 8249115472093836692}
+  - component: {fileID: 3453037365527260871}
   m_Layer: 10
   m_Name: Tower
   m_TagString: World
@@ -240,6 +241,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.98622596, y: 0.14600164}
   m_EdgeRadius: 0
+--- !u!114 &3453037365527260871
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 967701626375149684}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7246150603723a4ab23bfe3a78ed2ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isAlive: 1
 --- !u!1 &2299479200829867860
 GameObject:
   m_ObjectHideFlags: 0
