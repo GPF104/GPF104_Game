@@ -29,7 +29,7 @@ public class TimeManager : MonoBehaviour
 
 	//	Spawn Timers
 	[SerializeField] float BubbleInterval = 2;
-	[SerializeField] float SpawnerInterval = 15;
+	[SerializeField] float SpawnerInterval = 30;
 	[SerializeField] int ScrollChance = 5;
 	[SerializeField] int PotionChance = 13;
 	[SerializeField] int bossSpawnScoreThreshold = 450;
@@ -87,7 +87,8 @@ public class TimeManager : MonoBehaviour
 
 			if (secondCount % BubbleInterval == 0)
 			{
-				for (int i = 0; i < Random.Range(1, Mathf.Floor(levelGenerator.spawners.Count/2)); i++)
+				Debug.Log("Bubble Spawned: " + difficulty);
+				for (int i = 0; i < Random.Range(1, Mathf.Floor(difficulty)); i++)
 				{
 					yield return new WaitForSeconds(0.5f);
 					StartCoroutine(Bubble(2));

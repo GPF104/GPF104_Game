@@ -277,7 +277,10 @@ public class LevelGenerator : MonoBehaviour
     public void AddSpawner(GameObject gobject)
 	{
         //Spawn(gobject);
-        StartCoroutine(SpawnSpawner(gobject));
+        if (spawners.Count < 25)
+		{
+            StartCoroutine(SpawnSpawner(gobject));
+        }
 	}
 	#endregion
 

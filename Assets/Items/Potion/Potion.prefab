@@ -119,7 +119,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96a264576b9633840975e8fca0681bcf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnSFX: {fileID: 8300000, guid: a4c06ffa447830c4c9339b717dc5d5b6, type: 3}
+  spawnSFX:
+  - {fileID: 8300000, guid: 46176bfd7c696984b9fb0502b709916e, type: 3}
+  - {fileID: 8300000, guid: 4124928d16255b04b9ea3bf849aaf5a7, type: 3}
   bobSpeed: 1
   bobHeight: 0.4
 --- !u!198 &97857065899000647

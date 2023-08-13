@@ -941,6 +941,10 @@ PrefabInstance:
       propertyPath: minDistanceFromObjects
       value: 0.1
       objectReference: {fileID: 0}
+    - target: {fileID: 7933867572526841010, guid: 078f26bae120ec64899e587b6f0c5226, type: 3}
+      propertyPath: bossSpawnScoreThreshold
+      value: 700
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 078f26bae120ec64899e587b6f0c5226, type: 3}
 --- !u!1001 &696081737
