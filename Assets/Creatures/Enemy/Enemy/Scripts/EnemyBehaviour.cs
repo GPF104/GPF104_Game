@@ -175,7 +175,7 @@ public class EnemyBehaviour : MonoBehaviour
 
 	private void OnCollisionEnter2D(Collision2D collision)
 	{
-		if (collision.gameObject.tag == "Player" && !hitPlayer)
+		if (collision.gameObject.tag == "Player" && !hitPlayer && this.GetComponent<HealthScript>().isAlive)
 		{
             Debug.Log("Hit Player");
             hitPlayer = true;
