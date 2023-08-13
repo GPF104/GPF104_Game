@@ -88,7 +88,7 @@ public class TimeManager : MonoBehaviour
 			if (secondCount % BubbleInterval == 0)
 			{
 				Debug.Log("Bubble Spawned: " + difficulty);
-				for (int i = 0; i < Random.Range(1, Mathf.Floor(difficulty)); i++)
+				for (int i = 0; i < Random.Range(1, Mathf.Floor(difficulty*0.5f)); i++)
 				{
 					yield return new WaitForSeconds(0.5f);
 					StartCoroutine(Bubble(2));
