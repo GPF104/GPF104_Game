@@ -7,7 +7,10 @@ public class EnemyBehaviour : MonoBehaviour
 	#region ExternalLinks
 
 	public Transform player;
+    GameManager gameManager;
 
+	[SerializeField] List<GameObject> Drops = new List<GameObject>();
+    [SerializeField] int spawnChance = 20;
     #endregion
 
     #region Attributes
@@ -24,12 +27,19 @@ public class EnemyBehaviour : MonoBehaviour
     private bool hitPlayer = false;
     [SerializeField] float cooldown = 1.0f;
 
+    AudioSource audioSource;
+    [SerializeField] List<AudioClip> attackSounds = new List<AudioClip>();
+
+    //Minimap blip
+
+    GameObject blip;
     void moveEnemy(Vector2 direction)
     {
         if (!isStuck && !canAttack)
 		{
             rb.MovePosition((Vector2)transform.position + (direction * moveSpeed * Time.deltaTime));
             rb.rotation = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg + 90f;
+            
         }
     }
 
@@ -38,10 +48,19 @@ public class EnemyBehaviour : MonoBehaviour
         yield return new WaitForSeconds(cooldown);
         hitPlayer = false;
     }
+    bool isAttacking = false;
     IEnumerator Attack()
     {
         if (canAttack)
         {
+            if (!isAttacking)
+			{
+                if (audioSource != null)
+				{
+					audioSource.PlayOneShot(attackSounds[Random.Range(0, attackSounds.Count)]);
+                    isAttacking = true;
+                }
+			}
             yield return new WaitForSeconds(0.05f);
 
             // Calculate the direction from the enemy to the player
@@ -55,12 +74,14 @@ public class EnemyBehaviour : MonoBehaviour
 
             // Reset the enemy's velocity
             canAttack = false;
+            isAttacking = false;
             rb.velocity = Vector2.zero;
 
         }
         else
 		{
             canAttack = false;
+            isAttacking = false;
 		}
     }
 
@@ -80,33 +101,55 @@ public class EnemyBehaviour : MonoBehaviour
 
         StartCoroutine(CanAttack());
     }
-
+    float stuckTime = 0;
     IEnumerator IsStuck()
 	{
+        if (blip != null)
+		{
+            GameObject.FindObjectOfType<GameManager>().uiHandler.uiMap.UpdateBlipPosition(blip, this.transform.position);
+        }
+        if (stuckTime > 10)
+		{
+            Debug.LogWarning("Enemy stuck for longer than 10 seconds, removing");
+            Destroy(this.gameObject);
+		}
         oldPosition = transform.position;
         yield return new WaitForSeconds(0.25f);
         float distance = Vector2.Distance(oldPosition, transform.position);
-        if (distance < 0.5f && !canAttack)
+        if (distance < 0.5f)
 		{
             isStuck = true;
+            stuckTime += 0.25f;
 		}
 		else
 		{
             isStuck = false;
+            stuckTime = 0;
 		}
 
         StartCoroutine(IsStuck());
     }
-    #endregion
 
-    #region Unity
+    IEnumerator Spawn()
+	{
+        yield return new WaitForSeconds(0.25f);
+        if (blip == null)
+        {
+            blip = GameObject.FindObjectOfType<GameManager>().uiHandler.uiMap.AddMapElement(BlipType.enemy);
+        }
+        StartCoroutine(IsStuck());
+        StartCoroutine(CanAttack());
+    }
+	#endregion
 
-    void Start()
+	#region Unity
+
+	void Start()
     {
         player = GameObject.FindObjectOfType<Player>().GetComponent<Transform>();
         rb = this.GetComponent<Rigidbody2D>();
-        StartCoroutine(IsStuck());
-        StartCoroutine(CanAttack());
+        audioSource = this.GetComponent<AudioSource>();
+        StartCoroutine(Spawn());
     }
 
     // Update is called once per frame
@@ -120,18 +163,19 @@ public class EnemyBehaviour : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (!canAttack && !isStuck)
+        if (!canAttack && !isStuck && this.gameObject.GetComponent<HealthScript>().isAlive == true)
 		{
             if (Vector2.Distance(player.position, transform.position) >= 2)
 			{
                 moveEnemy(movement);
+                UpdateSortingOrder();
             }
         }
     }
 
 	private void OnCollisionEnter2D(Collision2D collision)
 	{
-		if (collision.gameObject.tag == "Player" && !hitPlayer)
+		if (collision.gameObject.tag == "Player" && !hitPlayer && this.GetComponent<HealthScript>().isAlive)
 		{
             Debug.Log("Hit Player");
             hitPlayer = true;
@@ -140,5 +184,25 @@ public class EnemyBehaviour : MonoBehaviour
 		}
 
 	}
-	#endregion
+    private void UpdateSortingOrder()
+    {
+        SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
+
+        // Get the player's y-position and the tree object's y-position
+        float enemyY = this.gameObject.transform.position.y;
+        float treeY = transform.position.y;
+
+        // Set the initial sorting order based on the y-position and enemy position relative to the tree object
+        int sortingOrder = Mathf.RoundToInt(-treeY * 100f);
+        if (enemyY > treeY)
+        {
+            sortingOrder -= 1;
+        }
+        spriteRenderer.sortingOrder = sortingOrder;
+    }
+    void OnDestroy()
+    {
+        Destroy(blip);
+    }
+    #endregion
 }

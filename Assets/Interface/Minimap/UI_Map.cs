@@ -3,6 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+
+public enum BlipType
+{
+    enemy = 0,
+    boss = 1,
+    item = 2,
+    portal = 3
+}
 public class UI_Map : MonoBehaviour
 {
 
@@ -16,18 +24,59 @@ public class UI_Map : MonoBehaviour
     Vector2 minimapSize;
     float xRatio;
     float yRatio;
+    [SerializeField] GameObject bossTracker;
+    [SerializeField] GameObject portalTracker;
+    [SerializeField] GameObject enemyTracker;
+    [SerializeField] GameObject itemTracker;
 
-    public void UpdatePositions(Vector3 position)
+
+    List<GameObject> enemyBlipTable = new List<GameObject>();
+    List<GameObject> enemyBlipList = new List<GameObject>();
+
+    public void UpdatePositions(Vector3 position, float facing)
 	{
         if (xRatio != float.NaN && yRatio != float.NaN)
 		{
             playerPos.anchoredPosition = new Vector3(position.x * xRatio, position.y * yRatio, 0);
+            playerPos.rotation = Quaternion.Euler(0f, 0f, facing);
+
         }
 	}        
-
-    public void AddMapElement(GameObject gobject)
+    public void UpdateBlipPosition(GameObject gobject, Vector3 position)
 	{
+        if (gobject.GetComponent<RectTransform>())
+		{
+            if (xRatio != float.NaN && yRatio != float.NaN)
+            {
+                gobject.GetComponent<RectTransform>().anchoredPosition = new Vector3(position.x * xRatio, position.y * yRatio, 0);
+            }
+        }
+	}
 
+    public GameObject AddMapElement(BlipType type)
+	{
+        Debug.Log("Add map element: " + type);
+        GameObject blip = null;
+
+        if (type == BlipType.enemy)
+		{
+            blip = Instantiate(enemyTracker);
+        }
+        if (type == BlipType.portal)
+		{
+            blip = Instantiate(portalTracker);
+		}
+        if (type == BlipType.item)
+		{
+            blip = Instantiate(itemTracker);
+		}
+        if (type == BlipType.boss)
+		{
+            blip = Instantiate(bossTracker);
+		}
+        //go.transform.SetParent(GameObject.Find("Spawners").transform);
+        blip.transform.SetParent(MapBG.transform);
+        return blip;
 	}
 
     IEnumerator LoadMap()
@@ -52,9 +101,5 @@ public class UI_Map : MonoBehaviour
         playerPos = GameObject.Find("PlayerPt").GetComponent<RectTransform>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+
 }

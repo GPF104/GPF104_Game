@@ -10,13 +10,20 @@ public class ProjectileScript : MonoBehaviour
 
     public GameObject particlesPrefab;
     private GameObject particleObject;
+    [SerializeField] GameObject HitParticles;
 
-    [SerializeField] List<AudioClip> soundFX;
+    
 
     #endregion
 
     #region Attributes
 
+    AudioSource audioSource;
+    [SerializeField] List<AudioClip> soundFX;
+    [SerializeField] AudioClip hitSFX;
+
+    public int damage = 5;
+    bool destroyed = false;
     IEnumerator LifeSpan(float interval)
 	{
         yield return new WaitForSeconds(interval);
@@ -27,19 +34,27 @@ public class ProjectileScript : MonoBehaviour
     #region Unity
     void Kill()
     {
-        particleObject.GetComponent<ParticleEmitter>().Remove();
+        destroyed = true;
+        if (particleObject != null)
+		{
+            particleObject.GetComponent<ParticleEmitter>().Remove();
+        }
         Destroy(gameObject); // Destroy the bullet
     }
 
     void Start()
     {
+        audioSource = GetComponent<AudioSource>();
         StartCoroutine(LifeSpan(3));
         particleObject = Instantiate(particlesPrefab, transform.position, Quaternion.identity);
-		GameObject.FindObjectOfType<GameManager>().GetComponent<GameManager>().audioManager.PlayAudio(soundFX[Random.Range(0, soundFX.Count)]);
+        audioSource.PlayOneShot(soundFX[Random.Range(0, soundFX.Count)]);
     }
 	void Update()
 	{
-		particleObject.transform.position = this.transform.position;
+        if (particleObject != null)
+		{
+            particleObject.transform.position = this.transform.position;
+        }
 	}
 
 
@@ -53,10 +68,17 @@ public class ProjectileScript : MonoBehaviour
             ishit = true;            
             healthScript = collision.gameObject.GetComponent<HealthScript>();
             healthScript.TakeDamage(1, collision.gameObject);
+            GameObject gobject = Instantiate(HitParticles);
+            gobject.GetComponent<ParticleEmitter>().hitWorld = false;
+            gobject.transform.position = this.transform.position;
             Kill();
         }
         else
 		{
+            GameObject gobject = Instantiate(HitParticles);
+            gobject.transform.position = this.transform.position;
+
+            gobject.GetComponent<ParticleEmitter>().PlaySFX(hitSFX);
             Kill();
         }
 

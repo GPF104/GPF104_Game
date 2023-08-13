@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class UIHandler : MonoBehaviour
 {
@@ -22,6 +23,12 @@ public class UIHandler : MonoBehaviour
 	public GameObject gameOverObject;
 	public GameObject uiMenu;
 	public ScrollCounter scrollCounter;
+	public PotionCounter potionCounter;
+	public GameObject bossHealthObject;
+
+	[SerializeField] GameObject eventSystemObject;
+
+	private EventSystem eventSystem;
 
 	#endregion
 
@@ -33,9 +40,23 @@ public class UIHandler : MonoBehaviour
 		fadeout = 0,
 		fadein = 1
 	}
+	public void EnableEventController(bool enabled)
+	{
+		if (eventSystem != null)
+		{
+			eventSystem.enabled = enabled;
+		}
+		else
+		{
+			Debug.LogWarning("eventSystemController is null. Make sure eventSystemObject is assigned correctly.");
+		}
+	}
 	public void Display(GameObject frame, bool active)
 	{
-		frame.SetActive(active);
+		if (frame)
+		{
+			frame.SetActive(active);
+		}
 	}
 	IEnumerator FadeOut(float speed)
 	{
@@ -46,10 +67,6 @@ public class UIHandler : MonoBehaviour
 		yield return new WaitForSeconds(speed);
 	}
 
-	public void FrameFade(GameObject gobject, Fade fade, float speed)
-	{
-
-	}
 
 	#endregion
 
@@ -57,6 +74,15 @@ public class UIHandler : MonoBehaviour
 	// Start is called before the first frame update
 	void Start()
     {
+		if (eventSystemObject != null)
+		{
+			eventSystem = eventSystemObject.GetComponent<EventSystem>();
+		}
+		else
+		{
+			Debug.LogWarning("eventSystemObject is not assigned in the Inspector.");
+		}
+
 		gameManager = GameObject.FindObjectOfType<GameManager>().GetComponent<GameManager>();
 		uiTimer = GameObject.FindObjectOfType<UI_Timer>().GetComponent<UI_Timer>();
 		uiScore = GameObject.FindObjectOfType<UI_Score>().GetComponent<UI_Score>();
@@ -65,9 +91,11 @@ public class UIHandler : MonoBehaviour
 		uiMap = GameObject.FindObjectOfType<UI_Map>().GetComponent<UI_Map>();
 		uiHealth = GameObject.FindObjectOfType<UI_Health>().GetComponent<UI_Health>();
 		scrollCounter = GameObject.FindObjectOfType<ScrollCounter>().GetComponent<ScrollCounter>();
+		potionCounter = GameObject.FindObjectOfType<PotionCounter>().GetComponent<PotionCounter>();
 
 		gameOverObject.SetActive(false);
 		uiMenu.SetActive(false);
+		bossHealthObject.SetActive(false);
 		
     }
 

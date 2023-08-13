@@ -47,6 +47,9 @@ public class LevelGenerator : MonoBehaviour
     [SerializeField] float MAX_SCALE = 1.5f;
     [SerializeField] float MIN_BRIGHTNESS = 0.5f;
     [SerializeField] float MAX_BRIGHTNESS = 1;
+    [SerializeField] float generateTime = 0.5f;
+
+    [SerializeField] int TrapDensity = 1500;
 
     //  Control the size of the generated tilemap level
     public Vector3Int levelSize = new Vector3Int(120, 120, 0);
@@ -55,18 +58,80 @@ public class LevelGenerator : MonoBehaviour
 
     #region Generation
     //  Slower generation - Might need this for when our objects get more complex.
-    IEnumerator SlowGenerate(List<GameObject> gameObjects)
+    IEnumerator SlowGenerate(GenerateType type)
 	{
-        for (int i = 0; i < gameObjects.Count; i++)
+        int minimumDensity = MIN_DENSITY;
+        int maximumDensity = MAX_DENSITY;
+
+        if (type == GenerateType.Lighting)
         {
-            for (int j = 0; j < Random.Range(MIN_DENSITY, MAX_DENSITY); j++)
+            minimumDensity += 2500;
+        }
+
+        if (type == GenerateType.Obstacles)
+		{
+            minimumDensity = TrapDensity;
+            maximumDensity = TrapDensity + 500;
+        }
+        if (type == GenerateType.Props)
+        {
+            minimumDensity = 120;
+            maximumDensity = 150;
+        }
+        if (type == GenerateType.Trees)
+        {
+            minimumDensity = 3000;
+            maximumDensity = 5000;
+        }
+        if (type == GenerateType.Flora)
+        {
+            minimumDensity = 2000;
+            maximumDensity = 3000;
+        }
+
+        for (int i = 0; i < Random.Range(minimumDensity, maximumDensity); i++)
+        {
+            Vector2 pos = Random.insideUnitSphere * radius;
+
+            if (type == GenerateType.Flora)
             {
-                Vector2 pos = Random.insideUnitSphere * radius;
-                GameObject go = Instantiate(gameObjects[Random.Range(0, gameObjects.Count)]);
-                go.transform.position = pos;
-                yield return new WaitForSeconds(0.05f);
+                if (autoTile.GetTile(pos, AutoTile.TileTypes.grass))
+                {
+                    GameObject go = AddProp(Flora[Random.Range(0, Flora.Count)], pos, type);
+                }
+            }
+            if (type == GenerateType.Trees)
+            {
+                if (autoTile.GetTile(pos, AutoTile.TileTypes.grass))
+                {
+                    GameObject go = AddProp(Trees[Random.Range(0, Trees.Count)], pos, type);
+
+                }
+            }
+            if (type == GenerateType.Obstacles)
+            {
+                if (autoTile.GetTile(pos, AutoTile.TileTypes.grass))
+                {
+                    GameObject go = AddProp(BadObstacles[Random.Range(0, BadObstacles.Count)], pos, type);
+                }
+            }
+            if (type == GenerateType.Props)
+            {
+                if (autoTile.GetTile(pos, AutoTile.TileTypes.grass))
+                {
+                    GameObject go = AddProp(Props[Random.Range(0, Props.Count)], pos, type);
+                }
+            }
+            if (type == GenerateType.Lighting)
+            {
+                if (!autoTile.GetTile(pos, AutoTile.TileTypes.grass))
+                {
+                    GameObject go = AddProp(Shadows[Random.Range(0, Shadows.Count)], pos, type);
+                    go.GetComponent<UnityEngine.Rendering.Universal.Light2D>().intensity = Random.Range(MIN_BRIGHTNESS, MAX_BRIGHTNESS);
+                }
             }
         }
+        yield return new WaitForSeconds(generateTime);
     }
 
     GameObject AddProp(GameObject prop, Vector2 pos, GenerateType type)
@@ -84,6 +149,7 @@ public class LevelGenerator : MonoBehaviour
         if (type == GenerateType.Trees)
         {
             go.transform.SetParent(GameObject.Find("Trees").transform);
+            go.transform.localScale = go.transform.localScale * 4;
         }
         if (type == GenerateType.Lighting)
         {
@@ -93,6 +159,11 @@ public class LevelGenerator : MonoBehaviour
         {
             go.transform.SetParent(GameObject.Find("Obstacles").transform);
             go.transform.localScale = go.transform.localScale * 1;
+        }
+        if (type == GenerateType.Props)
+        {
+            go.transform.SetParent(GameObject.Find("Props").transform);
+            go.transform.localScale = go.transform.localScale * 1.5f;
         }
         if (type != GenerateType.Lighting)
 		{
@@ -159,9 +230,29 @@ public class LevelGenerator : MonoBehaviour
         return new Vector2(x, y);
     }
 
+    IEnumerator SpawnSpawner(GameObject gobject)
+	{
+
+        //int num = spawners.Count == 0 ? 1 : (int)Mathf.Floor(spawners.Count / 2);
+        int num = Random.Range(1, 5);
+        float angleIncrement = 360f / num;
+        for (int i = 0; i < num; i++)
+        {
+            float angle = Random.Range(i * angleIncrement, (i + 1) * angleIncrement);
+            float distance = Random.Range(boundary.MIN_DISTANCE * 0.5f, boundary.MAX_DISTANCE);
+            GameObject go = Instantiate(gobject, CalculateSpawnPosition(angle, distance), Quaternion.identity);
+            spawners.Add(go);
+            go.transform.SetParent(GameObject.Find("Spawners").transform);
+            GameObject portal = gameManager.uiHandler.uiMap.AddMapElement(BlipType.portal);
+            gameManager.uiHandler.uiMap.UpdateBlipPosition(portal, go.transform.position);
+            yield return new WaitForSeconds(Time.deltaTime);
+        }
+
+    }
     void Spawn(GameObject gobject)
 	{
-        int num = spawners.Count == 0 ? 1 : spawners.Count;
+        // This is causing spawners to double
+        int num = spawners.Count == 0 ? 1 : (int)Mathf.Floor(spawners.Count / 2);
         float angleIncrement = 360f / num;
         for (int i = 0; i < num; i++)
 		{
@@ -170,14 +261,30 @@ public class LevelGenerator : MonoBehaviour
             GameObject go = Instantiate(gobject, CalculateSpawnPosition(angle, distance), Quaternion.identity);
             spawners.Add(go);
             go.transform.SetParent(GameObject.Find("Spawners").transform);
-            gameManager.uiHandler.uiMap.AddMapElement(go);
+            GameObject portal = gameManager.uiHandler.uiMap.AddMapElement(BlipType.portal);
 
-		}
+            gameManager.uiHandler.uiMap.UpdateBlipPosition(portal, go.transform.position);
+        }
 	}
-
+    public GameObject RandomSpawner()
+	{
+        return spawners[Random.Range(0, spawners.Count)];
+	}
+    public void RemoveSpawner(GameObject gobject)
+	{
+        spawners.Remove(gobject);
+	}
     public void AddSpawner(GameObject gobject)
 	{
-        Spawn(gobject);
+        //Spawn(gobject);
+        if (spawners.Count < 25)
+		{
+            StartCoroutine(SpawnSpawner(gobject));
+        }
+		else
+		{
+            Debug.LogWarning("Too many spawners");
+		}
 	}
 	#endregion
 
@@ -187,12 +294,14 @@ public class LevelGenerator : MonoBehaviour
         autoTile = GameObject.FindObjectOfType<AutoTile>().GetComponent<AutoTile>();
 
         //levelSize = new Vector3Int(boundary.MAX_DISTANCE + (int)radius, boundary.MAX_DISTANCE + (int)radius, 0);
+
         autoTile.doSim(autoTile.numSims, levelSize);
         //StartCoroutine(SlowGenerate(Flora));
-        Generate(GenerateType.Flora);
-        Generate(GenerateType.Trees);
-        Generate(GenerateType.Lighting);
-        Generate(GenerateType.Obstacles);
+        StartCoroutine(SlowGenerate(GenerateType.Flora));
+        StartCoroutine(SlowGenerate(GenerateType.Trees));
+        StartCoroutine(SlowGenerate(GenerateType.Lighting));
+        StartCoroutine(SlowGenerate(GenerateType.Obstacles));
+        StartCoroutine(SlowGenerate(GenerateType.Props));
     }
 
 	#region Unity

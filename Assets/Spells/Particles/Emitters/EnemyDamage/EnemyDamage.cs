@@ -8,12 +8,13 @@ public class EnemyDamage : MonoBehaviour
     IEnumerator LifeSpan()
 	{
         yield return new WaitForSeconds(m_ParticleSystem.main.duration);
-        Destroy(this);
+        Destroy(this.gameObject);
     }
+
     void Start()
     {
         m_ParticleSystem = GetComponent<ParticleSystem>();
+        // Destroy enemy defeat particles once they've played.
+        StartCoroutine(LifeSpan());
     }
-
-
 }

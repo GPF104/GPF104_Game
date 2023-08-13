@@ -8,19 +8,25 @@ public class Projectile_Inferno : MonoBehaviour
 	#region Attributes
 	Vector2 destination = new Vector2(0, 0);
 
-    [SerializeField] float moveSpeed = 2f;
+    [SerializeField] float moveSpeed = 1.5f;
     [SerializeField] GameObject explosion;
     Rigidbody2D rb2d;
 
-	#endregion
+    AudioSource audioSource;
+    [SerializeField] AudioClip shootSFX;
 
-	#region Unity
 
-	// Start is called before the first frame update
-	void Start()
+    #endregion
+
+    #region Unity
+
+    // Start is called before the first frame update
+    void Start()
     {
         rb2d = this.GetComponent<Rigidbody2D>();
         destination = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        audioSource = GetComponent<AudioSource>();
+        audioSource.PlayOneShot(shootSFX);
     }
 
     // Update is called once per frame
@@ -31,11 +37,21 @@ public class Projectile_Inferno : MonoBehaviour
 
         rb2d.MovePosition(destinationPoint);
 
-        if (Vector3.Distance(transform.position, destination) < 0.15f)
+        if (Vector3.Distance(transform.position, destination) < 0.5f)
         {
             Instantiate(explosion, transform.position, Quaternion.identity);
             Destroy(this.gameObject);
         }
     }
+
+	private void OnCollisionEnter2D(Collision2D collision)
+	{
+		if (collision.collider.tag == "Enemy" || collision.collider.tag == "World")
+		{
+            Instantiate(explosion, transform.position, Quaternion.identity);
+            Destroy(this.gameObject);
+
+        }
+	}
 	#endregion
 }

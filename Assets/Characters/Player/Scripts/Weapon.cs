@@ -7,6 +7,7 @@ public class Weapon : MonoBehaviour
 	#region ExternalLinks
 	public GameObject Projectile_Bullet;
     public GameObject Inferno_Bomb;
+    public GameObject Healing_Spell;
     [SerializeField] GameObject fizzle;
 
 	#endregion
@@ -15,10 +16,21 @@ public class Weapon : MonoBehaviour
 	Transform firePoint;
     public float fireForce = 20f;
 
+    
     public void Fire()
     {
         GameObject bullet = Instantiate(Projectile_Bullet, firePoint.position, firePoint.rotation);
         bullet.GetComponent<Rigidbody2D>().AddForce(firePoint.up * fireForce, ForceMode2D.Impulse);
+    }
+
+    public IEnumerator KeepFiring(float fireRate)
+    {
+        yield return new WaitForSeconds(fireRate);
+        if(Input.GetMouseButton(0)) 
+        { 
+            Fire();
+            StartCoroutine(KeepFiring(fireRate));
+        }        
     }
 
 
@@ -27,13 +39,21 @@ public class Weapon : MonoBehaviour
     {
         Instantiate(fizzle, firePoint.position, firePoint.rotation);
 
-        if (GameObject.FindObjectOfType<Player>().GetComponent<Player>().scrolls > 0)
+        if (FindObjectOfType<Player>().GetComponent<Player>().scrolls > 0)
         {
             GameObject inferno = Instantiate(Inferno_Bomb, firePoint.position, firePoint.rotation);
 
-            GameObject.FindObjectOfType<Player>().GetComponent<Player>().AddScroll(-1);
+            FindObjectOfType<Player>().GetComponent<Player>().AddScroll(-1);
         }
         
+    }
+
+    public void Heal()
+    {
+        if (FindObjectOfType<Player>().GetComponent<Player>().scrolls > 0)
+        {
+            FindObjectOfType<Player>().GetComponent<Player>().AddScroll(-1);
+        }
     }
 	#endregion
 
