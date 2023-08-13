@@ -8,7 +8,7 @@ public class ScrollScript : MonoBehaviour
 
     GameObject blip;
     AudioSource audioSource;
-    [SerializeField] AudioClip spawnSFX;
+    [SerializeField] List<AudioClip> spawnSFX = new List<AudioClip>();
 
     public float bobSpeed = 1.0f;  // Speed of bobbing motion
     public float bobHeight = 0.2f; // Height of bobbing motion
@@ -32,9 +32,9 @@ public class ScrollScript : MonoBehaviour
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
-        if (spawnSFX != null)
+        if (spawnSFX.Count > 0)
         {
-            audioSource.PlayOneShot(spawnSFX);
+			audioSource.PlayOneShot(spawnSFX[Random.Range(0, spawnSFX.Count)]);
         }
         if (blip == null)
         {

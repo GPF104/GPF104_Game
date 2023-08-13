@@ -930,6 +930,10 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7933867572526841010, guid: 078f26bae120ec64899e587b6f0c5226, type: 3}
+      propertyPath: maxDistanceFromPlayer
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 7933867572526841010, guid: 078f26bae120ec64899e587b6f0c5226, type: 3}
       propertyPath: worldLayerMask.m_Bits
       value: 1024
       objectReference: {fileID: 0}
@@ -1028,7 +1032,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7773913081694607278, guid: 3639e97faa0bf8b42a5078af82424d1c, type: 3}
       propertyPath: scrolls
-      value: 10
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7773913081694607278, guid: 3639e97faa0bf8b42a5078af82424d1c, type: 3}
       propertyPath: potionHeal

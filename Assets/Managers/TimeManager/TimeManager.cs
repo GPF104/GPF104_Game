@@ -37,6 +37,9 @@ public class TimeManager : MonoBehaviour
 
 	public LayerMask worldLayerMask; // Assign the 'world' layer to this in the Inspector
 	public float minDistanceFromObjects = 3f;
+	public float minDistanceFromPlayer = 10f;
+	public float maxDistanceFromPlayer = 15f;
+
 
 	int bossCounter = 0;
 	[ContextMenu("AddTime")]
@@ -138,7 +141,7 @@ public class TimeManager : MonoBehaviour
 	{
 		yield return new WaitForSeconds(0.25f);
 
-		Vector2 randomVector = Random.insideUnitCircle.normalized * 10;
+		Vector2 randomVector = Random.insideUnitCircle.normalized * Random.Range(minDistanceFromPlayer, maxDistanceFromPlayer);
 
 		Vector2 spawnPosition = (Vector2)gameManager.player.transform.position + randomVector;
 		Collider2D[] colliders = Physics2D.OverlapCircleAll(spawnPosition, minDistanceFromObjects, worldLayerMask);
@@ -159,7 +162,7 @@ public class TimeManager : MonoBehaviour
 	{
 		yield return new WaitForSeconds(0.25f);
 
-		Vector2 randomVector = Random.insideUnitCircle.normalized * 10;
+		Vector2 randomVector = Random.insideUnitCircle.normalized * Random.Range(minDistanceFromPlayer, maxDistanceFromPlayer);
 
 		Vector2 spawnPosition = (Vector2)gameManager.player.transform.position + randomVector;
 		Collider2D[] colliders = Physics2D.OverlapCircleAll(spawnPosition, minDistanceFromObjects, worldLayerMask);
@@ -181,7 +184,12 @@ public class TimeManager : MonoBehaviour
 	{
 		StartCoroutine(Potion());
 	}
-    IEnumerator Bubble(float delay)
+	[ContextMenu("SpawnScroll")]
+	void SpawnScroll()
+	{
+		StartCoroutine(Scroll());
+	}
+	IEnumerator Bubble(float delay)
 	{
 		yield return new WaitForSeconds(Random.Range(difficulty * 0.5f, 10 / difficulty));
 

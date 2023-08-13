@@ -130,7 +130,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   value: 1
-  spawnSFX: {fileID: 8300000, guid: 462f7bb6fcdea5c4596056bd98957c5f, type: 3}
+  spawnSFX:
+  - {fileID: 8300000, guid: 979ca805e0f35a34e897dc0695cc98c1, type: 3}
+  - {fileID: 8300000, guid: 77b68f863c14c36409b1ab4ee9f2bd9e, type: 3}
   bobSpeed: 1
   bobHeight: 0.4
 --- !u!198 &769715717349989199

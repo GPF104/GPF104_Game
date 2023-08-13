@@ -6,7 +6,7 @@ public class Potion : MonoBehaviour
 {
     GameObject blip;
     AudioSource audioSource;
-    [SerializeField] AudioClip spawnSFX;
+    [SerializeField] List<AudioClip> spawnSFX = new List<AudioClip>();
 
     public float bobSpeed = 1.0f;  // Speed of bobbing motion
     public float bobHeight = 0.2f; // Height of bobbing motion
@@ -32,11 +32,11 @@ public class Potion : MonoBehaviour
     void Start()
 	{
         audioSource = GetComponent<AudioSource>();
-        if (spawnSFX != null)
-		{
-            audioSource.PlayOneShot(spawnSFX);
-		}
-		if (blip == null)
+        if (spawnSFX.Count > 0)
+        {
+            audioSource.PlayOneShot(spawnSFX[Random.Range(0, spawnSFX.Count)]);
+        }
+        if (blip == null)
 		{
             blip = GameObject.FindObjectOfType<GameManager>().uiHandler.uiMap.AddMapElement(BlipType.item);
             GameObject.FindObjectOfType<GameManager>().uiHandler.uiMap.UpdateBlipPosition(blip, this.transform.position);

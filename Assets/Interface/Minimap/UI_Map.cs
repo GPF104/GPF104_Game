@@ -33,11 +33,13 @@ public class UI_Map : MonoBehaviour
     List<GameObject> enemyBlipTable = new List<GameObject>();
     List<GameObject> enemyBlipList = new List<GameObject>();
 
-    public void UpdatePositions(Vector3 position)
+    public void UpdatePositions(Vector3 position, float facing)
 	{
         if (xRatio != float.NaN && yRatio != float.NaN)
 		{
             playerPos.anchoredPosition = new Vector3(position.x * xRatio, position.y * yRatio, 0);
+            playerPos.rotation = Quaternion.Euler(0f, 0f, facing);
+
         }
 	}        
     public void UpdateBlipPosition(GameObject gobject, Vector3 position)
@@ -49,10 +51,6 @@ public class UI_Map : MonoBehaviour
                 gobject.GetComponent<RectTransform>().anchoredPosition = new Vector3(position.x * xRatio, position.y * yRatio, 0);
             }
         }
-	}
-    public void RemoveBlipPosition(GameObject gobject)
-	{
-
 	}
 
     public GameObject AddMapElement(BlipType type)
@@ -103,9 +101,5 @@ public class UI_Map : MonoBehaviour
         playerPos = GameObject.Find("PlayerPt").GetComponent<RectTransform>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+
 }

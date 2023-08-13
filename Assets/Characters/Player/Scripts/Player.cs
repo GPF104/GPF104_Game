@@ -15,6 +15,9 @@ public class Player : MonoBehaviour
 
     [SerializeField] public bool isDev = false;
 	[SerializeField] List<AudioClip> damageSFX = new List<AudioClip>();
+	[SerializeField] List<AudioClip> potionSFX = new List<AudioClip>();
+    [SerializeField] List<AudioClip> scrollSFX = new List<AudioClip>();
+
 
     [SerializeField] GameObject healParticles;
     int Health = 100;
@@ -34,7 +37,8 @@ public class Player : MonoBehaviour
     IEnumerator UpdatePosition()
 	{
         yield return new WaitForSeconds(0.5f);
-        gameManager.uiHandler.uiMap.UpdatePositions(this.transform.position);
+        //playerfacing is direction the player is facing
+        gameManager.uiHandler.uiMap.UpdatePositions(this.transform.position, this.GetComponent<Rigidbody2D>().rotation);
         StartCoroutine(UpdatePosition());
     }
 
@@ -89,12 +93,13 @@ public class Player : MonoBehaviour
     public void AddScroll(int amount)
     {
         scrolls += amount;
+        audioSource.PlayOneShot(scrollSFX[Random.Range(0, scrollSFX.Count)]);
         gameManager.uiHandler.scrollCounter.SetScroll(scrolls);
     }
     public void AddPotion(int amount)
 	{
         potions += amount;
-        audioSource.PlayOneShot(potionPickup);
+		audioSource.PlayOneShot(potionSFX[Random.Range(0, potionSFX.Count)]);
         gameManager.uiHandler.potionCounter.SetPotion(potions);
 	}
 

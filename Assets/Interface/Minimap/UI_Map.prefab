@@ -48,6 +48,7 @@ MonoBehaviour:
   bossTracker: {fileID: 8770026010458981711, guid: 4ee426671e897be4d93b596fb4edb848, type: 3}
   portalTracker: {fileID: 8770026010458981711, guid: 405c4e63832cc494f85406adbf505ce7, type: 3}
   enemyTracker: {fileID: 8770026010458981711, guid: 4ee426671e897be4d93b596fb4edb848, type: 3}
+  itemTracker: {fileID: 0}
 --- !u!1 &5267497274544649118
 GameObject:
   m_ObjectHideFlags: 0
@@ -107,7 +108,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.5882353}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -363,7 +364,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.6156863}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1

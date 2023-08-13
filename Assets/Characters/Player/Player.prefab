@@ -166,6 +166,12 @@ MonoBehaviour:
   damageSFX:
   - {fileID: 8300000, guid: 8a04630fe77072a4cadd5750103d83f7, type: 3}
   - {fileID: 8300000, guid: 386b8c39217be454ca5ce08c4ff64f02, type: 3}
+  potionSFX:
+  - {fileID: 8300000, guid: 46176bfd7c696984b9fb0502b709916e, type: 3}
+  - {fileID: 8300000, guid: 4124928d16255b04b9ea3bf849aaf5a7, type: 3}
+  scrollSFX:
+  - {fileID: 8300000, guid: 979ca805e0f35a34e897dc0695cc98c1, type: 3}
+  - {fileID: 8300000, guid: 77b68f863c14c36409b1ab4ee9f2bd9e, type: 3}
   healParticles: {fileID: 1232776670957128206, guid: b12155f67fa76534b9deafee9abba184, type: 3}
   scrolls: 0
   potions: 0
@@ -249,6 +255,8 @@ MonoBehaviour:
   damageParticles: {fileID: 1232776670957128206, guid: 4653494e9ecf64248993b3d344e724e1, type: 3}
   fadeDuration: 0.5
   isAlive: 1
+  Drops: []
+  spawnChance: 20
 --- !u!95 &4382676923746674429
 Animator:
   serializedVersion: 4
