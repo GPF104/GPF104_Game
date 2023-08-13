@@ -37,7 +37,7 @@ public class Projectile_Inferno : MonoBehaviour
 
         rb2d.MovePosition(destinationPoint);
 
-        if (Vector3.Distance(transform.position, destination) < 0.15f)
+        if (Vector3.Distance(transform.position, destination) < 0.5f)
         {
             Instantiate(explosion, transform.position, Quaternion.identity);
             Destroy(this.gameObject);
