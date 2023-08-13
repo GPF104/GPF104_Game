@@ -120,6 +120,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnSFX: {fileID: 8300000, guid: a4c06ffa447830c4c9339b717dc5d5b6, type: 3}
+  bobSpeed: 1
+  bobHeight: 0.4
 --- !u!198 &97857065899000647
 ParticleSystem:
   m_ObjectHideFlags: 0
