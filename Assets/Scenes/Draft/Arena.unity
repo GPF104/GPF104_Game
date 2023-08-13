@@ -923,7 +923,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7933867572526841010, guid: 078f26bae120ec64899e587b6f0c5226, type: 3}
       propertyPath: ScrollChance
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 7933867572526841010, guid: 078f26bae120ec64899e587b6f0c5226, type: 3}
       propertyPath: BubbleInterval
