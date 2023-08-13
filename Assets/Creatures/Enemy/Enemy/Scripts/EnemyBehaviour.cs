@@ -120,7 +120,6 @@ public class EnemyBehaviour : MonoBehaviour
 		{
             isStuck = true;
             stuckTime += 0.25f;
-            Debug.LogWarning("Enemy stuck " + stuckTime);
 		}
 		else
 		{

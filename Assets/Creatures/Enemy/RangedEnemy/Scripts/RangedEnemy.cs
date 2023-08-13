@@ -45,7 +45,7 @@ public class RangedEnemy : MonoBehaviour
     IEnumerator ShootChecker()
 	{
         yield return new WaitForSeconds(Random.Range(timeToFire, maxfireDelay));
-        if (Vector2.Distance(player.position, transform.position) <= Random.Range(shootingDistance, 10) && !isStuck)
+        if (Vector2.Distance(player.position, transform.position) <= Random.Range(shootingDistance, 10) && !isStuck && this.GetComponent<HealthScript>().isAlive)
         {
             StartCoroutine(Fire());
         }
@@ -54,7 +54,7 @@ public class RangedEnemy : MonoBehaviour
 
     void moveEnemy(Vector2 direction)
     {
-        if (!isStuck)
+        if (!isStuck && this.GetComponent<HealthScript>().isAlive == true)
 		{
             rb.MovePosition((Vector2)transform.position + (direction * moveSpeed * Time.deltaTime));
         }

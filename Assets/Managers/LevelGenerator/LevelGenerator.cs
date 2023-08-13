@@ -281,6 +281,10 @@ public class LevelGenerator : MonoBehaviour
 		{
             StartCoroutine(SpawnSpawner(gobject));
         }
+		else
+		{
+            Debug.LogWarning("Too many spawners");
+		}
 	}
 	#endregion
 

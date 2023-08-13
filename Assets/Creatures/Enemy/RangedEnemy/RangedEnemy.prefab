@@ -106,7 +106,7 @@ MonoBehaviour:
   maxHealth: 2
   currentHealth: 0
   scoreValue: 5
-  damageSFX: {fileID: 8300000, guid: 48d8225adc1c1174daf2fe1e3c07f50b, type: 3}
+  damageSFX: {fileID: 8300000, guid: 8f42f94eed6c1f845b7e412c6f4e1713, type: 3}
   damageParticles: {fileID: 1232776670957128206, guid: 4653494e9ecf64248993b3d344e724e1, type: 3}
   fadeDuration: 0.5
   isAlive: 1
@@ -215,13 +215,13 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 0.916
+  m_Volume: 1
   m_Pitch: 1
   Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 107
+  Priority: 49
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500

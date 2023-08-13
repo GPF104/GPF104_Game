@@ -53,7 +53,7 @@ public class HealthScript : MonoBehaviour
         // Disable the collider
         col.enabled = false;
 
-        while (elapsedTime < fadeDuration)
+        while (elapsedTime < damageSFX.length+1)
         {
             float normalizedTime = elapsedTime / fadeDuration;
             sr.color = Color.Lerp(initialColor, new Color(initialColor.r, initialColor.g, initialColor.b, 0), normalizedTime);
