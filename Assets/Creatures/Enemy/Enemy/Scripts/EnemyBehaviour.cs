@@ -108,18 +108,19 @@ public class EnemyBehaviour : MonoBehaviour
 		{
             GameObject.FindObjectOfType<GameManager>().uiHandler.uiMap.UpdateBlipPosition(blip, this.transform.position);
         }
-        if (stuckTime > 5)
+        if (stuckTime > 10)
 		{
-            Debug.LogWarning("Enemy stuck for longer than 5 seconds, removing");
+            Debug.LogWarning("Enemy stuck for longer than 10 seconds, removing");
             Destroy(this.gameObject);
 		}
         oldPosition = transform.position;
         yield return new WaitForSeconds(0.25f);
         float distance = Vector2.Distance(oldPosition, transform.position);
-        if (distance < 0.5f && !canAttack)
+        if (distance < 0.5f)
 		{
             isStuck = true;
             stuckTime += 0.25f;
+            Debug.LogWarning("Enemy stuck " + stuckTime);
 		}
 		else
 		{

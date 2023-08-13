@@ -31,6 +31,7 @@ public class RangedEnemy : MonoBehaviour
     private bool isStuck = false;
     private Vector2 oldPosition;
 
+    GameObject blip;
     #endregion
 
 
@@ -59,20 +60,43 @@ public class RangedEnemy : MonoBehaviour
         }
     }
 
+    float stuckTime = 0;
     IEnumerator IsStuck()
     {
+        if (blip != null)
+        {
+            GameObject.FindObjectOfType<GameManager>().uiHandler.uiMap.UpdateBlipPosition(blip, this.transform.position);
+        }
+        if (stuckTime > 10)
+        {
+            Debug.LogWarning("Enemy stuck for longer than 10 seconds, removing");
+            Destroy(this.gameObject);
+        }
         oldPosition = transform.position;
         yield return new WaitForSeconds(0.25f);
         float distance = Vector2.Distance(oldPosition, transform.position);
-
         if (distance < 0.5f)
         {
             isStuck = true;
+            stuckTime += 0.25f;
         }
         else
         {
             isStuck = false;
+            stuckTime = 0;
         }
+
+        StartCoroutine(IsStuck());
+    }
+
+    IEnumerator Spawn()
+    {
+        yield return new WaitForSeconds(0.25f);
+        if (blip == null)
+        {
+            blip = GameObject.FindObjectOfType<GameManager>().uiHandler.uiMap.AddMapElement(BlipType.enemy);
+        }
+        StartCoroutine(ShootChecker());
         StartCoroutine(IsStuck());
     }
 
@@ -82,8 +106,7 @@ public class RangedEnemy : MonoBehaviour
         player = GameObject.FindObjectOfType<Player>().GetComponent<Transform>();
         rb = this.GetComponent<Rigidbody2D>();
         timeToFire = 0f;
-        StartCoroutine(ShootChecker());
-        StartCoroutine(IsStuck());
+        StartCoroutine(Spawn());
     }
 
     // Update is called once per frame
@@ -107,9 +130,11 @@ public class RangedEnemy : MonoBehaviour
                 rb.velocity = Vector2.zero;
             }
         }
-        
     }
+
+	private void OnDestroy()
+	{
+        Destroy(blip);
+	}
 	#endregion
-
-
 }
