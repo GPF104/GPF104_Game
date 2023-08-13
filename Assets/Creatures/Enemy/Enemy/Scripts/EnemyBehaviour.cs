@@ -9,6 +9,8 @@ public class EnemyBehaviour : MonoBehaviour
 	public Transform player;
     GameManager gameManager;
 
+	[SerializeField] List<GameObject> Drops = new List<GameObject>();
+    [SerializeField] int spawnChance = 20;
     #endregion
 
     #region Attributes

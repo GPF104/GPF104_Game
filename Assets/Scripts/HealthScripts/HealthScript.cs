@@ -17,6 +17,21 @@ public class HealthScript : MonoBehaviour
 
     public bool isAlive = true;
 
+
+    [SerializeField] List<GameObject> Drops = new List<GameObject>();
+    [SerializeField] int spawnChance = 20;
+
+    bool WillDrop()
+    {
+        int RandomRoll = Random.Range(1, 100);
+        Debug.Log("Random Roll: " + RandomRoll);
+        if (RandomRoll > (100-spawnChance))
+		{
+            return true;
+		}
+        return false;
+    }
+
     void Start()
     {
         audioSource = this.GetComponent<AudioSource>();
@@ -48,7 +63,11 @@ public class HealthScript : MonoBehaviour
 
         // Make sure the character is fully transparent
         sr.color = new Color(initialColor.r, initialColor.g, initialColor.b, 0);
-
+        if (WillDrop())
+		{
+            GameObject go = Instantiate(Drops[Random.Range(0, Drops.Count)]);
+            go.transform.position = this.transform.position;
+		}
         // Destroy the character after fading
         Destroy(character);
     }

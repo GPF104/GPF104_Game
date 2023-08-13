@@ -16,6 +16,7 @@ public class Player : MonoBehaviour
     [SerializeField] public bool isDev = false;
 	[SerializeField] List<AudioClip> damageSFX = new List<AudioClip>();
 
+    [SerializeField] GameObject healParticles;
     int Health = 100;
     public int scrolls = 0;
     public int potions = 0;
@@ -59,6 +60,9 @@ public class Player : MonoBehaviour
             Health = Health + healAmount;
             AddPotion(-1);
             audioSource.PlayOneShot(potionHeal);
+            GameObject gob = Instantiate(healParticles);
+            gob.transform.position = this.transform.position;
+
             if (Health >= 100)
             {
                 Health = 100;

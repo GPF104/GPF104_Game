@@ -35,6 +35,9 @@ public class TimeManager : MonoBehaviour
 	[SerializeField] int bossSpawnScoreThreshold = 450;
 	[SerializeField] int bossSpawnTimeThreshold = 240;
 
+	public LayerMask worldLayerMask; // Assign the 'world' layer to this in the Inspector
+	public float minDistanceFromObjects = 3f;
+
 	int bossCounter = 0;
 	[ContextMenu("AddTime")]
 	void AddTime()
@@ -134,23 +137,50 @@ public class TimeManager : MonoBehaviour
 	IEnumerator Scroll()
 	{
 		yield return new WaitForSeconds(0.25f);
-		
-		GameObject scroll = Instantiate(scrolls);
-		Vector2 randomVector = Random.insideUnitCircle.normalized * 3;
 
-		scroll.transform.position = gameManager.player.transform.position + (Vector3)randomVector;
-		Debug.Log("Scroll spawned at: " + scroll.transform.position);
+		Vector2 randomVector = Random.insideUnitCircle.normalized * 10;
+
+		Vector2 spawnPosition = (Vector2)gameManager.player.transform.position + randomVector;
+		Collider2D[] colliders = Physics2D.OverlapCircleAll(spawnPosition, minDistanceFromObjects, worldLayerMask);
+
+		if (colliders.Length > 0)
+		{
+			Debug.LogWarning("Potion overlapped with world, try again");
+			StartCoroutine(Potion()); // Retry the potion spawn if it overlaps with objects in the 'world' layer
+			yield break;
+		}
+
+		GameObject potion = Instantiate(scrolls);
+		potion.transform.position = spawnPosition;
+		Debug.Log("Scroll spawned at: " + potion.transform.position);
 	}
-    IEnumerator Potion()
-    {
-        yield return new WaitForSeconds(0.25f);
 
-        GameObject potion = Instantiate(potions);
-        Vector2 randomVector = Random.insideUnitCircle.normalized * 3;
+	IEnumerator Potion()
+	{
+		yield return new WaitForSeconds(0.25f);
 
-        potion.transform.position = gameManager.player.transform.position + (Vector3)randomVector;
-        Debug.Log("Scroll spawned at: " + potion.transform.position);
-    }
+		Vector2 randomVector = Random.insideUnitCircle.normalized * 10;
+
+		Vector2 spawnPosition = (Vector2)gameManager.player.transform.position + randomVector;
+		Collider2D[] colliders = Physics2D.OverlapCircleAll(spawnPosition, minDistanceFromObjects, worldLayerMask);
+
+		if (colliders.Length > 0)
+		{
+			Debug.LogWarning("Potion overlapped with world, try again");
+			StartCoroutine(Potion()); // Retry the potion spawn if it overlaps with objects in the 'world' layer
+			yield break;
+		}
+
+		GameObject potion = Instantiate(potions);
+		potion.transform.position = spawnPosition;
+		Debug.Log("Potion spawned at: " + potion.transform.position);
+	}
+
+	[ContextMenu("SpawnPotion")]
+	void SpawnPotion()
+	{
+		StartCoroutine(Potion());
+	}
     IEnumerator Bubble(float delay)
 	{
 		yield return new WaitForSeconds(Random.Range(difficulty * 0.5f, 10 / difficulty));
