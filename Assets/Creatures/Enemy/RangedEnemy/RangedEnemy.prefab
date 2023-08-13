@@ -110,6 +110,10 @@ MonoBehaviour:
   damageParticles: {fileID: 1232776670957128206, guid: 4653494e9ecf64248993b3d344e724e1, type: 3}
   fadeDuration: 0.5
   isAlive: 1
+  Drops:
+  - {fileID: 4202098700287233634, guid: a9b4f887f15e4c64789ba5bcadb38bc0, type: 3}
+  - {fileID: 7144711045632652935, guid: eb2c1c04efa4b824a9f13fe9bc52fbba, type: 3}
+  spawnChance: 15
 --- !u!50 &8340791649948962777
 Rigidbody2D:
   serializedVersion: 4

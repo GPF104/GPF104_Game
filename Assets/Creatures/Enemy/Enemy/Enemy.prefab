@@ -50,6 +50,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
+  Drops: []
+  spawnChance: 20
   scoreValue: 15
   moveSpeed: 6
   damage: 5
@@ -76,6 +78,10 @@ MonoBehaviour:
   damageParticles: {fileID: 1232776670957128206, guid: d1db02191fca8e84faddeeb5106bcf4b, type: 3}
   fadeDuration: 0.5
   isAlive: 1
+  Drops:
+  - {fileID: 4202098700287233634, guid: a9b4f887f15e4c64789ba5bcadb38bc0, type: 3}
+  - {fileID: 7144711045632652935, guid: eb2c1c04efa4b824a9f13fe9bc52fbba, type: 3}
+  spawnChance: 5
 --- !u!212 &-5270974488518648505
 SpriteRenderer:
   m_ObjectHideFlags: 0
