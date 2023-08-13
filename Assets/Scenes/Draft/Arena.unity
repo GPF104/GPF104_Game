@@ -4534,6 +4534,22 @@ PrefabInstance:
       propertyPath: m_margin.y
       value: -4.6284084
       objectReference: {fileID: 0}
+    - target: {fileID: 6100268375992651977, guid: 2f54476031578614e8b2529c40df0fc2, type: 3}
+      propertyPath: m_fontColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6100268375992651977, guid: 2f54476031578614e8b2529c40df0fc2, type: 3}
+      propertyPath: m_fontColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6100268375992651977, guid: 2f54476031578614e8b2529c40df0fc2, type: 3}
+      propertyPath: m_fontColor.r
+      value: 0.9528302
+      objectReference: {fileID: 0}
+    - target: {fileID: 6100268375992651977, guid: 2f54476031578614e8b2529c40df0fc2, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4278190323
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2f54476031578614e8b2529c40df0fc2, type: 3}
 --- !u!224 &8660973797446939747 stripped
